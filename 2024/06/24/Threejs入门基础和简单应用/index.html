@@ -13,20 +13,20 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://shiro036-joker.github.io/2024/06/24/three.js入门/"/>
+    <link rel="canonical" href="https://shiro036-joker.github.io/2024/06/24/threejs入门基础和简单应用/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="Three.js导入three：npm install three  ||   npm install &#x74;&#x68;&#114;&#x65;&#x65;&#x40;&#48;&#46;&#49;&#x35;&#x33; （update） 导入threejsimport * as THREE from “three”; 创建场景const scene &#x3D; new THREE.S">
+        <meta name="description" content="Three.js：入门基础和简单应用引言随着Web技术的不断发展，三维图形在网页中的应用越来越广泛。Three.js 作为一款强大的3D图形库，使得开发者可以在网页上创建复杂而精美的三维场景。本文旨在通过详细的讲解和实例，帮助读者掌握 Three.js 的基础知识，并逐步提升到中高级水平。 为什么选择Three.js？易于入门相比于WebGL的复杂性，Three.js 提供了更高层次的抽象，使得开">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://shiro036-joker.github.io/2024/06/24/Three.js%E5%85%A5%E9%97%A8/index.html">
+<meta property="og:url" content="https://shiro036-joker.github.io/2024/06/24/Threejs%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Three.js导入three：npm install three  ||   npm install &#x74;&#x68;&#114;&#x65;&#x65;&#x40;&#48;&#46;&#49;&#x35;&#x33; （update） 导入threejsimport * as THREE from “three”; 创建场景const scene &#x3D; new THREE.S">
+<meta property="og:description" content="Three.js：入门基础和简单应用引言随着Web技术的不断发展，三维图形在网页中的应用越来越广泛。Three.js 作为一款强大的3D图形库，使得开发者可以在网页上创建复杂而精美的三维场景。本文旨在通过详细的讲解和实例，帮助读者掌握 Three.js 的基础知识，并逐步提升到中高级水平。 为什么选择Three.js？易于入门相比于WebGL的复杂性，Three.js 提供了更高层次的抽象，使得开">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-06-24T13:26:27.940Z">
-<meta property="article:modified_time" content="2024-06-24T13:28:40.414Z">
+<meta property="article:published_time" content="2024-06-24T13:55:52.761Z">
+<meta property="article:modified_time" content="2024-06-24T13:55:52.761Z">
 <meta property="article:author" content="Shirolin">
 <meta name="twitter:card" content="summary">
     
@@ -527,7 +527,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">4</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">3</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -574,15 +574,15 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2024-06-24 21:26:27</span>
-        <span class="mobile">2024-06-24 21:26:27</span>
+        <span class="desktop">2024-06-24 21:55:52</span>
+        <span class="mobile">2024-06-24 21:55:52</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-06-24 21:28:40</span>
-            <span class="mobile">2024-06-24 21:28:40</span>
+            <span class="desktop">2024-06-24 21:55:52</span>
+            <span class="mobile">2024-06-24 21:55:52</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -593,12 +593,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>2.6k 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.5k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>13 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>6 分钟</span>
         </span>
     
     
@@ -617,647 +617,70 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="Three-js"><a href="#Three-js" class="headerlink" title="Three.js"></a>Three.js</h1><p>导入three：npm install three  ||   npm install <a class="link"   href="mailto:&#x74;&#x68;&#114;&#x65;&#x65;&#x40;&#48;&#46;&#49;&#x35;&#x33;" >&#x74;&#x68;&#114;&#x65;&#x65;&#x40;&#48;&#46;&#49;&#x35;&#x33; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（update）</p>
-<h3 id="导入threejs"><a href="#导入threejs" class="headerlink" title="导入threejs"></a>导入threejs</h3><p>import * as THREE from “three”;</p>
-<h3 id="创建场景"><a href="#创建场景" class="headerlink" title="创建场景"></a>创建场景</h3><p>const scene &#x3D; new THREE.Scene();</p>
-<h3 id="创建相机"><a href="#创建相机" class="headerlink" title="创建相机"></a>创建相机</h3><p>const camera &#x3D; new THREE.PerspectiveCamera(</p>
-<pre><code> 45,    //视角
- 
- window.innerWidth / window.innerHeight,    // 宽高比
-</code></pre>
-<p>​	 0.1,    &#x2F;&#x2F;近平面</p>
-<pre><code> 1000    //远平面
-</code></pre>
-<p>);</p>
-<h3 id="创建渲染器"><a href="#创建渲染器" class="headerlink" title="创建渲染器"></a>创建渲染器</h3><p>const renderer &#x3D; new THREE.WebGL1Renderer();</p>
-<p>renderer.setSize(window.innerWidth, window.innerHeight);</p>
-<p>document.body.appendChild(renderer.domElement);</p>
-<h3 id="创建几何体"><a href="#创建几何体" class="headerlink" title="创建几何体"></a>创建几何体</h3><p>const geometry &#x3D; new THREE.BoxGeometry(1, 1, 1);</p>
-<h3 id="创建材质"><a href="#创建材质" class="headerlink" title="创建材质"></a>创建材质</h3><p>const material &#x3D; new THREE.MeshBasicMaterial({ color: 0x53868B });</p>
-<h3 id="创建网格"><a href="#创建网格" class="headerlink" title="创建网格"></a>创建网格</h3><p>const cube &#x3D; new THREE.Mesh(geometry, material);</p>
-<h3 id="将网格添加到场景中"><a href="#将网格添加到场景中" class="headerlink" title="将网格添加到场景中"></a>将网格添加到场景中</h3><p>scene.add(cube);</p>
-<h3 id="设置相机位置"><a href="#设置相机位置" class="headerlink" title="设置相机位置"></a>设置相机位置</h3><p>camera.position.z &#x3D; 5;</p>
-<p>camera.position.y &#x3D; 2;</p>
-<p>camera.position.x &#x3D; 2;</p>
-<p>camera.lookAt(0, 0, 0);</p>
-<h3 id="添加世界坐标辅助器"><a href="#添加世界坐标辅助器" class="headerlink" title="添加世界坐标辅助器"></a>添加世界坐标辅助器</h3><p>const axesHelper &#x3D; new THREE.AxesHelper(5);</p>
-<p>scene.add(axesHelper);</p>
-<h3 id="渲染函数"><a href="#渲染函数" class="headerlink" title="渲染函数"></a>渲染函数</h3><p>function animate() {</p>
-<pre><code> requestAnimationFrame(animate);
- 
- cube.rotation.x += 0.01;(旋转)
-</code></pre>
-<p>​	 cube.rotation.y +&#x3D; 0.01;(旋转)</p>
-<p>​	 renderer.render(scene, camera);（渲染）</p>
-<p>}</p>
-<p>animate();</p>
-<style>
-* {
-  margin: 0;
-  padding: 0;
-}
-body 
+            <h1 id="Three-js：入门基础和简单应用"><a href="#Three-js：入门基础和简单应用" class="headerlink" title="Three.js：入门基础和简单应用"></a>Three.js：入门基础和简单应用</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>随着Web技术的不断发展，三维图形在网页中的应用越来越广泛。Three.js 作为一款强大的3D图形库，使得开发者可以在网页上创建复杂而精美的三维场景。本文旨在通过详细的讲解和实例，帮助读者掌握 Three.js 的基础知识，并逐步提升到中高级水平。</p>
+<h2 id="为什么选择Three-js？"><a href="#为什么选择Three-js？" class="headerlink" title="为什么选择Three.js？"></a>为什么选择Three.js？</h2><h3 id="易于入门"><a href="#易于入门" class="headerlink" title="易于入门"></a>易于入门</h3><p>相比于WebGL的复杂性，Three.js 提供了更高层次的抽象，使得开发者能够快速上手并创建3D内容。无论你是经验丰富的开发者还是刚接触3D编程的新手，Three.js 都能为你提供一个友好的起点。</p>
+<h3 id="强大的功能"><a href="#强大的功能" class="headerlink" title="强大的功能"></a>强大的功能</h3><p>Three.js 拥有广泛的功能，包括但不限于几何体、材质、灯光、相机、动画、粒子系统等。这些功能使得开发者能够创建从简单到复杂的各种3D场景。</p>
+<h3 id="社区支持"><a href="#社区支持" class="headerlink" title="社区支持"></a>社区支持</h3><p>作为开源项目，Three.js 拥有一个活跃的社区。你可以在GitHub上找到大量的资源、教程和示例代码。此外，社区成员也非常乐于帮助新手解决问题。</p>
+<h2 id="开始使用Three-js"><a href="#开始使用Three-js" class="headerlink" title="开始使用Three.js"></a>开始使用Three.js</h2><p>在开始使用 Three.js 之前，我们需要先安装它。你可以通过 npm 安装：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash复制代码npm install three</span><br></pre></td></tr></table></figure></div>
 
+<p>或者安装指定版本：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash复制代码npm install three@0.153</span><br></pre></td></tr></table></figure></div>
 
-<script setup>
-//导入threejs
-import * as THREE from "three";
-//导入轨道控制器
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-//导入lil.gui
-import { GUI } from "three/examples/jsm/libs/lil-gui.module.min.js";
+<h3 id="导入Three-js"><a href="#导入Three-js" class="headerlink" title="导入Three.js"></a>导入Three.js</h3><p>首先，我们需要在项目中导入 Three.js：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码import * as THREE from &quot;three&quot;;</span><br></pre></td></tr></table></figure></div>
 
+<h3 id="创建场景"><a href="#创建场景" class="headerlink" title="创建场景"></a>创建场景</h3><p>场景是所有3D对象的容器。在 Three.js 中，你可以通过以下代码创建一个场景：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码const scene = new THREE.Scene();</span><br></pre></td></tr></table></figure></div>
 
+<h3 id="创建相机"><a href="#创建相机" class="headerlink" title="创建相机"></a>创建相机</h3><p>相机就像人的眼睛，决定了我们从哪个角度看场景。Three.js 提供了多种相机类型，这里我们使用透视相机：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码const camera = new THREE.PerspectiveCamera(</span><br><span class="line">  45, // 视角</span><br><span class="line">  window.innerWidth / window.innerHeight, // 宽高比</span><br><span class="line">  0.1, // 近平面</span><br><span class="line">  1000 // 远平面</span><br><span class="line">);</span><br></pre></td></tr></table></figure></div>
 
-//创建场景
-const scene = new THREE.Scene();
+<h3 id="创建渲染器"><a href="#创建渲染器" class="headerlink" title="创建渲染器"></a>创建渲染器</h3><p>渲染器用于将场景和相机渲染成图像并显示在浏览器中。常用的渲染器是 WebGLRenderer：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码const renderer = new THREE.WebGL1Renderer();</span><br><span class="line">renderer.setSize(window.innerWidth, window.innerHeight);</span><br><span class="line">document.body.appendChild(renderer.domElement);</span><br></pre></td></tr></table></figure></div>
 
-//创建相机
-const camera = new THREE.PerspectiveCamera(
-  45, //视角
-  window.innerWidth / window.innerHeight, // 宽高比
-  0.1, //近平面
-  1000 //远平面
-);
+<h2 id="创建几何体和材质"><a href="#创建几何体和材质" class="headerlink" title="创建几何体和材质"></a>创建几何体和材质</h2><p>几何体和材质是构成3D对象的基本元素。在这个示例中，我们创建一个立方体：</p>
+<h3 id="创建几何体"><a href="#创建几何体" class="headerlink" title="创建几何体"></a>创建几何体</h3><p>几何体定义了对象的形状。常用的几何体包括立方体、球体、圆柱体等：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码const geometry = new THREE.BoxGeometry(1, 1, 1);</span><br></pre></td></tr></table></figure></div>
 
-// 创建渲染器
-const renderer = new THREE.WebGL1Renderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+<h3 id="创建材质"><a href="#创建材质" class="headerlink" title="创建材质"></a>创建材质</h3><p>材质定义了对象的表面属性，如颜色、纹理等：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码const material = new THREE.MeshBasicMaterial(&#123; color: 0x53868B &#125;);</span><br></pre></td></tr></table></figure></div>
 
-//创建几何体
-const geometry = new THREE.BoxGeometry(1, 1, 1);
-//创建材质
-const material = new THREE.MeshBasicMaterial({ color: 0x53868b });
-//创建几何体
-const geometryb = new THREE.SphereGeometry(2);
-//创建材质
-const materialb = new THREE.MeshBasicMaterial({ color: 0x00cd66 });
-const parentmaterial = new THREE.MeshBasicMaterial({ color: 0x00cd66 });
-//设置父元素材质为线框模式
-parentmaterial.wireframe = true;
-//创建网格
-let parentCube = new THREE.Mesh(geometry, parentmaterial); //父元素
-const cube = new THREE.Mesh(geometry, material);
-const ball = new THREE.Mesh(geometryb, materialb)
-parentCube.add(cube);
-parentCube.add(ball);
-parentCube.position.set(-2, 0, 0);
-parentCube.scale.set(1 / 2, 1 / 2, 1 / 2);
-//parentCube.rotation.x = Math.PI / 4;
+<h3 id="创建网格"><a href="#创建网格" class="headerlink" title="创建网格"></a>创建网格</h3><p>网格是几何体和材质的结合体，是Three.js中表示3D对象的核心概念：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码const cube = new THREE.Mesh(geometry, material);</span><br></pre></td></tr></table></figure></div>
 
-cube.position.set(5, 0, 0); //根据父元素的局部坐标，没有父元素即世界坐标
-ball.position.set(0, 3, 0); //根据父元素的局部坐标，没有父元素即世界坐标
-cube.scale.set(2, 2, 2); //相对于父元素的局部放大
-cube.rotation.x = Math.PI / 4; //绕x轴旋转,相对于父元素的局部旋转
+<h3 id="将网格添加到场景中"><a href="#将网格添加到场景中" class="headerlink" title="将网格添加到场景中"></a>将网格添加到场景中</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码scene.add(cube);</span><br></pre></td></tr></table></figure></div>
 
-//将网格添加到场景中
-//scene.add(cube);
-scene.add(parentCube);
+<h2 id="设置相机位置"><a href="#设置相机位置" class="headerlink" title="设置相机位置"></a>设置相机位置</h2><p>为了使相机能够看到立方体，我们需要设置相机的位置：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码camera.position.z = 5;</span><br><span class="line">camera.position.y = 2;</span><br><span class="line">camera.position.x = 2;</span><br><span class="line">camera.lookAt(0, 0, 0);</span><br></pre></td></tr></table></figure></div>
 
-//设置相机位置
-camera.position.z = 5;
-camera.position.y = 2;
-camera.position.x = 2;
-camera.lookAt(0, 0, 0);
+<h2 id="添加世界坐标辅助器"><a href="#添加世界坐标辅助器" class="headerlink" title="添加世界坐标辅助器"></a>添加世界坐标辅助器</h2><p>为了帮助我们理解三维空间中的方向，可以添加一个坐标辅助器：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码const axesHelper = new THREE.AxesHelper(5);</span><br><span class="line">scene.add(axesHelper);</span><br></pre></td></tr></table></figure></div>
 
-// 添加世界坐标辅助器
-const axesHelper = new THREE.AxesHelper(5);
-scene.add(axesHelper);
+<h2 id="渲染函数"><a href="#渲染函数" class="headerlink" title="渲染函数"></a>渲染函数</h2><p>最后，我们需要创建一个渲染循环，使得场景能够持续更新：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码function animate() &#123;</span><br><span class="line">  requestAnimationFrame(animate);</span><br><span class="line">  cube.rotation.x += 0.01; // 旋转</span><br><span class="line">  cube.rotation.y += 0.01; // 旋转</span><br><span class="line">  renderer.render(scene, camera); // 渲染</span><br><span class="line">&#125;</span><br><span class="line">animate();</span><br></pre></td></tr></table></figure></div>
 
-//添加轨道控制器
-const controls = new OrbitControls(camera, renderer.domElement);
-//const controls = new OrbitControls(camera, document.body);
-//设置带阻尼的惯性
-controls.enableDamping = true;
-//设置阻尼系数
-controls.dampingFactor = 0.01;
-//设置旋转速度
-controls.autoRotate = true;
+<h2 id="进阶功能"><a href="#进阶功能" class="headerlink" title="进阶功能"></a>进阶功能</h2><h3 id="导入轨道控制器"><a href="#导入轨道控制器" class="headerlink" title="导入轨道控制器"></a>导入轨道控制器</h3><p>轨道控制器允许用户通过鼠标控制相机，从而更好地查看3D场景。我们可以通过以下方式导入轨道控制器：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码import &#123; OrbitControls &#125; from &quot;three/examples/jsm/controls/OrbitControls.js&quot;;</span><br></pre></td></tr></table></figure></div>
 
-//渲染函数
-function animate() {
-  controls.update(); //轨道控制器每次更新
-  requestAnimationFrame(animate);
-  //旋转
-   cube.rotation.x += 0.05;
-  // cube.rotation.y += 0.01;
-  // cube.rotation.z += 0.01;
-  //渲染
-  renderer.render(scene, camera);
-}
-animate();
+<p>然后，在相机和渲染器初始化完成后，创建轨道控制器实例：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码const controls = new OrbitControls(camera, renderer.domElement);</span><br></pre></td></tr></table></figure></div>
 
-//窗口自适应
-//监听窗口变化
-window.addEventListener("resize", () => {
-  //重置渲染器宽高比
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  //重置相机宽高比
-  camera.aspect = window.innerWidth / window.innerHeight;
-  //更新相机投影矩阵
-  camera.updateProjectionMatrix();
-});
+<h3 id="使用GUI控件"><a href="#使用GUI控件" class="headerlink" title="使用GUI控件"></a>使用GUI控件</h3><p>lil.gui 是一个轻量级的图形用户界面库，常用于调试和调整参数。我们可以通过以下方式导入 lil.gui：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码import &#123; GUI &#125; from &quot;three/examples/jsm/libs/lil-gui.module.min.js&quot;;</span><br></pre></td></tr></table></figure></div>
 
-// //全屏按钮点击事件1
-// var btn = document.createElement("button");
-// btn.innerHTML = "点击全屏";
-// btn.style.position = "absolute";
-// btn.style.top = "10px";
-// btn.style.left = "10px";
-// btn.style.zIndex = "999";
-// btn.onclick = function () {
-//   //全屏
-//   document.body.requestFullscreen();//退出全屏按钮退出全屏
-//   //renderer.domElement.requestFullscreen();//esc退出全屏
-// };
-// document.body.appendChild(btn);
+<p>然后创建一个 GUI 实例并添加控制项：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码const gui = new GUI();</span><br><span class="line">const cubeFolder = gui.addFolder(&#x27;Cube&#x27;);</span><br><span class="line">cubeFolder.add(cube.rotation, &#x27;x&#x27;, 0, Math.PI * 2);</span><br><span class="line">cubeFolder.add(cube.rotation, &#x27;y&#x27;, 0, Math.PI * 2);</span><br><span class="line">cubeFolder.add(cube.rotation, &#x27;z&#x27;, 0, Math.PI * 2);</span><br><span class="line">cubeFolder.open();</span><br></pre></td></tr></table></figure></div>
 
-// //退出全屏按钮点击事件
-// var exitbtn = document.createElement("button");
-// exitbtn.innerHTML = "退出全屏";
-// exitbtn.style.position = "absolute";
-// exitbtn.style.top = "10px";
-// exitbtn.style.left = "100px";
-// exitbtn.style.zIndex = "999";
-// exitbtn.onclick = function () {
-//   //退出全屏
-//   document.exitFullscreen();
-// };
-// document.body.appendChild(exitbtn);
+<h3 id="使用灯光"><a href="#使用灯光" class="headerlink" title="使用灯光"></a>使用灯光</h3><p>灯光对3D场景的效果至关重要。Three.js 提供了多种灯光类型，如环境光、点光源、平行光等。我们可以通过以下方式添加环境光和点光源：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码const ambientLight = new THREE.AmbientLight(0x404040); // 环境光</span><br><span class="line">scene.add(ambientLight);</span><br><span class="line"></span><br><span class="line">const pointLight = new THREE.PointLight(0xffffff, 1, 100); // 点光源</span><br><span class="line">pointLight.position.set(5, 5, 5);</span><br><span class="line">scene.add(pointLight);</span><br></pre></td></tr></table></figure></div>
 
-//全屏按钮点击事件2
-let eventObj = {
-  Fullscreen: function () {
-    //全屏
-    document.body.requestFullscreen(); //退出全屏按钮退出全屏
-  },
-  ExitFullscreen: function () {
-    document.exitFullscreen();
-  },
-};
+<h3 id="使用纹理"><a href="#使用纹理" class="headerlink" title="使用纹理"></a>使用纹理</h3><p>纹理可以为3D对象添加真实感。我们可以通过 TextureLoader 加载纹理并应用到材质上：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码const textureLoader = new THREE.TextureLoader();</span><br><span class="line">const texture = textureLoader.load(&#x27;path/to/texture.jpg&#x27;);</span><br><span class="line">const materialWithTexture = new THREE.MeshBasicMaterial(&#123; map: texture &#125;);</span><br><span class="line">const texturedCube = new THREE.Mesh(geometry, materialWithTexture);</span><br><span class="line">scene.add(texturedCube);</span><br></pre></td></tr></table></figure></div>
 
-//创建GUI
-const gui = new GUI();
-
-//添加按钮
-gui.add(eventObj, "Fullscreen").name("全屏");
-gui.add(eventObj, "ExitFullscreen").name("退出全屏");
-
-//父元素线框模式
-gui.add(parentmaterial, "wireframe").name("父元素线框模式");
-
-//控制颜色
-let colorParams = {
-  cubeColor: "#ff0000",
-};
-
-gui.addColor(colorParams, "cubeColor").name("立方体颜色")
-  .onChange((val) => {
-    cube.material.color.set(val);
-  });
-
-//控制立方体的位置
-//gui.add(cube.position, "x", -10, 10).name("立方体x轴位置");
-let folder = gui.addFolder("立方体位置");
-folder
-  .add(cube.position, "x")
-  .min(-10)
-  .max(10)
-  .step(1)
-  .name("立方体x轴位置")
-  .onChange((val) => {
-    console.log("立方体x轴位置", val);
-  });
-folder
-  .add(cube.position, "y")
-  .min(-10)
-  .max(10)
-  .step(1)
-  .name("立方体y轴位置")
-  .onFinishChange((val) => {
-    console.log("立方体y轴位置", val);
-  });
-folder.add(cube.position, "z").min(-10).max(10).step(1).name("立方体z轴位置");
-</script>
-
-<template>
-  <div></div>
-</template>
-
-
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-}
-
-
-body {
-  width: 100vw;
-  height: 100vh;
-}
-
-canvas {
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-}
-</style>
-
-<p>{<br>  width: 100vw;<br>  height: 100vh;<br>}<br>canvas {<br>  display: block;<br>  position: fixed;<br>  left: 0;<br>  top: 0;<br>  width: 100vw;<br>  height: 100vh;<br>}<br></style></p>
-<script setup>
-//导入threejs
-import * as THREE from "three";
-//导入轨道控制器
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-//导入lil.gui
-import { GUI } from "three/examples/jsm/libs/lil-gui.module.min.js";
-
-
-//创建场景
-const scene = new THREE.Scene();
-
-//创建相机
-const camera = new THREE.PerspectiveCamera(
-  45, //视角
-  window.innerWidth / window.innerHeight, // 宽高比
-  0.1, //近平面
-  1000 //远平面
-);
-
-// 创建渲染器
-const renderer = new THREE.WebGL1Renderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
-
-//创建几何体1
-const cubegeometry = new THREE.BoxGeometry(1, 1, 1);
-//创建材质
-const cubematerial0 = new THREE.MeshBasicMaterial({ color: 0x53868b });
-const cubematerial1 = new THREE.MeshBasicMaterial({ color: 0xff0000 });
-const cubematerial2 = new THREE.MeshBasicMaterial({ color: 0x0000ff });
-const cubematerial3 = new THREE.MeshBasicMaterial({ color: 0xffff00 });
-const cubematerial4 = new THREE.MeshBasicMaterial({ color: 0x00ffff });
-const cubematerial5 = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-// //设置元素材质为线框模式
-// material.wireframe = true;
-//创建网格
-const cube = new THREE.Mesh(cubegeometry,
-  [cubematerial0, cubematerial1, cubematerial2, cubematerial3,
-    cubematerial4, cubematerial5]);
-cube.position.set(3, 0, 0); //世界坐标
-// cube.scale.set(1, 1, 1); //放大
-// cube.rotation.x = Math.PI / 2; //绕x轴旋转
-//将网格添加到场景中
-scene.add(cube);
-
-//创建几何体2
-const geometry = new THREE.BufferGeometry();
-
-//创建顶点数据，顶点是有序的，逆时针为正面
-// const vertices = new Float32Array([
-//   -1.0, -1.0, 0.0, 1.0, -1.0, 0.0, 1.0, 1.0, 0.0,
-//   1.0,1.0,0,-1.0,1.0,0,-1.0,-1.0,0,
-// ]);
-// //创建顶点属性
-// geometry.setAttribute("position", new THREE.BufferAttribute(vertices, 3));
-
-//使用索引绘制
-const vertices = new Float32Array([
-  -1.0, -1.0, 0.0, 1.0, -1.0, 0.0, 1.0, 1.0, 0.0, -1.0, 1.0, 0,
-]);
-//创建顶点属性
-geometry.setAttribute("position", new THREE.BufferAttribute(vertices, 3));
-//创建索引
-const indices = new Uint16Array([0, 1, 2, 2, 3, 0]);
-//创建索引属性
-geometry.setIndex(new THREE.BufferAttribute(indices, 1));
-
-//设置两个顶点组，形成2种材质
-geometry.addGroup(0, 3, 0);
-geometry.addGroup(3, 3, 1);
-
-//创建材质
-const material = new THREE.MeshBasicMaterial({
-  color: 0x00ff00,
-  side: THREE.DoubleSide,//两面都能看到
-  //wireframe: true,
-});
-const material1 = new THREE.MeshBasicMaterial({
-  color: 0xff0000,
-  side: THREE.DoubleSide,//两面都能看到
-  //wireframe: true,
-});
-
-const plane = new THREE.Mesh(geometry, [material,material1]);
-scene.add(plane);
-
-//设置相机位置
-camera.position.z = 5;
-camera.position.y = 2;
-camera.position.x = 2;
-camera.lookAt(0, 0, 0);
-
-// 添加世界坐标辅助器
-const axesHelper = new THREE.AxesHelper(5);
-scene.add(axesHelper);
-
-//添加轨道控制器
-const controls = new OrbitControls(camera, renderer.domElement);
-//设置带阻尼的惯性
-controls.enableDamping = true;
-//设置阻尼系数
-controls.dampingFactor = 0.01;
-//设置旋转速度
-//controls.autoRotate = true;
-
-//渲染函数
-function animate() {
-  controls.update(); //轨道控制器每次更新
-  requestAnimationFrame(animate);
-  //旋转
-  //cube.rotation.x += 0.01;
-  //cube.rotation.y += 0.01;
-  //cube.rotation.z += 0.01;
-  //渲染
-  renderer.render(scene, camera);
-}
-animate();
-
-//窗口自适应
-//监听窗口变化
-window.addEventListener("resize", () => {
-  //重置渲染器宽高比
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  //重置相机宽高比
-  camera.aspect = window.innerWidth / window.innerHeight;
-  //更新相机投影矩阵
-  camera.updateProjectionMatrix();
-});
-
-
-//全屏按钮点击事件2
-let eventObj = {
-  Fullscreen: function () {
-    //全屏
-    document.body.requestFullscreen(); //退出全屏按钮退出全屏
-  },
-  ExitFullscreen: function () {
-    document.exitFullscreen();
-  },
-};
-
-//创建GUI
-const gui = new GUI();
-
-//添加按钮
-gui.add(eventObj, "Fullscreen").name("全屏");
-gui.add(eventObj, "ExitFullscreen").name("退出全屏");
-
-//父元素线框模式
-gui.add(material, "wireframe").name("线框模式");
-
-
-</script>
-
-<template>
-  <div></div>
-</template>
-
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-}
-body {
-  width: 100vw;
-  height: 100vh;
-}
-canvas {
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-}
-</style>
-
-<script setup>
-//导入threejs
-import * as THREE from "three";
-//导入轨道控制器
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-//导入lil.gui
-import { GUI } from "three/examples/jsm/libs/lil-gui.module.min.js";
-//导入hdr加载器
-import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader.js";
-//导入gltf加载器
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-//导入draco解码器
-import {DRACOLoader} from "three/examples/jsm/loaders/DRACOLoader.js";
-
-
-
-//创建场景
-const scene = new THREE.Scene();
-
-//创建相机
-const camera = new THREE.PerspectiveCamera(
-  45, //视角
-  window.innerWidth / window.innerHeight, // 宽高比
-  0.1, //近平面
-  1000 //远平面
-);
-
-// 创建渲染器
-const renderer = new THREE.WebGL1Renderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
-
-//设置相机位置
-camera.position.z = 5;
-camera.position.y = 2;
-camera.position.x = 2;
-camera.lookAt(0, 0, 0);
-
-// 添加世界坐标辅助器
-const axesHelper = new THREE.AxesHelper(5);
-scene.add(axesHelper);
-
-//添加轨道控制器
-const controls = new OrbitControls(camera, renderer.domElement);
-//设置带阻尼的惯性
-controls.enableDamping = true;
-//设置阻尼系数
-controls.dampingFactor = 0.01;
-//设置旋转速度
-//controls.autoRotate = true;
-
-//渲染函数
-function animate() {
-  controls.update(); //轨道控制器每次更新
-  requestAnimationFrame(animate);
-  //旋转
-  //cube.rotation.x += 0.01;
-  //cube.rotation.y += 0.01;
-  //cube.rotation.z += 0.01;
-  //渲染
-  renderer.render(scene, camera);
-}
-animate();
-
-//窗口自适应
-//监听窗口变化
-window.addEventListener("resize", () => {
-  //重置渲染器宽高比
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  //重置相机宽高比
-  camera.aspect = window.innerWidth / window.innerHeight;
-  //更新相机投影矩阵
-  camera.updateProjectionMatrix();
-});
-
-let params = {};
-
-//创建GUI
-const gui = new GUI();
-//创建纹理加载器
-let textureLoader = new THREE.TextureLoader();
-//加载纹理
-let texture = textureLoader.load("./texture/1.jpg");
-//在感知光强度方面均匀分布的灰度条
-texture.colorSpace = THREE.SRGBColorSpace;
-//按发射光强度均匀分布的灰度条
-//texture.colorSpace = THREE.LinearSRGBColorSpace;
-
-//加载ao环境遮挡贴图
-let aoMap = textureLoader.load("./texture/2.PNG");
-//加载透明度贴图
-let alphaMap = textureLoader.load("./texture/3.jpg");
-//加载光照贴图
-let lightMap = textureLoader.load("./texture/4.jpeg");
-//设置高光贴图
-let specularMap = textureLoader.load(
-  ""
-);
-//rgbeLoader 加载hdr环境贴图
-let rgbeLoader = new RGBELoader();
-rgbeLoader.load("./texture/1.hdr", (envMap) => {
-  //设置球形贴图
-  envMap.mapping = THREE.EquirectangularReflectionMapping;
-  //设置环境贴图
-  scene.background = envMap;
-  //设置环境贴图
-  scene.environment = envMap;
-  //设置plane的环境贴图
-  planeMaterial.envMap = envMap;
-});
-
-let planeGeometry = new THREE.PlaneGeometry(1, 1);
-let planeMaterial = new THREE.MeshBasicMaterial({
-  color: 0xffffff,
-  map: texture,
-  //设置透明
-  transparent: true,
-  //设置ao贴图
-  aoMap: aoMap,
-  aoMapIntensity: 1,
-  //透明度贴图
-  //alphaMap:alphaMap,
-  //设置光照贴图
-  //lightMap:lightMap,
-  //设置高光贴图
-  specularMap: specularMap,
-  //光反射强度
-  //reflectivity: 0.1,
-});
-//planeMaterial.map = texture;
-
-let plane = new THREE.Mesh(planeGeometry, planeMaterial);
-scene.add(plane);
-
-gui.add(planeMaterial, "aoMapIntensity").min(0).max(1).name("ao强度");
-gui.add(texture, "colorSpace", {
-  sRGB: THREE.SRGBColorSpace,
-  Linear: THREE.LinearSRGBColorSpace,
-})
-  .onChange(() => {
-    texture.needsUpdate = true;
-  });
-
-//创建长方体
-// const boxGeometry = new THREE.BoxGeometry(1, 1, 100);
-// const boxMaterial = new THREE.MeshBasicMaterial({
-//   color: 0x00ffff,
-// });
-// const box = new THREE.Mesh(boxGeometry, boxMaterial);
-// scene.add(box);
-
-//创建场景fog
-//scene.fog = new THREE.Fog(0x999999, 0.1, 50);
-//创建场景指数fog
-// scene.fog = new THREE.FogExp2(0x999999, 0.1);
-// scene.background = new THREE.Color(0x999999);
-
-
-//实例化加载器gltf
-const gltfLoader = new GLTFLoader();
-//加载模型
-gltfLoader.load(
-  //模型路径
-  "./model/1.glb",
-  //加载完成回调
-  (gltf) => {
-    console.log(gltf);
-    scene.add(gltf.scene);
-  }
-);
-
-//实例化加载器draco(已压缩的gltf模型)
-const dracoLoader = new DRACOLoader();
-//设置draco路径
-dracoLoader.setDecoderPath("./draco/");
-//设置gltf加载器draco解码器
-gltfLoader.setDRACOLoader(dracoLoader);
-
-</script>
-
-<template>
-  <div></div>
-</template>
-
-
-
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-}
-
-
-
-body {
-  width: 100vw;
-  height: 100vh;
-}
-
-canvas {
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-}
-</style>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>通过本文的介绍，我们了解了 Three.js 的基本使用方法，包括如何创建场景、相机、渲染器以及几何体和材质。我们还探讨了如何使用轨道控制器、GUI控件、灯光和纹理来增强3D场景的效果。</p>
+<p>Three.js 是一款功能强大且易于使用的3D图形库，它不仅适合初学者快速入门，也能满足高级开发者的需求。希望本文能为你打开 Three.js 世界的大门，并激发你在网页上创建更多精彩的3D作品。</p>
+<p>如果你对 Three.js 有进一步的兴趣，建议参考官方文档和社区资源，这些都是学习和提高的宝贵资料。祝你在 Three.js 的旅程中收获满满！</p>
 
         </div>
 
@@ -1268,15 +691,15 @@ canvas {
         <li><strong>标题:</strong> </li>
         <li><strong>作者:</strong> Shirolin</li>
         <li><strong>创建于
-                :</strong> 2024-06-24 21:26:27</li>
+                :</strong> 2024-06-24 21:55:52</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-06-24 21:28:40
+                    :</strong> 2024-06-24 21:55:52
             </li>
         
         <li>
-            <strong>链接:</strong> https://redefine.ohevan.com/2024/06/24/Three.js入门/
+            <strong>链接:</strong> https://redefine.ohevan.com/2024/06/24/Threejs入门基础和简单应用/
         </li>
         <li>
             <strong>
@@ -1300,21 +723,6 @@ canvas {
 
         
             <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
-                
-                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-                        <a class="prev"
-                        rel="prev"
-                        href="/2024/06/24/Threejs%E5%85%A5%E9%97%A8(2)/"
-                        >
-                            <span class="left arrow-icon flex justify-center items-center">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item"></span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                        </a>
-                    </div>
                 
                 
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
@@ -1388,7 +796,7 @@ canvas {
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title"></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Three-js"><span class="nav-text">Three.js</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5threejs"><span class="nav-text">导入threejs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%9C%BA%E6%99%AF"><span class="nav-text">创建场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%9B%B8%E6%9C%BA"><span class="nav-text">创建相机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%B8%B2%E6%9F%93%E5%99%A8"><span class="nav-text">创建渲染器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%87%A0%E4%BD%95%E4%BD%93"><span class="nav-text">创建几何体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%9D%90%E8%B4%A8"><span class="nav-text">创建材质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%BD%91%E6%A0%BC"><span class="nav-text">创建网格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%86%E7%BD%91%E6%A0%BC%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%9C%BA%E6%99%AF%E4%B8%AD"><span class="nav-text">将网格添加到场景中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E7%9B%B8%E6%9C%BA%E4%BD%8D%E7%BD%AE"><span class="nav-text">设置相机位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E4%B8%96%E7%95%8C%E5%9D%90%E6%A0%87%E8%BE%85%E5%8A%A9%E5%99%A8"><span class="nav-text">添加世界坐标辅助器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%B2%E6%9F%93%E5%87%BD%E6%95%B0"><span class="nav-text">渲染函数</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Three-js%EF%BC%9A%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8"><span class="nav-text">Three.js：入门基础和简单应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9Three-js%EF%BC%9F"><span class="nav-text">为什么选择Three.js？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%98%93%E4%BA%8E%E5%85%A5%E9%97%A8"><span class="nav-text">易于入门</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%BA%E5%A4%A7%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="nav-text">强大的功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BE%E5%8C%BA%E6%94%AF%E6%8C%81"><span class="nav-text">社区支持</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8Three-js"><span class="nav-text">开始使用Three.js</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5Three-js"><span class="nav-text">导入Three.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%9C%BA%E6%99%AF"><span class="nav-text">创建场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%9B%B8%E6%9C%BA"><span class="nav-text">创建相机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%B8%B2%E6%9F%93%E5%99%A8"><span class="nav-text">创建渲染器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%87%A0%E4%BD%95%E4%BD%93%E5%92%8C%E6%9D%90%E8%B4%A8"><span class="nav-text">创建几何体和材质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%87%A0%E4%BD%95%E4%BD%93"><span class="nav-text">创建几何体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%9D%90%E8%B4%A8"><span class="nav-text">创建材质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%BD%91%E6%A0%BC"><span class="nav-text">创建网格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%86%E7%BD%91%E6%A0%BC%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%9C%BA%E6%99%AF%E4%B8%AD"><span class="nav-text">将网格添加到场景中</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E7%9B%B8%E6%9C%BA%E4%BD%8D%E7%BD%AE"><span class="nav-text">设置相机位置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E4%B8%96%E7%95%8C%E5%9D%90%E6%A0%87%E8%BE%85%E5%8A%A9%E5%99%A8"><span class="nav-text">添加世界坐标辅助器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%B2%E6%9F%93%E5%87%BD%E6%95%B0"><span class="nav-text">渲染函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E9%98%B6%E5%8A%9F%E8%83%BD"><span class="nav-text">进阶功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%E8%BD%A8%E9%81%93%E6%8E%A7%E5%88%B6%E5%99%A8"><span class="nav-text">导入轨道控制器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8GUI%E6%8E%A7%E4%BB%B6"><span class="nav-text">使用GUI控件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E7%81%AF%E5%85%89"><span class="nav-text">使用灯光</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E7%BA%B9%E7%90%86"><span class="nav-text">使用纹理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-text">结论</span></a></li></ol></li></ol>
 
     </div>
 </div>
@@ -1423,11 +831,11 @@ canvas {
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共 4 篇文章
+                        共 3 篇文章
                     </span>
                     
                         <span>
-                            共 9.7k 字
+                            共 6.8k 字
                         </span>
                     
                 </p>
