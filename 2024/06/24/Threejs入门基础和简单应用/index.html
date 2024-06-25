@@ -26,7 +26,7 @@
 <meta property="og:description" content="Three.js：入门基础和简单应用引言随着Web技术的不断发展，三维图形在网页中的应用越来越广泛。Three.js 作为一款强大的3D图形库，使得开发者可以在网页上创建复杂而精美的三维场景。本文旨在通过详细的讲解和实例，帮助读者掌握 Three.js 的基础知识，并逐步提升到中高级水平。 为什么选择Three.js？易于入门相比于WebGL的复杂性，Three.js 提供了更高层次的抽象，使得开">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-06-24T13:55:52.761Z">
-<meta property="article:modified_time" content="2024-06-24T13:55:52.761Z">
+<meta property="article:modified_time" content="2024-06-25T08:20:28.354Z">
 <meta property="article:author" content="Shirolin">
 <meta name="twitter:card" content="summary">
     
@@ -579,8 +579,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-06-24 21:55:52</span>
-            <span class="mobile">2024-06-24 21:55:52</span>
+            <span class="desktop">2024-06-25 16:20:28</span>
+            <span class="mobile">2024-06-25 16:20:28</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -591,12 +591,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.5k 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.4k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>6 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>5 分钟</span>
         </span>
     
     
@@ -620,61 +620,61 @@
 <h3 id="强大的功能"><a href="#强大的功能" class="headerlink" title="强大的功能"></a>强大的功能</h3><p>Three.js 拥有广泛的功能，包括但不限于几何体、材质、灯光、相机、动画、粒子系统等。这些功能使得开发者能够创建从简单到复杂的各种3D场景。</p>
 <h3 id="社区支持"><a href="#社区支持" class="headerlink" title="社区支持"></a>社区支持</h3><p>作为开源项目，Three.js 拥有一个活跃的社区。你可以在GitHub上找到大量的资源、教程和示例代码。此外，社区成员也非常乐于帮助新手解决问题。</p>
 <h2 id="开始使用Three-js"><a href="#开始使用Three-js" class="headerlink" title="开始使用Three.js"></a>开始使用Three.js</h2><p>在开始使用 Three.js 之前，我们需要先安装它。你可以通过 npm 安装：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash复制代码npm install three</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install three</span><br></pre></td></tr></table></figure></div>
 
 <p>或者安装指定版本：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash复制代码npm install three@0.153</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install three@0.153</span><br></pre></td></tr></table></figure></div>
 
 <h3 id="导入Three-js"><a href="#导入Three-js" class="headerlink" title="导入Three.js"></a>导入Three.js</h3><p>首先，我们需要在项目中导入 Three.js：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码import * as THREE from &quot;three&quot;;</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import * as THREE from &quot;three&quot;;</span><br></pre></td></tr></table></figure></div>
 
 <h3 id="创建场景"><a href="#创建场景" class="headerlink" title="创建场景"></a>创建场景</h3><p>场景是所有3D对象的容器。在 Three.js 中，你可以通过以下代码创建一个场景：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码const scene = new THREE.Scene();</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const scene = new THREE.Scene();</span><br></pre></td></tr></table></figure></div>
 
 <h3 id="创建相机"><a href="#创建相机" class="headerlink" title="创建相机"></a>创建相机</h3><p>相机就像人的眼睛，决定了我们从哪个角度看场景。Three.js 提供了多种相机类型，这里我们使用透视相机：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码const camera = new THREE.PerspectiveCamera(</span><br><span class="line">  45, // 视角</span><br><span class="line">  window.innerWidth / window.innerHeight, // 宽高比</span><br><span class="line">  0.1, // 近平面</span><br><span class="line">  1000 // 远平面</span><br><span class="line">);</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const camera = new THREE.PerspectiveCamera(</span><br><span class="line">  45, // 视角</span><br><span class="line">  window.innerWidth / window.innerHeight, // 宽高比</span><br><span class="line">  0.1, // 近平面</span><br><span class="line">  1000 // 远平面</span><br><span class="line">);</span><br></pre></td></tr></table></figure></div>
 
 <h3 id="创建渲染器"><a href="#创建渲染器" class="headerlink" title="创建渲染器"></a>创建渲染器</h3><p>渲染器用于将场景和相机渲染成图像并显示在浏览器中。常用的渲染器是 WebGLRenderer：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码const renderer = new THREE.WebGL1Renderer();</span><br><span class="line">renderer.setSize(window.innerWidth, window.innerHeight);</span><br><span class="line">document.body.appendChild(renderer.domElement);</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const renderer = new THREE.WebGL1Renderer();</span><br><span class="line">renderer.setSize(window.innerWidth, window.innerHeight);</span><br><span class="line">document.body.appendChild(renderer.domElement);</span><br></pre></td></tr></table></figure></div>
 
 <h2 id="创建几何体和材质"><a href="#创建几何体和材质" class="headerlink" title="创建几何体和材质"></a>创建几何体和材质</h2><p>几何体和材质是构成3D对象的基本元素。在这个示例中，我们创建一个立方体：</p>
 <h3 id="创建几何体"><a href="#创建几何体" class="headerlink" title="创建几何体"></a>创建几何体</h3><p>几何体定义了对象的形状。常用的几何体包括立方体、球体、圆柱体等：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码const geometry = new THREE.BoxGeometry(1, 1, 1);</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const geometry = new THREE.BoxGeometry(1, 1, 1);</span><br></pre></td></tr></table></figure></div>
 
 <h3 id="创建材质"><a href="#创建材质" class="headerlink" title="创建材质"></a>创建材质</h3><p>材质定义了对象的表面属性，如颜色、纹理等：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码const material = new THREE.MeshBasicMaterial(&#123; color: 0x53868B &#125;);</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const material = new THREE.MeshBasicMaterial(&#123; color: 0x53868B &#125;);</span><br></pre></td></tr></table></figure></div>
 
 <h3 id="创建网格"><a href="#创建网格" class="headerlink" title="创建网格"></a>创建网格</h3><p>网格是几何体和材质的结合体，是Three.js中表示3D对象的核心概念：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码const cube = new THREE.Mesh(geometry, material);</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const cube = new THREE.Mesh(geometry, material);</span><br></pre></td></tr></table></figure></div>
 
-<h3 id="将网格添加到场景中"><a href="#将网格添加到场景中" class="headerlink" title="将网格添加到场景中"></a>将网格添加到场景中</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码scene.add(cube);</span><br></pre></td></tr></table></figure></div>
+<h3 id="将网格添加到场景中"><a href="#将网格添加到场景中" class="headerlink" title="将网格添加到场景中"></a>将网格添加到场景中</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scene.add(cube);</span><br></pre></td></tr></table></figure></div>
 
 <h2 id="设置相机位置"><a href="#设置相机位置" class="headerlink" title="设置相机位置"></a>设置相机位置</h2><p>为了使相机能够看到立方体，我们需要设置相机的位置：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码camera.position.z = 5;</span><br><span class="line">camera.position.y = 2;</span><br><span class="line">camera.position.x = 2;</span><br><span class="line">camera.lookAt(0, 0, 0);</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">camera.position.z = 5;</span><br><span class="line">camera.position.y = 2;</span><br><span class="line">camera.position.x = 2;</span><br><span class="line">camera.lookAt(0, 0, 0);</span><br></pre></td></tr></table></figure></div>
 
 <h2 id="添加世界坐标辅助器"><a href="#添加世界坐标辅助器" class="headerlink" title="添加世界坐标辅助器"></a>添加世界坐标辅助器</h2><p>为了帮助我们理解三维空间中的方向，可以添加一个坐标辅助器：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码const axesHelper = new THREE.AxesHelper(5);</span><br><span class="line">scene.add(axesHelper);</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const axesHelper = new THREE.AxesHelper(5);</span><br><span class="line">scene.add(axesHelper);</span><br></pre></td></tr></table></figure></div>
 
 <h2 id="渲染函数"><a href="#渲染函数" class="headerlink" title="渲染函数"></a>渲染函数</h2><p>最后，我们需要创建一个渲染循环，使得场景能够持续更新：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码function animate() &#123;</span><br><span class="line">  requestAnimationFrame(animate);</span><br><span class="line">  cube.rotation.x += 0.01; // 旋转</span><br><span class="line">  cube.rotation.y += 0.01; // 旋转</span><br><span class="line">  renderer.render(scene, camera); // 渲染</span><br><span class="line">&#125;</span><br><span class="line">animate();</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function animate() &#123;</span><br><span class="line">  requestAnimationFrame(animate);</span><br><span class="line">  cube.rotation.x += 0.01; // 旋转</span><br><span class="line">  cube.rotation.y += 0.01; // 旋转</span><br><span class="line">  renderer.render(scene, camera); // 渲染</span><br><span class="line">&#125;</span><br><span class="line">animate();</span><br></pre></td></tr></table></figure></div>
 
 <h2 id="进阶功能"><a href="#进阶功能" class="headerlink" title="进阶功能"></a>进阶功能</h2><h3 id="导入轨道控制器"><a href="#导入轨道控制器" class="headerlink" title="导入轨道控制器"></a>导入轨道控制器</h3><p>轨道控制器允许用户通过鼠标控制相机，从而更好地查看3D场景。我们可以通过以下方式导入轨道控制器：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码import &#123; OrbitControls &#125; from &quot;three/examples/jsm/controls/OrbitControls.js&quot;;</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123; OrbitControls &#125; from &quot;three/examples/jsm/controls/OrbitControls.js&quot;;</span><br></pre></td></tr></table></figure></div>
 
 <p>然后，在相机和渲染器初始化完成后，创建轨道控制器实例：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码const controls = new OrbitControls(camera, renderer.domElement);</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const controls = new OrbitControls(camera, renderer.domElement);</span><br></pre></td></tr></table></figure></div>
 
 <h3 id="使用GUI控件"><a href="#使用GUI控件" class="headerlink" title="使用GUI控件"></a>使用GUI控件</h3><p>lil.gui 是一个轻量级的图形用户界面库，常用于调试和调整参数。我们可以通过以下方式导入 lil.gui：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码import &#123; GUI &#125; from &quot;three/examples/jsm/libs/lil-gui.module.min.js&quot;;</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123; GUI &#125; from &quot;three/examples/jsm/libs/lil-gui.module.min.js&quot;;</span><br></pre></td></tr></table></figure></div>
 
 <p>然后创建一个 GUI 实例并添加控制项：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码const gui = new GUI();</span><br><span class="line">const cubeFolder = gui.addFolder(&#x27;Cube&#x27;);</span><br><span class="line">cubeFolder.add(cube.rotation, &#x27;x&#x27;, 0, Math.PI * 2);</span><br><span class="line">cubeFolder.add(cube.rotation, &#x27;y&#x27;, 0, Math.PI * 2);</span><br><span class="line">cubeFolder.add(cube.rotation, &#x27;z&#x27;, 0, Math.PI * 2);</span><br><span class="line">cubeFolder.open();</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const gui = new GUI();</span><br><span class="line">const cubeFolder = gui.addFolder(&#x27;Cube&#x27;);</span><br><span class="line">cubeFolder.add(cube.rotation, &#x27;x&#x27;, 0, Math.PI * 2);</span><br><span class="line">cubeFolder.add(cube.rotation, &#x27;y&#x27;, 0, Math.PI * 2);</span><br><span class="line">cubeFolder.add(cube.rotation, &#x27;z&#x27;, 0, Math.PI * 2);</span><br><span class="line">cubeFolder.open();</span><br></pre></td></tr></table></figure></div>
 
 <h3 id="使用灯光"><a href="#使用灯光" class="headerlink" title="使用灯光"></a>使用灯光</h3><p>灯光对3D场景的效果至关重要。Three.js 提供了多种灯光类型，如环境光、点光源、平行光等。我们可以通过以下方式添加环境光和点光源：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码const ambientLight = new THREE.AmbientLight(0x404040); // 环境光</span><br><span class="line">scene.add(ambientLight);</span><br><span class="line"></span><br><span class="line">const pointLight = new THREE.PointLight(0xffffff, 1, 100); // 点光源</span><br><span class="line">pointLight.position.set(5, 5, 5);</span><br><span class="line">scene.add(pointLight);</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const ambientLight = new THREE.AmbientLight(0x404040); // 环境光</span><br><span class="line">scene.add(ambientLight);</span><br><span class="line"></span><br><span class="line">const pointLight = new THREE.PointLight(0xffffff, 1, 100); // 点光源</span><br><span class="line">pointLight.position.set(5, 5, 5);</span><br><span class="line">scene.add(pointLight);</span><br></pre></td></tr></table></figure></div>
 
 <h3 id="使用纹理"><a href="#使用纹理" class="headerlink" title="使用纹理"></a>使用纹理</h3><p>纹理可以为3D对象添加真实感。我们可以通过 TextureLoader 加载纹理并应用到材质上：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码const textureLoader = new THREE.TextureLoader();</span><br><span class="line">const texture = textureLoader.load(&#x27;path/to/texture.jpg&#x27;);</span><br><span class="line">const materialWithTexture = new THREE.MeshBasicMaterial(&#123; map: texture &#125;);</span><br><span class="line">const texturedCube = new THREE.Mesh(geometry, materialWithTexture);</span><br><span class="line">scene.add(texturedCube);</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const textureLoader = new THREE.TextureLoader();</span><br><span class="line">const texture = textureLoader.load(&#x27;path/to/texture.jpg&#x27;);</span><br><span class="line">const materialWithTexture = new THREE.MeshBasicMaterial(&#123; map: texture &#125;);</span><br><span class="line">const texturedCube = new THREE.Mesh(geometry, materialWithTexture);</span><br><span class="line">scene.add(texturedCube);</span><br></pre></td></tr></table></figure></div>
 
 <h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>通过本文的介绍，我们了解了 Three.js 的基本使用方法，包括如何创建场景、相机、渲染器以及几何体和材质。我们还探讨了如何使用轨道控制器、GUI控件、灯光和纹理来增强3D场景的效果。</p>
 <p>Three.js 是一款功能强大且易于使用的3D图形库，它不仅适合初学者快速入门，也能满足高级开发者的需求。希望本文能为你打开 Three.js 世界的大门，并激发你在网页上创建更多精彩的3D作品。</p>
@@ -693,7 +693,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-06-24 21:55:52
+                    :</strong> 2024-06-25 16:20:28
             </li>
         
         <li>
@@ -833,7 +833,7 @@
                     </span>
                     
                         <span>
-                            共 6.7k 字
+                            共 6.6k 字
                         </span>
                     
                 </p>
