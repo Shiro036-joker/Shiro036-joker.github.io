@@ -18,15 +18,15 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="docker搭建网络靶场dvwa sqlilabs uploadlabs pikachu -&gt;php src 渗透python   靶场 django，flask，fastapijava  s2  springboot   webgoatgo  gin docker search  dvwa(靶场名称) docker pull sagikazarmark&#x2F;dvwa(具体版本) do">
+        <meta name="description" content="Docker搭建网络靶场指南一、引言​    随着网络安全技术的不断发展，网络靶场作为一种模拟真实网络环境、用于测试网络安全技术的平台，越来越受到重视。Docker作为一种轻量级的容器化技术，为网络靶场的搭建提供了极大的便利。本文将详细介绍如何使用Docker搭建包含dvwa、sqlilabs、uploadlabs、pikachu、php源码、渗透测试靶场，以及django、flask、fasta">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="https://shiro036-joker.github.io/2024/06/28/%E7%BD%91%E7%BB%9C%E9%9D%B6%E5%9C%BA/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="docker搭建网络靶场dvwa sqlilabs uploadlabs pikachu -&gt;php src 渗透python   靶场 django，flask，fastapijava  s2  springboot   webgoatgo  gin docker search  dvwa(靶场名称) docker pull sagikazarmark&#x2F;dvwa(具体版本) do">
+<meta property="og:description" content="Docker搭建网络靶场指南一、引言​    随着网络安全技术的不断发展，网络靶场作为一种模拟真实网络环境、用于测试网络安全技术的平台，越来越受到重视。Docker作为一种轻量级的容器化技术，为网络靶场的搭建提供了极大的便利。本文将详细介绍如何使用Docker搭建包含dvwa、sqlilabs、uploadlabs、pikachu、php源码、渗透测试靶场，以及django、flask、fasta">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-06-28T01:29:53.024Z">
-<meta property="article:modified_time" content="2024-06-21T13:34:16.191Z">
+<meta property="article:modified_time" content="2024-06-28T09:33:54.493Z">
 <meta property="article:author" content="Shirolin">
 <meta name="twitter:card" content="summary">
     
@@ -581,8 +581,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-06-21 21:34:16</span>
-            <span class="mobile">2024-06-21 21:34:16</span>
+            <span class="desktop">2024-06-28 17:33:54</span>
+            <span class="mobile">2024-06-28 17:33:54</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -593,12 +593,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>161 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.1k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>4 分钟</span>
         </span>
     
     
@@ -617,24 +617,65 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="docker搭建"><a href="#docker搭建" class="headerlink" title="docker搭建"></a>docker搭建</h1><h6 id="网络靶场"><a href="#网络靶场" class="headerlink" title="网络靶场"></a>网络靶场</h6><p>dvwa sqlilabs uploadlabs pikachu -&gt;php src 渗透<br>python   靶场 django，flask，fastapi<br>java  s2  springboot   webgoat<br>go  gin</p>
-<p>docker search  dvwa(靶场名称)</p>
-<p>docker pull sagikazarmark&#x2F;dvwa(具体版本)</p>
-<p>docker images(查看镜像是否下载成功)</p>
-<p>docker run -d -p 32505:80 sagikazarmark&#x2F;dvwa(设置端口)</p>
-<p>ifconfig（查看）</p>
-<p>docker ps -a（查看端口）</p>
-<p>docker stop 095(CONTAINER ID 前三位)&#x2F;&#x2F;关闭</p>
-<p>docker start 095(CONTAINER ID 前三位)&#x2F;&#x2F;启动</p>
-<p>docker rm -f 095(CONTAINER ID 前三位)&#x2F;&#x2F;删除</p>
-<p>cd vulhub  </p>
-<p>cd tomcat (靶场环境)</p>
-<p>ls (列出里面的漏洞编号)</p>
-<p>cd CVE-2020-1938(漏洞编号文件目录下)</p>
+            <h1 id="Docker搭建网络靶场指南"><a href="#Docker搭建网络靶场指南" class="headerlink" title="Docker搭建网络靶场指南"></a><strong>Docker搭建网络靶场指南</strong></h1><h2 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a><strong>一、引言</strong></h2><p>​    随着网络安全技术的不断发展，网络靶场作为一种模拟真实网络环境、用于测试网络安全技术的平台，越来越受到重视。Docker作为一种轻量级的容器化技术，为网络靶场的搭建提供了极大的便利。本文将详细介绍如何使用Docker搭建包含dvwa、sqlilabs、uploadlabs、pikachu、php源码、渗透测试靶场，以及django、flask、fastapi等Python靶场，s2、springboot、webgoat等Java靶场，和gin等Go语言靶场的网络靶场。</p>
+<h2 id="二、Docker环境准备"><a href="#二、Docker环境准备" class="headerlink" title="二、Docker环境准备"></a><strong>二、Docker环境准备</strong></h2><ol>
+<li><h3 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a><strong>安装Docker</strong></h3></li>
+</ol>
+<p>首先，你需要在你的服务器上安装Docker。安装过程因操作系统而异，但通常可以通过包管理器（如apt、yum等）或Docker官方提供的安装脚本进行安装。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker search  dvwa(靶场名称)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull sagikazarmark/dvwa(具体版本)</span><br></pre></td></tr></table></figure></div>
+
+
+
+<ol start="2">
+<li><h3 id="配置Docker镜像加速"><a href="#配置Docker镜像加速" class="headerlink" title="配置Docker镜像加速"></a><strong>配置Docker镜像加速</strong></h3></li>
+</ol>
+<p>由于Docker默认从国外服务器下载镜像，速度较慢。为了提高下载速度，可以配置Docker镜像加速。常见的镜像加速服务有阿里云、DaoCloud等。</p>
+<h2 id="三、Docker搭建网络靶场"><a href="#三、Docker搭建网络靶场" class="headerlink" title="三、Docker搭建网络靶场"></a><strong>三、Docker搭建网络靶场</strong></h2><ol>
+<li><h3 id="dvwa、sqlilabs、uploadlabs、pikachu搭建"><a href="#dvwa、sqlilabs、uploadlabs、pikachu搭建" class="headerlink" title="dvwa、sqlilabs、uploadlabs、pikachu搭建"></a><strong>dvwa、sqlilabs、uploadlabs、pikachu搭建</strong></h3><ul>
+<li><p><strong>搜索并拉取镜像</strong><br>使用<code>docker search</code>命令搜索你需要的靶场镜像，如<code>docker search dvwa</code>。然后使用<code>docker pull</code>命令拉取你需要的镜像版本，如<code>docker pull sagikazarmark/dvwa</code>。</p>
+</li>
+<li><p><strong>查看镜像</strong><br>使用<code>docker images</code>命令查看已经下载的镜像。</p>
+</li>
+<li><p><strong>运行容器</strong><br>使用<code>docker run</code>命令运行容器，并通过<code>-d</code>参数让容器在后台运行，<code>-p</code>参数设置端口映射。例如，<code>docker run -d -p 32505:80 sagikazarmark/dvwa</code>表示将宿主机的32505端口映射到容器的80端口。</p>
+</li>
+<li><p><strong>查看并操作容器</strong><br>使用<code>docker ps -a</code>命令查看正在运行和已经停止的容器。使用<code>docker stop</code>命令停止容器，<code>docker start</code>命令启动容器，<code>docker rm</code>命令删除容器。</p>
+<p>例：</p>
+<ol>
+<li><p><strong>docker ps -a</strong></p>
+<p>用于列出所有的Docker容器，无论它们是正在运行还是已经停止。<code>-a</code> 参数是“all”的缩写，表示显示所有容器。但是，这个命令本身<strong>并不直接显示端口信息</strong>。要查看端口信息，您通常需要查看容器列表中的“PORTS”列，它显示了宿主机的端口与容器端口的映射关系。</p>
+</li>
+<li><p><strong>docker stop 095 (CONTAINER ID 前三位)</strong></p>
+<p>用于停止正在运行的Docker容器。如果“095”是容器的完整ID的前缀，并且该前缀是唯一的（即没有其他容器以“095”开始），那么这个命令会工作。但是，如果有多个容器以“095”开始，那么您可能会遇到问题。通常，最好使用完整的容器ID或名称来确保准确性。</p>
+</li>
+<li><p><strong>docker start 095 (CONTAINER ID 前三位)</strong></p>
+<p>用于启动已经停止的Docker容器。确保您使用的ID或名称是唯一的，以避免意外地启动错误的容器。</p>
+</li>
+<li><p><strong>docker rm -f 095 (CONTAINER ID 前三位)</strong></p>
+<p>用于强制删除Docker容器。<code>-f</code> 参数是“force”的缩写，表示强制删除容器，即使它正在运行。请注意，强制删除正在运行的容器可能会导致数据丢失，因此在使用此命令时要格外小心。</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><h3 id="使用vulhub搭建其他靶场"><a href="#使用vulhub搭建其他靶场" class="headerlink" title="使用vulhub搭建其他靶场"></a><strong>使用vulhub搭建其他靶场</strong></h3><p>vulhub是一个开源的漏洞环境集合，包含了大量常见漏洞的Docker-Compose部署脚本。</p>
+<ul>
+<li><p><strong>下载vulhub</strong><br>从GitHub或其他地方下载vulhub代码。</p>
+</li>
+<li><p><strong>进入目标漏洞目录</strong><br>使用<code>cd</code>命令进入你需要的漏洞环境目录，如<code>cd tomcat/CVE-2020-1938</code>。</p>
+</li>
+<li><p><strong>列出里面的漏洞编号</strong></p>
 <p>ls</p>
-<p><strong>docker-compose up -d（启动）</strong></p>
-<p>docker ps -a（查看端口）</p>
-<p>docker-compose down</p>
+</li>
+<li><p><strong>启动环境</strong><br>使用<code>docker-compose up -d</code>命令启动环境。<code>-d</code>参数表示在后台运行。</p>
+</li>
+<li><p><strong>查看并操作环境</strong><br>使用<code>docker ps -a</code>命令查看正在运行和已经停止的容器。使用<code>docker-compose down</code>命令停止并删除环境。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a><strong>四、总结</strong></h2><p>​     通过Docker技术，我们可以轻松地搭建包含各种语言和各种框架的网络靶场。这不仅为我们提供了一个安全的、可控的测试环境，也大大提高了我们测试网络安全技术的效率。在搭建过程中，我们需要注意配置Docker镜像加速以提高下载速度，同时注意选择合适的靶场镜像版本以确保环境的稳定性。同时，vulhub等开源项目为我们提供了大量的漏洞环境部署脚本，大大简化了靶场搭建的过程。</p>
 
         </div>
 
@@ -649,7 +690,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-06-21 21:34:16
+                    :</strong> 2024-06-28 17:33:54
             </li>
         
         <li>
@@ -678,11 +719,26 @@
         
             <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
                 
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2024/06/28/%E8%BF%9C%E6%8E%A7%E6%9C%A8%E9%A9%AC/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item"></span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
                 
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/2024/06/28/%E8%BF%9C%E6%8E%A7%E6%9C%A8%E9%A9%AC/"
+                        href="/2024/06/28/%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/"
                         >
                             <span class="title flex justify-center items-center">
                                 <span class="post-nav-title-item"></span>
@@ -750,7 +806,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title"></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#docker%E6%90%AD%E5%BB%BA"><span class="nav-text">docker搭建</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker%E6%90%AD%E5%BB%BA%E7%BD%91%E7%BB%9C%E9%9D%B6%E5%9C%BA%E6%8C%87%E5%8D%97"><span class="nav-text">Docker搭建网络靶场指南</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%BC%95%E8%A8%80"><span class="nav-text">一、引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81Docker%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-text">二、Docker环境准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Docker"><span class="nav-text">安装Docker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEDocker%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F"><span class="nav-text">配置Docker镜像加速</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81Docker%E6%90%AD%E5%BB%BA%E7%BD%91%E7%BB%9C%E9%9D%B6%E5%9C%BA"><span class="nav-text">三、Docker搭建网络靶场</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dvwa%E3%80%81sqlilabs%E3%80%81uploadlabs%E3%80%81pikachu%E6%90%AD%E5%BB%BA"><span class="nav-text">dvwa、sqlilabs、uploadlabs、pikachu搭建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8vulhub%E6%90%AD%E5%BB%BA%E5%85%B6%E4%BB%96%E9%9D%B6%E5%9C%BA"><span class="nav-text">使用vulhub搭建其他靶场</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%80%BB%E7%BB%93"><span class="nav-text">四、总结</span></a></li></ol></li></ol>
 
     </div>
 </div>
@@ -789,7 +845,7 @@
                     </span>
                     
                         <span>
-                            共 10.8k 字
+                            共 11.7k 字
                         </span>
                     
                 </p>
