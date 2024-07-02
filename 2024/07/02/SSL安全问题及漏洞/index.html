@@ -13,20 +13,24 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://shiro036-joker.github.io/board/"/>
+    <link rel="canonical" href="https://shiro036-joker.github.io/2024/07/02/ssl安全问题及漏洞/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta property="og:type" content="website">
-<meta property="og:title" content="board">
-<meta property="og:url" content="https://shiro036-joker.github.io/board/index.html">
+        <meta name="description" content="SSL安全问题及漏洞  SSL是一个安全传输协议，其作用是身份验证，附带的是数据加密。通俗的来说就是用来加密传输服务器与网页之间的数据，在传输中保证数据的不被窃取，防止有人窥探你的敏感信息。 一、什么是SSL？SSL &#x3D;Secure Socket Layer，是一个安全传输协议，位于TCP&#x2F;IP协议与各种应用层协议之间。它为Netscape所研发，用以保障在Internet上数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://shiro036-joker.github.io/2024/07/02/SSL%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%8F%8A%E6%BC%8F%E6%B4%9E/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="SSL安全问题及漏洞  SSL是一个安全传输协议，其作用是身份验证，附带的是数据加密。通俗的来说就是用来加密传输服务器与网页之间的数据，在传输中保证数据的不被窃取，防止有人窥探你的敏感信息。 一、什么是SSL？SSL &#x3D;Secure Socket Layer，是一个安全传输协议，位于TCP&#x2F;IP协议与各种应用层协议之间。它为Netscape所研发，用以保障在Internet上数">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-06-19T07:47:38.000Z">
-<meta property="article:modified_time" content="2024-06-19T07:47:38.842Z">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/02/SSL%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%8F%8A%E6%BC%8F%E6%B4%9E/1c30874d-062a-4945-bfb2-c36c1631b518.jpg">
+<meta property="article:published_time" content="2024-07-02T13:47:51.029Z">
+<meta property="article:modified_time" content="2024-07-02T14:45:28.618Z">
 <meta property="article:author" content="Shirolin">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://shiro036-joker.github.io/2024/07/02/SSL%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%8F%8A%E6%BC%8F%E6%B4%9E/1c30874d-062a-4945-bfb2-c36c1631b518.jpg">
     
     
     <!--- Icon Part-->
@@ -37,8 +41,6 @@
     <!--- Page Info-->
     
     <title>
-        
-            board -
         
         Shiro Scale
     </title>
@@ -547,19 +549,228 @@
             <div class="main-content">
 
                 
-                    <div class="page-template-container">
-    
-    
-    
-    <div class="page-template-content markdown-body">
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3"></h1>
+                </div>
+            
+            </div>
+
         
-            <h1>board</h1>
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/logo.svg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">Shirolin</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-07-02 21:47:51</span>
+        <span class="mobile">2024-07-02 21:47:51</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-07-02 22:45:28</span>
+            <span class="mobile">2024-07-02 22:45:28</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>2.8k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>10 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <h1 id="SSL安全问题及漏洞"><a href="#SSL安全问题及漏洞" class="headerlink" title="SSL安全问题及漏洞"></a>SSL安全问题及漏洞</h1><p>  SSL是一个安全传输协议，其作用是身份验证，附带的是数据加密。通俗的来说就是用来加密传输服务器与网页之间的数据，在传输中保证数据的不被窃取，防止有人窥探你的敏感信息。</p>
+<h2 id="一、什么是SSL？"><a href="#一、什么是SSL？" class="headerlink" title="一、什么是SSL？"></a>一、什么是SSL？</h2><p><strong>SSL &#x3D;Secure Socket Layer</strong>，是一个安全传输协议，位于TCP&#x2F;IP协议与各种应用层协议之间。它为Netscape所研发，用以保障在Internet上数据传输之安全，利用数据加密(Encryption)技术，可确保数据在网络上之传输过程中不会被截取。它已被广泛地用于Web浏览器与服务器之间的身份认证和加密数据传输。SSL协议位于TCP&#x2F;IP协议与各种应用层协议之间，为数据通讯提供安全支持。</p>
+<h2 id="二、SSL的重要性"><a href="#二、SSL的重要性" class="headerlink" title="二、SSL的重要性"></a>二、SSL的重要性</h2><p>它的设计目的主要是提供以下服务：1、认证用户和服务器，确保数据发送到正确的客户机和服务器；2、加密数据以防止数据中途被窃取；3、维护数据的完整性，确保数据在传输过程中不被改变。从他提供的服务，就知道它的重要性了；4、不可否认服务，从技术上保证网站和用户对其行为的认可；5、公正服务，通过技术手段证明数据的有效性和正确性。SSL证书的作用是身份验证，附带的是数据加密。通俗的来说就是用来加密传输服务器与网页之间的数据，在传输中保证数据的不被窃取，防止有人窥探你的敏感信息。</p>
+<h2 id="三、SSL常见安全问题"><a href="#三、SSL常见安全问题" class="headerlink" title="三、SSL常见安全问题"></a>三、SSL常见安全问题</h2><img lazyload src="/images/loading.svg" data-src="/2024/07/02/SSL%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%8F%8A%E6%BC%8F%E6%B4%9E/1c30874d-062a-4945-bfb2-c36c1631b518.jpg" class title="1c30874d-062a-4945-bfb2-c36c1631b518">
+
+<p>通过分析SSL握手过程，可以看到有 SSL的工作过程主要涉及客户端、服务器、CA证书服务器，大致来说，安全问题主要涉及CA证书服务器安全问题、服务器的私钥安全问题，以及经SSL代码实现的安全问题。CA证书服务器安全问题主要是被爆破导致证书被窃取，CA证书服务器拒绝服务问题等。服务器私钥安全问题，主要是私钥丢失的问题，比如把私钥放github上。SSL代码实现问题，主要是各种SSL实现库的问题，最经典的就是openSSL的漏洞。所以类似openSSL这种公共的加密库的安全应该持续关注， 该升级升级，该打补丁的打补丁。</p>
+<h2 id="四、解决这些SSL常见安全问题的有效方法"><a href="#四、解决这些SSL常见安全问题的有效方法" class="headerlink" title="四、解决这些SSL常见安全问题的有效方法"></a>四、解决这些SSL常见安全问题的有效方法</h2><p>推荐使用 libressl（OpenSSL加密软件库的一个分支）。针对证书服务的安全问题，建议最后在选择证书的时候，看看CA提供商的黑历史。开发者和公司要持续关注SSL爆出的安全问题，提高自身的安全意思，注意证书的保护。个人的话，需要提高保护自己敏感信息的意识，要注意非法证书，不要直接就点确认。</p>
+<h2 id="五、开发者具体如何注重SSL安全"><a href="#五、开发者具体如何注重SSL安全" class="headerlink" title="五、开发者具体如何注重SSL安全"></a>五、开发者具体如何注重SSL安全</h2><p>其实最根本的就是要有使用SSL的意识，尤其是登录、输入密码，还有检验升级的地方。因为检验升级的地方不做SSL，可以挟持给用户下载一个含木马的安装包（安卓），或者诱导用户下载到其他的软件（安卓苹果）。然后再谈技术层面的问题，首先要检验SSL证书，不要忽略SSL错误，服务端启用htst。注意保护SSL的私钥不要丢失，丢了要及时去CA申请注销&#x2F;吊销这张证书。</p>
+<h2 id="六、SSL-TLS常见的几种漏洞以及过往的攻击方式"><a href="#六、SSL-TLS常见的几种漏洞以及过往的攻击方式" class="headerlink" title="六、SSL&#x2F;TLS常见的几种漏洞以及过往的攻击方式"></a>六、SSL&#x2F;TLS常见的几种漏洞以及过往的攻击方式</h2><h2 id="Export-加密算法"><a href="#Export-加密算法" class="headerlink" title="Export 加密算法"></a>Export 加密算法</h2><p>Export是一种老旧的弱加密算法，是被美国法律标示为可出口的加密算法，其限制对称加密最大强度位数为40位，限制密钥交换强度为最大512位。这是一个现今被强制丢弃的算法。</p>
+<h2 id="Downgrade（降级攻击）"><a href="#Downgrade（降级攻击）" class="headerlink" title="Downgrade（降级攻击）"></a>Downgrade（降级攻击）</h2><p>降级攻击是一种对计算机系统或者通信协议的攻击，在降级攻击中，攻击者故意使系统放弃新式、安全性高的工作方式，反而使用为向下兼容而准备的老式、安全性差的工作方式，降级攻击常被用于中间人攻击，讲加密的通信协议安全性大幅削弱，得以进行原本不可能做到的攻击。 在现代的回退防御中，使用单独的信号套件来指示自愿降级行为，需要理解该信号并支持更高协议版本的服务器来终止协商，该套件是TLS_FALLBACK_SCSV(0x5600)</p>
+<h2 id="MITM（中间人攻击）"><a href="#MITM（中间人攻击）" class="headerlink" title="MITM（中间人攻击）"></a>MITM（中间人攻击）</h2><p>MITM(Man-in-the-MiddleAttack) ，是指攻击者与通讯的两端分别创建独立的联系，并交换其所有收到的数据，使通讯的两端认为他们正在通过一个私密的连接与对方直接对话，但事实上整个对话都被攻击者完全控制，在中间人攻击中，攻击者可以拦截通讯双方的通话并插入新的内容。一个中间人攻击能成功的前提条件是攻击者能够将自己伪装成每个参与会话的终端，并且不被其他终端识破。</p>
+<h2 id="BEAST（野兽攻击）"><a href="#BEAST（野兽攻击）" class="headerlink" title="BEAST（野兽攻击）"></a>BEAST（野兽攻击）</h2><p>BEAST(CVE-2011-3389) BEAST是一种明文攻击，通过从SSL&#x2F;TLS加密的会话中获取受害者的COOKIE值（通过进行一次会话劫持攻击），进而篡改一个加密算法的 CBC（密码块链）的模式以实现攻击目录，其主要针对TLS1.0和更早版本的协议中的对称加密算法CBC模式。</p>
+<h2 id="RC4-加密算法"><a href="#RC4-加密算法" class="headerlink" title="RC4 加密算法"></a>RC4 加密算法</h2><p>由于早期的BEAST野兽攻击而采用的加密算法，RC4算法能减轻野兽攻击的危害，后来随着客户端版本升级，有了客户端缓解方案（Chrome 和 Firefox 提供了缓解方案），野兽攻击就不是什么大问题了。同样这是一个现今被强制丢弃的算法。</p>
+<h2 id="CRIME（罪恶攻击）"><a href="#CRIME（罪恶攻击）" class="headerlink" title="CRIME（罪恶攻击）"></a>CRIME（罪恶攻击）</h2><p>CRIME(CVE-2012-4929)，全称Compression Ratio Info-leak Made Easy，这是一种因SSL压缩造成的安全隐患，通过它可窃取启用数据压缩特性的HTTPS或SPDY协议传输的私密Web Cookie。在成功读取身份验证Cookie后，攻击者可以实行会话劫持和发动进一步攻击。</p>
+<p>SSL 压缩在下述版本是默认关闭的： nginx 1.1.6及更高&#x2F;1.0.9及更高（如果使用了 OpenSSL 1.0.0及更高）， nginx 1.3.2及更高&#x2F;1.2.2及更高（如果使用较旧版本的 OpenSSL）。</p>
+<p>如果你使用一个早期版本的 nginx 或 OpenSSL，而且你的发行版没有向后移植该选项，那么你需要重新编译没有一个 ZLIB 支持的 OpenSSL。这会禁止 OpenSSL 使用 DEFLATE 压缩方式。如果你禁用了这个，你仍然可以使用常规的 HTML DEFLATE 压缩。</p>
+<h2 id="Heartbleed（心血漏洞）"><a href="#Heartbleed（心血漏洞）" class="headerlink" title="Heartbleed（心血漏洞）"></a>Heartbleed（心血漏洞）</h2><p>Heartbleed(CVE-2014-0160) 是一个于2014年4月公布的 OpenSSL 加密库的漏洞，它是一个被广泛使用的传输层安全（TLS）协议的实现。无论是服务器端还是客户端在 TLS 中使用了有缺陷的 OpenSSL，都可以被利用该缺陷。由于它是因 DTLS 心跳扩展（RFC 6520）中的输入验证不正确（缺少了边界检查）而导致的，所以该漏洞根据“心跳”而命名。这个漏洞是一种缓存区超读漏洞，它可以读取到本不应该读取的数据。如果使用带缺陷的Openssl版本，无论是服务器还是客户端，都可能因此受到攻击。</p>
+<h2 id="POODLE漏洞（卷毛狗攻击）"><a href="#POODLE漏洞（卷毛狗攻击）" class="headerlink" title="POODLE漏洞（卷毛狗攻击）"></a>POODLE漏洞（卷毛狗攻击）</h2><p>2014年10月14号由Google发现的POODLE漏洞，全称是Padding Oracle On Downloaded Legacy Encryption vulnerability，又被称为“贵宾犬攻击”（CVE-2014-3566），POODLE漏洞只对CBC模式的明文进行了身份验证，但是没有对填充字节进行完整性验证，攻击者窃取采用SSL3.0版加密通信过程中的内容，对填充字节修改并且利用预置填充来恢复加密内容，以达到攻击目的。</p>
+<h2 id="TLS-POODLE（TLS卷毛狗攻击）"><a href="#TLS-POODLE（TLS卷毛狗攻击）" class="headerlink" title="TLS POODLE（TLS卷毛狗攻击）"></a>TLS POODLE（TLS卷毛狗攻击）</h2><p>TLS POODLE(CVE-2014-8730) 该漏洞的原理和POODLE漏洞的原理一致，但不是SSL3协议。由于TLS填充是SSLv3的一个子集，因此可以重新使用针对TLS的POODLE攻击。TLS对于它的填充格式是非常严格的，但是一些TLS实现在解密之后不执行填充结构的检查。即使使用TLS也不会容易受到POODLE攻击的影响。</p>
+<h2 id="CCS"><a href="#CCS" class="headerlink" title="CCS"></a>CCS</h2><p>CCS(CVE-2014-0224) 全称openssl MITM CCS injection attack，Openssl 0.9.8za之前的版本、1.0.0m之前的以及1.0.1h之前的openssl没有适当的限制ChangeCipherSpec信息的处理，这允许中间人攻击者在通信之间使用0长度的主密钥。</p>
+<h2 id="FREAK"><a href="#FREAK" class="headerlink" title="FREAK"></a>FREAK</h2><p>FREAK(CVE-2015-0204) 客户端会在一个全安全强度的RSA握手过程中接受使用弱安全强度的出口RSA密钥，其中关键在于客户端并没有允许协商任何出口级别的RSA密码套件。</p>
+<h2 id="Logjam"><a href="#Logjam" class="headerlink" title="Logjam"></a>Logjam</h2><p>Logjam(CVE-2015-4000) 使用 Diffie-Hellman 密钥交换协议的 TLS 连接很容易受到攻击，尤其是DH密钥中的公钥强度小于1024bits。中间人攻击者可将有漏洞的 TLS 连接降级至使用 512 字节导出级加密。这种攻击会影响支持 DHE_EXPORT 密码的所有服务器。这个攻击可通过为两组弱 Diffie-Hellman 参数预先计算 512 字节质数完成，特别是 Apache 的 httpd 版本 2.1.5 到 2.4.7，以及 OpenSSL 的所有版本。</p>
+<h2 id="DROWN（溺水攻击-溺亡攻击）"><a href="#DROWN（溺水攻击-溺亡攻击）" class="headerlink" title="DROWN（溺水攻击&#x2F;溺亡攻击）"></a>DROWN（溺水攻击&#x2F;溺亡攻击）</h2><p>2016年3月发现的针对TLS的新漏洞攻击——DROWN（Decrypting RSA with Obsolete and Weakened eNcryption，CVE-2016-0800），也即利用过时的、弱化的一种RSA加密算法来解密破解TLS协议中被该算法加密的会话密钥。 具体说来，DROWN漏洞可以利用过时的SSLv2协议来解密与之共享相同RSA私钥的TLS协议所保护的流量。 DROWN攻击依赖于SSLv2协议的设计缺陷以及知名的Bleichenbacher攻击。</p>
+<p>通常检查以下两点服务器的配置</p>
+<ul>
+<li>服务器允许SSL2连接，需要将其关闭。</li>
+<li>私钥同时用于允许SSL2连接的其他服务器。例如，Web服务器和邮件服务器上使用相同的私钥和证书，如果邮件服务器支持SSL2，即使web服务器不支持SSL2，攻击者可以利用邮件服务器来破坏与web服务器的TLS连接。</li>
+</ul>
+<h2 id="Openssl-Padding-Oracle"><a href="#Openssl-Padding-Oracle" class="headerlink" title="Openssl Padding Oracle"></a>Openssl Padding Oracle</h2><p>Openssl Padding Oracle(CVE-2016-2107) openssl 1.0.1t到openssl 1.0.2h之前没有考虑某些填充检查期间的内存分配，这允许远程攻击者通过针对AES CBC会话的padding-oracle攻击来获取敏感的明文信息。</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> </li>
+        <li><strong>作者:</strong> Shirolin</li>
+        <li><strong>创建于
+                :</strong> 2024-07-02 21:47:51</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2024-07-02 22:45:28
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://redefine.ohevan.com/2024/07/02/SSL安全问题及漏洞/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+
+            
+                本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/07/02/%E7%9F%AD%E4%BF%A1%E9%AA%8C%E8%AF%81%E7%A0%81%E5%AE%89%E5%85%A8/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item"></span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        评论
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://example.example.com',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          reaction: false,
+          requiredMeta: ['nick', 'mail'],
+          emoji: [],
+          recaptchaV3Key: "wasd",
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
         
     </div>
-    <div class="page-template-comments">
-        
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此页目录</div>
+        <div class="page-title"></div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SSL%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%8F%8A%E6%BC%8F%E6%B4%9E"><span class="nav-text">SSL安全问题及漏洞</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFSSL%EF%BC%9F"><span class="nav-text">一、什么是SSL？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81SSL%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7"><span class="nav-text">二、SSL的重要性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81SSL%E5%B8%B8%E8%A7%81%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98"><span class="nav-text">三、SSL常见安全问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E8%A7%A3%E5%86%B3%E8%BF%99%E4%BA%9BSSL%E5%B8%B8%E8%A7%81%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E7%9A%84%E6%9C%89%E6%95%88%E6%96%B9%E6%B3%95"><span class="nav-text">四、解决这些SSL常见安全问题的有效方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%BC%80%E5%8F%91%E8%80%85%E5%85%B7%E4%BD%93%E5%A6%82%E4%BD%95%E6%B3%A8%E9%87%8DSSL%E5%AE%89%E5%85%A8"><span class="nav-text">五、开发者具体如何注重SSL安全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81SSL-TLS%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%A0%E7%A7%8D%E6%BC%8F%E6%B4%9E%E4%BB%A5%E5%8F%8A%E8%BF%87%E5%BE%80%E7%9A%84%E6%94%BB%E5%87%BB%E6%96%B9%E5%BC%8F"><span class="nav-text">六、SSL&#x2F;TLS常见的几种漏洞以及过往的攻击方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Export-%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95"><span class="nav-text">Export 加密算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Downgrade%EF%BC%88%E9%99%8D%E7%BA%A7%E6%94%BB%E5%87%BB%EF%BC%89"><span class="nav-text">Downgrade（降级攻击）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MITM%EF%BC%88%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB%EF%BC%89"><span class="nav-text">MITM（中间人攻击）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BEAST%EF%BC%88%E9%87%8E%E5%85%BD%E6%94%BB%E5%87%BB%EF%BC%89"><span class="nav-text">BEAST（野兽攻击）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RC4-%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95"><span class="nav-text">RC4 加密算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CRIME%EF%BC%88%E7%BD%AA%E6%81%B6%E6%94%BB%E5%87%BB%EF%BC%89"><span class="nav-text">CRIME（罪恶攻击）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Heartbleed%EF%BC%88%E5%BF%83%E8%A1%80%E6%BC%8F%E6%B4%9E%EF%BC%89"><span class="nav-text">Heartbleed（心血漏洞）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#POODLE%E6%BC%8F%E6%B4%9E%EF%BC%88%E5%8D%B7%E6%AF%9B%E7%8B%97%E6%94%BB%E5%87%BB%EF%BC%89"><span class="nav-text">POODLE漏洞（卷毛狗攻击）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TLS-POODLE%EF%BC%88TLS%E5%8D%B7%E6%AF%9B%E7%8B%97%E6%94%BB%E5%87%BB%EF%BC%89"><span class="nav-text">TLS POODLE（TLS卷毛狗攻击）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CCS"><span class="nav-text">CCS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FREAK"><span class="nav-text">FREAK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Logjam"><span class="nav-text">Logjam</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DROWN%EF%BC%88%E6%BA%BA%E6%B0%B4%E6%94%BB%E5%87%BB-%E6%BA%BA%E4%BA%A1%E6%94%BB%E5%87%BB%EF%BC%89"><span class="nav-text">DROWN（溺水攻击&#x2F;溺亡攻击）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Openssl-Padding-Oracle"><span class="nav-text">Openssl Padding Oracle</span></a></li></ol></li></ol>
+
     </div>
 </div>
+        </div>
+    
+</div>
+
 
 
                 
@@ -648,6 +859,27 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-side-tools-container">
