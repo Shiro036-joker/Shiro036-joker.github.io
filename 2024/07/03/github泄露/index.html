@@ -13,25 +13,44 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://shiro036-joker.github.io/2024/07/03/app安全加固技术/"/>
+    <link rel="canonical" href="https://shiro036-joker.github.io/2024/07/03/github泄露/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="移动安全之app加固一、app安全加固的性质  app加固是对原本容易暴露的程序运行逻辑进行保护，而不影响程序本的运行结果。包括dex和so。目前来看，保护dex文件更为重要因为dex文件反编译之后的代码可读性更强。具体就是在二进制的程序中植入一段代码，在运行时优先取得程序的控制权，做一些额外的工作。大多数病毒就是基于此原理。是应用加固的一种手法对原始二进制原文进行加密&#x2F;隐藏&#x2F;">
+        <meta name="description" content="github泄露一、github泄露的诱因1）git工具以或相关git项目托管平台自身缺陷问题，存在漏洞，可被恶意利用。例如之前github被曝由于一个coder对Rails的mass-assignment（批量赋值）使用不当造成可以被轻易的篡夺任何代码库的权限。但这种情况比较少，首先利用成本较高，其次相关平台已相对成熟，可利用的漏洞较少。 2）企业内部开发、运维人员安全意识不足，将公司源代码提交">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://shiro036-joker.github.io/2024/07/03/app%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%E6%8A%80%E6%9C%AF/index.html">
+<meta property="og:url" content="https://shiro036-joker.github.io/2024/07/03/github%E6%B3%84%E9%9C%B2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="移动安全之app加固一、app安全加固的性质  app加固是对原本容易暴露的程序运行逻辑进行保护，而不影响程序本的运行结果。包括dex和so。目前来看，保护dex文件更为重要因为dex文件反编译之后的代码可读性更强。具体就是在二进制的程序中植入一段代码，在运行时优先取得程序的控制权，做一些额外的工作。大多数病毒就是基于此原理。是应用加固的一种手法对原始二进制原文进行加密&#x2F;隐藏&#x2F;">
+<meta property="og:description" content="github泄露一、github泄露的诱因1）git工具以或相关git项目托管平台自身缺陷问题，存在漏洞，可被恶意利用。例如之前github被曝由于一个coder对Rails的mass-assignment（批量赋值）使用不当造成可以被轻易的篡夺任何代码库的权限。但这种情况比较少，首先利用成本较高，其次相关平台已相对成熟，可利用的漏洞较少。 2）企业内部开发、运维人员安全意识不足，将公司源代码提交">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/03/app%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%E6%8A%80%E6%9C%AF/twhb2sxwmmsoq_670b7d8bc2bb4b01a67e32b7ce41dab3.webp">
-<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/03/app%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%E6%8A%80%E6%9C%AF/twhb2sxwmmsoq_d37adaf1401042b7a7be3c21edb4a312.webp">
-<meta property="article:published_time" content="2024-07-03T01:58:20.176Z">
-<meta property="article:modified_time" content="2024-07-03T02:20:19.601Z">
+<meta property="og:image" content="g:\blog\myblog\source_posts\github%E6%B3%84%E9%9C%B2\QQ%E6%88%AA%E5%9B%BE20240703111235.png">
+<meta property="og:image" content="g:\blog\myblog\source_posts\github%E6%B3%84%E9%9C%B2\QQ%E6%88%AA%E5%9B%BE20240703111303.png">
+<meta property="og:image" content="g:\blog\myblog\source_posts\github%E6%B3%84%E9%9C%B2\QQ%E6%88%AA%E5%9B%BE20240703111315.png">
+<meta property="og:image" content="g:\blog\myblog\source_posts\github%E6%B3%84%E9%9C%B2\QQ%E6%88%AA%E5%9B%BE20240703111328.png">
+<meta property="og:image" content="g:\blog\myblog\source_posts\github%E6%B3%84%E9%9C%B2\QQ%E6%88%AA%E5%9B%BE20240703111344.png">
+<meta property="og:image" content="g:\blog\myblog\source_posts\github%E6%B3%84%E9%9C%B2\QQ%E6%88%AA%E5%9B%BE20240703111357.png">
+<meta property="og:image" content="g:\blog\myblog\source_posts\github%E6%B3%84%E9%9C%B2\QQ%E6%88%AA%E5%9B%BE20240703111413.png">
+<meta property="og:image" content="g:\blog\myblog\source_posts\github%E6%B3%84%E9%9C%B2\QQ%E6%88%AA%E5%9B%BE20240703111455.png">
+<meta property="og:image" content="g:\blog\myblog\source_posts\github%E6%B3%84%E9%9C%B2\QQ%E6%88%AA%E5%9B%BE20240703111509.png">
+<meta property="og:image" content="g:\blog\myblog\source_posts\github%E6%B3%84%E9%9C%B2\QQ%E6%88%AA%E5%9B%BE20240703111519.png">
+<meta property="og:image" content="g:\blog\myblog\source_posts\github%E6%B3%84%E9%9C%B2\QQ%E6%88%AA%E5%9B%BE20240703111530.png">
+<meta property="og:image" content="g:\blog\myblog\source_posts\github%E6%B3%84%E9%9C%B2\QQ%E6%88%AA%E5%9B%BE20240703111539.png">
+<meta property="og:image" content="g:\blog\myblog\source_posts\github%E6%B3%84%E9%9C%B2\QQ%E6%88%AA%E5%9B%BE20240703112400.png">
+<meta property="og:image" content="g:\blog\myblog\source_posts\github%E6%B3%84%E9%9C%B2\QQ%E6%88%AA%E5%9B%BE20240703112415.png">
+<meta property="og:image" content="g:\blog\myblog\source_posts\github%E6%B3%84%E9%9C%B2\QQ%E6%88%AA%E5%9B%BE20240703112425.png">
+<meta property="og:image" content="g:\blog\myblog\source_posts\github%E6%B3%84%E9%9C%B2\QQ%E6%88%AA%E5%9B%BE20240703112433.png">
+<meta property="og:image" content="g:\blog\myblog\source_posts\github%E6%B3%84%E9%9C%B2\QQ%E6%88%AA%E5%9B%BE20240703112442.png">
+<meta property="og:image" content="https://ask.qcloudimg.com/http-save/yehe-7370903/duhos3bymk.png">
+<meta property="og:image" content="g:\blog\myblog\source_posts\github%E6%B3%84%E9%9C%B2\QQ%E6%88%AA%E5%9B%BE20240703112458.png">
+<meta property="og:image" content="g:\blog\myblog\source_posts\github%E6%B3%84%E9%9C%B2\QQ%E6%88%AA%E5%9B%BE20240703112509.png">
+<meta property="og:image" content="g:\blog\myblog\source_posts\github%E6%B3%84%E9%9C%B2\QQ%E6%88%AA%E5%9B%BE20240703112518.png">
+<meta property="article:published_time" content="2024-07-03T02:57:23.741Z">
+<meta property="article:modified_time" content="2024-07-03T03:40:49.804Z">
 <meta property="article:author" content="Shirolin">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://shiro036-joker.github.io/2024/07/03/app%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%E6%8A%80%E6%9C%AF/twhb2sxwmmsoq_670b7d8bc2bb4b01a67e32b7ce41dab3.webp">
+<meta name="twitter:image" content="g:\blog\myblog\source_posts\github%E6%B3%84%E9%9C%B2\QQ%E6%88%AA%E5%9B%BE20240703111235.png">
     
     
     <!--- Icon Part-->
@@ -577,15 +596,15 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2024-07-03 09:58:20</span>
-        <span class="mobile">2024-07-03 09:58:20</span>
+        <span class="desktop">2024-07-03 10:57:23</span>
+        <span class="mobile">2024-07-03 10:57:23</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-07-03 10:20:19</span>
-            <span class="mobile">2024-07-03 10:20:19</span>
+            <span class="desktop">2024-07-03 11:40:49</span>
+            <span class="mobile">2024-07-03 11:40:49</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -596,12 +615,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>2.1k 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>2.3k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>7 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>8 分钟</span>
         </span>
     
     
@@ -620,57 +639,139 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="移动安全之app加固"><a href="#移动安全之app加固" class="headerlink" title="移动安全之app加固"></a>移动安全之app加固</h1><h2 id="一、app安全加固的性质"><a href="#一、app安全加固的性质" class="headerlink" title="一、app安全加固的性质"></a>一、app安全加固的性质</h2><p>  app加固是对原本容易暴露的程序运行逻辑进行保护，而不影响程序本的运行结果。包括dex和so。目前来看，保护dex文件更为重要因为dex文件反编译之后的代码可读性更强。具体就是在二进制的程序中植入一段代码，在运行时优先取得程序的控制权，做一些额外的工作。大多数病毒就是基于此原理。是应用加固的一种手法对原始二进制原文进行加密&#x2F;隐藏&#x2F;混淆。</p>
-<h2 id="二、app安全加固的影响"><a href="#二、app安全加固的影响" class="headerlink" title="二、app安全加固的影响"></a>二、app安全加固的影响</h2><p>  积极影响:保护自己核心代码算法，提高破解&#x2F;盗版&#x2F;二次打包的难度缓解代码注入&#x2F;动态调试&#x2F;内存注入攻击。<br>  负面影响:1.影响兼容性，影响程序运行效率，目前大的加固厂家兼容性、运行效果都做的还是不错，需要多试一试:兼容性的问题，是app加固技术上的一个难题。很多时候为了追求兼容性，不得不放弃一些技术。并且，目前很多应用市场要求程序带有自己的加固方案。导致一些应用不能占用许多市场、或者发布不同的apk，需要维护多版本。比如360加固的应用，baidu认为不能确保程序的安全性，就不会给发布。不过，正面的效果也是很明显的。前几年猖獗的二次打包事实上受到了不少打击。而且，随着加固技术的发展，也带来了脱壳技术的提升。有加壳的病毒在之前看来比较难分析，现在基本用一些通用技术就可以搞定。2.部分流氓、病毒也会使用加壳技术来保护自己:4.部分应用市场会拒绝加壳后的应用上架，因为加固之后，应用商店审核起来很麻烦。</p>
-<h2 id="三、app安全加固的必要性"><a href="#三、app安全加固的必要性" class="headerlink" title="三、app安全加固的必要性"></a>三、app安全加固的必要性</h2><p>  一方面保护开反者，防上做里包，保护重要代码逻辑、算法，防止被反编译，被破解。破解的话，一般是修改关键逻辑<br>破解应用内购买，加固技术对这类破解也有很大的保护作用。有些病毒就是重打包些热门游戏，向里面增加病毒代码，来传播的;一方面，保护了开发厂商利益，有些代码里会有一些漏洞，apk加固也可以在一定程度上做到保护，给开发商更多时间;另一方面也提高了用户体验。重打包的app从外面几乎分辨不出来。大多数用户的甄别没有那么强。在有了加固技术后，这类应用会少很多。</p>
-<h2 id="四、app安全加固的分类"><a href="#四、app安全加固的分类" class="headerlink" title="四、app安全加固的分类"></a>四、app安全加固的分类</h2><p>  核心逻辑上，一种是动态载入，另一种是vmp，相当于自己实现虚拟机，但通常只是指令的简单替换。由于兼容性问题，目前没遇见dex文件的加固用到vmp。从加固的范围上，可以分为dex加固，so和dex加固，核心逻辑加固。因为加固会影响运行效率，所以有些加固只对核心逻辑进行有效的保护，大多数维护运行的代码还是暴露的。资源也会被加密，还有一些加密技术会结合一些防止反编译的技术。比如在resource文件里做一些手脚，可以影响apktool。在smali里加一些代码，可以影响baksmali工具。不过这些都是辅助性的。</p>
-<h2 id="五、app安全加固的思路"><a href="#五、app安全加固的思路" class="headerlink" title="五、app安全加固的思路"></a>五、app安全加固的思路</h2><p>  目前app加固几乎都是利用DexClassLoader来动态加载dex来实现的。由于这段逻辑本身会暴露dex文件。所以通常要配合反调试技术。一方面是混淆逻辑，另一方面可以对一些文件的特殊内容进行检查，还可以检查代码运行时间，来判断是否在被调试。在对抗一些脱壳工具方面，会在程序中做hook，检查是否有特殊的逻辑存在。一般使用常见的加固工具加固应用后，他会把你的dex、so加密存在apk中，然后apk运行过程会先运行壳的代码，壳的代码再把原来的dex、so解出来加载，不同厂商自己的方案略有差距，但目前多数都是这个思路，具体细节各厂家有各自的方法。</p>
-<h2 id="六、app安全加固技术解析"><a href="#六、app安全加固技术解析" class="headerlink" title="六、app安全加固技术解析"></a>六、app安全加固技术解析</h2><h3 id="源码加固"><a href="#源码加固" class="headerlink" title="源码加固"></a>源码加固</h3><ul>
-<li>Java 源码加固：通过 dex 文件加壳保护、dex 函数抽取加密等手段，增强代码的安全性。</li>
-<li>SO 库加固：对 SO 文件进行加壳保护、深度混淆和 ELF 数据隐藏，防止被反编译。</li>
-<li>Html 加固：加固 HTML 文件，提高前端资源的安全性。</li>
-<li>资源文件加固：对音视频、配置文件和数据库进行加密处理，避免敏感信息泄露。</li>
-</ul>
-<h3 id="运行环境加固"><a href="#运行环境加固" class="headerlink" title="运行环境加固"></a>运行环境加固</h3><ul>
-<li>完整性保护：使用签名等方式确保应用完整性，防止二次打包等恶意行为。</li>
-<li>防调试保护：采用双向 ptrace 保护、反 IDAPro 调试等方法，防止应用被恶意调试。</li>
-<li>防篡改保护：防止数据破解分析和数据劫持，保障应用数据安全。</li>
-<li>反编译保护：抵御 apktool、ApkIDE、jd-gui 等反编译工具，确保应用代码不被窃取。</li>
-<li>模拟器识别和 ROOT 检测：识别运行环境，避免在非正常环境下运行。</li>
-</ul>
-<h3 id="业务场景加固"><a href="#业务场景加固" class="headerlink" title="业务场景加固"></a>业务场景加固</h3><ul>
-<li>密钥保护：加密存储和传输密钥，防止密钥泄露。</li>
-<li>安全键盘：使用安全键盘提高用户输入的安全性。</li>
-<li>防界面劫持：防止页面被篡改，保证应用界面的完整性。</li>
-<li>反外挂和清场：防止外挂攻击，保障应用运行环境的整洁。</li>
-<li>通信协议加密：对应用通信进行加密，防止数据泄露。</li>
-</ul>
-<h3 id="iOS-加固技术"><a href="#iOS-加固技术" class="headerlink" title="iOS 加固技术"></a>iOS 加固技术</h3><p>在 iOS 平台上，高级混淆、字符串加密、指令多样化等技术被广泛运用：</p>
+            <h1 id="github泄露"><a href="#github泄露" class="headerlink" title="github泄露"></a>github泄露</h1><h2 id="一、github泄露的诱因"><a href="#一、github泄露的诱因" class="headerlink" title="一、github泄露的诱因"></a>一、github泄露的诱因</h2><p>1）git工具以或相关git项目托管平台自身缺陷问题，存在漏洞，可被恶意利用。例如之前github被曝由于一个coder对Rails的mass-assignment（批量赋值）使用不当造成可以被轻易的篡夺任何代码库的权限。但这种情况比较少，首先利用成本较高，其次相关平台已相对成熟，可利用的漏洞较少。</p>
+<p>2）企业内部开发、运维人员安全意识不足，将公司源代码提交到git项目托管平台上，而且没有进行敏感字过滤，其中包含的大部分账号密码都以明文形式直接提交，这是主要原因。</p>
+<p>现在使用git来管理代码、项目是一种趋势。git可以深度的结合到开发流程的各个环节中。各个公司基本也都有在自己内部搭建有gitlab来管理。其实对企业内部员工的安全培训，安全意识的要求，一直都是我们甲方安全工作开展过程中很头疼的一点，就算我们在公司内部纯粹暴力使用技术手段封禁github本身，还有其他的项目共享、托管平台。可以说，git只是这类企业内部信息泄露的一个集中体现点，信息泄露并不仅仅局限在github上。</p>
+<h2 id="二、git信息泄露的分类"><a href="#二、git信息泄露的分类" class="headerlink" title="二、git信息泄露的分类"></a>二、git信息泄露的分类</h2><p>  由于git本身主要用于项目、代码的管理。所以基本上在github上泄露出来的大多数属于：1. 项目源码与配置；2. 项目说明；3. 公司内部技术资料。</p>
+<p>git信息泄露可以从两个方面来分类：</p>
+<p>1）数据类型不同区分：产品代码、密码密钥、基础设施信息、客户信息公司业务数据、公司内部信息；</p>
+<p>2）涉及系统类型：业务生产系统、业务测试系统、内部IT系统、内部知识管理系统等。</p>
+<h2 id="三、git信息泄露的危害"><a href="#三、git信息泄露的危害" class="headerlink" title="三、git信息泄露的危害"></a>三、git信息泄露的危害</h2><p>  危害嘛，那自然最直接的就是可能暴露数据库。其次，看到了项目源码，对于有心的人来说，无论是黑猫还是花猫，都可以通过分析源码，来提高对目标站点的业务流程的了解，降低挖洞&#x2F;入侵的难度，搜集公司的内部信息等。再次，会向广大IT技术群体暴露自己公司开发人员的智商下限。对，尤其是内部系统。如果是暴露那些对外开放服务的系统源码、文档，起码公司内部、安全团队，都是重点会解决外部服务的安全性。而对内系统的安全性，很多时候是缺乏保障的，内网应用的安全评估标准比外网低一些。git 信息泄露的危害程度视泄露的信息敏感性以及数据类型、可利用难度来判断。危害程度可能小至无关痛痒，大的话可直接从源码获取敏感配置信息，通过进一步审计代码，挖掘文件上传、SQL注入等安全漏洞。更有甚者通过内网漫游，获取核心竞争力代码、敏感业务数据，导致不可估量的影响。</p>
+<h2 id="四、防御git信息泄露的措施"><a href="#四、防御git信息泄露的措施" class="headerlink" title="四、防御git信息泄露的措施"></a>四、防御git信息泄露的措施</h2><p>  就像我就曾经在github上弄到过某公司的域控管理维护脚本和域控数据备份，这个问题其实说难也难，说不难也不难。员工把内部信息上传到外网，这个过程中，关键点是员工是否意识到了自己在做什么，所以归根到底是对员工的管理、员工培训的问题。泄露事件一旦发生，事后是很难甚至无法补救的。如果要通过技术手段实现禁止访问、上传共享其实并不难，但对于互联网企业的我们是不会做这方面完全禁止的管控。你能封掉github，他可以自己搭个svn之类的，技术手段只能解决特例问题，就算有办法封禁所有的代码项目托管站，主要还是从安全意识，制度管控。一方面我们需要通过互联网获取最新的代码填补技术人员自身的不足，同时git确实是一个协同开发，提升效率的好东西。因此我们通过内部自建git项目平台给所有开发者使用，加入权限控制。</p>
+<h2 id="五、github敏感信息搜集工具"><a href="#五、github敏感信息搜集工具" class="headerlink" title="五、github敏感信息搜集工具"></a>五、github敏感信息搜集工具</h2><h3 id="1、gsil"><a href="#1、gsil" class="headerlink" title="1、gsil"></a><strong>1、gsil</strong></h3><blockquote>
+<p>介绍：此工具主要用于GitHub敏感信息泄露的监控，可实现邮件实时告警，缺点不是可视化</p>
+</blockquote>
+<h3 id="所需环境："><a href="#所需环境：" class="headerlink" title="所需环境："></a><strong>所需环境：</strong></h3><p>- </p>
 <ul>
-<li>高级混淆：混淆代码逻辑，增加代码的复杂性和混乱度。</li>
-<li>字符串加密：对关键字符串进行加密处理，提高代码安全性。</li>
-<li>指令多样化和基本块分裂：打破代码流程，增加代码的难读性。</li>
-<li>控制流引入和跳转指令插入：引入控制流混淆，增加代码执行路径的多样性。</li>
-<li>安全防护 SDK：集成安全防护 SDK，对应用进行全方位的安全防护。</li>
-<li>越狱检测和重签名检测：检测设备是否越狱以及应用是否被重签名。</li>
+<li>Python2、3皆可，笔者用的是Python3</li>
+<li>gsil项目：<a class="link" target="_blank" rel="noopener" href="https://github.com/FeeiCN/GSIL">https://github.com/FeeiCN/GSIL <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li>开启<code>POP3/SMTP</code>服务的邮箱</li>
+<li>一个github账号token，获取地址：<a class="link" target="_blank" rel="noopener" href="https://github.com/settings/tokens">https://github.com/settings/tokens <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
 </ul>
-<h2 id="加固混淆"><a href="#加固混淆" class="headerlink" title="加固混淆"></a>加固混淆</h2><p>为了保护 React Native 应用程序不被攻击者攻击，我们需要进行代码混淆和加固操作。以下是一些常见的加固混淆方法：</p>
-<ul>
-<li>使用 iPAGuard 等工具进行 IPA 重签名</li>
+<h3 id="项目安装："><a href="#项目安装：" class="headerlink" title="项目安装："></a><strong>项目安装：</strong></h3><p>建议在安装之前把pip升级到最新版，不然有可能报错，命令如下：</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -m pip install --upgrade pip</span><br></pre></td></tr></table></figure></div>
+
+<p>然后进入想要安装的目录，依次输入：</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone <span class="attr">https</span>:<span class="comment">//github.com/FeeiCN/gsil.git</span></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd gsil</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install -r requirements.<span class="property">txt</span></span><br></pre></td></tr></table></figure></div>
+
+<p>这就安装完了，下一步进入gsil目录找到<code>config.gsil.example</code>文件</p>
+<p><img lazyload src="/images/loading.svg" data-src="G:\blog\myblog\source_posts\github泄露\QQ截图20240703111235.png" alt="QQ截图20240703111235"></p>
+<p>内容如下：</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[mail]</span><br><span class="line">host : smtp.<span class="property">exmail</span>.<span class="property">qq</span>.<span class="property">com</span>   <span class="comment">//这个最后要改成smtp.qq.com</span></span><br><span class="line">port : <span class="number">25</span>   <span class="comment">//这个端口smtp服务一般是465</span></span><br><span class="line">mails : your_mail   <span class="comment">//这是你的邮箱地址Ps：多个邮箱用,隔开</span></span><br><span class="line"><span class="keyword">from</span> : <span class="variable constant_">GSIL</span></span><br><span class="line">password : your_password    <span class="comment">//这是生成的授权码</span></span><br><span class="line">to : feei@feei.<span class="property">cn</span>   <span class="comment">//这是接受邮件的邮箱地址</span></span><br><span class="line">cc : feei@feei.<span class="property">cn</span>   <span class="comment">//这是抄送邮件的邮箱地址</span></span><br><span class="line"></span><br><span class="line">[github]</span><br><span class="line">clone : <span class="literal">false</span>   <span class="comment">//扫描到的漏洞仓库是否立刻Clone到本地</span></span><br><span class="line">tokens : your_github_token  <span class="comment">//这是你github的token</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="邮箱服务配置："><a href="#邮箱服务配置：" class="headerlink" title="邮箱服务配置："></a><strong>邮箱服务配置：</strong></h3><p>这里以QQ邮箱为例，找到【设置】点击【账户】下拉找到<code>POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务</code>一栏，点击开启，绑定QQ安全中心的用户需要输入app中的令牌</p>
+<p><img lazyload src="/images/loading.svg" data-src="G:\blog\myblog\source_posts\github泄露\QQ截图20240703111303.png" alt="QQ截图20240703111303"></p>
+<p>验证成功授权码就拿到啦</p>
+<p><img lazyload src="/images/loading.svg" data-src="G:\blog\myblog\source_posts\github泄露\QQ截图20240703111315.png" alt="QQ截图20240703111315"></p>
+<h3 id="github获取token："><a href="#github获取token：" class="headerlink" title="github获取token："></a><strong>github获取token：</strong></h3><p>进入<a class="link" target="_blank" rel="noopener" href="https://github.com/settings/tokens%E9%A1%B5%E9%9D%A2%E7%82%B9%E5%87%BB%E7%94%9F%E6%88%90%E6%96%B0%E4%BB%A4%E7%89%8C">https://github.com/settings/tokens页面点击生成新令牌 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img lazyload src="/images/loading.svg" data-src="G:\blog\myblog\source_posts\github泄露\QQ截图20240703111328.png" alt="QQ截图20240703111328"></p>
+<p>然后会验证密码</p>
+<p>勾选<code>public_repo</code></p>
+<p><img lazyload src="/images/loading.svg" data-src="G:\blog\myblog\source_posts\github泄露\QQ截图20240703111344.png" alt="QQ截图20240703111344"></p>
+<p>然后生成就完活了</p>
+<p><img lazyload src="/images/loading.svg" data-src="G:\blog\myblog\source_posts\github泄露\QQ截图20240703111357.png" alt="QQ截图20240703111357"></p>
+<p>最后将配置文件改成这样就行了</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[mail]</span><br><span class="line">host : smtp.<span class="property">qq</span>.<span class="property">com</span></span><br><span class="line">port : <span class="number">465</span></span><br><span class="line">mails : nsq88@vip.<span class="property">qq</span>.<span class="property">com</span></span><br><span class="line"><span class="keyword">from</span> : <span class="variable constant_">GSIL</span></span><br><span class="line">password : jvydbjshjvhvjdsc</span><br><span class="line">to : nsq88@vip.<span class="property">qq</span>.<span class="property">com</span></span><br><span class="line">cc : nsq88@vip.<span class="property">qq</span>.<span class="property">com</span></span><br><span class="line"></span><br><span class="line">[github]</span><br><span class="line">clone : <span class="literal">false</span></span><br><span class="line">tokens : 1ef5d5f0bajdshvcb455dmcbmdbh29046d5b</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="配置搜索规则："><a href="#配置搜索规则：" class="headerlink" title="配置搜索规则："></a><strong>配置搜索规则：</strong></h3><p>如图找到<code>rules.gsil.example</code>文件，修改你想搜索的内容</p>
+<p><img lazyload src="/images/loading.svg" data-src="G:\blog\myblog\source_posts\github泄露\QQ截图20240703111413.png" alt="QQ截图20240703111413"></p>
+<p>解释如下：</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    # 一级分类，一般使用公司名，用作开启扫描的第一个参数（python gsil.<span class="property">py</span> test）</span><br><span class="line">    <span class="string">&quot;test&quot;</span>: &#123;</span><br><span class="line">        # 二级分类，一般使用产品线</span><br><span class="line">        <span class="string">&quot;mogujie&quot;</span>: &#123;</span><br><span class="line">            # 公司内部域名</span><br><span class="line">            <span class="string">&quot;\&quot;mogujie.org\&quot;&quot;</span>: &#123;</span><br><span class="line">                # mode/ext默认可不填</span><br><span class="line">                <span class="string">&quot;mode&quot;</span>: <span class="string">&quot;normal-match&quot;</span>,</span><br><span class="line">                <span class="string">&quot;ext&quot;</span>: <span class="string">&quot;php,java,python,go,js,properties&quot;</span></span><br><span class="line">            &#125;,</span><br><span class="line">            # 公司代码特征</span><br><span class="line">            <span class="string">&quot;copyright meili inc&quot;</span>: &#123;&#125;,</span><br><span class="line">            # 内部主机域名</span><br><span class="line">            <span class="string">&quot;yewu1.db.mogujie.host&quot;</span>: &#123;&#125;,</span><br><span class="line">            # 外部邮箱</span><br><span class="line">            <span class="string">&quot;mail.mogujie.com&quot;</span>: &#123;&#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">&quot;meilishuo&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;meilishuo.org&quot;</span>: &#123;&#125;,</span><br><span class="line">            <span class="string">&quot;meilishuo.io&quot;</span>: &#123;&#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>都配置好以后你可以先检查一下token的有效性，这样部署就完成了</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python gsil.<span class="property">py</span> --verify-tokens</span><br></pre></td></tr></table></figure></div>
+
+<p><img lazyload src="/images/loading.svg" data-src="G:\blog\myblog\source_posts\github泄露\QQ截图20240703111455.png" alt="QQ截图20240703111455"></p>
+<h3 id="开始获取敏感信息-："><a href="#开始获取敏感信息-：" class="headerlink" title="开始获取敏感信息 ："></a><strong>开始获取敏感信息 ：</strong></h3><p>终端输入</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python gsil.<span class="property">py</span> test</span><br></pre></td></tr></table></figure></div>
+
+<p>这是我配置的规则，有点多<img lazyload src="/images/loading.svg" data-src="G:\blog\myblog\source_posts\github泄露\QQ截图20240703111509.png" alt="QQ截图20240703111509"></p>
+<h3 id="结果展示："><a href="#结果展示：" class="headerlink" title="结果展示："></a><strong>结果展示：</strong></h3><h3 id><a href="#" class="headerlink" title></a><img lazyload src="/images/loading.svg" data-src="G:\blog\myblog\source_posts\github泄露\QQ截图20240703111519.png" alt="QQ截图20240703111519"></h3><p>比如这里有一个泄露用户名及密码的</p>
+<p><img lazyload src="/images/loading.svg" data-src="G:\blog\myblog\source_posts\github泄露\QQ截图20240703111530.png" alt="QQ截图20240703111530"></p>
+<p>点击<code>e8b503</code>就可以直接定位到文件位置</p>
+<p><img lazyload src="/images/loading.svg" data-src="G:\blog\myblog\source_posts\github泄露\QQ截图20240703111539.png" alt="QQ截图20240703111539"></p>
+<h3 id="2、gshark"><a href="#2、gshark" class="headerlink" title="2、gshark"></a><strong>2、gshark</strong></h3><p>介绍：这是个可视化的监测工具，它不仅可以监控<code>github</code>，还可以监控<code>gitlab</code>‍</p>
+<h3 id="所需环境：-1"><a href="#所需环境：-1" class="headerlink" title="所需环境："></a><strong>所需环境：</strong></h3><ul>
+<li>go</li>
+<li>64位gcc</li>
+<li>Linux 一个github账号token，获取地址：<a class="link" target="_blank" rel="noopener" href="https://github.com/settings/tokens">https://github.com/settings/tokens <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
 </ul>
-<img lazyload src="/images/loading.svg" data-src="/2024/07/03/app%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%E6%8A%80%E6%9C%AF/twhb2sxwmmsoq_670b7d8bc2bb4b01a67e32b7ce41dab3.webp" class title="twhb2sxwmmsoq_670b7d8bc2bb4b01a67e32b7ce41dab3">
+<p>不建议使用window部署</p>
+<p>安装go</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install golang</span><br></pre></td></tr></table></figure></div>
+
+<p>Linux中一般自带gcc，没有的话跟上面一样安装就行了</p>
+<h3 id="项目安装：-1"><a href="#项目安装：-1" class="headerlink" title="项目安装："></a><strong>项目安装：<img lazyload src="/images/loading.svg" data-src="G:\blog\myblog\source_posts\github泄露\QQ截图20240703112400.png" alt="QQ截图20240703112400"></strong></h3><h3 id="-1"><a href="#-1" class="headerlink" title></a></h3><p>gshark安装可以执行命令，也可以直接到github下载</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone <span class="attr">https</span>:<span class="comment">//github.com/madneal/gshark</span></span><br></pre></td></tr></table></figure></div>
+
+<p>然后执行</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go get ./...</span><br></pre></td></tr></table></figure></div>
+
+<p>如果报错没有执行成功可以试试这个更换国内源</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go env -w <span class="variable constant_">GOPROXY</span>=<span class="attr">https</span>:<span class="comment">//goproxy.cn</span></span><br></pre></td></tr></table></figure></div>
+
+<p>完成后执行</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go build main.<span class="property">go</span></span><br></pre></td></tr></table></figure></div>
+
+<p>然后改个文件名就哦克了</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv app-template.<span class="property">ini</span> app.<span class="property">ini</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="运行服务："><a href="#运行服务：" class="headerlink" title="运行服务："></a><strong>运行服务：</strong></h3><p>开启后台web服务</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./main web &amp;</span><br></pre></td></tr></table></figure></div>
+
+<p><img lazyload src="/images/loading.svg" data-src="G:\blog\myblog\source_posts\github泄露\QQ截图20240703112415.png" alt="QQ截图20240703112415"></p>
+<p>浏览器中输入</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">http</span>:<span class="comment">//127.0.0.1:8000/admin/login</span></span><br></pre></td></tr></table></figure></div>
+
+<p>账号密码都是<code>gshark</code></p>
+<p><img lazyload src="/images/loading.svg" data-src="G:\blog\myblog\source_posts\github泄露\QQ截图20240703112425.png" alt="QQ截图20240703112425"></p>
+<p>进去之后先添加github的token</p>
+<p><img lazyload src="/images/loading.svg" data-src="G:\blog\myblog\source_posts\github泄露\QQ截图20240703112433.png" alt="QQ截图20240703112433"></p>
+<h3 id="规则配置："><a href="#规则配置：" class="headerlink" title="规则配置："></a><strong>规则配置：</strong></h3><p>改一下规则，想扫那个子<a class="link" target="_blank" rel="noopener" href="https://cloud.tencent.com/act/pro/domain-sales?from_column=20065&from=20065">域名 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>或者关键字填上就行</p>
+<p><img lazyload src="/images/loading.svg" data-src="G:\blog\myblog\source_posts\github泄露\QQ截图20240703112442.png" alt="QQ截图20240703112442"></p>
+<p>规则配置好后点击<code>enable</code>启用规则，想停用就点右边那个</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://ask.qcloudimg.com/http-save/yehe-7370903/duhos3bymk.png" alt="img"></p>
+<p>过滤规则可以自己添加</p>
+<p><img lazyload src="/images/loading.svg" data-src="G:\blog\myblog\source_posts\github泄露\QQ截图20240703112458.png" alt="QQ截图20240703112458"></p>
+<p>然后回到终端输入下面命令开始监测</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./main scan</span><br></pre></td></tr></table></figure></div>
 
 
 
-<ul>
-<li>使用 iPAGuardr 对 JavaScript 代码进行混淆，只要是 ipa 都可以，不限制 OC，Swift，Flutter，React Native，H5 类 app。可对 IOS ipa 文件的代码，代码库，资源文件等进行混淆保护。 可以根据设置对函数名、变量名、类名等关键代码进行重命名和混淆处理，降低代码的可读性，增加 ipa 破解反编译难度。可以对图片，资源，配置等进行修改名称，修改 md5。</li>
-</ul>
-<img lazyload src="/images/loading.svg" data-src="/2024/07/03/app%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%E6%8A%80%E6%9C%AF/twhb2sxwmmsoq_d37adaf1401042b7a7be3c21edb4a312.webp" class title="twhb2sxwmmsoq_d37adaf1401042b7a7be3c21edb4a312">
-
-
-
-<p>以上是一些常见的加固混淆方法，我们可以根据实际情况选择合适的方法来加固我们的 React Native 应用程序。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>移动应用安全加固是保障应用安全的重要手段，通过源码加固、运行环境加固和业务场景加固等技术手段，可以有效提升应用的安全性。在开发移动应用时，开发者应当充分了解安全加固技术，并根据实际情况选择合适的加固方案，确保应用的安全性和稳定性。</p>
+<h3 id="结果展示：-1"><a href="#结果展示：-1" class="headerlink" title="结果展示："></a><strong>结果<img lazyload src="/images/loading.svg" data-src="G:\blog\myblog\source_posts\github泄露\QQ截图20240703112509.png" alt="QQ截图20240703112509">展示：</strong></h3><p>‍过一段时间<code>源代码扫描报告</code>中就会有一堆结果</p>
+<p><img lazyload src="/images/loading.svg" data-src="G:\blog\myblog\source_posts\github泄露\QQ截图20240703112518.png" alt="QQ截图20240703112518">直接点击上面的链接会跳到那个文件，这时就可以寻找敏感信息了。</p>
 
         </div>
 
@@ -681,15 +782,15 @@
         <li><strong>标题:</strong> </li>
         <li><strong>作者:</strong> Shirolin</li>
         <li><strong>创建于
-                :</strong> 2024-07-03 09:58:20</li>
+                :</strong> 2024-07-03 10:57:23</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-07-03 10:20:19
+                    :</strong> 2024-07-03 11:40:49
             </li>
         
         <li>
-            <strong>链接:</strong> https://redefine.ohevan.com/2024/07/03/app安全加固技术/
+            <strong>链接:</strong> https://redefine.ohevan.com/2024/07/03/github泄露/
         </li>
         <li>
             <strong>
@@ -714,26 +815,11 @@
         
             <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
                 
-                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-                        <a class="prev"
-                        rel="prev"
-                        href="/2024/07/03/%E8%B4%A6%E6%88%B7%E4%BD%93%E7%B3%BB%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E6%8E%A2%E8%AE%A8/"
-                        >
-                            <span class="left arrow-icon flex justify-center items-center">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item"></span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/2024/07/03/%E7%A7%BB%E5%8A%A8%E5%AE%89%E5%85%A8%E4%B9%8Bapp%E5%8A%A0%E5%9B%BA/"
+                        href="/2024/07/03/%E8%B4%A6%E6%88%B7%E4%BD%93%E7%B3%BB%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E6%8E%A2%E8%AE%A8/"
                         >
                             <span class="title flex justify-center items-center">
                                 <span class="post-nav-title-item"></span>
@@ -801,7 +887,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title"></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A7%BB%E5%8A%A8%E5%AE%89%E5%85%A8%E4%B9%8Bapp%E5%8A%A0%E5%9B%BA"><span class="nav-text">移动安全之app加固</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81app%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-text">一、app安全加固的性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81app%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="nav-text">二、app安全加固的影响</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81app%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%E7%9A%84%E5%BF%85%E8%A6%81%E6%80%A7"><span class="nav-text">三、app安全加固的必要性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81app%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-text">四、app安全加固的分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81app%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%E7%9A%84%E6%80%9D%E8%B7%AF"><span class="nav-text">五、app安全加固的思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81app%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%E6%8A%80%E6%9C%AF%E8%A7%A3%E6%9E%90"><span class="nav-text">六、app安全加固技术解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BA%90%E7%A0%81%E5%8A%A0%E5%9B%BA"><span class="nav-text">源码加固</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E5%8A%A0%E5%9B%BA"><span class="nav-text">运行环境加固</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF%E5%8A%A0%E5%9B%BA"><span class="nav-text">业务场景加固</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iOS-%E5%8A%A0%E5%9B%BA%E6%8A%80%E6%9C%AF"><span class="nav-text">iOS 加固技术</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E5%9B%BA%E6%B7%B7%E6%B7%86"><span class="nav-text">加固混淆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#github%E6%B3%84%E9%9C%B2"><span class="nav-text">github泄露</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81github%E6%B3%84%E9%9C%B2%E7%9A%84%E8%AF%B1%E5%9B%A0"><span class="nav-text">一、github泄露的诱因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81git%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-text">二、git信息泄露的分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81git%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2%E7%9A%84%E5%8D%B1%E5%AE%B3"><span class="nav-text">三、git信息泄露的危害</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E9%98%B2%E5%BE%A1git%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2%E7%9A%84%E6%8E%AA%E6%96%BD"><span class="nav-text">四、防御git信息泄露的措施</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81github%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86%E5%B7%A5%E5%85%B7"><span class="nav-text">五、github敏感信息搜集工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81gsil"><span class="nav-text">1、gsil</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%80%E9%9C%80%E7%8E%AF%E5%A2%83%EF%BC%9A"><span class="nav-text">所需环境：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E5%AE%89%E8%A3%85%EF%BC%9A"><span class="nav-text">项目安装：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%82%AE%E7%AE%B1%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE%EF%BC%9A"><span class="nav-text">邮箱服务配置：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#github%E8%8E%B7%E5%8F%96token%EF%BC%9A"><span class="nav-text">github获取token：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%90%9C%E7%B4%A2%E8%A7%84%E5%88%99%EF%BC%9A"><span class="nav-text">配置搜索规则：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E8%8E%B7%E5%8F%96%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF-%EF%BC%9A"><span class="nav-text">开始获取敏感信息 ：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E6%9E%9C%E5%B1%95%E7%A4%BA%EF%BC%9A"><span class="nav-text">结果展示：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text"></span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81gshark"><span class="nav-text">2、gshark</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%80%E9%9C%80%E7%8E%AF%E5%A2%83%EF%BC%9A-1"><span class="nav-text">所需环境：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E5%AE%89%E8%A3%85%EF%BC%9A-1"><span class="nav-text">项目安装：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-1"><span class="nav-text"></span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E6%9C%8D%E5%8A%A1%EF%BC%9A"><span class="nav-text">运行服务：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%84%E5%88%99%E9%85%8D%E7%BD%AE%EF%BC%9A"><span class="nav-text">规则配置：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E6%9E%9C%E5%B1%95%E7%A4%BA%EF%BC%9A-1"><span class="nav-text">结果展示：</span></a></li></ol></li></ol></li></ol>
 
     </div>
 </div>
