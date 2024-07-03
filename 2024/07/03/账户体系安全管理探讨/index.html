@@ -13,18 +13,20 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://shiro036-joker.github.io/board/"/>
+    <link rel="canonical" href="https://shiro036-joker.github.io/2024/07/03/账户体系安全管理探讨/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta property="og:type" content="website">
-<meta property="og:title" content="board">
-<meta property="og:url" content="https://shiro036-joker.github.io/board/index.html">
+        <meta name="description" content="账户体系安全管理探讨一、账号体系管理包含部分内容分别为登录、注册、找回密码、消除、冻结。 1.其中登录、注册得区分正常、撞库、暴力破解、秒杀及羊毛党用户； 2.找回密码涉及业务方对安全的认知度还有安全的规范与否，这个占很大比重。如果产品和开发对安全认知深浅不一，那就会面临各种各样的安全隐患； 3.消除和冻结，比如在电商行业里一个被风控行为指定为专门用来做秒杀的用户那就会触发冻结规则，而所说的消除得">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://shiro036-joker.github.io/2024/07/03/%E8%B4%A6%E6%88%B7%E4%BD%93%E7%B3%BB%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E6%8E%A2%E8%AE%A8/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="账户体系安全管理探讨一、账号体系管理包含部分内容分别为登录、注册、找回密码、消除、冻结。 1.其中登录、注册得区分正常、撞库、暴力破解、秒杀及羊毛党用户； 2.找回密码涉及业务方对安全的认知度还有安全的规范与否，这个占很大比重。如果产品和开发对安全认知深浅不一，那就会面临各种各样的安全隐患； 3.消除和冻结，比如在电商行业里一个被风控行为指定为专门用来做秒杀的用户那就会触发冻结规则，而所说的消除得">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-06-19T07:47:38.000Z">
-<meta property="article:modified_time" content="2024-06-19T07:47:38.842Z">
+<meta property="article:published_time" content="2024-07-03T02:34:19.363Z">
+<meta property="article:modified_time" content="2024-07-03T02:46:43.748Z">
 <meta property="article:author" content="Shirolin">
 <meta name="twitter:card" content="summary">
     
@@ -37,8 +39,6 @@
     <!--- Page Info-->
     
     <title>
-        
-            board -
         
         Shiro Scale
     </title>
@@ -547,19 +547,217 @@
             <div class="main-content">
 
                 
-                    <div class="page-template-container">
-    
-    
-    
-    <div class="page-template-content markdown-body">
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3"></h1>
+                </div>
+            
+            </div>
+
         
-            <h1>board</h1>
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/logo.svg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">Shirolin</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv2</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-07-03 10:34:19</span>
+        <span class="mobile">2024-07-03 10:34:19</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-07-03 10:46:43</span>
+            <span class="mobile">2024-07-03 10:46:43</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.8k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>5 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <h1 id="账户体系安全管理探讨"><a href="#账户体系安全管理探讨" class="headerlink" title="账户体系安全管理探讨"></a>账户体系安全管理探讨</h1><h2 id="一、账号体系管理包含部分内容"><a href="#一、账号体系管理包含部分内容" class="headerlink" title="一、账号体系管理包含部分内容"></a>一、账号体系管理包含部分内容</h2><p>分别为登录、注册、找回密码、消除、冻结。</p>
+<p>1.其中登录、注册得区分正常、撞库、暴力破解、秒杀及羊毛党用户；</p>
+<p>2.找回密码涉及业务方对安全的认知度还有安全的规范与否，这个占很大比重。如果产品和开发对安全认知深浅不一，那就会面临各种各样的安全隐患；</p>
+<p>3.消除和冻结，比如在电商行业里一个被风控行为指定为专门用来做秒杀的用户那就会触发冻结规则，而所说的消除得看行业和业务（目前应该很少有这种规则）。</p>
+<h2 id="二、账号体系的内外部风险"><a href="#二、账号体系的内外部风险" class="headerlink" title="二、账号体系的内外部风险"></a>二、账号体系的内外部风险</h2><p>  从外部风险先说起。在注册阶段，会有针对注册机、垃圾虫注册垃圾账号，以便于后面养账号、买卖账号，进一步的通过垃圾账号秒杀，抢红包，发垃圾等等。在登陆阶段，遇到最多的就是暴力破解和撞库攻击。我们需要的还是立体的、多层次的防御体系。另外，在密码找回阶段，主要由于一些历史原因或者设计的不合理，往往也会成为攻击者喜欢下手的地方。最后就是公司对账号的主动回收，这个因账号体系而异。还有就是当前账号是正常、被盗、申诉等状态的，需要细化的策略去分析出来。长期不登录不活跃的用户账号，会有回收机制。这个得看业务。当然这个也会造成一些安全上的风险。主要还是这部分内容设计上比较复杂，各类密保一环套一环，然后有时候一改动或者增加个新接 就容易出事儿 这个 能是邮箱账号特有的问题 比如 君拿邮箱注一个新接口，就容易出事儿。这个可能是邮箱账号特有的问题。比如，A拿邮箱注册第三方服务，如果A长期不登录邮箱，导致邮箱被回收,那么A注册第三方服务，可能被人重新注册邮箱后，通过邮箱找回密码的方式，盗取第三方服务的账号。</p>
+<h2 id="三、账号体系风控成熟的架构主要形式"><a href="#三、账号体系风控成熟的架构主要形式" class="headerlink" title="三、账号体系风控成熟的架构主要形式"></a>三、账号体系风控成熟的架构主要形式</h2><p>  大致都是在线的风控+离线风控结合，然后规则 vs 模型。一般得二者配合起来。数据支撑第一位，埋点信息足够多，能完整跟踪用户的整个行为。在线的一般是需要实时返回，主要采集位置、时间、网络环境、行为等数据。验证码也可以分不同等级，等级越高粘连度越高。但是黑产也会识别验证码，神马打码平台，人工打码等等，所以风控策略需要经常评估有效性。我们能做的就是不断提高攻击门槛，或者让攻击者无利可图，且不太影响用户体验。</p>
+<h2 id="四、划分风控策略的维度"><a href="#四、划分风控策略的维度" class="headerlink" title="四、划分风控策略的维度"></a>四、划分风控策略的维度</h2><p>1.账号：经过风控策略分析确认该账号的类型是正常、被盗、申诉状态等等；</p>
+<p>2.设备：一个账号最多能登录几台设备，同一账号下每台设备的切换是否需要证明用户身份，同一个设备频繁切换不同，用户会触发什么等级的阈值规则;</p>
+<p>3.位置：也就是非同一地区登录的验证规则，如果同一地区触发较多的异地状态是否也会触发规则；</p>
+<p>4.行为：比如说，用户三次访问JD，第一次访问之后直接查看我的订单，因为昨天刚买了一台Mac电脑看看现在到哪了。第二次访问这台电脑的商品页，然后退出。到了第三次访问之后直接下了一单Mac，发现需要支付密码然后找回支付密码，发现找回又需要提供身份验证….第三次异常的行为记录又是会触发什么样的规则，还有具体的策略要如何去细化；</p>
+<p>5.偏好：其实这块可以涵盖到用户行为里面，不过可以把每个用户的操作习惯记录下来，有非常态的操作触发风控规则；</p>
+<p>6.关系：也就是朋友&#x2F;设备&#x2F;买家与商家各种关系的状态，比如一个存在泄露买家信息的商家，与他交易甚多的买家是否会触发规则。</p>
+<h2 id="五、理想的内部风控流程"><a href="#五、理想的内部风控流程" class="headerlink" title="五、理想的内部风控流程"></a>五、理想的内部风控流程</h2><p>概况来说，一个门进来，分很多条路，最后让坏人的路越走越窄。如从技术架构上，确定内部人员的操作权限到底能到什么地步，如何不依赖于人而是依赖于严格的授权机制。敏感业务的授权理论上应该做到即使是内部工作人员也不可能利用工作之便获取用户权限。从业务流程上对某种情况的处理设计的是否合理没有漏洞可钻，这样内部流程才会逐步完善。</p>
+<h2 id="六、账号体系问题可能造成的数据安全风险"><a href="#六、账号体系问题可能造成的数据安全风险" class="headerlink" title="六、账号体系问题可能造成的数据安全风险"></a>六、账号体系问题可能造成的数据安全风险</h2><p>数据是企业的核心资产，面对严峻的数据泄漏形势，加强数据安全已经成为企业必须面对的课题。解决企业云上数据安全问题需要从基础设施、系统安全、应用安全、数据安全等多方面治理，不仅仅是产品技术，还包括组织框架、业务流程等。可能导致数据泄漏的原因包括但不限于权限管控、云产品基线、暴露面收敛、行为管理、数据分级分类和安全审计、数据加密等方面的配置缺失。</p>
+<ul>
+<li>员工权限：大部分员工习惯使用相同的账户和密码登录不同的系统，没有养成定期修改密码的习惯。很多企业对员工岗位变动没有做出及时的权限更新。这些内部管理问题容易导致数据泄漏。阿里云应用身份服务通过基于组织的数据安全需求和合规性要求，建立身份鉴别和数据访问控制机制，防止对数据的未授权访问风险。</li>
+<li>运维权限：企业运维人员高权限运维账号未合理管控，非法或者越权操作可能导致资产数据被窃取泄漏。堡垒机对运维权限细粒度划分，建立人员职责与资源分配的授权管理体系，解决共享账号、滥用权限等问题。通过高危命令阻断保护重要业务系统数据安全，操作审计便于还原追溯。</li>
+</ul>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> </li>
+        <li><strong>作者:</strong> Shirolin</li>
+        <li><strong>创建于
+                :</strong> 2024-07-03 10:34:19</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2024-07-03 10:46:43
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://redefine.ohevan.com/2024/07/03/账户体系安全管理探讨/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+
+            
+                本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/07/03/app%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%E6%8A%80%E6%9C%AF/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item"></span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        评论
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://example.example.com',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          reaction: false,
+          requiredMeta: ['nick', 'mail'],
+          emoji: [],
+          recaptchaV3Key: "wasd",
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
         
     </div>
-    <div class="page-template-comments">
-        
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此页目录</div>
+        <div class="page-title"></div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B4%A6%E6%88%B7%E4%BD%93%E7%B3%BB%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E6%8E%A2%E8%AE%A8"><span class="nav-text">账户体系安全管理探讨</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E8%B4%A6%E5%8F%B7%E4%BD%93%E7%B3%BB%E7%AE%A1%E7%90%86%E5%8C%85%E5%90%AB%E9%83%A8%E5%88%86%E5%86%85%E5%AE%B9"><span class="nav-text">一、账号体系管理包含部分内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E8%B4%A6%E5%8F%B7%E4%BD%93%E7%B3%BB%E7%9A%84%E5%86%85%E5%A4%96%E9%83%A8%E9%A3%8E%E9%99%A9"><span class="nav-text">二、账号体系的内外部风险</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E8%B4%A6%E5%8F%B7%E4%BD%93%E7%B3%BB%E9%A3%8E%E6%8E%A7%E6%88%90%E7%86%9F%E7%9A%84%E6%9E%B6%E6%9E%84%E4%B8%BB%E8%A6%81%E5%BD%A2%E5%BC%8F"><span class="nav-text">三、账号体系风控成熟的架构主要形式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%88%92%E5%88%86%E9%A3%8E%E6%8E%A7%E7%AD%96%E7%95%A5%E7%9A%84%E7%BB%B4%E5%BA%A6"><span class="nav-text">四、划分风控策略的维度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E7%90%86%E6%83%B3%E7%9A%84%E5%86%85%E9%83%A8%E9%A3%8E%E6%8E%A7%E6%B5%81%E7%A8%8B"><span class="nav-text">五、理想的内部风控流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E8%B4%A6%E5%8F%B7%E4%BD%93%E7%B3%BB%E9%97%AE%E9%A2%98%E5%8F%AF%E8%83%BD%E9%80%A0%E6%88%90%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9"><span class="nav-text">六、账号体系问题可能造成的数据安全风险</span></a></li></ol></li></ol>
+
     </div>
 </div>
+        </div>
+    
+</div>
+
 
 
                 
@@ -648,6 +846,27 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-side-tools-container">
