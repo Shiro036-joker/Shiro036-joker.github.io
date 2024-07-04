@@ -13,22 +13,28 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://shiro036-joker.github.io/2024/07/03/移动安全之app加固/"/>
+    <link rel="canonical" href="https://shiro036-joker.github.io/2024/07/04/scrapy爬虫框架和简单应用/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="移动安全之app加固引言 移动互联网的火热，让移动APP的开发、运营、维护成为各企业抢占市场的“制高点”，但移动APP的安全保障也就成为一个不容忽视的重大问题。为了确保移动应用的安全性，开发者 需要采取一系列的安全措施。其中，APP加固作为一种有效的防护手段，受到了广泛的关注和应用。APP加固是一种通过技术手段对移动应用进行保护的过程。它通过对应用代码进行加密、混淆、优化等处理，提高应用的抗逆性和">
+        <meta name="description" content="scrapy爬虫框架和简单应用摘  要：   Scrapy是一个适用爬取网站数据、提取结构性数据的应用程序框架可以解决传统网络爬虫在大型网站上提取信息效率不高的问题。以某图书网站为案例，通过深入分析了该网站的页面结构，编写了高效的爬虫文件源码，用于提取目标网站的关键信息，包括图书名称、价格、定价、作者和销量排名等。研究结果表明，通过对主流网站的信息提取实验，在实际应用中展示了该方法取得了良好的效果">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://shiro036-joker.github.io/2024/07/03/%E7%A7%BB%E5%8A%A8%E5%AE%89%E5%85%A8%E4%B9%8Bapp%E5%8A%A0%E5%9B%BA/index.html">
+<meta property="og:url" content="https://shiro036-joker.github.io/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="移动安全之app加固引言 移动互联网的火热，让移动APP的开发、运营、维护成为各企业抢占市场的“制高点”，但移动APP的安全保障也就成为一个不容忽视的重大问题。为了确保移动应用的安全性，开发者 需要采取一系列的安全措施。其中，APP加固作为一种有效的防护手段，受到了广泛的关注和应用。APP加固是一种通过技术手段对移动应用进行保护的过程。它通过对应用代码进行加密、混淆、优化等处理，提高应用的抗逆性和">
+<meta property="og:description" content="scrapy爬虫框架和简单应用摘  要：   Scrapy是一个适用爬取网站数据、提取结构性数据的应用程序框架可以解决传统网络爬虫在大型网站上提取信息效率不高的问题。以某图书网站为案例，通过深入分析了该网站的页面结构，编写了高效的爬虫文件源码，用于提取目标网站的关键信息，包括图书名称、价格、定价、作者和销量排名等。研究结果表明，通过对主流网站的信息提取实验，在实际应用中展示了该方法取得了良好的效果">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-07-03T01:37:18.245Z">
-<meta property="article:modified_time" content="2024-07-03T01:55:30.530Z">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/DNZS202407014_23400.jpg">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/DNZS202407014_23500.jpg">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/QQ20240704-205144.png">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/DNZS202407014_24500.jpg">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/QQ20240704-210411.png">
+<meta property="article:published_time" content="2024-07-04T12:06:40.849Z">
+<meta property="article:modified_time" content="2024-07-04T13:08:20.177Z">
 <meta property="article:author" content="Shirolin">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://shiro036-joker.github.io/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/DNZS202407014_23400.jpg">
     
     
     <!--- Icon Part-->
@@ -574,15 +580,15 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2024-07-03 09:37:18</span>
-        <span class="mobile">2024-07-03 09:37:18</span>
+        <span class="desktop">2024-07-04 20:06:40</span>
+        <span class="mobile">2024-07-04 20:06:40</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-07-03 09:55:30</span>
-            <span class="mobile">2024-07-03 09:55:30</span>
+            <span class="desktop">2024-07-04 21:08:20</span>
+            <span class="mobile">2024-07-04 21:08:20</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -593,12 +599,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.4k 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.8k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>4 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>7 分钟</span>
         </span>
     
     
@@ -617,13 +623,50 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="移动安全之app加固"><a href="#移动安全之app加固" class="headerlink" title="移动安全之app加固"></a>移动安全之app加固</h1><p>引言</p>
-<p>移动互联网的火热，让移动APP的开发、运营、维护成为各企业抢占市场的“制高点”，但移动APP的安全保障也就成为一个不容忽视的重大问题。为了确保移动应用的安全性，<a class="link" target="_blank" rel="noopener" href="https://cloud.baidu.com/product/xly.html">开发者 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>需要采取一系列的安全措施。其中，APP加固作为一种有效的防护手段，受到了广泛的关注和应用。APP加固是一种通过技术手段对移动应用进行保护的过程。它通过对应用代码进行加密、混淆、优化等处理，提高应用的抗逆性和安全性，防止应用被破解、篡改或恶意攻击。加固后的应用可以更好地保护用户数据和隐私，提高应用的稳定性和可用性。</p>
-<h2 id="一、app应用为什么需要安全加固？"><a href="#一、app应用为什么需要安全加固？" class="headerlink" title="一、app应用为什么需要安全加固？"></a>一、app应用为什么需要安全加固？</h2><p>  app应用需要安全加固的原因，从两个方面来讲。一是人们上网习惯慢慢从PC端转向了移动端，越来越多的智能设备、移动终端、各种各样的应用app开始渗透生活的方方面面，其实它们很多就是我们所熟悉的Android&#x2F;i0S应用，普及广泛必然黑产集聚，安全也就接懂而至。还有一个就是移动app的安全现状导致了一款app在发布时，必然要进行简单粗暴的安全加固。web安全一直老生常谈，web安全开发市场也相对饱和，但app的开发者深刻懂得安全的人也少之又少，这也是为什么有些不了解安全的中小app选择直接加壳做安全，简单粗暴。而有移动安全开发团队的大厂，如支付宝，则不需要用加壳来自慰，依然满满自信的裸奔在市场上。</p>
-<h2 id="二、app安全加固实现原理是什么？"><a href="#二、app安全加固实现原理是什么？" class="headerlink" title="二、app安全加固实现原理是什么？"></a>二、app安全加固实现原理是什么？</h2><p>  谈到app安全加固，就安卓来说，这里我只说一下加壳般加壳的侧重点就是对原始的dex&#x2F;so&#x2F;dl等进行隐藏、混淆、加花、代码抽离等操件在程序运行过程中，对隐藏加密的原始dex再进行还原，以执行原有逻辑。现在普遍的认为Android的加壳技术根据强度分为4代:1整体的dex的加壳隐藏;2防调试防Dump出现;3方法体抽离;4lVmp加壳&#x2F;so加壳.无论哪一代，运行时解密不会变，所以即使是4代的字节码置换虚拟技术也可以在内存中修复，拿到完整的dex。至于ios加固，现在很多安全厂商的做法是Xcode插件，编译过程中对逻辑进行混淆、扁平化处理等方式现在安卓加壳太普遍了，一般很多应用都是加壳了事。</p>
-<h2 id="三、加固主要是对哪几个地方进行加强？"><a href="#三、加固主要是对哪几个地方进行加强？" class="headerlink" title="三、加固主要是对哪几个地方进行加强？"></a>三、加固主要是对哪几个地方进行加强？</h2><p>  从泛义来讲，app安全加固不仅仅是源码加壳，如果开发者的安全意识很强，加壳只是app安全很小的一个方面。app我一般分类3类:Android、ios、h5(混合)app安全加固也包括两个方面:1.客户端本体的安全:四大组件安全、本地数据安全、WebView安全、安全配置、界面劫持、界面敏感信息显示、日志安全、内置账号泄露、测试信息泄露、手机密码安<br>全、设备识别安全、环境清场2.业务安全:Http&#x2F;Https中间人攻击、手机验证码安全、数据封包弱加密、登录会话机制、用户信息泄露、敏感请求重放攻击、请求越权。针对不同的安全点，可以采取的安全措施:加壳(dex&#x2F;so)、文件校验(签名校验&#x2F;dex&#x2F;包体&#x2F;特殊文件等)、不返回多余信息、不打印多余信息、封包验签、时间戳验证、https校验SSL证书、敏感数据不落地、对用户做好安全提示、敏感操作进行环境场、敏感操作进行用户状态二次校验、手势密码做全局FLAG、设备绑定信息合多个因子等等。</p>
-<h2 id="四、app进行加固有哪些作用？"><a href="#四、app进行加固有哪些作用？" class="headerlink" title="四、app进行加固有哪些作用？"></a>四、app进行加固有哪些作用？</h2><p>  app安全加固的作用主要有:防止被二次打包。二次打包的害处有:app原创技术被抄袭、界面被模仿，换了皮后被重新放到市场上;二次打包后方便黑客调试分析、跟踪关键逻辑;app被插入盗号木马，并流传在朋友圈、Q群、论坛、网盘等，影响公司形象;2.安全加固最重要也是最终的目的是最大程度的保障业务安全，防止协议被脱端重写，防止业务活动被撸羊毛。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>  APP加固是确保移动应用安全的重要手段之一。通过对应用进行加密、混淆、优化等处理，可以有效地提高应用的安全性和抗逆性，保护用户数据和隐私。在实际的APP加固过程中，需要选择合适的方法和技术，并进行合理的配置和调整。同时，也需要不断关注安全技术的最新发展，及时更新加固方案，提高应用的安全性。建议开发者在开发过程中就考虑安全问题，并采取相应的加固措施，确保应用的安全性和合规性。</p>
+            <h1 id="scrapy爬虫框架和简单应用"><a href="#scrapy爬虫框架和简单应用" class="headerlink" title="scrapy爬虫框架和简单应用"></a>scrapy爬虫框架和简单应用</h1><p><strong>摘  要：</strong></p>
+<p>  <em><strong>Scrapy</strong></em>是一个适用爬取网站数据、提取结构性数据的应用程序框架可以解决传统网络爬虫在大型网站上提取信息效率不高的问题。以某图书网站为案例，通过深入分析了该网站的页面结构，编写了高效的爬虫文件源码，用于提取目标网站的关键信息，包括图书名称、价格、定价、作者和销量排名等。研究结果表明，通过对主流网站的信息提取实验，在实际应用中展示了该方法取得了良好的效果，可以成功提出需要的信息，并根据提取出的图书价格和销量排名信息可以分析出价格与销量之间的关系，实现了对大型网站的信息提取任务。研究为爬虫技术在数据采集和分析领域的应用提供了有力的支持，为信息爬取与处理提供了新的解决方案。</p>
+<h5 id="引-言："><a href="#引-言：" class="headerlink" title="引  言："></a>引  言：</h5><p>   <em><strong>Scrapy</strong></em>框架作为高度可定制的Web抓取框架，能够采集、处理和分析Web上的数据信息。针对传统网络爬虫在大型网站上信息提取效率不高的问题，本研究采用了Scrapy框架作为Python网络爬虫的核心工具。以某图书网站为例，本研究深入分析了该网站的页面结构，并编写了高效的爬虫文件源码，用于提取目标网站的关键信息，包括图书名称、价格、定价、作者和销量排名等。研究的创新性表现在引入Scrapy框架作为Python网络爬虫的核心工具，从而提高了数据采集、处理和分析的效率和灵活性，共同推动了网络爬虫技术在数据采集和分析领域的发展，为更高效和可靠的信息提供了新的解决方案。</p>
+<h2 id="网络爬虫基本理论"><a href="#网络爬虫基本理论" class="headerlink" title="网络爬虫基本理论"></a>网络爬虫基本理论</h2><p>  网络爬虫，也被称为网络爬取器、网络机器人或网络蜘蛛，是一种自动化程序或脚本，用于自动地浏览互联网上的网页并从中收集信息。网络爬虫的主要目的是收集互联网上的数据，这些数据可以用于各种用途，包括搜索引擎索引、数据挖掘、信息检索、价格比较、网站更新监测等。常用的Python网络爬虫库及其功能如下所示。</p>
+<style>.lfyvdkimfsis{zoom:50%;}</style><img lazyload src="/images/loading.svg" data-src="/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/DNZS202407014_23400.jpg" class="lfyvdkimfsis" alt="DNZS202407014_23400">
+
+<style>.khoftgokjouq{zoom:50%;}</style><img lazyload src="/images/loading.svg" data-src="/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/DNZS202407014_23500.jpg" class="khoftgokjouq" alt="DNZS202407014_23500">
+
+<h2 id="scrapy爬虫架构"><a href="#scrapy爬虫架构" class="headerlink" title="scrapy爬虫架构"></a>scrapy爬虫架构</h2><ul>
+<li>***Scrapy Engine(引擎)***：负责Spider、ItemPipeline、Downloader、Scheduler中间的通讯，信号、数据传递等。</li>
+<li>***Scheduler(调度器)***：它负责接受引擎发送过来的Request请求，并按照一定的方式进行整理排列，入队，当引擎需要时，交还给引擎。</li>
+<li><em><strong>Downloader（下载器）</strong></em>：负责下载Scrapy Engine(引擎)发送的所有Requests请求，并将其获取到的Responses交还给Scrapy Engine(引擎)，由引擎交给Spider来处理。</li>
+<li><em><strong>Spider（爬虫）</strong></em>：它负责处理所有Responses,从中分析提取数据，获取Item字段需要的数据，并将需要跟进的URL提交给引擎，再次进入Scheduler(调度器)。</li>
+<li>***Item Pipeline(管道)***：它负责处理Spider中获取到的Item，并进行进行后期处理（详细分析、过滤、存储等）的地方。</li>
+<li><em><strong>Downloader Middlewares（下载中间件）</strong></em>：一个可以自定义扩展下载功能的组件。</li>
+<li><em><strong>Spider Middlewares（Spider中间件）</strong></em>：一个可以自定扩展和操作引擎和Spider中间通信的功能组件。</li>
+</ul>
+<style>.nfyyqbstgxrf{zoom:50%;}</style><img lazyload src="/images/loading.svg" data-src="/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/QQ20240704-205144.png" class="nfyyqbstgxrf" alt="QQ20240704-205144">
+
+<h4 id="Xpath查询语言"><a href="#Xpath查询语言" class="headerlink" title="Xpath查询语言"></a>Xpath查询语言</h4><p>  可扩展标记语言路径语言(XML Path Language,XPath)是一种用于在XML文档中定位和提取数据的查询语言。XPath的主要原理是根据路径表达式在XML文档的节点树中进行导航和筛选，以便精确定位所需的节点。它是XML文档处理的重要工具，用于XML数据的查询、转换和提取，常用于Web爬虫、XML文档处理、XPath查询引擎等各种应用领域[<a class="link" href="javascript:void(0);">15 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>]。XPath路径表达式如表所示。</p>
+<style>.qhtwehwvvdlk{zoom:50%;}</style><img lazyload src="/images/loading.svg" data-src="/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/DNZS202407014_24500.jpg" class="qhtwehwvvdlk" alt="DNZS202407014_24500">
+
+<h2 id="scrapy项目的结构"><a href="#scrapy项目的结构" class="headerlink" title="scrapy项目的结构"></a>scrapy项目的结构</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">项目名字</span><br><span class="line">    项目的名字</span><br><span class="line">        spiders文件夹（存储的是爬虫文件）</span><br><span class="line">            init</span><br><span class="line">            自定义的爬虫文件        核心功能文件</span><br><span class="line">        init</span><br><span class="line">        items           定义数据结构的地方 爬虫的数据都包含哪些</span><br><span class="line">        middleware      中间件 代理</span><br><span class="line">        pipelines       管道  用来处理下载的数据</span><br><span class="line">        settings        配置文件 robots协议 ua定义等</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="Scrapy爬取豆瓣图书Top250"><a href="#Scrapy爬取豆瓣图书Top250" class="headerlink" title="Scrapy爬取豆瓣图书Top250"></a>Scrapy爬取豆瓣图书Top250</h2><p>先在<a class="link" target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=cmd&spm=1001.2101.3001.7020">cmd <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>创建一个项目 ，记得先切换到对应的目录下面</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">py -m scrapy startproject doubanTop</span><br></pre></td></tr></table></figure></div>
+
+<p><strong><a class="link" target="_blank" rel="noopener" href="http://items.py/">items.py <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">DoubantopItem</span>(scrapy.Item):</span><br><span class="line">    <span class="comment"># define the fields for your item here like:</span></span><br><span class="line">    <span class="comment"># name = scrapy.Field()</span></span><br><span class="line">    title = scrapy.Field()</span><br><span class="line">    orginal_title = scrapy.Field()</span><br><span class="line">    author = scrapy.Field()</span><br><span class="line">    publisher = scrapy.Field()</span><br><span class="line">    release_time = scrapy.Field()</span><br><span class="line">    price = scrapy.Field()</span><br><span class="line">    rating = scrapy.Field()</span><br><span class="line">    number_of_comments = scrapy.Field()</span><br><span class="line">    simple_comment = scrapy.Field()</span><br></pre></td></tr></table></figure></div>
+
+<p><strong><a class="link" target="_blank" rel="noopener" href="http://douban.py/">douban.py <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"><span class="keyword">from</span> doubanTop.items <span class="keyword">import</span> DoubantopItem <span class="comment"># 把items.py里面的名字对应地引进来</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">DoubanSpider</span>(scrapy.Spider):</span><br><span class="line">    name = <span class="string">&#x27;douban&#x27;</span></span><br><span class="line">    allowed_domains = [<span class="string">&#x27;douban.com&#x27;</span>]</span><br><span class="line">    start_urls = [<span class="string">&#x27;https://book.douban.com/top250?start=0&#x27;</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">parse</span>(<span class="params">self, response</span>):</span><br><span class="line">        item = DoubantopItem()</span><br><span class="line">        find_all = response.xpath(<span class="string">&#x27;//div[@class=&quot;article&quot;]/div[@class=&quot;indent&quot;]/table/tr[@class=&quot;item&quot;]&#x27;</span>)</span><br><span class="line">        <span class="keyword">for</span> section <span class="keyword">in</span> find_all:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                title = section.xpath(<span class="string">&quot;td[2]/div[@class=&#x27;pl2&#x27;]/a/text()&quot;</span>).extract_first().strip()</span><br><span class="line">                orginal_title = section.xpath(<span class="string">&quot;td[2]/div[@class=&#x27;pl2&#x27;]/span/text()&quot;</span>).extract_first().strip()</span><br><span class="line">                author = section.xpath(<span class="string">&quot;td[2]/p[@class=&#x27;pl&#x27;]/text()&quot;</span>).extract()[<span class="number">0</span>].strip().split(<span class="string">&#x27;/&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">                publisher = section.xpath(<span class="string">&quot;td[2]/p[@class=&#x27;pl&#x27;]/text()&quot;</span>).extract()[<span class="number">0</span>].strip().split(<span class="string">&#x27;/&#x27;</span>)[-<span class="number">3</span>]</span><br><span class="line">                release_time = section.xpath(<span class="string">&quot;td[2]/p[@class=&#x27;pl&#x27;]/text()&quot;</span>).extract()[<span class="number">0</span>].strip().split(<span class="string">&#x27;/&#x27;</span>)[-<span class="number">2</span>]</span><br><span class="line">                price = section.xpath(<span class="string">&quot;td[2]/p[@class=&#x27;pl&#x27;]/text()&quot;</span>).extract()[<span class="number">0</span>].strip().split(<span class="string">&#x27;/&#x27;</span>)[-<span class="number">1</span>]</span><br><span class="line">                rating = section.xpath(<span class="string">&quot;td[2]/div[@class=&#x27;star clearfix&#x27;]/span[@class=&#x27;rating_nums&#x27;]/text()&quot;</span>).extract_first()</span><br><span class="line">                number_of_comments = section.xpath(<span class="string">&quot;td[2]/div[@class=&#x27;star clearfix&#x27;]/span[@class=&#x27;pl&#x27;]/text()&quot;</span>).extract_first().strip(<span class="string">&#x27;\n )(&#x27;</span>)</span><br><span class="line">                simple_comment = section.xpath(<span class="string">&quot;td[2]/p[@class=&#x27;quote&#x27;]/span[@class=&#x27;inq&#x27;]/text()&quot;</span>).extract_first()</span><br><span class="line"></span><br><span class="line">                item[<span class="string">&#x27;title&#x27;</span>] = title</span><br><span class="line">                item[<span class="string">&#x27;orginal_title&#x27;</span>] = orginal_title</span><br><span class="line">                item[<span class="string">&#x27;author&#x27;</span>] = author</span><br><span class="line">                item[<span class="string">&#x27;publisher&#x27;</span>] = publisher</span><br><span class="line">                item[<span class="string">&#x27;release_time&#x27;</span>] = release_time</span><br><span class="line">                item[<span class="string">&#x27;price&#x27;</span>] = price</span><br><span class="line">                item[<span class="string">&#x27;rating&#x27;</span>] = rating</span><br><span class="line">                item[<span class="string">&#x27;number_of_comments&#x27;</span>] = number_of_comments</span><br><span class="line">                item[<span class="string">&#x27;simple_comment&#x27;</span>] = simple_comment</span><br><span class="line">                <span class="keyword">yield</span> item</span><br><span class="line">            <span class="keyword">except</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&#x27;error&#x27;</span>)</span><br><span class="line">                <span class="keyword">pass</span></span><br><span class="line">		<span class="comment">#注意此处的缩进</span></span><br><span class="line">        urls = [<span class="string">&#x27;https://book.douban.com/top250?start=&#123;0&#125;&#x27;</span>.<span class="built_in">format</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">25</span>,<span class="number">275</span>,<span class="number">25</span>)]</span><br><span class="line">        <span class="keyword">for</span> url <span class="keyword">in</span> urls:</span><br><span class="line">            <span class="keyword">yield</span> scrapy.Request(url,callback=self.parse) <span class="comment"># 递归调用自己的parse方法</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong><a class="link" target="_blank" rel="noopener" href="http://piplines.py/">piplines.py <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong><br>此处用csv格式进行存储</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">DoubantopPipeline</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        path = <span class="string">&#x27;D://douban_book_Top250.csv&#x27;</span></span><br><span class="line">        self.file = <span class="built_in">open</span>(path,<span class="string">&#x27;a+&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">        self.writer = csv.writer(self.file)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">process_item</span>(<span class="params">self, item, spider</span>):</span><br><span class="line">        self.writer.writerow(</span><br><span class="line">            (item[<span class="string">&#x27;title&#x27;</span>],item[<span class="string">&#x27;orginal_title&#x27;</span>],item[<span class="string">&#x27;author&#x27;</span>],</span><br><span class="line">             item[<span class="string">&#x27;publisher&#x27;</span>],item[<span class="string">&#x27;release_time&#x27;</span>],item[<span class="string">&#x27;price&#x27;</span>],</span><br><span class="line">             item[<span class="string">&#x27;rating&#x27;</span>],item[<span class="string">&#x27;number_of_comments&#x27;</span>],item[<span class="string">&#x27;simple_comment&#x27;</span>]</span><br><span class="line">             )</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">return</span> item</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">close_spider</span>(<span class="params">self,spider</span>):</span><br><span class="line">        self.file.close()</span><br></pre></td></tr></table></figure></div>
+
+<p>然后再settings.py里面把对应的东西弄好<br><strong><a class="link" target="_blank" rel="noopener" href="http://settings.py/">settings.py <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">BOT_NAME = <span class="string">&#x27;doubanTop&#x27;</span></span><br><span class="line"></span><br><span class="line">SPIDER_MODULES = [<span class="string">&#x27;doubanTop.spiders&#x27;</span>]</span><br><span class="line">NEWSPIDER_MODULE = <span class="string">&#x27;doubanTop.spiders&#x27;</span></span><br><span class="line"></span><br><span class="line">ROBOTSTXT_OBEY = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">DEFAULT_REQUEST_HEADERS = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">ITEM_PIPELINES = &#123;</span></span><br><span class="line"><span class="string">   &#x27;</span>doubanTop.pipelines.DoubantopPipeline<span class="string">&#x27;: 300,</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>然后再次打开cmd，再此目录下</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">py -m scrapy crawl douban</span><br></pre></td></tr></table></figure></div>
+
+<p>最后结果</p>
+<style>.dfymlfbzesdr{zoom:50%;}</style><img lazyload src="/images/loading.svg" data-src="/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/QQ20240704-210411.png" class="dfymlfbzesdr" alt="QQ20240704-210411">
 
         </div>
 
@@ -634,15 +677,15 @@
         <li><strong>标题:</strong> </li>
         <li><strong>作者:</strong> Shirolin</li>
         <li><strong>创建于
-                :</strong> 2024-07-03 09:37:18</li>
+                :</strong> 2024-07-04 20:06:40</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-07-03 09:55:30
+                    :</strong> 2024-07-04 21:08:20
             </li>
         
         <li>
-            <strong>链接:</strong> https://redefine.ohevan.com/2024/07/03/移动安全之app加固/
+            <strong>链接:</strong> https://redefine.ohevan.com/2024/07/04/scrapy爬虫框架和简单应用/
         </li>
         <li>
             <strong>
@@ -670,7 +713,7 @@
                     <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="prev"
                         rel="prev"
-                        href="/2024/07/03/app%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%E6%8A%80%E6%9C%AF/"
+                        href="/2024/07/04/uniapp%E4%BF%9D%E7%95%99%E4%B8%A4%E4%BD%8D%E5%B0%8F%E6%95%B0%E9%97%AE%E9%A2%98/"
                         >
                             <span class="left arrow-icon flex justify-center items-center">
                                 <i class="fa-solid fa-chevron-left"></i>
@@ -686,7 +729,7 @@
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/2024/07/02/SSL%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%8F%8A%E6%BC%8F%E6%B4%9E/"
+                        href="/2024/07/03/github%E6%B3%84%E9%9C%B2/"
                         >
                             <span class="title flex justify-center items-center">
                                 <span class="post-nav-title-item"></span>
@@ -754,7 +797,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title"></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A7%BB%E5%8A%A8%E5%AE%89%E5%85%A8%E4%B9%8Bapp%E5%8A%A0%E5%9B%BA"><span class="nav-text">移动安全之app加固</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81app%E5%BA%94%E7%94%A8%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%EF%BC%9F"><span class="nav-text">一、app应用为什么需要安全加固？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81app%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-text">二、app安全加固实现原理是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%8A%A0%E5%9B%BA%E4%B8%BB%E8%A6%81%E6%98%AF%E5%AF%B9%E5%93%AA%E5%87%A0%E4%B8%AA%E5%9C%B0%E6%96%B9%E8%BF%9B%E8%A1%8C%E5%8A%A0%E5%BC%BA%EF%BC%9F"><span class="nav-text">三、加固主要是对哪几个地方进行加强？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81app%E8%BF%9B%E8%A1%8C%E5%8A%A0%E5%9B%BA%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BD%9C%E7%94%A8%EF%BC%9F"><span class="nav-text">四、app进行加固有哪些作用？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8"><span class="nav-text">scrapy爬虫框架和简单应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E5%9F%BA%E6%9C%AC%E7%90%86%E8%AE%BA"><span class="nav-text">网络爬虫基本理论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#scrapy%E7%88%AC%E8%99%AB%E6%9E%B6%E6%9E%84"><span class="nav-text">scrapy爬虫架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#scrapy%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%BB%93%E6%9E%84"><span class="nav-text">scrapy项目的结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scrapy%E7%88%AC%E5%8F%96%E8%B1%86%E7%93%A3%E5%9B%BE%E4%B9%A6Top250"><span class="nav-text">Scrapy爬取豆瓣图书Top250</span></a></li></ol></li></ol>
 
     </div>
 </div>
