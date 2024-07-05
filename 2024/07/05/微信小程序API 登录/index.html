@@ -25,12 +25,12 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="微信小程序API 登录wx.login(OBJECT) 调用接口获取登录凭证（code）进而换取用户登录态信息，包括用户的唯一标识（openid） 及本次登录的 会话密钥（session_key）。用户数据的加解密通讯需要依赖会话密钥完成。 OBJECT参数说明：    参数名 类型 必填 说明    success Function 否 接口调用成功的回调函数   fail Function 否">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://shiro036-joker.github.io/Meterpreter%E5%BA%94%E7%94%A8/20190530224117_74684.png">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/05/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8FAPI%20%E7%99%BB%E5%BD%95/20190530224117_74684.png">
 <meta property="article:published_time" content="2024-07-05T01:50:18.381Z">
-<meta property="article:modified_time" content="2024-07-05T01:57:10.627Z">
+<meta property="article:modified_time" content="2024-07-05T02:04:10.519Z">
 <meta property="article:author" content="Shirolin">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://shiro036-joker.github.io/Meterpreter%E5%BA%94%E7%94%A8/20190530224117_74684.png">
+<meta name="twitter:image" content="https://shiro036-joker.github.io/2024/07/05/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8FAPI%20%E7%99%BB%E5%BD%95/20190530224117_74684.png">
     
     
     <!--- Icon Part-->
@@ -583,8 +583,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-07-05 09:57:10</span>
-            <span class="mobile">2024-07-05 09:57:10</span>
+            <span class="desktop">2024-07-05 10:04:10</span>
+            <span class="mobile">2024-07-05 10:04:10</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -769,7 +769,8 @@
 
 <h2 id="登录态维护"><a href="#登录态维护" class="headerlink" title="登录态维护"></a>登录态维护</h2><p>通过<code>wx.login()</code>获取到用户登录态之后，需要维护登录态。开发者要注意<strong>不应该直接把 session_key、openid 等字段作为用户的标识或者 session 的标识</strong>，而应该自己派发一个 session 登录态（请参考登录时序图）。对于开发者自己生成的 session，应该保证其安全性且不应该设置较长的过期时间。session 派发到小程序客户端之后，可将其存储在 storage ，用于后续通信使用。</p>
 <p>通过<code>wx.checkSession()</code>检测用户登录态是否失效。并决定是否调用wx.login() 重新获取登录态</p>
-<h3 id="登录时序图"><a href="#登录时序图" class="headerlink" title="登录时序图"></a>登录时序图</h3><p><img lazyload src="/images/loading.svg" data-src="/Meterpreter%E5%BA%94%E7%94%A8/20190530224117_74684.png" alt="20190530224117_74684"></p>
+<h3 id="登录时序图"><a href="#登录时序图" class="headerlink" title="登录时序图"></a>登录时序图</h3><img lazyload src="/images/loading.svg" data-src="/2024/07/05/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8FAPI%20%E7%99%BB%E5%BD%95/20190530224117_74684.png" class title="20190530224117_74684">
+
 <h1 id="微信小程序API-用户数据的签名验证和加解密"><a href="#微信小程序API-用户数据的签名验证和加解密" class="headerlink" title="微信小程序API 用户数据的签名验证和加解密"></a>微信小程序API 用户数据的签名验证和加解密</h1><hr>
 <h2 id="用户数据的签名验证和加解密"><a href="#用户数据的签名验证和加解密" class="headerlink" title="用户数据的签名验证和加解密"></a>用户数据的签名验证和加解密</h2><hr>
 <h3 id="数据签名校验"><a href="#数据签名校验" class="headerlink" title="数据签名校验"></a>数据签名校验</h3><p>为了确保 <a class="link" target="_blank" rel="noopener" href="https://www.w3cschool.cn/weixinapp/weixinapp-open.html">开放接口 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 返回用户数据的安全性，微信会对明文数据进行签名。开发者可以根据业务需要对数据包进行签名校验，确保数据的完整性。</p>
@@ -843,7 +844,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-07-05 09:57:10
+                    :</strong> 2024-07-05 10:04:10
             </li>
         
         <li>
