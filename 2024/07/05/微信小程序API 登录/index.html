@@ -13,18 +13,24 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://shiro036-joker.github.io/archives/2024/07/"/>
+    <link rel="canonical" href="https://shiro036-joker.github.io/2024/07/05/微信小程序api 登录/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta property="og:type" content="website">
+        <meta name="description" content="微信小程序API 登录wx.login(OBJECT) 调用接口获取登录凭证（code）进而换取用户登录态信息，包括用户的唯一标识（openid） 及本次登录的 会话密钥（session_key）。用户数据的加解密通讯需要依赖会话密钥完成。 OBJECT参数说明：    参数名 类型 必填 说明    success Function 否 接口调用成功的回调函数   fail Function 否">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://shiro036-joker.github.io/archives/2024/07/index.html">
+<meta property="og:url" content="https://shiro036-joker.github.io/2024/07/05/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8FAPI%20%E7%99%BB%E5%BD%95/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="微信小程序API 登录wx.login(OBJECT) 调用接口获取登录凭证（code）进而换取用户登录态信息，包括用户的唯一标识（openid） 及本次登录的 会话密钥（session_key）。用户数据的加解密通讯需要依赖会话密钥完成。 OBJECT参数说明：    参数名 类型 必填 说明    success Function 否 接口调用成功的回调函数   fail Function 否">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://shiro036-joker.github.io/Meterpreter%E5%BA%94%E7%94%A8/20190530224117_74684.png">
+<meta property="article:published_time" content="2024-07-05T01:50:18.381Z">
+<meta property="article:modified_time" content="2024-07-05T01:57:10.627Z">
 <meta property="article:author" content="Shirolin">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://shiro036-joker.github.io/Meterpreter%E5%BA%94%E7%94%A8/20190530224117_74684.png">
     
     
     <!--- Icon Part-->
@@ -35,8 +41,6 @@
     <!--- Page Info-->
     
     <title>
-        
-            归档: 2024/7 -
         
         Shiro Scale
     </title>
@@ -545,170 +549,410 @@
             <div class="main-content">
 
                 
-                    <div class="archive-container shadow-none hover:shadow-none sm:shadow-redefine sm:hover:shadow-redefine-hover">
-    
-<div class="archive-list-container">
-    
-        <section class="archive-item mb-spacing-unit last:mb-0">
-            <div class="archive-item-header flex flex-row items-center mb-2">
-                <span class="archive-year font-semibold text-3xl mr-2">2024</span>
-                <span class="archive-year-post-count text-xs md:text-sm font-bold rounded-small bg-third-background-color py-[2px] px-[10px] border border-border-color">16</span>
-            </div>
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
             
-            <ul class="article-list pl-0 md:pl-8 text-lg leading-[1.5]">
-                
-                    
-                    
-                         <!-- Close the previous LI if not the first item -->
-                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='07-05'>
-                    
-                    <a href="/2024/07/05/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8FAPI%20%E7%99%BB%E5%BD%95/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl"></span>
-                    </a>
-                    
-                
-                    
-                    
-                    <a href="/2024/07/05/Meterpreter%E5%BA%94%E7%94%A8/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl"></span>
-                    </a>
-                    
-                
-                    
-                    
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3"></h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/logo.svg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">Shirolin</span>
                         
-                            </li>
-                         <!-- Close the previous LI if not the first item -->
-                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='07-04'>
-                    
-                    <a href="/2024/07/04/uniapp%E6%8E%A5%E5%8F%A3%E6%95%B0%E6%8D%AE%E5%B0%81%E8%A3%85/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl"></span>
-                    </a>
-                    
-                
-                    
-                    
-                    <a href="/2024/07/04/uniapp%E4%BF%9D%E7%95%99%E4%B8%A4%E4%BD%8D%E5%B0%8F%E6%95%B0%E9%97%AE%E9%A2%98/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl"></span>
-                    </a>
-                    
-                
-                    
-                    
-                    <a href="/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl"></span>
-                    </a>
-                    
-                
-                    
-                    
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv3</span>
                         
-                            </li>
-                         <!-- Close the previous LI if not the first item -->
-                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='07-03'>
-                    
-                    <a href="/2024/07/03/github%E6%B3%84%E9%9C%B2/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl"></span>
-                    </a>
-                    
-                
-                    
-                    
-                    <a href="/2024/07/03/%E8%B4%A6%E6%88%B7%E4%BD%93%E7%B3%BB%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E6%8E%A2%E8%AE%A8/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl"></span>
-                    </a>
-                    
-                
-                    
-                    
-                    <a href="/2024/07/03/app%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA%E6%8A%80%E6%9C%AF/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl"></span>
-                    </a>
-                    
-                
-                    
-                    
-                    <a href="/2024/07/03/%E7%A7%BB%E5%8A%A8%E5%AE%89%E5%85%A8%E4%B9%8Bapp%E5%8A%A0%E5%9B%BA/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl"></span>
-                    </a>
-                    
-                
-                    
-                    
-                        
-                            </li>
-                         <!-- Close the previous LI if not the first item -->
-                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='07-02'>
-                    
-                    <a href="/2024/07/02/SSL%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%8F%8A%E6%BC%8F%E6%B4%9E/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl"></span>
-                    </a>
-                    
-                
-                    
-                    
-                    <a href="/2024/07/02/%E7%9F%AD%E4%BF%A1%E9%AA%8C%E8%AF%81%E7%A0%81%E5%AE%89%E5%85%A8/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl"></span>
-                    </a>
-                    
-                
-                    
-                    
-                        
-                            </li>
-                         <!-- Close the previous LI if not the first item -->
-                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='06-28'>
-                    
-                    <a href="/2024/06/28/%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl"></span>
-                    </a>
-                    
-                
-                    
-                    
-                    <a href="/2024/06/28/%E7%BD%91%E7%BB%9C%E9%9D%B6%E5%9C%BA/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl"></span>
-                    </a>
-                    
-                
-                    
-                    
-                    <a href="/2024/06/28/%E8%BF%9C%E6%8E%A7%E6%9C%A8%E9%A9%AC/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl"></span>
-                    </a>
-                    
-                
-                    
-                    
-                        
-                            </li>
-                         <!-- Close the previous LI if not the first item -->
-                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='06-24'>
-                    
-                    <a href="/2024/06/24/Threejs%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl"></span>
-                    </a>
-                    
-                
-                    
-                    
-                        
-                            </li>
-                         <!-- Close the previous LI if not the first item -->
-                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='06-20'>
-                    
-                    <a href="/2024/06/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%97%85%E6%AF%92%E4%BC%A0%E6%92%AD%E6%A8%A1%E5%9E%8B%E5%92%8C%E9%98%B2%E6%8A%A4%E7%AD%96%E7%95%A5/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl"></span>
-                    </a>
-                    
-                
-                </li> <!-- Ensure the last item is properly closed -->
-            </ul>
-        </section>
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-07-05 09:50:18</span>
+        <span class="mobile">2024-07-05 09:50:18</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-07-05 09:57:10</span>
+            <span class="mobile">2024-07-05 09:57:10</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.7k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>7 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <h1 id="微信小程序API-登录"><a href="#微信小程序API-登录" class="headerlink" title="微信小程序API 登录"></a>微信小程序API 登录</h1><h2 id="wx-login-OBJECT"><a href="#wx-login-OBJECT" class="headerlink" title="wx.login(OBJECT)"></a>wx.login(OBJECT)</h2><hr>
+<p>调用接口获取<strong>登录凭证（code）</strong>进而换取用户登录态信息，包括用户的<strong>唯一标识（openid）</strong> 及本次登录的 <strong>会话密钥（session_key）</strong>。<strong>用户数据的加解密通讯</strong>需要依赖会话密钥完成。</p>
+<p><strong>OBJECT参数说明：</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>success</td>
+<td>Function</td>
+<td>否</td>
+<td>接口调用成功的回调函数</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+</tr>
+</tbody></table>
+<p><strong>success返回参数说明：</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>errMsg</td>
+<td>String</td>
+<td>调用结果</td>
+</tr>
+<tr>
+<td>code</td>
+<td>String</td>
+<td>用户允许登录后，回调内容会带上 code（有效期五分钟），开发者需要将 code 发送到开发者服务器后台，使用<code>code 换取 session_key</code> api，将 code 换成 openid 和 session_key</td>
+</tr>
+</tbody></table>
+<p><strong>示例代码：</strong></p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//app.js</span></span><br><span class="line"><span class="title class_">App</span>(&#123;</span><br><span class="line">  <span class="attr">onLaunch</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    wx.<span class="title function_">login</span>(&#123;</span><br><span class="line">      <span class="attr">success</span>: <span class="keyword">function</span>(<span class="params">res</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (res.<span class="property">code</span>) &#123;</span><br><span class="line">          <span class="comment">//发起网络请求</span></span><br><span class="line">          wx.<span class="title function_">request</span>(&#123;</span><br><span class="line">            <span class="attr">url</span>: <span class="string">&#x27;https://test.com/onLogin&#x27;</span>,</span><br><span class="line">            <span class="attr">data</span>: &#123;</span><br><span class="line">              <span class="attr">code</span>: res.<span class="property">code</span></span><br><span class="line">            &#125;</span><br><span class="line">          &#125;)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;获取用户登录态失败！&#x27;</span> + res.<span class="property">errMsg</span>)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="code-换取-session-key"><a href="#code-换取-session-key" class="headerlink" title="code 换取 session_key"></a>code 换取 session_key</h3><p>这是一个 HTTPS 接口，开发者服务器使用<strong>登录凭证 code</strong> 获取 session_key 和 openid。其中 session_key 是对用户数据进行<a class="link" target="_blank" rel="noopener" href="https://www.w3cschool.cn/weixinapp/weixinapp-signature.html">加密签名 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的密钥。为了自身应用安全，<strong>session_key 不应该在网络上传输</strong>。</p>
+<p><strong>接口地址：</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://api.weixin.qq.com/sns/jscode2session?appid=APPID&amp;secret=SECRET&amp;js_code=JSCODE&amp;grant_type=authorization_code</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>请求参数：</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th>必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">appid</td>
+<td>是</td>
+<td>小程序唯一标识</td>
+</tr>
+<tr>
+<td align="left">secret</td>
+<td>是</td>
+<td>小程序的 app secret</td>
+</tr>
+<tr>
+<td align="left">js_code</td>
+<td>是</td>
+<td>登录时获取的 code</td>
+</tr>
+<tr>
+<td align="left">grant_type</td>
+<td>是</td>
+<td>填写为 authorization_code</td>
+</tr>
+</tbody></table>
+<p><strong>返回参数：</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>openid</td>
+<td>用户唯一标识</td>
+</tr>
+<tr>
+<td>session_key</td>
+<td>会话密钥</td>
+</tr>
+<tr>
+<td>unionid</td>
+<td>用户在开放平台的唯一标识符。本字段在满足一定条件的情况下才返回。具体参看<a class="link" target="_blank" rel="noopener" href="https://www.w3cschool.cn/weixinapp/weixinapp-open.html#unionid">UnionID机制说明 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+</tbody></table>
+<p><strong>返回说明：</strong></p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//正常返回的JSON数据包</span></span><br><span class="line">&#123;</span><br><span class="line">      <span class="string">&quot;openid&quot;</span>: <span class="string">&quot;OPENID&quot;</span>,</span><br><span class="line">      <span class="string">&quot;session_key&quot;</span>: <span class="string">&quot;SESSIONKEY&quot;</span></span><br><span class="line">      <span class="string">&quot;unionid&quot;</span>:  <span class="string">&quot;UNIONID&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//错误时返回JSON数据包(示例为Code无效)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;errcode&quot;</span>: <span class="number">40029</span>,</span><br><span class="line">    <span class="string">&quot;errmsg&quot;</span>: <span class="string">&quot;invalid code&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id><a href="#" class="headerlink" title></a></h2><h2 id="wx-checkSession-OBJECT"><a href="#wx-checkSession-OBJECT" class="headerlink" title="wx.checkSession(OBJECT)"></a>wx.checkSession(OBJECT)</h2><hr>
+<p>通过上述接口获得的用户登录态拥有一定的时效性。用户越久未使用小程序，用户登录态越有可能失效。反之如果用户一直在使用小程序，则用户登录态一直保持有效。具体时效逻辑由微信维护，对开发者透明。开发者只需要调用wx.checkSession接口<strong>检测当前用户登录态是否有效</strong>。登录态过期后开发者可以再调用wx.login获取新的用户登录态。</p>
+<p><strong>OBJECT参数说明：</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>success</td>
+<td>Function</td>
+<td>否</td>
+<td>接口调用成功的回调函数，登陆态未过期</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>否</td>
+<td>接口调用失败的回调函数，登陆态已过期</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+</tr>
+</tbody></table>
+<p><strong>示例代码：</strong></p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">wx.<span class="title function_">checkSession</span>(&#123;</span><br><span class="line">  <span class="attr">success</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="comment">//session 未过期，并且在本生命周期一直有效</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">fail</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="comment">//登录态过期</span></span><br><span class="line">    wx.<span class="title function_">login</span>() <span class="comment">//重新登录    ....</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="登录态维护"><a href="#登录态维护" class="headerlink" title="登录态维护"></a>登录态维护</h2><p>通过<code>wx.login()</code>获取到用户登录态之后，需要维护登录态。开发者要注意<strong>不应该直接把 session_key、openid 等字段作为用户的标识或者 session 的标识</strong>，而应该自己派发一个 session 登录态（请参考登录时序图）。对于开发者自己生成的 session，应该保证其安全性且不应该设置较长的过期时间。session 派发到小程序客户端之后，可将其存储在 storage ，用于后续通信使用。</p>
+<p>通过<code>wx.checkSession()</code>检测用户登录态是否失效。并决定是否调用wx.login() 重新获取登录态</p>
+<h3 id="登录时序图"><a href="#登录时序图" class="headerlink" title="登录时序图"></a>登录时序图</h3><p><img lazyload src="/images/loading.svg" data-src="/Meterpreter%E5%BA%94%E7%94%A8/20190530224117_74684.png" alt="20190530224117_74684"></p>
+<h1 id="微信小程序API-用户数据的签名验证和加解密"><a href="#微信小程序API-用户数据的签名验证和加解密" class="headerlink" title="微信小程序API 用户数据的签名验证和加解密"></a>微信小程序API 用户数据的签名验证和加解密</h1><hr>
+<h2 id="用户数据的签名验证和加解密"><a href="#用户数据的签名验证和加解密" class="headerlink" title="用户数据的签名验证和加解密"></a>用户数据的签名验证和加解密</h2><hr>
+<h3 id="数据签名校验"><a href="#数据签名校验" class="headerlink" title="数据签名校验"></a>数据签名校验</h3><p>为了确保 <a class="link" target="_blank" rel="noopener" href="https://www.w3cschool.cn/weixinapp/weixinapp-open.html">开放接口 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 返回用户数据的安全性，微信会对明文数据进行签名。开发者可以根据业务需要对数据包进行签名校验，确保数据的完整性。</p>
+<ol>
+<li>签名校验算法涉及用户的session_key，通过 <a class="link" target="_blank" rel="noopener" href="https://www.w3cschool.cn/weixinapp/weixinapp-api-login.html#wxloginobject">wx.login <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 登录流程获取用户session_key，并自行维护与应用自身登录态的对应关系。</li>
+<li>通过调用接口（如 <a class="link" target="_blank" rel="noopener" href="https://www.w3cschool.cn/weixinapp/weixinapp-open.html">wx.getUserInfo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）获取数据时，接口会同时返回 rawData、signature，其中 signature &#x3D; sha1( rawData + session_key )</li>
+<li>开发者将 signature、rawData 发送到开发者服务器进行校验。服务器利用用户对应的 session_key 使用相同的算法计算出签名 signature2 ，比对 signature 与 signature2 即可校验数据的完整性。</li>
+</ol>
+<p><strong>如wx.getUserInfo的数据校验：</strong></p>
+<p>接口返回的rawData：</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;nickName&quot;</span>: <span class="string">&quot;Band&quot;</span>,</span><br><span class="line">  <span class="string">&quot;gender&quot;</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="string">&quot;language&quot;</span>: <span class="string">&quot;zh_CN&quot;</span>,</span><br><span class="line">  <span class="string">&quot;city&quot;</span>: <span class="string">&quot;Guangzhou&quot;</span>,</span><br><span class="line">  <span class="string">&quot;province&quot;</span>: <span class="string">&quot;Guangdong&quot;</span>,</span><br><span class="line">  <span class="string">&quot;country&quot;</span>: <span class="string">&quot;CN&quot;</span>,</span><br><span class="line">  <span class="string">&quot;avatarUrl&quot;</span>: <span class="string">&quot;http://wx.qlogo.cn/mmopen/vi_32/1vZvI39NWFQ9XM4LtQpFrQJ1xlgZxx3w7bQxKARol6503Iuswjjn6nIGBiaycAjAtpujxyzYsrztuuICqIM5ibXQ/0&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>用户的 session-key：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HyVFkGl5F5OQWJZZaNzBBg==</span><br></pre></td></tr></table></figure></div>
+
+<p>所以，用于签名的字符串为：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;nickName&quot;:&quot;Band&quot;,&quot;gender&quot;:1,&quot;language&quot;:&quot;zh_CN&quot;,&quot;city&quot;:&quot;Guangzhou&quot;,&quot;province&quot;:&quot;Guangdong&quot;,&quot;country&quot;:&quot;CN&quot;,&quot;avatarUrl&quot;:&quot;http://wx.qlogo.cn/mmopen/vi_32/1vZvI39NWFQ9XM4LtQpFrQJ1xlgZxx3w7bQxKARol6503Iuswjjn6nIGBiaycAjAtpujxyzYsrztuuICqIM5ibXQ/0&quot;&#125;HyVFkGl5F5OQWJZZaNzBBg==</span><br></pre></td></tr></table></figure></div>
+
+<p>使用sha1得到的结果为</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">75e81ceda165f4ffa64f4068af58c64b8f54b88c</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="加密数据解密算法"><a href="#加密数据解密算法" class="headerlink" title="加密数据解密算法"></a>加密数据解密算法</h3><p>接口如果涉及敏感数据（如<a target="_blank" rel="noopener" href="https://www.w3cschool.cn/weixinapp/weixinapp-open.html"><code>wx.getUserInfo</code></a>当中的 openId 和unionId ），接口的明文内容将不包含这些敏感数据。开发者如需要获取敏感数据，需要对接口返回的**加密数据( encryptedData )**进行对称解密。解密算法如下：</p>
+<ol>
+<li>对称解密使用的算法为 AES-128-CBC，数据采用PKCS#7填充。</li>
+<li>对称解密的目标密文为 Base64_Decode(encryptedData),</li>
+<li>对称解密秘钥 aeskey &#x3D; Base64_Decode(session_key), aeskey 是16字节</li>
+<li>对称解密算法初始向量 iv 会在数据接口中返回。</li>
+</ol>
+<p>微信官方提供了多种编程语言的示例代码（<a class="link" target="_blank" rel="noopener" href="https://mp.weixin.qq.com/debug/wxadoc/dev/demo/aes-sample.zip">点击下载 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）。每种语言类型的接口名字均一致。调用方式可以参照示例。</p>
+<p>另外，为了应用能校验数据的有效性，我们会在敏感数据加上数据水印( watermark )</p>
+<p><strong>watermark参数说明：</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>watermark</td>
+<td>OBJECT</td>
+<td>数据水印</td>
+</tr>
+<tr>
+<td>appid</td>
+<td>String</td>
+<td>敏感数据归属appid，开发者可校验此参数与自身appid是否一致</td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>DateInt</td>
+<td>敏感数据获取的时间戳, 开发者可以用于数据时效性校验</td>
+</tr>
+</tbody></table>
+<p>如接口<a class="link" target="_blank" rel="noopener" href="https://www.w3cschool.cn/weixinapp/weixinapp-open.html">wx.getUserInfo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>敏感数据当中的watermark：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;openId&quot;: &quot;OPENID&quot;,</span><br><span class="line">    &quot;nickName&quot;: &quot;NICKNAME&quot;,</span><br><span class="line">    &quot;gender&quot;: GENDER,</span><br><span class="line">    &quot;city&quot;: &quot;CITY&quot;,</span><br><span class="line">    &quot;province&quot;: &quot;PROVINCE&quot;,</span><br><span class="line">    &quot;country&quot;: &quot;COUNTRY&quot;,</span><br><span class="line">    &quot;avatarUrl&quot;: &quot;AVATARURL&quot;,</span><br><span class="line">    &quot;unionId&quot;: &quot;UNIONID&quot;,</span><br><span class="line">    &quot;watermark&quot;:</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;appid&quot;:&quot;APPID&quot;,</span><br><span class="line">        &quot;timestamp&quot;:TIMESTAMP</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>注：此前提供的<strong>加密数据（encryptData）</strong>以及对应的加密算法将被弃用，请开发者不要再依赖旧逻辑。</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> </li>
+        <li><strong>作者:</strong> Shirolin</li>
+        <li><strong>创建于
+                :</strong> 2024-07-05 09:50:18</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2024-07-05 09:57:10
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://redefine.ohevan.com/2024/07/05/微信小程序API 登录/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+
+            
+                本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
+    </ul>
 </div>
+
+            </div>
+        
+
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/07/05/Meterpreter%E5%BA%94%E7%94%A8/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item"></span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        评论
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://example.example.com',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          reaction: false,
+          requiredMeta: ['nick', 'mail'],
+          emoji: [],
+          recaptchaV3Key: "wasd",
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此页目录</div>
+        <div class="page-title"></div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8FAPI-%E7%99%BB%E5%BD%95"><span class="nav-text">微信小程序API 登录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#wx-login-OBJECT"><span class="nav-text">wx.login(OBJECT)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#code-%E6%8D%A2%E5%8F%96-session-key"><span class="nav-text">code 换取 session_key</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wx-checkSession-OBJECT"><span class="nav-text">wx.checkSession(OBJECT)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%99%BB%E5%BD%95%E6%80%81%E7%BB%B4%E6%8A%A4"><span class="nav-text">登录态维护</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BB%E5%BD%95%E6%97%B6%E5%BA%8F%E5%9B%BE"><span class="nav-text">登录时序图</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8FAPI-%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E7%9A%84%E7%AD%BE%E5%90%8D%E9%AA%8C%E8%AF%81%E5%92%8C%E5%8A%A0%E8%A7%A3%E5%AF%86"><span class="nav-text">微信小程序API 用户数据的签名验证和加解密</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E7%9A%84%E7%AD%BE%E5%90%8D%E9%AA%8C%E8%AF%81%E5%92%8C%E5%8A%A0%E8%A7%A3%E5%AF%86"><span class="nav-text">用户数据的签名验证和加解密</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%AD%BE%E5%90%8D%E6%A0%A1%E9%AA%8C"><span class="nav-text">数据签名校验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E6%95%B0%E6%8D%AE%E8%A7%A3%E5%AF%86%E7%AE%97%E6%B3%95"><span class="nav-text">加密数据解密算法</span></a></li></ol></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
 
                 
 
@@ -796,6 +1040,27 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-side-tools-container">
