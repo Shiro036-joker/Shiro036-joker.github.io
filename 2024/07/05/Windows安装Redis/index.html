@@ -13,24 +13,42 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://shiro036-joker.github.io/2024/07/05/微信小程序api 登录/"/>
+    <link rel="canonical" href="https://shiro036-joker.github.io/2024/07/05/windows安装redis/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="微信小程序API 登录wx.login(OBJECT) 调用接口获取登录凭证（code）进而换取用户登录态信息，包括用户的唯一标识（openid） 及本次登录的 会话密钥（session_key）。用户数据的加解密通讯需要依赖会话密钥完成。 OBJECT参数说明：    参数名 类型 必填 说明    success Function 否 接口调用成功的回调函数   fail Function 否">
+        <meta name="description" content="Windows安装Redis及可视化界面RESP一、Redis是什么数据库？Remote Dictionary Server(Redis) 是一个开源的使用 ANSI C 语言编写、遵守 BSD 协议、支持网络、可基于内存、分布式、可选持久性的键值对(Key-Value)存储数据库，并提供多种语言的 API，是跨平台的非关系型数据库。Redis 通常被称为数据结构服务器，因为值（value）可以是">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://shiro036-joker.github.io/2024/07/05/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8FAPI%20%E7%99%BB%E5%BD%95/index.html">
+<meta property="og:url" content="https://shiro036-joker.github.io/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="微信小程序API 登录wx.login(OBJECT) 调用接口获取登录凭证（code）进而换取用户登录态信息，包括用户的唯一标识（openid） 及本次登录的 会话密钥（session_key）。用户数据的加解密通讯需要依赖会话密钥完成。 OBJECT参数说明：    参数名 类型 必填 说明    success Function 否 接口调用成功的回调函数   fail Function 否">
+<meta property="og:description" content="Windows安装Redis及可视化界面RESP一、Redis是什么数据库？Remote Dictionary Server(Redis) 是一个开源的使用 ANSI C 语言编写、遵守 BSD 协议、支持网络、可基于内存、分布式、可选持久性的键值对(Key-Value)存储数据库，并提供多种语言的 API，是跨平台的非关系型数据库。Redis 通常被称为数据结构服务器，因为值（value）可以是">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/05/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8FAPI%20%E7%99%BB%E5%BD%95/20190530224117_74684.png">
-<meta property="article:published_time" content="2024-07-05T01:50:18.381Z">
-<meta property="article:modified_time" content="2024-07-05T02:04:10.519Z">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910151311930-118333430.png">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910173105548-509662721.png">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910151534515-1362296718.png">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910151713597-709889887.png">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910152909484-478694299.png">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910160807204-772922936.png">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910161046240-165355360.png">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910163811371-215020076.png">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910163945851-456017714.png">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910164101461-568889453.png">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910174256180-1683744499.png">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910164132042-1668378277.png">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/c443ca3e54f3456fbfcc56c8eb2cdf9f.png">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/25444830cdef41599ea208574a29065c.png">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1085fc8251a5480596e7af335ef91434.png">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/321002ec23b74f88affebed995903822.png">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/211da70e7aec4b1fa8e960a317936c62.png">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1db56699007147c88dff3efeb7a99307.png">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/6a1c48bbfa0b44f6b606bd7e850c9dfa.png">
+<meta property="article:published_time" content="2024-07-05T03:43:11.860Z">
+<meta property="article:modified_time" content="2024-07-05T03:55:39.758Z">
 <meta property="article:author" content="Shirolin">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://shiro036-joker.github.io/2024/07/05/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8FAPI%20%E7%99%BB%E5%BD%95/20190530224117_74684.png">
+<meta name="twitter:image" content="https://shiro036-joker.github.io/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910151311930-118333430.png">
     
     
     <!--- Icon Part-->
@@ -576,15 +594,15 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2024-07-05 09:50:18</span>
-        <span class="mobile">2024-07-05 09:50:18</span>
+        <span class="desktop">2024-07-05 11:43:11</span>
+        <span class="mobile">2024-07-05 11:43:11</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-07-05 10:04:10</span>
-            <span class="mobile">2024-07-05 10:04:10</span>
+            <span class="desktop">2024-07-05 11:55:39</span>
+            <span class="mobile">2024-07-05 11:55:39</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -595,12 +613,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.7k 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>885 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>7 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>3 分钟</span>
         </span>
     
     
@@ -619,217 +637,90 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="微信小程序API-登录"><a href="#微信小程序API-登录" class="headerlink" title="微信小程序API 登录"></a>微信小程序API 登录</h1><h2 id="wx-login-OBJECT"><a href="#wx-login-OBJECT" class="headerlink" title="wx.login(OBJECT)"></a>wx.login(OBJECT)</h2><hr>
-<p>调用接口获取<strong>登录凭证（code）</strong>进而换取用户登录态信息，包括用户的<strong>唯一标识（openid）</strong> 及本次登录的 <strong>会话密钥（session_key）</strong>。<strong>用户数据的加解密通讯</strong>需要依赖会话密钥完成。</p>
-<p><strong>OBJECT参数说明：</strong></p>
-<table>
-<thead>
-<tr>
-<th>参数名</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>success</td>
-<td>Function</td>
-<td>否</td>
-<td>接口调用成功的回调函数</td>
-</tr>
-<tr>
-<td>fail</td>
-<td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
-</tr>
-<tr>
-<td>complete</td>
-<td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
-</tr>
-</tbody></table>
-<p><strong>success返回参数说明：</strong></p>
-<table>
-<thead>
-<tr>
-<th>参数名</th>
-<th>类型</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>errMsg</td>
-<td>String</td>
-<td>调用结果</td>
-</tr>
-<tr>
-<td>code</td>
-<td>String</td>
-<td>用户允许登录后，回调内容会带上 code（有效期五分钟），开发者需要将 code 发送到开发者服务器后台，使用<code>code 换取 session_key</code> api，将 code 换成 openid 和 session_key</td>
-</tr>
-</tbody></table>
-<p><strong>示例代码：</strong></p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//app.js</span></span><br><span class="line"><span class="title class_">App</span>(&#123;</span><br><span class="line">  <span class="attr">onLaunch</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    wx.<span class="title function_">login</span>(&#123;</span><br><span class="line">      <span class="attr">success</span>: <span class="keyword">function</span>(<span class="params">res</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (res.<span class="property">code</span>) &#123;</span><br><span class="line">          <span class="comment">//发起网络请求</span></span><br><span class="line">          wx.<span class="title function_">request</span>(&#123;</span><br><span class="line">            <span class="attr">url</span>: <span class="string">&#x27;https://test.com/onLogin&#x27;</span>,</span><br><span class="line">            <span class="attr">data</span>: &#123;</span><br><span class="line">              <span class="attr">code</span>: res.<span class="property">code</span></span><br><span class="line">            &#125;</span><br><span class="line">          &#125;)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;获取用户登录态失败！&#x27;</span> + res.<span class="property">errMsg</span>)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div>
+            <h1 id="Windows安装Redis及可视化界面RESP"><a href="#Windows安装Redis及可视化界面RESP" class="headerlink" title="Windows安装Redis及可视化界面RESP"></a>Windows安装Redis及可视化界面RESP</h1><h2 id="一、Redis是什么数据库？"><a href="#一、Redis是什么数据库？" class="headerlink" title="一、Redis是什么数据库？"></a>一、Redis是什么数据库？</h2><p>Remote Dictionary Server(Redis) 是一个开源的使用 ANSI C 语言编写、遵守 BSD 协议、支持网络、可基于内存、分布式、可选持久性的键值对(Key-Value)存储数据库，并提供多种语言的 API，是跨平台的非关系型数据库。<br>Redis 通常被称为数据结构服务器，因为值（value）可以是字符串(String)、哈希(Hash)、列表(list)、集合(sets)和有序集合(sorted sets)等类型。</p>
+<h2 id="二、安装Redis"><a href="#二、安装Redis" class="headerlink" title="二、安装Redis"></a>二、安装Redis</h2><p>1、下载地址<br>Github下载地址：<a class="link" target="_blank" rel="noopener" href="https://github.com/MicrosoftArchive/redis/releases">https://github.com/MicrosoftArchive/redis/releases <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>网盘下载：</p>
+<p>windows服务链接：</p>
+<p>链接：<a class="link" target="_blank" rel="noopener" href="https://pan.baidu.com/s/1oLneZAF3xbG0IIAhl2PCFQ?pwd=fxud">https://pan.baidu.com/s/1oLneZAF3xbG0IIAhl2PCFQ?pwd=fxud <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>提取码：fxud</p>
+<p>redis客户端工具链接：</p>
+<p>链接：<a class="link" target="_blank" rel="noopener" href="https://pan.baidu.com/s/1dCnUS2SdfNSeml-sy6-wJA?pwd=gu44">https://pan.baidu.com/s/1dCnUS2SdfNSeml-sy6-wJA?pwd=gu44 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>提取码：gu44</p>
+<h4 id="2、安装过程"><a href="#2、安装过程" class="headerlink" title="2、安装过程"></a>2、安装过程</h4><h5 id="2-1-将下载的压缩包解压到一个文件夹中："><a href="#2-1-将下载的压缩包解压到一个文件夹中：" class="headerlink" title="2.1 将下载的压缩包解压到一个文件夹中："></a>2.1 将下载的压缩包解压到一个文件夹中：</h5><img lazyload src="/images/loading.svg" data-src="/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910151311930-118333430.png" class title="1476712-20220910151311930-118333430">
 
-<h3 id="code-换取-session-key"><a href="#code-换取-session-key" class="headerlink" title="code 换取 session_key"></a>code 换取 session_key</h3><p>这是一个 HTTPS 接口，开发者服务器使用<strong>登录凭证 code</strong> 获取 session_key 和 openid。其中 session_key 是对用户数据进行<a class="link" target="_blank" rel="noopener" href="https://www.w3cschool.cn/weixinapp/weixinapp-signature.html">加密签名 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的密钥。为了自身应用安全，<strong>session_key 不应该在网络上传输</strong>。</p>
-<p><strong>接口地址：</strong></p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://api.weixin.qq.com/sns/jscode2session?appid=APPID&amp;secret=SECRET&amp;js_code=JSCODE&amp;grant_type=authorization_code</span><br></pre></td></tr></table></figure></div>
+<img lazyload src="/images/loading.svg" data-src="/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910173105548-509662721.png" class title="1476712-20220910173105548-509662721">
 
-<p><strong>请求参数：</strong></p>
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th>必填</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">appid</td>
-<td>是</td>
-<td>小程序唯一标识</td>
-</tr>
-<tr>
-<td align="left">secret</td>
-<td>是</td>
-<td>小程序的 app secret</td>
-</tr>
-<tr>
-<td align="left">js_code</td>
-<td>是</td>
-<td>登录时获取的 code</td>
-</tr>
-<tr>
-<td align="left">grant_type</td>
-<td>是</td>
-<td>填写为 authorization_code</td>
-</tr>
-</tbody></table>
-<p><strong>返回参数：</strong></p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>openid</td>
-<td>用户唯一标识</td>
-</tr>
-<tr>
-<td>session_key</td>
-<td>会话密钥</td>
-</tr>
-<tr>
-<td>unionid</td>
-<td>用户在开放平台的唯一标识符。本字段在满足一定条件的情况下才返回。具体参看<a class="link" target="_blank" rel="noopener" href="https://www.w3cschool.cn/weixinapp/weixinapp-open.html#unionid">UnionID机制说明 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
-</tr>
-</tbody></table>
-<p><strong>返回说明：</strong></p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//正常返回的JSON数据包</span></span><br><span class="line">&#123;</span><br><span class="line">      <span class="string">&quot;openid&quot;</span>: <span class="string">&quot;OPENID&quot;</span>,</span><br><span class="line">      <span class="string">&quot;session_key&quot;</span>: <span class="string">&quot;SESSIONKEY&quot;</span></span><br><span class="line">      <span class="string">&quot;unionid&quot;</span>:  <span class="string">&quot;UNIONID&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//错误时返回JSON数据包(示例为Code无效)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;errcode&quot;</span>: <span class="number">40029</span>,</span><br><span class="line">    <span class="string">&quot;errmsg&quot;</span>: <span class="string">&quot;invalid code&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<img lazyload src="/images/loading.svg" data-src="/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910151534515-1362296718.png" class title="1476712-20220910151534515-1362296718">
 
-<h2 id><a href="#" class="headerlink" title></a></h2><h2 id="wx-checkSession-OBJECT"><a href="#wx-checkSession-OBJECT" class="headerlink" title="wx.checkSession(OBJECT)"></a>wx.checkSession(OBJECT)</h2><hr>
-<p>通过上述接口获得的用户登录态拥有一定的时效性。用户越久未使用小程序，用户登录态越有可能失效。反之如果用户一直在使用小程序，则用户登录态一直保持有效。具体时效逻辑由微信维护，对开发者透明。开发者只需要调用wx.checkSession接口<strong>检测当前用户登录态是否有效</strong>。登录态过期后开发者可以再调用wx.login获取新的用户登录态。</p>
-<p><strong>OBJECT参数说明：</strong></p>
-<table>
-<thead>
-<tr>
-<th>参数名</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>success</td>
-<td>Function</td>
-<td>否</td>
-<td>接口调用成功的回调函数，登陆态未过期</td>
-</tr>
-<tr>
-<td>fail</td>
-<td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数，登陆态已过期</td>
-</tr>
-<tr>
-<td>complete</td>
-<td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
-</tr>
-</tbody></table>
-<p><strong>示例代码：</strong></p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">wx.<span class="title function_">checkSession</span>(&#123;</span><br><span class="line">  <span class="attr">success</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="comment">//session 未过期，并且在本生命周期一直有效</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">fail</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="comment">//登录态过期</span></span><br><span class="line">    wx.<span class="title function_">login</span>() <span class="comment">//重新登录    ....</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div>
+<p>2.3 启动Redis临时服务</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-server.exe redis.windows.conf</span><br></pre></td></tr></table></figure></div>
 
+<p>(备注：通过这个命令，会创建Redis临时服务，不会在window Service列表出现Redis服务名称和状态，此窗口关闭，服务会自动关闭。)</p>
+<img lazyload src="/images/loading.svg" data-src="/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910151713597-709889887.png" class title="1476712-20220910151713597-709889887">
 
+<p>2.4 打开另一个cmd窗口，客户端调用：redis-cli.exe -h 127.0.0.1 -p 6379</p>
+<img lazyload src="/images/loading.svg" data-src="/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910152909484-478694299.png" class title="1476712-20220910152909484-478694299">
 
-<h2 id="登录态维护"><a href="#登录态维护" class="headerlink" title="登录态维护"></a>登录态维护</h2><p>通过<code>wx.login()</code>获取到用户登录态之后，需要维护登录态。开发者要注意<strong>不应该直接把 session_key、openid 等字段作为用户的标识或者 session 的标识</strong>，而应该自己派发一个 session 登录态（请参考登录时序图）。对于开发者自己生成的 session，应该保证其安全性且不应该设置较长的过期时间。session 派发到小程序客户端之后，可将其存储在 storage ，用于后续通信使用。</p>
-<p>通过<code>wx.checkSession()</code>检测用户登录态是否失效。并决定是否调用wx.login() 重新获取登录态</p>
-<h3 id="登录时序图"><a href="#登录时序图" class="headerlink" title="登录时序图"></a>登录时序图</h3><img lazyload src="/images/loading.svg" data-src="/2024/07/05/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8FAPI%20%E7%99%BB%E5%BD%95/20190530224117_74684.png" class title="20190530224117_74684">
+<p>三、Redis自定义windows服务安装</p>
+<p>3.1.进入Redis安装包目录，安装服务</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-server --service-install redis.windows.conf</span><br></pre></td></tr></table></figure></div>
 
-<h1 id="微信小程序API-用户数据的签名验证和加解密"><a href="#微信小程序API-用户数据的签名验证和加解密" class="headerlink" title="微信小程序API 用户数据的签名验证和加解密"></a>微信小程序API 用户数据的签名验证和加解密</h1><hr>
-<h2 id="用户数据的签名验证和加解密"><a href="#用户数据的签名验证和加解密" class="headerlink" title="用户数据的签名验证和加解密"></a>用户数据的签名验证和加解密</h2><hr>
-<h3 id="数据签名校验"><a href="#数据签名校验" class="headerlink" title="数据签名校验"></a>数据签名校验</h3><p>为了确保 <a class="link" target="_blank" rel="noopener" href="https://www.w3cschool.cn/weixinapp/weixinapp-open.html">开放接口 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 返回用户数据的安全性，微信会对明文数据进行签名。开发者可以根据业务需要对数据包进行签名校验，确保数据的完整性。</p>
-<ol>
-<li>签名校验算法涉及用户的session_key，通过 <a class="link" target="_blank" rel="noopener" href="https://www.w3cschool.cn/weixinapp/weixinapp-api-login.html#wxloginobject">wx.login <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 登录流程获取用户session_key，并自行维护与应用自身登录态的对应关系。</li>
-<li>通过调用接口（如 <a class="link" target="_blank" rel="noopener" href="https://www.w3cschool.cn/weixinapp/weixinapp-open.html">wx.getUserInfo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）获取数据时，接口会同时返回 rawData、signature，其中 signature &#x3D; sha1( rawData + session_key )</li>
-<li>开发者将 signature、rawData 发送到开发者服务器进行校验。服务器利用用户对应的 session_key 使用相同的算法计算出签名 signature2 ，比对 signature 与 signature2 即可校验数据的完整性。</li>
-</ol>
-<p><strong>如wx.getUserInfo的数据校验：</strong></p>
-<p>接口返回的rawData：</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;nickName&quot;</span>: <span class="string">&quot;Band&quot;</span>,</span><br><span class="line">  <span class="string">&quot;gender&quot;</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="string">&quot;language&quot;</span>: <span class="string">&quot;zh_CN&quot;</span>,</span><br><span class="line">  <span class="string">&quot;city&quot;</span>: <span class="string">&quot;Guangzhou&quot;</span>,</span><br><span class="line">  <span class="string">&quot;province&quot;</span>: <span class="string">&quot;Guangdong&quot;</span>,</span><br><span class="line">  <span class="string">&quot;country&quot;</span>: <span class="string">&quot;CN&quot;</span>,</span><br><span class="line">  <span class="string">&quot;avatarUrl&quot;</span>: <span class="string">&quot;http://wx.qlogo.cn/mmopen/vi_32/1vZvI39NWFQ9XM4LtQpFrQJ1xlgZxx3w7bQxKARol6503Iuswjjn6nIGBiaycAjAtpujxyzYsrztuuICqIM5ibXQ/0&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<img lazyload src="/images/loading.svg" data-src="/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910160807204-772922936.png" class title="1476712-20220910160807204-772922936">
 
-<p>用户的 session-key：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HyVFkGl5F5OQWJZZaNzBBg==</span><br></pre></td></tr></table></figure></div>
+<p> 3.2 win+r -&gt; services.msc可以看到服务安装成功</p>
+<img lazyload src="/images/loading.svg" data-src="/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910161046240-165355360.png" class title="1476712-20220910161046240-165355360">
 
-<p>所以，用于签名的字符串为：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;nickName&quot;:&quot;Band&quot;,&quot;gender&quot;:1,&quot;language&quot;:&quot;zh_CN&quot;,&quot;city&quot;:&quot;Guangzhou&quot;,&quot;province&quot;:&quot;Guangdong&quot;,&quot;country&quot;:&quot;CN&quot;,&quot;avatarUrl&quot;:&quot;http://wx.qlogo.cn/mmopen/vi_32/1vZvI39NWFQ9XM4LtQpFrQJ1xlgZxx3w7bQxKARol6503Iuswjjn6nIGBiaycAjAtpujxyzYsrztuuICqIM5ibXQ/0&quot;&#125;HyVFkGl5F5OQWJZZaNzBBg==</span><br></pre></td></tr></table></figure></div>
+<p>不指定服务名称：则为默认的Resis</p>
+<p>Redis使用：</p>
+<p>安装服务（redis-install.bat）：redis-server –service-install redis.windows.conf</p>
+<p>开启服务（start-redis.bat）：redis-server –service-start </p>
+<p>停止服务（stop-redis.bat）：redis-server –service-stop</p>
+<p>卸载服务（redis-uninstall.bat）：redis-server –service-uninstall</p>
+<p>指定服务名称：redisserver1</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">安装服务：redis-server.exe --service-install redis.windows.conf --service-name redisserver1 --loglevel verbose``</span><br><span class="line">启动服务：redis-server.exe --service-start --service-name redisserver1``</span><br><span class="line">停止服务：redis-server.exe --service-stop --service-name redisserver1``</span><br><span class="line">卸载服务：redis-server.exe --service-uninstall–service-name redisserver1</span><br></pre></td></tr></table></figure></div>
 
-<p>使用sha1得到的结果为</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">75e81ceda165f4ffa64f4068af58c64b8f54b88c</span><br></pre></td></tr></table></figure></div>
+<p>卸载服务失败，可以用管理员命令执行一下命令</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc delete redisserver1</span><br></pre></td></tr></table></figure></div>
 
-<h3 id="加密数据解密算法"><a href="#加密数据解密算法" class="headerlink" title="加密数据解密算法"></a>加密数据解密算法</h3><p>接口如果涉及敏感数据（如<a target="_blank" rel="noopener" href="https://www.w3cschool.cn/weixinapp/weixinapp-open.html"><code>wx.getUserInfo</code></a>当中的 openId 和unionId ），接口的明文内容将不包含这些敏感数据。开发者如需要获取敏感数据，需要对接口返回的**加密数据( encryptedData )**进行对称解密。解密算法如下：</p>
-<ol>
-<li>对称解密使用的算法为 AES-128-CBC，数据采用PKCS#7填充。</li>
-<li>对称解密的目标密文为 Base64_Decode(encryptedData),</li>
-<li>对称解密秘钥 aeskey &#x3D; Base64_Decode(session_key), aeskey 是16字节</li>
-<li>对称解密算法初始向量 iv 会在数据接口中返回。</li>
-</ol>
-<p>微信官方提供了多种编程语言的示例代码（<a class="link" target="_blank" rel="noopener" href="https://mp.weixin.qq.com/debug/wxadoc/dev/demo/aes-sample.zip">点击下载 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）。每种语言类型的接口名字均一致。调用方式可以参照示例。</p>
-<p>另外，为了应用能校验数据的有效性，我们会在敏感数据加上数据水印( watermark )</p>
-<p><strong>watermark参数说明：</strong></p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>watermark</td>
-<td>OBJECT</td>
-<td>数据水印</td>
-</tr>
-<tr>
-<td>appid</td>
-<td>String</td>
-<td>敏感数据归属appid，开发者可校验此参数与自身appid是否一致</td>
-</tr>
-<tr>
-<td>timestamp</td>
-<td>DateInt</td>
-<td>敏感数据获取的时间戳, 开发者可以用于数据时效性校验</td>
-</tr>
-</tbody></table>
-<p>如接口<a class="link" target="_blank" rel="noopener" href="https://www.w3cschool.cn/weixinapp/weixinapp-open.html">wx.getUserInfo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>敏感数据当中的watermark：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;openId&quot;: &quot;OPENID&quot;,</span><br><span class="line">    &quot;nickName&quot;: &quot;NICKNAME&quot;,</span><br><span class="line">    &quot;gender&quot;: GENDER,</span><br><span class="line">    &quot;city&quot;: &quot;CITY&quot;,</span><br><span class="line">    &quot;province&quot;: &quot;PROVINCE&quot;,</span><br><span class="line">    &quot;country&quot;: &quot;COUNTRY&quot;,</span><br><span class="line">    &quot;avatarUrl&quot;: &quot;AVATARURL&quot;,</span><br><span class="line">    &quot;unionId&quot;: &quot;UNIONID&quot;,</span><br><span class="line">    &quot;watermark&quot;:</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;appid&quot;:&quot;APPID&quot;,</span><br><span class="line">        &quot;timestamp&quot;:TIMESTAMP</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p> 四、Redis开启远程访问</p>
+<p>1、由于Redis默认只允许本地访问，要使Redis可以远程访问，需修改redis对应的配置文件；<br>我使用的Redis版本为：redis 3.0 ，默认使用的是redis.windows.conf</p>
+<p>注：Redis查看版本信息方法：<br>　　使用redis-server.exe 命令启动Redis服务端之后，再使用redis-cli.exe启动客户端，然后在客户端中输入 info 命令即可查看。</p>
+<img lazyload src="/images/loading.svg" data-src="/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910163811371-215020076.png" class title="1476712-20220910163811371-215020076">
 
-<p>注：此前提供的<strong>加密数据（encryptData）</strong>以及对应的加密算法将被弃用，请开发者不要再依赖旧逻辑。</p>
+<p>确认redis服务运行的配置文件，查找redis服务：</p>
+<img lazyload src="/images/loading.svg" data-src="/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910163945851-456017714.png" class title="1476712-20220910163945851-456017714">
+
+<p>由于redis运行的配置文件是 redis.windows.conf，所以需要修改对应的配置文件。<br>修改两个地方即可：</p>
+<img lazyload src="/images/loading.svg" data-src="/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910164101461-568889453.png" class title="1476712-20220910164101461-568889453">
+
+<p> 2）redis密码的配置：</p>
+<p>打开 requirepass 的注释，在其后面配置密码，如下所示：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">requirepass password</span><br></pre></td></tr></table></figure></div>
+
+<p> 3）客户端连接redis</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli -h localhost -p 6379 -a 123456</span><br></pre></td></tr></table></figure></div>
+
+<img lazyload src="/images/loading.svg" data-src="/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910174256180-1683744499.png" class title="1476712-20220910174256180-1683744499">
+
+<p>4）将redis默认的守护关闭，修改protected-mode yes 为 protected-mode no：注意：3.2版本才有该配置</p>
+<img lazyload src="/images/loading.svg" data-src="/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1476712-20220910164132042-1668378277.png" class title="1476712-20220910164132042-1668378277">
+
+<p> 2、修改完以后，保存文件，重启redis服务。</p>
+<h2 id="三、安装RESP-Redis可视化工具"><a href="#三、安装RESP-Redis可视化工具" class="headerlink" title="三、安装RESP(Redis可视化工具)"></a>三、安装RESP(Redis可视化工具)</h2><p>GitHub下载软件<br><a class="link" target="_blank" rel="noopener" href="https://github.com/lework/RedisDesktopManager-Windows/releases">https://github.com/lework/RedisDesktopManager-Windows/releases <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<img lazyload src="/images/loading.svg" data-src="/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/c443ca3e54f3456fbfcc56c8eb2cdf9f.png" class title="c443ca3e54f3456fbfcc56c8eb2cdf9f">
+
+<p>点击第二个下在压缩包，也是点点点，下一步就ok（没下载第一个 感兴趣的可以试试）由于redis默认使用的ip是测试ip（127.0.0.1:6379）如果需要设置外网地址 必须改配置文件，我这里是win11系统。这两个文件都要改</p>
+<img lazyload src="/images/loading.svg" data-src="/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/25444830cdef41599ea208574a29065c.png" class title="25444830cdef41599ea208574a29065c">
+
+<img lazyload src="/images/loading.svg" data-src="/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1085fc8251a5480596e7af335ef91434.png" class title="1085fc8251a5480596e7af335ef91434">
+
+<img lazyload src="/images/loading.svg" data-src="/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/321002ec23b74f88affebed995903822.png" class title="321002ec23b74f88affebed995903822">
+
+<p>之后点击桌面刚才新建的RESP.app快捷键方式</p>
+<img lazyload src="/images/loading.svg" data-src="/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/211da70e7aec4b1fa8e960a317936c62.png" class title="211da70e7aec4b1fa8e960a317936c62">
+
+<img lazyload src="/images/loading.svg" data-src="/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/1db56699007147c88dff3efeb7a99307.png" class title="1db56699007147c88dff3efeb7a99307">
+
+<p>点击测试连接，如图提示就ok了</p>
+<img lazyload src="/images/loading.svg" data-src="/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/6a1c48bbfa0b44f6b606bd7e850c9dfa.png" class title="6a1c48bbfa0b44f6b606bd7e850c9dfa">
 
         </div>
 
@@ -840,15 +731,15 @@
         <li><strong>标题:</strong> </li>
         <li><strong>作者:</strong> Shirolin</li>
         <li><strong>创建于
-                :</strong> 2024-07-05 09:50:18</li>
+                :</strong> 2024-07-05 11:43:11</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-07-05 10:04:10
+                    :</strong> 2024-07-05 11:55:39
             </li>
         
         <li>
-            <strong>链接:</strong> https://redefine.ohevan.com/2024/07/05/微信小程序API 登录/
+            <strong>链接:</strong> https://redefine.ohevan.com/2024/07/05/Windows安装Redis/
         </li>
         <li>
             <strong>
@@ -873,26 +764,11 @@
         
             <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
                 
-                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-                        <a class="prev"
-                        rel="prev"
-                        href="/2024/07/05/Vue3%E5%85%A5%E9%97%A8/"
-                        >
-                            <span class="left arrow-icon flex justify-center items-center">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item"></span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/2024/07/05/Meterpreter%E5%BA%94%E7%94%A8/"
+                        href="/2024/07/05/%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E6%94%BB%E5%87%BB%E5%AE%89%E5%85%A8%E4%BB%8B%E7%BB%8D/"
                         >
                             <span class="title flex justify-center items-center">
                                 <span class="post-nav-title-item"></span>
@@ -960,7 +836,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title"></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8FAPI-%E7%99%BB%E5%BD%95"><span class="nav-text">微信小程序API 登录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#wx-login-OBJECT"><span class="nav-text">wx.login(OBJECT)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#code-%E6%8D%A2%E5%8F%96-session-key"><span class="nav-text">code 换取 session_key</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wx-checkSession-OBJECT"><span class="nav-text">wx.checkSession(OBJECT)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%99%BB%E5%BD%95%E6%80%81%E7%BB%B4%E6%8A%A4"><span class="nav-text">登录态维护</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BB%E5%BD%95%E6%97%B6%E5%BA%8F%E5%9B%BE"><span class="nav-text">登录时序图</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8FAPI-%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E7%9A%84%E7%AD%BE%E5%90%8D%E9%AA%8C%E8%AF%81%E5%92%8C%E5%8A%A0%E8%A7%A3%E5%AF%86"><span class="nav-text">微信小程序API 用户数据的签名验证和加解密</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E7%9A%84%E7%AD%BE%E5%90%8D%E9%AA%8C%E8%AF%81%E5%92%8C%E5%8A%A0%E8%A7%A3%E5%AF%86"><span class="nav-text">用户数据的签名验证和加解密</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%AD%BE%E5%90%8D%E6%A0%A1%E9%AA%8C"><span class="nav-text">数据签名校验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E6%95%B0%E6%8D%AE%E8%A7%A3%E5%AF%86%E7%AE%97%E6%B3%95"><span class="nav-text">加密数据解密算法</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows%E5%AE%89%E8%A3%85Redis%E5%8F%8A%E5%8F%AF%E8%A7%86%E5%8C%96%E7%95%8C%E9%9D%A2RESP"><span class="nav-text">Windows安装Redis及可视化界面RESP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81Redis%E6%98%AF%E4%BB%80%E4%B9%88%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%9F"><span class="nav-text">一、Redis是什么数据库？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%AE%89%E8%A3%85Redis"><span class="nav-text">二、安装Redis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%AE%89%E8%A3%85RESP-Redis%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7"><span class="nav-text">三、安装RESP(Redis可视化工具)</span></a></li></ol></li></ol>
 
     </div>
 </div>
