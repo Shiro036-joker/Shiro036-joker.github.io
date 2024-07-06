@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Shirolin">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://shiro036-joker.github.io/categories/security/计算机病毒传播模型和防护策略.html"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="计算机病毒传播模型和防护策略 shirolin 摘 要: 在当下网络通信已经成为我们生活和工作中不可或缺的一部分，无论是个人交流还是商务合作，几乎都依赖于网络。然而，随着网络的普及和应用领域的扩展，信息安全问题日益突出。网络的互联互通性使得信息传输和共享变得前所未有的快捷和高效的同时，也让信息传输面临各种潜在的安全威胁，尤其是计算机病毒和网络攻击的威胁。信息时代计算机病毒的传播、爆发对社会生产">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://shiro036-joker.github.io/categories/security/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%97%85%E6%AF%92%E4%BC%A0%E6%92%AD%E6%A8%A1%E5%9E%8B%E5%92%8C%E9%98%B2%E6%8A%A4%E7%AD%96%E7%95%A5.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="计算机病毒传播模型和防护策略 shirolin 摘 要: 在当下网络通信已经成为我们生活和工作中不可或缺的一部分，无论是个人交流还是商务合作，几乎都依赖于网络。然而，随着网络的普及和应用领域的扩展，信息安全问题日益突出。网络的互联互通性使得信息传输和共享变得前所未有的快捷和高效的同时，也让信息传输面临各种潜在的安全威胁，尤其是计算机病毒和网络攻击的威胁。信息时代计算机病毒的传播、爆发对社会生产">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-06-20T12:04:18.100Z">
+<meta property="article:modified_time" content="2024-06-20T12:04:18.100Z">
+<meta property="article:author" content="Shirolin">
+<meta name="twitter:card" content="summary">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/logo.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+        Shiro Scale
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    
+        <link href="https://fonts.googleapis.com/css2?family=Farsan&display=swap" rel="stylesheet">
+    
+
+    
+        
+<script src="/js/libs/anime.min.js"></script>
+
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"shiro036-joker.github.io","root":"/","language":"zh-CN"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":true,"family":"Noto Sans SC","url":"https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"},"english":{"enable":true,"family":"Farsan","url":"https://fonts.googleapis.com/css2?family=Farsan&display=swap"}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Shiro Scale","subtitle":{"text":["This is the first message","This is the second message","etc"],"hitokoto":{"enable":true,"api":"https://v1.hitokoto.cn"},"typing_speed":150,"backing_speed":140,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":"https://github.com/Shiro036-joker/Shiro036-joker.github.io.git","instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.6.4","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"About":{"icon":"fa-regular fa-user","submenus":{"Me":"/about","Github":"https://github.com/EvanNotFound/hexo-theme-redefine","Blog":"https://ohevan.com","Friends":"https://blog.csdn.net/ysjy13?type=blog"}},"Links":{"icon":"fa-regular fa-link","submenus":{"Link1":"https://blog.csdn.net/ysjy13?type=blog","Link2":"https://blog.csdn.net/ysjy13?type=blog","Link3":"https://blog.csdn.net/ysjy13?type=blog"}}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":{"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/6/20 10:35:16"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+
+    <style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        Shiro Scale
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({loop: true})
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [40,0],
+                translateZ: 0,
+                opacity: [0,1],
+                filter: ['blur(5px)', 'blur(0px)'], // Starting from blurred to unblurred
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 300 + 30 * i,
+            }).add({
+                targets: '.ml13 .letter',
+                translateY: [0,-40],
+                opacity: [1,0],
+                filter: ['blur(0px)', 'blur(5px)'], // Ending from unblurred to blurred
+                easing: "easeInExpo",
+                duration: 1200,
+                delay: (el, i) => 100 + 30 * i,
+                complete: function() {
+                    hidePreloader(); // Call hidePreloader after the animation completes
+                }
+            });
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container px-6 md:px-12">
+
+    <div class="navbar-content ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Shiro Scale
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    关于
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about">
+                                                    ME
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://github.com/EvanNotFound/hexo-theme-redefine">
+                                                    GITHUB
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://ohevan.com">
+                                                    BLOG
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">
+                                                    友情链接
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-link fa-fw"></i>
+                                    链接
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">
+                                                    LINK1
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">
+                                                    LINK2
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">
+                                                    LINK3
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-About"
+                        >
+                            <span>
+                                关于
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-About">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about">ME</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://github.com/EvanNotFound/hexo-theme-redefine">GITHUB</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://ohevan.com">BLOG</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">友情链接</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-Links"
+                        >
+                            <span>
+                                链接
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-Links">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">LINK1</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">LINK2</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">LINK3</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">21</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="page-template-container">
+    
+    
+    
+    <div class="page-template-content markdown-body">
+        
+            <hr>
+<hr>
+<p>计算机病毒传播模型和防护策略</p>
+<p>shirolin</p>
+<p><strong>摘 要:</strong></p>
+<p>在当下网络通信已经成为我们生活和工作中不可或缺的一部分，无论是个人交流还是商务合作，几乎都依赖于网络。然而，随着网络的普及和应用领域的扩展，信息安全问题日益突出。网络的互联互通性使得信息传输和共享变得前所未有的快捷和高效的同时，也让信息传输面临各种潜在的安全威胁，尤其是计算机病毒和网络攻击的威胁。信息时代计算机病毒的传播、爆发对社会生产和人民生活造成严重影响，有效预防和抑制计算机病毒传播尤为重要。结合最优控制方法，通过分析计算机病毒传染方式，提出防护技术和安全措施，包括防火墙、用户识别入侵检测、存储数据信息加密、综合病毒防范技术的应用来形成相关的防护策略。</p>
+<p>关键词<strong>：</strong><a class="link" target="_blank" rel="noopener" href="https://kns.cnki.net/kcms2/keyword/detail?v=WfYi3ZLogAZY65M9DqHtPXlIqLDyOm_Mb_HQTORU__zA38jL1PirEc3IrERH9QM4L1YpvmkrPHio5ei5f3433sgSkHDk7CnJ-E88n6q3qbSVMiPkqOGy3Ow3Ne2cWJ4q&uniplatform=NZKPT&language=CHS">计算机技术; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><a class="link" target="_blank" rel="noopener" href="https://kns.cnki.net/kcms2/keyword/detail?v=WfYi3ZLogAZY65M9DqHtPXlIqLDyOm_MwQuuBovWq1tGR6pA34f0Yr8fo4Or1ESeOcixGncEwCj3Wdk6vtqxkT8s-Edr5AMeP20EOsIVrlYXeGEgX1gGgw==&uniplatform=NZKPT&language=CHS">病毒防护; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>计算机病毒;传播模型;</p>
+<p><strong>0 引 言</strong>    </p>
+<p>计算机病毒是一类嵌入在计算机程序中的指令或代码，其主要目标是破坏计算机功能或数据，影响计算机的正常使用，并且能够自我复制和传播[1]。由于计算机网络的广泛应用，计算机病毒具备极强的传播能力，对经济造成了巨大的损失。这些病毒由人为编写，具有自我复制的能力，能够破坏计算机功能和资源[2]。计算机病毒具有繁殖性、传染性、破坏性、潜伏性、隐蔽性、可激活再生性等特点[3]。生物学中潜伏期病毒大多没有传播性，但计算机病毒能以多种方式传播，部分病毒长期潜伏于文件或程序中，当运行这些程序或文件时病毒程序随之执行，因此建立与病毒潜伏特性相关的模型[4]非常重要。通常认为，杀毒软件是一种有效的干预措施，安装杀毒软件的计算机是带有免疫效力的，但如果软件杀毒不彻底，计算机会被反复感染[5]。隔离策略作为预防计算机病毒传播的一项重要措施，不仅可隔离感染源，而且有利于控制感染计算机，在建模过程中也应考虑隔离策略[6]。无明显症状的被感染计算机会出现某程序流量过大、电脑卡顿等情况，这些异常现象易被检测系统识别，这类计算机也存在被隔离的风险[7]。</p>
+<p><strong>1  计算机病毒的<strong><strong>主要</strong></strong>内容</strong></p>
+<h4 id="1-1-计算机病毒的内容"><a href="#1-1-计算机病毒的内容" class="headerlink" title="1.1 计算机病毒的内容"></a>1.1 计算机病毒的内容</h4><p>计算机病毒是一种恶意程序，其目的是通过自我复制或扩散，感染他人的计算机系统，并可能对其造成破坏或控制。这些程序代码会植入到计算机系统中的其他程序或文件中，利用系统的漏洞或用户的行为进行传播。在网络环境中，计算机病毒可以通过互联网等网络平台广泛传播，严重威胁着网络安全和用户数据的保护。因此，计算机病毒又被称为网络病毒，因其开放性而更容易传播[8]。</p>
+<p>计算机系统的安全性与计算机病毒的功能之间存在着持续的对抗关系。随着病毒技术的进步，对计算机系统的威胁也在不断增加。尽管安全措施不断进步，但没有哪种安全机制能够百分之百确保防范所有类型的计算机病毒[9]。因此，确保计算机系统安全的过程是持续不断的，需要综合使用防火墙、反病毒软件、安全更新等措施来最大程度地减少病毒入侵的风险。</p>
+<p>计算机病毒的存在和传播展示了信息安全领域中的一场持久战，需要持续的技术进步和有效的防范措施来保护计算机系统和用户数据的安全[10]。</p>
+<h4 id="1-2-计算机病毒的特征"><a href="#1-2-计算机病毒的特征" class="headerlink" title="1.2 计算机病毒的特征"></a>1.2 计算机病毒的特征</h4><h4 id="1-2-1-潜伏性"><a href="#1-2-1-潜伏性" class="headerlink" title="1.2.1 潜伏性"></a>1.2.1 潜伏性</h4><p>计算机病毒具有隐蔽性和潜伏能力，它们能够长时间在受感染的计算机系统中潜伏，待条件成熟时迅速展开攻击。这种潜伏特性使得病毒能够避开安全监测和防御措施，等待最合适的时机进行传播和破坏。一个典型的例子是“熊猫烧香病毒”，它曾在网络中广泛传播并造成严重影响。这类病毒在感染计算机后可能并不立即表现出症状，而是等待一个时机，例如计算机系统的安全性降低或用户行为的特定条件，才会激活并展示其破坏性。这种延迟效果使得病毒更难被及时发现和清除，增加了防范和处理的复杂性。</p>
+<h4 id="1-2-2-破坏性"><a href="#1-2-2-破坏性" class="headerlink" title="1.2.2 破坏性"></a>1.2.2 破坏性</h4><p>计算机病毒的存在和行为通常会对计算机系统造成破坏性影响，构成安全威胁。一旦计算机感染了病毒，可能会出现多种症状和不同程度的损坏。</p>
+<p>这些损坏可以表现为资源被占用，导致系统运行缓慢或功能异常；或者阻止其他正常程序的启动，使得计算机的日常操作受到限制。更严重的情况下，病毒可能会损坏系统中的重要文件或数据，导致信息丢失或无法恢复。因此，理解计算机病毒的破坏性质对于保护个人和组织的计算机系统至关重要[11]。通过定期更新和维护防病毒软件、加强网络安全意识教育、实施有效的访问控制和数据备份策略等措施，可以有效降低计算机病毒带来的风险，确保系统和数据的安全性和完整性。</p>
+<h4 id="1-2-3-传染性"><a href="#1-2-3-传染性" class="headerlink" title="1.2.3 传染性"></a>1.2.3 传染性</h4><p>计算机病毒因其具备自我复制的能力，所以具有极强的传染性。它们可以通过多种途径传播，如通过感染U盘或通过互联网直接传播到其他计算机系统。一旦病毒开始复制和传播，其速度和范围往往是难以控制的，这使得感染的计算机系统面临严重的风险和威胁。</p>
+<p>传染性强的计算机病毒可以迅速扩散到整个网络，甚至跨越不同的系统和组织。它们的存在可能导致大规模的系统中断或数据损失，造成严重的经济损失和信息泄露。</p>
+<h4 id="1-2-4-隐蔽性"><a href="#1-2-4-隐蔽性" class="headerlink" title="1.2.4 隐蔽性"></a>1.2.4 隐蔽性</h4><p>计算机病毒的程序编写水平较高，而且可执行程序短小精悍，传播到计算机系统中时轻易不会被使用者发现，所以其具有较强的隐蔽性。一些等级较低的计算机病毒能够被软件检测出来，而一些等级较高的病毒则难以被软件查出来，隐蔽性越高的病毒对计算机系统的危害越大，所造成的影响也越大。</p>
+<h4 id="1-2-5-可触发性"><a href="#1-2-5-可触发性" class="headerlink" title="1.2.5 可触发性"></a>1.2.5 可触发性</h4><p>计计算机病毒的发作通常需要特定的触发点，这些点可以是时间、用户操作或系统事件等。时间触发的病毒可能会在特定的日期或时间点激活，如每月的某一天或特定的假期。用户操作触发的病毒则依赖于用户执行某些动作，比如打开感染的电子邮件附件或点击恶意链接。此外，一些病毒可能在系统发生特定事件时被激活，例如启动、关机或文件访问。这些触发点不仅影响病毒的激活时间，还决定了它们可能导致的恶意行为类型和影响范围。</p>
+<h4 id="1-3-计算机病毒的攻击方式"><a href="#1-3-计算机病毒的攻击方式" class="headerlink" title="1.3 计算机病毒的攻击方式"></a>1.3 计算机病毒的攻击方式</h4><h4 id="1-3-1-通过设备和远程电子信息"><a href="#1-3-1-通过设备和远程电子信息" class="headerlink" title="1.3.1 通过设备和远程电子信息"></a>1.3.1 通过设备和远程电子信息</h4><p>通过计算机的硬件设备、移动硬盘、U盘等传播。通过电子邮件或下载文件等传播来释放病毒。</p>
+<h4 id="1-3-1-后门攻击"><a href="#1-3-1-后门攻击" class="headerlink" title="1.3.1 后门攻击"></a>1.3.1 后门攻击</h4><p>后门是技术人员在计算机系统中单独设计的一个小程序，是为了技术人员能够绕过安全防护措施进入系统的开口。然而，计算机病毒也可以通过后门攻击的方式，入侵计算机系统。最常见的攻击后门的形式就是通过控制电磁脉冲来释放病毒。</p>
+<h4 id="1-3-2-无线电"><a href="#1-3-2-无线电" class="headerlink" title="1.3.2 无线电"></a>1.3.2 无线电</h4><p>无线电可以将病毒码发射到计算机系统中，让目标的系统接收病毒，这种方式成为现代计算机病毒常用的扩散方式，能够混合在合法的信号中，进入对方的计算机系统，但是这种攻击方式的难度较大，需要等级较高的计算机病毒程序才可以完成。</p>
+<h4 id="1-4-计算机病毒引发的后果症结"><a href="#1-4-计算机病毒引发的后果症结" class="headerlink" title="1.4 计算机病毒引发的后果症结"></a>1.4 计算机病毒引发的后果症结</h4><p>(1)计算机会无故死机。</p>
+<p>(2)计算机内部软件运行速度会明显变慢。</p>
+<p>(3)打印和通讯过程中会突然发生异常,导致打印和通讯中断。</p>
+<p>(4)磁盘空间会被大量“垃圾”占据,造成磁盘空间迅速减少、电脑无法正常启动。</p>
+<p>(5)网络瘫痪或无法连接到网络的现象也时有发生。</p>
+<p><strong>2</strong>  <strong>常见计算机病毒传播模型</strong></p>
+<h4 id="2-1-SIS模型"><a href="#2-1-SIS模型" class="headerlink" title="2.1 SIS模型"></a>2.1 SIS模型</h4><p>我国第一次将生物病毒用到计算机病毒传播过程中的模型就是SIS模型，从而给计算机病毒的进一步发展提供了基础条件。SIS模型主要是将计算感染病毒的状态分为两类，即S表示容易被病毒感染，I表示计算机已经被病毒感染，且两者之间可以相互转换。但是，该模型预期与模型相比其结构简单且缺乏感染返回机制，因此该模型不能够精准的刻画反病毒的效果，且与现实的使用情况有较大的出入，因此针对该模型的研究很少。</p>
+<h4 id="2-2-SIR模型"><a href="#2-2-SIR模型" class="headerlink" title="2.2 SIR模型"></a>2.2 SIR模型</h4><p>与SIS模型不同，SIR模型主要将计算机病毒感染的状态分为三类，即S表示容易被病毒感染，I表示计算机已经被病毒感染，R表示该计算机对病毒免疫，且三者之间根据相关的规则就可以相互转换，又考虑到计算机用户对杀毒软件对被感染的计算机进行杀毒，使得被感染的计算机进入免疫状态，从而进化为对病毒免疫的计算机。另外，SIR模型与SIS模型相比有了巨大的改进，它在计算机原有的基础上对计算机的舱室进行了更为详细的划分，从而让该模型更接近实际的使用情况。但是，此模型没有将对病毒免疫的计算机纳入考核保准，计算机如果失去对病毒的免疫功能将会是病毒入侵计算机。</p>
+<h4 id="2-3-SIRS模型"><a href="#2-3-SIRS模型" class="headerlink" title="2.3 SIRS模型"></a>2.3 SIRS模型</h4><p>SIRS模型在SIR模型上进行了较大的改进，该模型更贴近于现实情况，考虑到计算机用户虽然对杀毒软件对被感染的计算机进行杀毒，使得被感染的计算机进入免疫状态，从而进化为对病毒免疫的计算机，但是该免疫效果也病史长久存在的，也有可能失去免疫的一天，从而使得计算机感染病毒。</p>
+<h4 id="2-4-SEIR模型"><a href="#2-4-SEIR模型" class="headerlink" title="2.4 SEIR模型"></a>2.4 SEIR模型</h4><p>SEIR在SIR模型的基础上，将计算机病毒感染的状态分为四类，即S表示容易被病毒感染，I表示计算机已经被病毒感染，R表示该计算机对病毒免疫，E表示该计算机处于病毒潜伏期，且四者之间根据相关的规则就可以相互转换。其中，处于病毒潜伏期的计算机在达到一定的激活条件之后被病毒感染后成为已经感染的计算机，但是经过相关病毒查杀软件杀毒之后成为对病毒免疫的计算机，且该免疫为永久的免疫。</p>
+<p><strong>3 防护策略</strong></p>
+<h4 id="3-1-提升病毒防范意识"><a href="#3-1-提升病毒防范意识" class="headerlink" title="3.1 提升病毒防范意识"></a>3.1 提升病毒防范意识</h4><p>日常管理中，应严格防止计算机病毒的入侵，避免计算机受到病毒侵害。常规操作过程中，尽量不要随意使用不安全的光盘，确实需要使用的，应购买正规渠道的软件，以保证安全。使用前，要对光盘进行杀毒检查，提升病毒防范意识，保证安全，同时应注意尽量不要将光盘借给他人或打开不熟悉的邮件。</p>
+<h4 id="3-2-定期开展数据备份"><a href="#3-2-定期开展数据备份" class="headerlink" title="3.2 定期开展数据备份"></a>3.2 定期开展数据备份</h4><p>应有规律地对计算机进行定期备份处理，特别是重要文件应及时备份，可将常用文件保存至移动硬盘中。只有常规化的操作才能保证计算机病毒的有效防控，避免出现重要文件的丢失，造成损失。</p>
+<h4 id="3-3使用高性能软件，加大对木马和病毒的查杀力度"><a href="#3-3使用高性能软件，加大对木马和病毒的查杀力度" class="headerlink" title="3.3使用高性能软件，加大对木马和病毒的查杀力度"></a>3.3使用高性能软件，加大对木马和病毒的查杀力度</h4><p>虽然计算机技术不断发展，但其系统及软件仍存在一些安全隐患和漏洞，是导致计算机网络出现病毒和木马的重要因素。同时人们缺乏安全防护意识，也是导致计算机网络通信出现威胁的主要原因[<a class="link" href="javascript:void(0);">3 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>]。由此，针对网络通信安全存在的问题，为有效加强安全性和保密性，则需要在网络系统中，使用高性能的绿色杀毒软件，从而加大对木马以及病毒的查杀力度[12]。基于此，为充分保障网络通信安全，防范计算机病毒入侵，则应当进一步加强防护意识，重视对计算机系统的日常维护，比如定期检查系统完善性，及时更新补丁，并下载绿色杀毒软件，定期进行垃圾清理和木马查杀。现阶段比较正规的高性能病毒及木马查杀软件有360安全卫士、金山毒霸、卡巴斯基、瑞星杀毒、火绒等，能够针对家庭计算机、企事业单位的公用计算等进行检测和查杀，如发现病毒和木马均能快速清除，切实保障计算机系统的安全性[13]。</p>
+<h4 id="3-4-设置网络防火墙，保障网络系统安全"><a href="#3-4-设置网络防火墙，保障网络系统安全" class="headerlink" title="3.4 设置网络防火墙，保障网络系统安全"></a>3.4 设置网络防火墙，保障网络系统安全</h4><p>为有效维护计算机网络安全和通信安全，应当做好预防工作。通常情况下可结合实际需求设置网络防火墙，以此强化对黑客入侵的监控和防范。在现代科学技术的发展状况下，网络防火墙作为一种加强网络之间访问控制的特殊互联设备，能够对计算机流入和流出的网络通信进行扫描，以此过滤恶意攻击，防范黑客在目标计算机中执行不法操作。同时防火墙还可关闭不使用的端口，禁止特定端口的通信流出，以此对木马起到封锁作用[14]。比如禁止来自特殊站点的访问，预防非法入侵行为和不明通信。</p>
+<p><strong>4 结论</strong></p>
+<p>随着计算机网络的发展,计算机病毒对计算机安全的威胁日益严重。因此,了解计算机病毒的原理及病毒的预防对维护计算机安全是十分重要的。由于计算机病毒的可复制性、潜伏性和高破坏性等性质,对网络安全存在严重威胁,而现有反病毒措施因清理计算机病毒需要一定时间周期而存在时间延迟的情况使得查杀病毒的效率难以进一步提升<em><strong>*[*</strong></em><em><strong>*15*</strong></em>****]****。因此,本文基于SIS、SIR、SIRS、SEIR四种常见的病毒传播模型,考虑杀毒软件等反病毒措施清理病毒需要一定的时间周期,以期望了解计算机病毒传播规律,为反病毒措施的改进提供理论指导,从而帮助实现更快地查杀病毒,降低计算机病毒可能造成的损失。同时，计算机的使用者在使用网络和计算机时,应养成上网的好习惯,随时更新查毒和杀毒软件,积极了解新病毒的情况。简而言之,我们要养成使用计算机的良好习惯,树立时刻注意防范病毒的意识,充分利用杀毒软件的检测与查杀功能,才能无忧地使用计算机。</p>
+<p>附录  标题排列和编号方式为附录A，附录B，附录C,每个附录里如果有表，则相应为表A1,A2，表B1,B2，表C1,C2。</p>
+<p><strong>参考文献</strong></p>
+<p>[1] 傅建明, 彭国军, 张焕国. 计算机病毒分析与对抗[M]. 武汉: 武汉大学出版社, 2009: 1.</p>
+<p>[2] COHEN F. Computer viruses:Theory and experiments[J]. Computers&amp;Security, 1987,6(1):22-35. DOI:10.1016&#x2F;0167-4048(87)90122-2</p>
+<p>[3] 张仁斌，李钢，侯整风.计算机病毒与反病毒技术[M].北京：清华大学出版社，2006.ZHANG R B, LI G, HOU Z F. Computer Viruses and Anti-Virus Technology[M]. Beijing:Tsinghua University Press, 2006.</p>
+<p>[4] 钟晓静，杨宇琨，赵志甲.社交网络中的谣言传播模型与全局动力学分析[J].南京信息工程大学学报，2021,13(1):17-21.</p>
+<p>[5] MURRAY W H. The application of epidemiology to computer viruses[J]. Computers&amp;Security, 1988,7(2):139-145. DOI:10.1016&#x2F;0167-4048(88)90327-6</p>
+<p>[6] YANG X, YANG L X. Towards the epidemiological modeling of computer viruses[J]. Discrete Dynamics in Nature and Society, 2012, 2012:259671. DOI:10.1155&#x2F;2012&#x2F;259671</p>
+<p>[7] 周斌.大数据云计算环境下的数据安全问题分析[J].电子技术与软件工程，2021, 5:245-246.ZHOU B. Analysis of data security in big data cloud computing environment[J]. Information Technology and Security, 2021, 5:245-246.</p>
+<p>[8] Wang R L, Xue Y K, Xue K L. Dynamic analysis and optimal control of worm propagation model with saturated incidence rate[J]. Frontiers in Physics, 2023, 10: 1338.</p>
+<p>[9] 许俊良.信息化时代下计算机网络安全问题分析[J].网络安全技术与应用，2023(07):165-167.</p>
+<p>[10]张晓磊.信息化时代下计算机网络安全问题及建议[J].信息记录材料，2022,23(08):32-34.DOI:10.16009&#x2F;j.cnki.cn13-1295&#x2F;tq.</p>
+<p>2022.08.023.</p>
+<p>[11] Wang R L, Xue Y K. Stability analysis and optimal control of worm propagation model with saturated incidence rate[J]. Computers &amp; Security, 2023, 125: 103063.</p>
+<p>[12] 康秀兰.大数据时代下计算机网络信息安全问题分析[J].网络安全技术与应用，2022(07):51-53.</p>
+<p>[13] 年爱华.大数据时代下计算机网络信息安全问题探究[J].无线互联科技，2022,19(11):29-31.</p>
+<p>[14] Guan G, Guo Z Y. Stability behavior of a two-susceptibility SHIR epidemic model with time delay in complex networks[J]. Nonlinear Dynamics, 2021, 106: 1083-1110.</p>
+<p>[15] Zhu L H, Guan G. Dynamical analysis of a rumor spreading model with self-discrimination and time delay in complex networks[J]. Physica A: Statistical Mechanics and its Applications, 2019, 533: 121953.</p>
+<p><strong>Computer virus propagation model and protection strategy</strong></p>
+<p>Shirolin †</p>
+<p>(College of Computer Science and Technology, Guangxi University of Science and Technology ) </p>
+<p><strong>Abstract:</strong></p>
+<p>In the present era, network communication has become an indispensable part of our lives and work. Be it personal communication or business collaboration, nearly all activities rely on the network. However, as the internet becomes more widespread and its applications expand, information security concerns are increasingly evident. The interconnected nature of networks has accelerated information transmission and sharing to unprecedented levels, but also exposes it to various potential security threats, notably computer viruses and cyberattacks. In the information age, the spread and outbreak of computer viruses have a severe impact on social production and people’s livelihood, making effective prevention and containment of their transmission critically important. By integrating optimal control methods and analyzing the modes of transmission of computer viruses, we propose protective technologies and security measures, including firewalls, user authentication intrusion detection, encryption of stored data, and the application of comprehensive virus prevention techniques to form relevant protection strategies.</p>
+<p><strong>Keywords</strong>: Computer technology, Virus protection, Computer viruses, Transmission model</p>
+
+        
+    </div>
+    <div class="page-template-comments">
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+            <div class="customize-info my-1">别紧张，我又不是什么好人。别紧张，我又不是什么好人。别紧张，我又不是什么好人。</div>
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Shirolin</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共 21 篇文章
+                    </span>
+                    
+                        <span>
+                            共 40.6k 字
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.6.4</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+</body>
+</html>

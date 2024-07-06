@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Shirolin">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://shiro036-joker.github.io/categories/security/无线网络攻击安全介绍.html"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="无线网络攻击安全介绍引言    在介绍如何入侵无线网络之前，首先要解释路由器的概念，首先得知道什么是路由。所谓“路由”，是指把数据从一个地方传送到另一个地方的行为和动作，而路由器，正是执行这种行为动作的机器，它的英文名称为Router,是一种连接多个网络或网段的网络设备，它能将不同网络或网段之间的数据信息进行“翻译”，以使它们能够相互“读懂”对方的数据，从而构成一个更大的网络。而我们常说的入侵路由">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://shiro036-joker.github.io/categories/security/%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E6%94%BB%E5%87%BB%E5%AE%89%E5%85%A8%E4%BB%8B%E7%BB%8D.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="无线网络攻击安全介绍引言    在介绍如何入侵无线网络之前，首先要解释路由器的概念，首先得知道什么是路由。所谓“路由”，是指把数据从一个地方传送到另一个地方的行为和动作，而路由器，正是执行这种行为动作的机器，它的英文名称为Router,是一种连接多个网络或网段的网络设备，它能将不同网络或网段之间的数据信息进行“翻译”，以使它们能够相互“读懂”对方的数据，从而构成一个更大的网络。而我们常说的入侵路由">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-07-05T03:27:03.836Z">
+<meta property="article:modified_time" content="2024-07-05T03:27:03.836Z">
+<meta property="article:author" content="Shirolin">
+<meta name="twitter:card" content="summary">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/logo.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+        Shiro Scale
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    
+        <link href="https://fonts.googleapis.com/css2?family=Farsan&display=swap" rel="stylesheet">
+    
+
+    
+        
+<script src="/js/libs/anime.min.js"></script>
+
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"shiro036-joker.github.io","root":"/","language":"zh-CN"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":true,"family":"Noto Sans SC","url":"https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"},"english":{"enable":true,"family":"Farsan","url":"https://fonts.googleapis.com/css2?family=Farsan&display=swap"}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Shiro Scale","subtitle":{"text":["This is the first message","This is the second message","etc"],"hitokoto":{"enable":true,"api":"https://v1.hitokoto.cn"},"typing_speed":150,"backing_speed":140,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":"https://github.com/Shiro036-joker/Shiro036-joker.github.io.git","instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.6.4","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"About":{"icon":"fa-regular fa-user","submenus":{"Me":"/about","Github":"https://github.com/EvanNotFound/hexo-theme-redefine","Blog":"https://ohevan.com","Friends":"https://blog.csdn.net/ysjy13?type=blog"}},"Links":{"icon":"fa-regular fa-link","submenus":{"Link1":"https://blog.csdn.net/ysjy13?type=blog","Link2":"https://blog.csdn.net/ysjy13?type=blog","Link3":"https://blog.csdn.net/ysjy13?type=blog"}}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":{"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/6/20 10:35:16"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+
+    <style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        Shiro Scale
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({loop: true})
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [40,0],
+                translateZ: 0,
+                opacity: [0,1],
+                filter: ['blur(5px)', 'blur(0px)'], // Starting from blurred to unblurred
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 300 + 30 * i,
+            }).add({
+                targets: '.ml13 .letter',
+                translateY: [0,-40],
+                opacity: [1,0],
+                filter: ['blur(0px)', 'blur(5px)'], // Ending from unblurred to blurred
+                easing: "easeInExpo",
+                duration: 1200,
+                delay: (el, i) => 100 + 30 * i,
+                complete: function() {
+                    hidePreloader(); // Call hidePreloader after the animation completes
+                }
+            });
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container px-6 md:px-12">
+
+    <div class="navbar-content ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Shiro Scale
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    关于
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about">
+                                                    ME
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://github.com/EvanNotFound/hexo-theme-redefine">
+                                                    GITHUB
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://ohevan.com">
+                                                    BLOG
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">
+                                                    友情链接
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-link fa-fw"></i>
+                                    链接
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">
+                                                    LINK1
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">
+                                                    LINK2
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">
+                                                    LINK3
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-About"
+                        >
+                            <span>
+                                关于
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-About">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about">ME</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://github.com/EvanNotFound/hexo-theme-redefine">GITHUB</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://ohevan.com">BLOG</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">友情链接</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-Links"
+                        >
+                            <span>
+                                链接
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-Links">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">LINK1</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">LINK2</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">LINK3</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">21</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="page-template-container">
+    
+    
+    
+    <div class="page-template-content markdown-body">
+        
+            <h1 id="无线网络攻击安全介绍"><a href="#无线网络攻击安全介绍" class="headerlink" title="无线网络攻击安全介绍"></a>无线网络攻击安全介绍</h1><p>引言<br>    在介绍如何入侵无线网络之前，首先要解释路由器的概念，首先得知道什么是路由。所谓“路由”，是指把数据从一个地方传送到另一个地方的行为和动作，而路由器，正是执行这种行为动作的机器，它的英文名称为Router,是一种连接多个网络或网段的网络设备，它能将不同网络或网段之间的数据信息进行“翻译”，以使它们能够相互“读懂”对方的数据，从而构成一个更大的网络。而我们常说的入侵路由器,只不过是入侵家用的 Modem 设备。为什么这么说了?而MODEM又是什么了?<br>    调制解调器(Modem)作为末端系统和通信系统之间信号转换的设备，是广域网中必不可少的设备之一。分为同步和异步两种，分别用来与路由器的同步和异步串口相连接，同步可用于专线、帧中继、X.25 等，异步用于PSTN 的连接。因为我们所使用的 ADSLMODEM大部分都是存在着路由功能的，厂商为了用户在使用 MODEM 的时候可以减少大量的操作以及配置，所以都会自配一些适合家庭用户的路由功能，例如:NAT、PPPOE 等等的功能。家庭用户可以不需要懂得路由器的配置方法就可以很轻松的配置好自己的路由器了,而大型的路由器却不是如此，对于普通人来说配置一台路由器并非是一件容易的事情。</p>
+<p>​    作为一个入侵者，如果他所针对的并非是目标的服务器，而是针对其线路上的联通，导致其服务瘫痪或者导致其他的用户不能够正常访问其服务的话，大多数会采用 D.D.O.S或者更有甚者会直接入侵目标服务器所经过的路由器,控制路由器致使访问者不能够访问其服务，或者利用路由器的功能去攻击目标服务器。无线网络的攻击就是利用嗅探、破解无线网络所使用的加密钥匙、以及局域网相同的攻击形式。</p>
+<h2 id="什么是无线网络"><a href="#什么是无线网络" class="headerlink" title="什么是无线网络?"></a>什么是无线网络?</h2><p>无线网络(WI-FI)是一种局域网的网络架构。Wi-Fi WirelessFidelity,无线保真 技术与蓝牙技术一样,同属于在办公 室和家庭中使用的短距离无线技术。该技术使用的使2.4GHz附近的频段，该频段目前尚属没用许可的无线频段。其目前可使用的标准有两个，分别是IEEE802.11a和IEEE802.11b。该技术由于有着自身的优点，因此受到厂商的青睐。越来越多的热点都提供免费或者收费的无线网络服务,而且现在大多数的热点都存在着一个普遍的问题,因为人流量以及人手的问题,导致很多热点所提供的服务器都是很随意的,只要你所携带的手提电脑能够接受连接无线网络就可以无需要任何的验证方式进行使用,往往这样子的管理模式造成了很多安全的问题,理论上无线电波范围内的任何一台电脑都可以监听并登录无线网络。 如果这些热点的安全措施不够严密，则完全有可能被窃听、浏览甚至操作电子邮件。</p>
+<h2 id="无线网络所使用的加密方式以及介绍"><a href="#无线网络所使用的加密方式以及介绍" class="headerlink" title="无线网络所使用的加密方式以及介绍"></a>无线网络所使用的加密方式以及介绍</h2><p>对于无线 AP 的入侵其实很简单，根据上述所说的，我们可以利用无线网络的配置，从而很容易的介入一个无线网络，然后寻找其网络的无线 AP 根据默认密码或者利用 WEB 页面安全口令工具去破解 AP 的登陆密码以及帐号。无线AP(AP，AccessPoint，无线访问节点、会话点或存取桥接器)是一个包含很广的名称，它不仅包含单纯性无线接入点(无线AP)，也同样是无线路由器(含无线网关、无线网桥)等类设备的统称。</p>
+<p>WEP 是一种使用共享密钥和 RC4 加密算法。访问点(AP)和连接到该访问点的所有工作站必须使用同样的共享密钥。因为 WEP的特殊性以及当初开发商的不重视，所以在使用 WEP 的情况下会存在以下几点安全问题。</p>
+<ul>
+<li><p>RC4 算法本身就有一个小缺陷，可以利用这个缺陷来破解密钥。</p>
+</li>
+<li><p>WEP 标准允许 IV 重复使用(平均大约每 5 小时重复一次)。这一特性会使得攻击 WEP变得更加容易，因为重复使用IV 就可以使攻击者用同样的密文重复进行分析。</p>
+</li>
+<li><p>WEP 标准不提供自动修改密钥的方法。因此，您只能手动对访问点(AP)及其工作站重新设置密钥;因此，在实际情况中，没人会去修改密钥，这样就会将他们的无线局域网(Wireless LAN，WLAN)暴露给收集流量和破解密钥的被动攻击。</p>
+</li>
+<li><p>最早的一些开发商的 WEP 实施只提供 40 位加密–短得可怜的密钥长度。更现代的系统提供 128 位的 WEP;128 位的密钥长度减去 24 位的 IV 后，实际上有效的密钥长度为 104 位，虽然这对其他一些缺陷也无能为力，但还可以接受。这些缺陷增加了三个以上的攻击隐患，但 WEP 也不是一无是处–有还是比什么都没有强，只是您必须理解 WEP 并不是无懈可击。</p>
+</li>
+</ul>
+<h2 id="无线网络攻击"><a href="#无线网络攻击" class="headerlink" title="无线网络攻击"></a>无线网络攻击</h2><h3 id="01数据包嗅探攻击"><a href="#01数据包嗅探攻击" class="headerlink" title="01数据包嗅探攻击"></a>01数据包嗅探攻击</h3><p>数据包嗅探是指获取无线网络中原始流量的行为。在日常网络管理中，管理员需要通过Wireshark等数据包嗅探器检测、监控和收集网络数据包，以了解网络系统的运行情况，这是一种合法的监控活动，但数据包嗅探器也可以被攻击者非法使用，用来违规获取网络流量。</p>
+<h3 id="02非法接入攻击"><a href="#02非法接入攻击" class="headerlink" title="02非法接入攻击"></a>02非法接入攻击</h3><p>非法接入攻击是指攻击者将任何未经授权的接入点连接到网络。如果企业的无线网络中被攻击者成功放置了非法接入点，那么网络中的应用和数据将不再安全，因为攻击者随时可以访问它所连接的网络。</p>
+<h3 id="03双面恶魔攻击"><a href="#03双面恶魔攻击" class="headerlink" title="03双面恶魔攻击"></a>03双面恶魔攻击</h3><p>无线网络钓鱼是指恶意分子创建模仿合法的网络接入点，诱骗合法用户连接。双面恶魔是一种常见的用于Wi-Fi网络钓鱼的攻击手法。它模仿成是合法的已授权接入点，并使用授权接入点的SSID来诱骗用户连接上去。有时，攻击者还会禁用授权接入点来破坏整个网络。即使授权接入点没有被禁用，双面恶魔仍然能够获取一些有价值的网络流量。</p>
+<h3 id="04欺骗攻击"><a href="#04欺骗攻击" class="headerlink" title="04欺骗攻击"></a>04欺骗攻击</h3><p>欺骗攻击指攻击者假装是合法用户或服务来进行网络访问或数据传输活动。欺骗攻击包括以下几种类型：</p>
+<ul>
+<li>MAC地址欺骗，主要发生在攻击者检测到授权设备上的网络适配器MAC地址，企图冒充授权设备建立新连接。</li>
+<li>帧欺骗（又叫帧注入），发生在攻击者发送看似来自合法发送者的恶意数据帧时。</li>
+<li>IP欺骗，发生在攻击者使用篡改过的IP数据包来隐藏数据包的真实来源时。</li>
+<li>数据重放，发生在攻击者捕获无线传输的数据，篡改传输内容，并将篡改后的内容重新传输给目标系统时。</li>
+<li>身份验证重放，发生在攻击者捕获用户之间的身份验证交换内容，并在攻击中重新使用这些交换内容时。</li>
+</ul>
+<h3 id="05加密破解攻击"><a href="#05加密破解攻击" class="headerlink" title="05加密破解攻击"></a>05加密破解攻击</h3><p>许多过时的无线网络安全协议也会很容易受到攻击，包括有线等效隐私（WEP）和Wi-Fi受保护访问（WPA）等，其中，2003年推出的WPA比WEP更有效。它使用比WEP更强大的加密和更好的身份验证。然而，WPA也容易受到攻击，目前也不应该继续使用。后续推出的WPA2于2004年正式取代了WEP，它包含了AES加密技术。而2018年推出的WPA3则提供了比WPA2更强大的加密能力。</p>
+<h3 id="06MitM中间人攻击"><a href="#06MitM中间人攻击" class="headerlink" title="06MitM中间人攻击"></a>06MitM中间人攻击</h3><p>MitM攻击是一种第三方冒充合法通信方的窃听攻击，主要发生在网络犯罪分子窃听两个合法用户（应用）之间的通信内容时，比如两个用户相互通信，或者一个用户与应用程序或服务进行交互。攻击者会将自己伪装成是合法的用户，从而拦截敏感信息并转发信息。</p>
+<h3 id="07DoS攻击"><a href="#07DoS攻击" class="headerlink" title="07DoS攻击"></a>07DoS攻击</h3><p>DoS攻击可以阻止合法用户正常连接到无线网络，一般发生在恶意分子用大量流量阻塞网络时，从而使网络不堪重负，并使合法用户无法正常访问。</p>
+<h3 id="08无线干扰攻击"><a href="#08无线干扰攻击" class="headerlink" title="08无线干扰攻击"></a>08无线干扰攻击</h3><p>与DoS攻击一样，无线网络干扰攻击也会使网络系统不堪重负，这样很多合法用户将无法连接到网络。无线干扰攻击的一个典型做法就是向某个网络接入点发送大量流量，以“阻塞”其合法连接。</p>
+<h3 id="09无线搜寻攻击"><a href="#09无线搜寻攻击" class="headerlink" title="09无线搜寻攻击"></a>09无线搜寻攻击</h3><p>无线搜寻又叫接入点映射，不法分子带着无线设备（通常是电脑或移动设备）四处搜寻，查找那些可以自由连接的开放式无线网络。很多企业的无线网络由于疏忽等原因，未设置完善的安全措施，这样就让攻击者可以趁虚而入。</p>
+<h3 id="10战舰式攻击"><a href="#10战舰式攻击" class="headerlink" title="10战舰式攻击"></a>10战舰式攻击</h3><p>战舰式攻击指攻击者蓄意向企业组织投寄针对无线网络的物理监视设备，这类设备一旦进入企业组织内部，就会自动连接到目标无线网络，并采集外发敏感数据。这种攻击需要特定的攻击设备来配合，并且攻击的目的性会非常明确。一旦设备进入受害企业无线网络信号的覆盖范围，就会伺机攻击网络。</p>
+<h3 id="11盗窃和篡改"><a href="#11盗窃和篡改" class="headerlink" title="11盗窃和篡改"></a>11盗窃和篡改</h3><p>攻击者可以窃取或破坏无线接入点和路由器，从而对无线网络发动物理攻击。这些攻击不仅阻止用户访问网络，导致网络运行异常，从而导致业务中断和收入损失，还会使受害企业蒙受无线网络系统维修的经济损失。</p>
+<h3 id="12默认密码漏洞"><a href="#12默认密码漏洞" class="headerlink" title="12默认密码漏洞"></a>12默认密码漏洞</h3><p>企业级无线网络应用是绝不应该使用默认密码和SSID的，这将使攻击者能够轻易发现员工使用的路由器，进而发现该路由器所含有的潜在威胁漏洞。默认密码和厂商提供的密码常常记录在消费级路由器的使用说明中，安全管理人员应及时修改密码，防止未经授权的用户看到和使用。无线网络应用应该遵循密码安全管理的最佳实践，比如不要使用容易猜到的弱密码、定期维护修改密码。</p>
+<h2 id="实战例子-Aircrack-ng破解wifi"><a href="#实战例子-Aircrack-ng破解wifi" class="headerlink" title="实战例子 Aircrack-ng破解wifi"></a>实战例子 <strong>Aircrack-ng破解wifi</strong></h2><p>Aircrack-ng是一个包含一个多款工具的套装，</p>
+<p>我们需要使用里面的：</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">airmon-ng</span><br><span class="line">airodump-ng</span><br><span class="line">aireplay-ng</span><br><span class="line">aircrack-ng</span><br></pre></td></tr></table></figure></div>
+
+<p>一共有六部分</p>
+<p>准备 探测 抓包 攻击 字典 破解</p>
+<h4 id="1、准备阶段-启动wlan0"><a href="#1、准备阶段-启动wlan0" class="headerlink" title="1、准备阶段-启动wlan0"></a><strong>1、准备阶段-启动wlan0</strong></h4><ol>
+<li>ipconfig检查无线网卡wlan0是否启动</li>
+</ol>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipconfig</span><br></pre></td></tr></table></figure></div>
+
+<p>一定保证他现在没有连接任何wifi。上面那个wlan0里面没有IP地址什么的，就说明现在不在连接中</p>
+
+
+<p>2）查看无线网卡状态</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iwconfig（查看无线网卡状态信息）</span><br></pre></td></tr></table></figure></div>
+
+
+
+
+
+<p>激活无线网卡至monitor模式，监听模式</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">airmon-ng start <span class="title function_">wlan0</span>(开启激活网卡)</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>再次检查网卡状态</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iwconfig</span><br></pre></td></tr></table></figure></div>
+
+<p>我们网卡的名称为wlan0mon了</p>
+
+
+<p>拓展命令</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo ifconfig wlan0mon down</span><br><span class="line">sudo iwconfig wlan0mon mode monitor</span><br><span class="line">sudo ifconfig wlan0mon up</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="2、探测阶段-确定需要攻击的wifi"><a href="#2、探测阶段-确定需要攻击的wifi" class="headerlink" title="2、探测阶段-确定需要攻击的wifi"></a><strong>2、探测阶段-确定需要攻击的wifi</strong></h4><p>1）利用网卡搜索周围能获取的wifi的信息</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">airodump-ng wlan0mon</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>可以看到，最右侧的SSID，下面是周边wifi的名字，最左侧的BSSID，是这些wifi对应的mac地址。ENC是加密方式，可以看到都是WPA2的。有的也会有WPA和WEP，但是这两个安全性都不如WPA2。CH是工作频道。我们要破解图中的FAST 236D，这个是我的wifi。可以看到它的mac地址是F4:6A:92:90:23:6D！本来正常情况下这张表的下半部分会罗列出连接到这个wif内的设备的mac地址，但是会在后面显示给大家看!CH频率是6记住!</p>
+<h4 id="3、抓包阶段-利用airodump"><a href="#3、抓包阶段-利用airodump" class="headerlink" title="3、抓包阶段-利用airodump"></a><strong>3、抓包阶段-利用airodump</strong></h4><p>1）我们已经看到了要攻击的路由器的mac地址，还有工作频道。执行以下命令：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">airodump-ng --ivs --bssid F4:6A:92:90:23:6D -w test -c 6 wlan0mon </span><br><span class="line"></span><br><span class="line">我们使用airodump-ng这个攻击进行抓包 </span><br><span class="line">--bssid是路由器的mac地址 </span><br><span class="line">-w 是写入到文件longas中 </span><br><span class="line">-c 6 CH频道是6 </span><br><span class="line">--ivs 是只抓取可用于破解的IVS数据报文</span><br></pre></td></tr></table></figure></div>
+
+<p>需要注意的是：这里我们虽然设置了保存的文件名test,但是生成的文件不是test.ivs,而是test-01.ivs</p>
+
+
+<p>注意我们观察，STATION部分看到了两个mac地址，这两个MAC分别为我电脑和手机连接的这个wifi网络</p>
+<p><strong>无客户端连接AP，airodump-ng是抓不到数据的</strong></p>
+
+
+<p>拓展思路抓取CAP包</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">airodump-ng -c 信道 -w 抓包保存目录 --bssid <span class="variable constant_">BSSID</span>地址 wlan0mon网卡</span><br><span class="line"><span class="attr">CH</span>:信道</span><br><span class="line"><span class="attr">BSSID</span>:<span class="attr">F4</span>:6<span class="attr">A</span>:<span class="number">92</span>:<span class="number">90</span>:<span class="number">23</span>:<span class="title function_">XX</span>(wifi的mac)</span><br><span class="line">airodump-ng -c <span class="number">6</span> -w testquanliang/ --bssid <span class="attr">F4</span>:6<span class="attr">A</span>:<span class="number">92</span>:<span class="number">90</span>:<span class="number">23</span>:<span class="variable constant_">XX</span> wlan0mon</span><br><span class="line">(抓取全量的包)</span><br></pre></td></tr></table></figure></div>
+
+
+
+
+
+<h4 id="4、攻击阶段-aireplay"><a href="#4、攻击阶段-aireplay" class="headerlink" title="4、攻击阶段-aireplay"></a><strong>4、攻击阶段-aireplay</strong></h4><p>谨记：开新窗口运行</p>
+<p>1）思路1（方法实用性高）</p>
+<p>这里为了获取破解所需要的WPA2握手验证的整个完整数据包，我们将会发送一种称之为”Deauth”的数据包来讲已经连接至无线路由器的合法洼陷客户端强制断开，此时客户端就会自动重新连接无线路由器，我们也就有机会捕获到包含WPA2握手验证的完整数据包了。</p>
+<p>此处需要新开启一个shell：</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">aireplay-ng -<span class="number">0</span> <span class="number">1</span> -a <span class="attr">F4</span>:6<span class="attr">A</span>:<span class="number">92</span>:<span class="number">90</span>:<span class="number">23</span>:<span class="variable constant_">XX</span> -c <span class="attr">A4</span>:<span class="number">02</span>:<span class="attr">B9</span>:<span class="attr">CC</span>:6<span class="attr">D</span>:<span class="variable constant_">XX</span> wlan0mon</span><br><span class="line"></span><br><span class="line">-<span class="number">0</span> 采用deauth攻击模式，后面跟上攻击次数，这里我设置为<span class="number">1</span>，大家可以根据实际情况设置为<span class="number">10</span>不等</span><br><span class="line">-a 后跟路由器的mac地址</span><br><span class="line">-c 后面跟客户端的mac地址</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>在此处可能会出现wlan0mon is on channel 13, but the AP uses channel 6问题，这是内核问题，有个暂时的解决方案</p>
+<p><strong>方案：设置无线网卡监听信道</strong></p>
+<p>通常情况下，使用Aircrack-ng工具实施无线密码破解时，都是使用airodump-ng工具捕获数据包。用户在捕获数据包时，可以通过指定监听数据的工作信道为目标AP工作的信道来解决该问题。由于AP工作信道为6，所以这里需要设置无线网卡监听信道为6。</p>
+<p>执行命令如下所示：</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">airodump-ng wlan0mon -c <span class="number">6</span></span><br><span class="line">参考网站：</span><br><span class="line"><span class="attr">https</span>:<span class="comment">//my.oschina.net/u/1585857/blog/3420946</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+
+
+<p>2）思路2-利用aireplay进行攻击：（实用性一般）</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">aireplay-ng -<span class="number">0</span> <span class="number">5</span> -a <span class="attr">F4</span>:6<span class="attr">A</span>:<span class="number">92</span>:<span class="number">90</span>:<span class="number">23</span>:6D wlan0mon</span><br><span class="line"></span><br><span class="line">-<span class="number">0</span> 攻击五次</span><br><span class="line">-a 路由器mac</span><br><span class="line"></span><br><span class="line">或者：</span><br><span class="line">aireplay -<span class="number">0</span> <span class="number">0</span> -a <span class="attr">F4</span>:6<span class="attr">A</span>:<span class="number">92</span>:<span class="number">90</span>:<span class="number">23</span>:6D -c <span class="attr">A4</span>:<span class="number">02</span>:<span class="attr">B9</span>:<span class="attr">CC</span>:6<span class="attr">D</span>:<span class="number">25</span> wlan0mon</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>条件: 此网络需要有用户在连接，攻击手段是断开对方的网络，让对方重新连接后，重新抓取握手包，对方重新连接会自动连接进入携带了密码key</p>
+<p>出现WPA handshake: F4:6A:92:90:23:6D 代表抓包完成!获取到了wif包的加密秘钥! 注意︰按两次Q退出，不要强制退出!</p>
+<p>注意：如果在执行aireplay攻击后，在airodump-ng界面右上角不出现“WPA handshake: ……”字样，需要选执行“airmon-ng stop wlan0”，再次执行aireplay-ng 攻击，即可出现。</p>
+<h4 id="5、收集阶段-字典攻击cap-字典收集"><a href="#5、收集阶段-字典攻击cap-字典收集" class="headerlink" title="5、收集阶段-字典攻击cap(字典收集)"></a><strong>5、收集阶段-字典攻击cap(字典收集)</strong></h4><p>1）使用kali自带的秘钥字典</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/share/wordlists/</span><br><span class="line">ls -al rockyou.<span class="property">txt</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+
+
+<p>2）使用本地的密码本</p>
+
+
+<p>3）收集自动生成字典crunch等等。</p>
+<h4 id="6、破解阶段-airarck破解"><a href="#6、破解阶段-airarck破解" class="headerlink" title="6、破解阶段-airarck破解"></a><strong>6、破解阶段-airarck破解</strong></h4><p>1）ivs 数据包爆破</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aircrack-ng -w passwd.<span class="property">txt</span> test-<span class="number">01</span>.<span class="property">ivs</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>此时的破解速度跟使用的机器性能和字典大小有关。为了节省时间我就把密码直接加入到字典中了。可以看到破解成功时候的界面! 中间有一句:KEY FOUND!，后面的中括号里面，就是这个路由器的wif密码。到此，wif密码的破解也就完成了。</p>
+<p>2）破解cap包</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aircrack-ng -w passwd.<span class="property">txt</span> /root/<span class="title class_">Desktop</span>/testquanliang/-<span class="number">01</span>.<span class="property">cap</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>成功破解</p>
+
+        
+    </div>
+    <div class="page-template-comments">
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+            <div class="customize-info my-1">别紧张，我又不是什么好人。别紧张，我又不是什么好人。别紧张，我又不是什么好人。</div>
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Shirolin</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共 21 篇文章
+                    </span>
+                    
+                        <span>
+                            共 40.6k 字
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.6.4</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+</body>
+</html>
