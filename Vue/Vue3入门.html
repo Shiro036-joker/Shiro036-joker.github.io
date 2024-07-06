@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Shirolin">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://shiro036-joker.github.io/vue/vue3入门.html"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="认识Vue31. Vue3组合式API体验 通过 Counter 案例 体验Vue3新引入的组合式API  1234567891011121314&lt;script&gt;export default &#123;  data()&#123;    return &#123;      count:0    &#125;  &#125;,  methods:&#123;    addCount(">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://shiro036-joker.github.io/Vue/Vue3%E5%85%A5%E9%97%A8.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="认识Vue31. Vue3组合式API体验 通过 Counter 案例 体验Vue3新引入的组合式API  1234567891011121314&lt;script&gt;export default &#123;  data()&#123;    return &#123;      count:0    &#125;  &#125;,  methods:&#123;    addCount(">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-07-05T03:39:20.602Z">
+<meta property="article:modified_time" content="2024-07-05T03:39:20.602Z">
+<meta property="article:author" content="Shirolin">
+<meta name="twitter:card" content="summary">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/logo.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+        Shiro Scale
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    
+        <link href="https://fonts.googleapis.com/css2?family=Farsan&display=swap" rel="stylesheet">
+    
+
+    
+        
+<script src="/js/libs/anime.min.js"></script>
+
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"shiro036-joker.github.io","root":"/","language":"zh-CN"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":true,"family":"Noto Sans SC","url":"https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"},"english":{"enable":true,"family":"Farsan","url":"https://fonts.googleapis.com/css2?family=Farsan&display=swap"}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Shiro Scale","subtitle":{"text":["This is the first message","This is the second message","etc"],"hitokoto":{"enable":true,"api":"https://v1.hitokoto.cn"},"typing_speed":150,"backing_speed":140,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":"https://github.com/Shiro036-joker/Shiro036-joker.github.io.git","instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.6.4","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"About":{"icon":"fa-regular fa-user","submenus":{"Me":"/about","Github":"https://github.com/EvanNotFound/hexo-theme-redefine","Blog":"https://ohevan.com","Friends":"https://blog.csdn.net/ysjy13?type=blog"}},"Links":{"icon":"fa-regular fa-link","submenus":{"Link1":"https://blog.csdn.net/ysjy13?type=blog","Link2":"https://blog.csdn.net/ysjy13?type=blog","Link3":"https://blog.csdn.net/ysjy13?type=blog"}}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/6/20 10:35:16"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+
+    <style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        Shiro Scale
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({loop: true})
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [40,0],
+                translateZ: 0,
+                opacity: [0,1],
+                filter: ['blur(5px)', 'blur(0px)'], // Starting from blurred to unblurred
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 300 + 30 * i,
+            }).add({
+                targets: '.ml13 .letter',
+                translateY: [0,-40],
+                opacity: [1,0],
+                filter: ['blur(0px)', 'blur(5px)'], // Ending from unblurred to blurred
+                easing: "easeInExpo",
+                duration: 1200,
+                delay: (el, i) => 100 + 30 * i,
+                complete: function() {
+                    hidePreloader(); // Call hidePreloader after the animation completes
+                }
+            });
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container px-6 md:px-12">
+
+    <div class="navbar-content ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Shiro Scale
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    关于
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about">
+                                                    ME
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://github.com/EvanNotFound/hexo-theme-redefine">
+                                                    GITHUB
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://ohevan.com">
+                                                    BLOG
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">
+                                                    友情链接
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-link fa-fw"></i>
+                                    链接
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">
+                                                    LINK1
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">
+                                                    LINK2
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">
+                                                    LINK3
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-About"
+                        >
+                            <span>
+                                关于
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-About">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about">ME</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://github.com/EvanNotFound/hexo-theme-redefine">GITHUB</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://ohevan.com">BLOG</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">友情链接</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-Links"
+                        >
+                            <span>
+                                链接
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-Links">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">LINK1</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">LINK2</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://blog.csdn.net/ysjy13?type=blog">LINK3</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/archives"
+                        >
+                            <span>Archives</span>
+                            <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">21</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="page-template-container">
+    
+    
+    
+    <div class="page-template-content markdown-body">
+        
+            <h1 id="认识Vue3"><a href="#认识Vue3" class="headerlink" title="认识Vue3"></a>认识Vue3</h1><h2 id="1-Vue3组合式API体验"><a href="#1-Vue3组合式API体验" class="headerlink" title="1. Vue3组合式API体验"></a>1. Vue3组合式API体验</h2><blockquote>
+<p>通过 Counter 案例 体验Vue3新引入的组合式API</p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  data()&#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      count:0</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods:&#123;</span><br><span class="line">    addCount()&#123;</span><br><span class="line">      this.count++</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import &#123; ref &#125; from &#x27;vue&#x27;</span><br><span class="line">const count = ref(0)</span><br><span class="line">const addCount = ()=&gt; count.value++</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p>特点：</p>
+<ol>
+<li>代码量变少</li>
+<li>分散式维护变成集中式维护</li>
+</ol>
+<h2 id="2-Vue3更多的优势"><a href="#2-Vue3更多的优势" class="headerlink" title="2. Vue3更多的优势"></a>2. Vue3更多的优势</h2>
+
+
+<h1 id="使用create-vue搭建Vue3项目"><a href="#使用create-vue搭建Vue3项目" class="headerlink" title="使用create-vue搭建Vue3项目"></a>使用create-vue搭建Vue3项目</h1><h2 id="1-认识create-vue"><a href="#1-认识create-vue" class="headerlink" title="1. 认识create-vue"></a>1. 认识create-vue</h2><blockquote>
+<p>create-vue是Vue官方新的脚手架工具，底层切换到了 vite （下一代前端工具链），为开发提供极速响应</p>
+</blockquote>
+
+
+<h2 id="2-使用create-vue创建项目"><a href="#2-使用create-vue创建项目" class="headerlink" title="2. 使用create-vue创建项目"></a>2. 使用create-vue创建项目</h2><blockquote>
+<p>前置条件 - 已安装16.0或更高版本的Node.js</p>
+</blockquote>
+<p>执行如下命令，这一指令将会安装并执行 create-vue</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init vue@latest</span><br></pre></td></tr></table></figure></div>
+
+
+<h1 id="熟悉项目和关键文件"><a href="#熟悉项目和关键文件" class="headerlink" title="熟悉项目和关键文件"></a>熟悉项目和关键文件</h1>
+
+<h1 id="组合式API-setup选项"><a href="#组合式API-setup选项" class="headerlink" title="组合式API - setup选项"></a>组合式API - setup选项</h1><h2 id="1-setup选项的写法和执行时机"><a href="#1-setup选项的写法和执行时机" class="headerlink" title="1. setup选项的写法和执行时机"></a>1. setup选项的写法和执行时机</h2><p>写法</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  export default &#123;</span><br><span class="line">    setup()&#123;</span><br><span class="line">      </span><br><span class="line">    &#125;,</span><br><span class="line">    beforeCreate()&#123;</span><br><span class="line">      </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
+<p>执行时机</p>
+<blockquote>
+<p>在beforeCreate钩子之前执行</p>
+</blockquote>
+
+
+<h2 id="2-setup中写代码的特点"><a href="#2-setup中写代码的特点" class="headerlink" title="2. setup中写代码的特点"></a>2. setup中写代码的特点</h2><blockquote>
+<p>在setup函数中写的数据和方法需要在末尾以对象的方式return，才能给模版使用</p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  export default &#123;</span><br><span class="line">    setup()&#123;</span><br><span class="line">      const message = &#x27;this is message&#x27;</span><br><span class="line">      const logMessage = ()=&gt;&#123;</span><br><span class="line">        console.log(message)</span><br><span class="line">      &#125;</span><br><span class="line">      // 必须return才可以</span><br><span class="line">      return &#123;</span><br><span class="line">        message,</span><br><span class="line">        logMessage</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
+<h2 id="3-语法糖"><a href="#3-语法糖" class="headerlink" title="3. 语法糖"></a>3. <script setup>语法糖</h2><blockquote>
+<p>script标签添加 setup标记，不需要再写导出语句，默认会添加导出语句</p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">  const message = &#x27;this is message&#x27;</span><br><span class="line">  const logMessage = ()=&gt;&#123;</span><br><span class="line">    console.log(message)</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
+
+<h1 id="组合式API-reactive和ref函数"><a href="#组合式API-reactive和ref函数" class="headerlink" title="组合式API - reactive和ref函数"></a>组合式API - reactive和ref函数</h1><h2 id="1-reactive"><a href="#1-reactive" class="headerlink" title="1. reactive"></a>1. reactive</h2><blockquote>
+<p>接受对象类型数据的参数传入并返回一个响应式的对象</p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line"> // 导入</span><br><span class="line"> import &#123; reactive &#125; from &#x27;vue&#x27;</span><br><span class="line"> // 执行函数 传入参数 变量接收</span><br><span class="line"> const state = reactive(&#123;</span><br><span class="line">   msg:&#x27;this is msg&#x27;</span><br><span class="line"> &#125;)</span><br><span class="line"> const setSate = ()=&gt;&#123;</span><br><span class="line">   // 修改数据更新视图</span><br><span class="line">   state.msg = &#x27;this is new msg&#x27;</span><br><span class="line"> &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &#123;&#123; state.msg &#125;&#125;</span><br><span class="line">  &lt;button @click=&quot;setState&quot;&gt;change msg&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="2-ref"><a href="#2-ref" class="headerlink" title="2. ref"></a>2. ref</h2><blockquote>
+<p>接收简单类型或者对象类型的数据传入并返回一个响应式的对象</p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line"> // 导入</span><br><span class="line"> import &#123; ref &#125; from &#x27;vue&#x27;</span><br><span class="line"> // 执行函数 传入参数 变量接收</span><br><span class="line"> const count = ref(0)</span><br><span class="line"> const setCount = ()=&gt;&#123;</span><br><span class="line">   // 修改数据更新视图必须加上.value</span><br><span class="line">   count.value++</span><br><span class="line"> &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;button @click=&quot;setCount&quot;&gt;&#123;&#123;count&#125;&#125;&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure></div>
+<h2 id="3-reactive-对比-ref"><a href="#3-reactive-对比-ref" class="headerlink" title="3. reactive 对比 ref"></a>3. reactive 对比 ref</h2><ol>
+<li>都是用来生成响应式数据</li>
+<li>不同点<ol>
+<li>reactive不能处理简单类型的数据</li>
+<li>ref参数类型支持更好，但是必须通过.value做访问修改</li>
+<li>ref函数内部的实现依赖于reactive函数</li>
+</ol>
+</li>
+<li>在实际工作中的推荐<ol>
+<li>推荐使用ref函数，减少记忆负担，小兔鲜项目都使用ref</li>
+</ol>
+</li>
+</ol>
+<h1 id="组合式API-computed"><a href="#组合式API-computed" class="headerlink" title="组合式API - computed"></a>组合式API - computed</h1><blockquote>
+<p>计算属性基本思想和Vue2保持一致，组合式API下的计算属性只是修改了API写法</p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">// 导入</span><br><span class="line">import &#123;ref, computed &#125; from &#x27;vue&#x27;</span><br><span class="line">// 原始数据</span><br><span class="line">const count = ref(0)</span><br><span class="line">// 计算属性</span><br><span class="line">const doubleCount = computed(()=&gt;count.value * 2)</span><br><span class="line"></span><br><span class="line">// 原始数据</span><br><span class="line">const list = ref([1,2,3,4,5,6,7,8])</span><br><span class="line">// 计算属性list</span><br><span class="line">const filterList = computed(item=&gt;item &gt; 2)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
+<h1 id="组合式API-watch"><a href="#组合式API-watch" class="headerlink" title="组合式API - watch"></a>组合式API - watch</h1><blockquote>
+<p>侦听一个或者多个数据的变化，数据变化时执行回调函数，俩个额外参数 immediate控制立刻执行，deep开启深度侦听</p>
+</blockquote>
+<h2 id="1-侦听单个数据"><a href="#1-侦听单个数据" class="headerlink" title="1. 侦听单个数据"></a>1. 侦听单个数据</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">  // 1. 导入watch</span><br><span class="line">  import &#123; ref, watch &#125; from &#x27;vue&#x27;</span><br><span class="line">  const count = ref(0)</span><br><span class="line">  // 2. 调用watch 侦听变化</span><br><span class="line">  watch(count, (newValue, oldValue)=&gt;&#123;</span><br><span class="line">    console.log(`count发生了变化，老值为$&#123;oldValue&#125;,新值为$&#123;newValue&#125;`)</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
+<h2 id="2-侦听多个数据"><a href="#2-侦听多个数据" class="headerlink" title="2. 侦听多个数据"></a>2. 侦听多个数据</h2><blockquote>
+<p>侦听多个数据，第一个参数可以改写成数组的写法</p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">  // 1. 导入watch</span><br><span class="line">  import &#123; ref, watch &#125; from &#x27;vue&#x27;</span><br><span class="line">  const count = ref(0)</span><br><span class="line">  const name = ref(&#x27;cp&#x27;)</span><br><span class="line">  // 2. 调用watch 侦听变化</span><br><span class="line">  watch([count, name], ([newCount, newName],[oldCount,oldName])=&gt;&#123;</span><br><span class="line">    console.log(`count或者name变化了，[newCount, newName],[oldCount,oldName])</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
+<h2 id="3-immediate"><a href="#3-immediate" class="headerlink" title="3. immediate"></a>3. immediate</h2><blockquote>
+<p>在侦听器创建时立即出发回调，响应式数据变化之后继续执行回调</p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">  // 1. 导入watch</span><br><span class="line">  import &#123; ref, watch &#125; from &#x27;vue&#x27;</span><br><span class="line">  const count = ref(0)</span><br><span class="line">  // 2. 调用watch 侦听变化</span><br><span class="line">  watch(count, (newValue, oldValue)=&gt;&#123;</span><br><span class="line">    console.log(`count发生了变化，老值为$&#123;oldValue&#125;,新值为$&#123;newValue&#125;`)</span><br><span class="line">  &#125;,&#123;</span><br><span class="line">    immediate: true</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
+<h2 id="4-deep"><a href="#4-deep" class="headerlink" title="4. deep"></a>4. deep</h2><blockquote>
+<p>通过watch监听的ref对象默认是浅层侦听的，直接修改嵌套的对象属性不会触发回调执行，需要开启deep</p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">  // 1. 导入watch</span><br><span class="line">  import &#123; ref, watch &#125; from &#x27;vue&#x27;</span><br><span class="line">  const state = ref(&#123; count: 0 &#125;)</span><br><span class="line">  // 2. 监听对象state</span><br><span class="line">  watch(state, ()=&gt;&#123;</span><br><span class="line">    console.log(&#x27;数据变化了&#x27;)</span><br><span class="line">  &#125;)</span><br><span class="line">  const changeStateByCount = ()=&gt;&#123;</span><br><span class="line">    // 直接修改不会引发回调执行</span><br><span class="line">    state.value.count++</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line">  // 1. 导入watch</span><br><span class="line">  import &#123; ref, watch &#125; from &#x27;vue&#x27;</span><br><span class="line">  const state = ref(&#123; count: 0 &#125;)</span><br><span class="line">  // 2. 监听对象state 并开启deep</span><br><span class="line">  watch(state, ()=&gt;&#123;</span><br><span class="line">    console.log(&#x27;数据变化了&#x27;)</span><br><span class="line">  &#125;,&#123;deep:true&#125;)</span><br><span class="line">  const changeStateByCount = ()=&gt;&#123;</span><br><span class="line">    // 此时修改可以触发回调</span><br><span class="line">    state.value.count++</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<h1 id="组合式API-生命周期函数"><a href="#组合式API-生命周期函数" class="headerlink" title="组合式API - 生命周期函数"></a>组合式API - 生命周期函数</h1><h2 id="1-选项式对比组合式"><a href="#1-选项式对比组合式" class="headerlink" title="1. 选项式对比组合式"></a>1. 选项式对比组合式</h2>
+<h2 id="2-生命周期函数基本使用"><a href="#2-生命周期函数基本使用" class="headerlink" title="2. 生命周期函数基本使用"></a>2. 生命周期函数基本使用</h2><blockquote>
+<ol>
+<li>导入生命周期函数</li>
+<li>执行生命周期函数，传入回调</li>
+</ol>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;scirpt setup&gt;</span><br><span class="line">import &#123; onMounted &#125; from &#x27;vue&#x27;</span><br><span class="line">onMounted(()=&gt;&#123;</span><br><span class="line">  // 自定义逻辑</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
+<h2 id="3-执行多次"><a href="#3-执行多次" class="headerlink" title="3. 执行多次"></a>3. 执行多次</h2><blockquote>
+<p>生命周期函数执行多次的时候，会按照顺序依次执行</p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;scirpt setup&gt;</span><br><span class="line">import &#123; onMounted &#125; from &#x27;vue&#x27;</span><br><span class="line">onMounted(()=&gt;&#123;</span><br><span class="line">  // 自定义逻辑</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">onMounted(()=&gt;&#123;</span><br><span class="line">  // 自定义逻辑</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
+<h1 id="组合式API-父子通信"><a href="#组合式API-父子通信" class="headerlink" title="组合式API - 父子通信"></a>组合式API - 父子通信</h1><h2 id="1-父传子"><a href="#1-父传子" class="headerlink" title="1. 父传子"></a>1. 父传子</h2><blockquote>
+<p>基本思想</p>
+<ol>
+<li>父组件中给子组件绑定属性</li>
+<li>子组件内部通过props选项接收数据</li>
+</ol>
+</blockquote>
+
+
+<h2 id="2-子传父"><a href="#2-子传父" class="headerlink" title="2. 子传父"></a>2. 子传父</h2><blockquote>
+<p>基本思想</p>
+<ol>
+<li>父组件中给子组件标签通过@绑定事件</li>
+<li>子组件内部通过 emit 方法触发事件</li>
+</ol>
+</blockquote>
+
+
+<h1 id="组合式API-模版引用"><a href="#组合式API-模版引用" class="headerlink" title="组合式API - 模版引用"></a>组合式API - 模版引用</h1><blockquote>
+<p>概念：通过 ref标识 获取真实的 dom对象或者组件实例对象</p>
+</blockquote>
+<h2 id="1-基本使用"><a href="#1-基本使用" class="headerlink" title="1. 基本使用"></a>1. 基本使用</h2><blockquote>
+<p>实现步骤：</p>
+<ol>
+<li>调用ref函数生成一个ref对象</li>
+<li>通过ref标识绑定ref对象到标签</li>
+</ol>
+</blockquote>
+
+<h2 id="2-defineExpose"><a href="#2-defineExpose" class="headerlink" title="2. defineExpose"></a>2. defineExpose</h2><blockquote>
+<p>默认情况下在 <script setup>语法糖下组件内部的属性和方法是不开放给父组件访问的，可以通过defineExpose编译宏指定哪些属性和方法容许访问<br>说明：指定testMessage属性可以被访问到</p>
+</blockquote>
+
+<h1 id="组合式API-provide和inject"><a href="#组合式API-provide和inject" class="headerlink" title="组合式API - provide和inject"></a>组合式API - provide和inject</h1><h2 id="1-作用和场景"><a href="#1-作用和场景" class="headerlink" title="1. 作用和场景"></a>1. 作用和场景</h2><blockquote>
+<p>顶层组件向任意的底层组件传递数据和方法，实现跨层组件通信</p>
+</blockquote>
+
+
+<h2 id="2-跨层传递普通数据"><a href="#2-跨层传递普通数据" class="headerlink" title="2. 跨层传递普通数据"></a>2. 跨层传递普通数据</h2><blockquote>
+<p>实现步骤</p>
+<ol>
+<li>顶层组件通过 <code>provide</code> 函数提供数据</li>
+<li>底层组件通过 <code>inject</code> 函数提供数据</li>
+</ol>
+</blockquote>
+
+
+<h2 id="3-跨层传递响应式数据"><a href="#3-跨层传递响应式数据" class="headerlink" title="3. 跨层传递响应式数据"></a>3. 跨层传递响应式数据</h2><blockquote>
+<p>在调用provide函数时，第二个参数设置为ref对象</p>
+</blockquote>
+
+
+<h2 id="4-跨层传递方法"><a href="#4-跨层传递方法" class="headerlink" title="4. 跨层传递方法"></a>4. 跨层传递方法</h2><blockquote>
+<p>顶层组件可以向底层组件传递方法，底层组件调用方法修改顶层组件的数据</p>
+</blockquote>
+
+
+<h1 id="综合案例"><a href="#综合案例" class="headerlink" title="综合案例"></a>综合案例</h1>
+<h2 id="1-项目地址"><a href="#1-项目地址" class="headerlink" title="1. 项目地址"></a>1. 项目地址</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span>  http://git.itcast.cn/heimaqianduan/vue3-basic-project.git</span><br></pre></td></tr></table></figure></div>
+<h2 id="2-项目说明"><a href="#2-项目说明" class="headerlink" title="2. 项目说明"></a>2. 项目说明</h2><ol>
+<li>模版已经配置好了案例必须的安装包</li>
+<li>案例用到的接口在 README.MD文件 中</li>
+<li>案例项目有俩个分支，main主分支为开发分支，complete分支为完成版分支供开发完参考</li>
+</ol>
+</script></h2>
+        
+    </div>
+    <div class="page-template-comments">
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+            <div class="customize-info my-1">别紧张，我又不是什么好人。别紧张，我又不是什么好人。别紧张，我又不是什么好人。</div>
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Shirolin</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共 21 篇文章
+                    </span>
+                    
+                        <span>
+                            共 40.6k 字
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.6.4</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+</body>
+</html>

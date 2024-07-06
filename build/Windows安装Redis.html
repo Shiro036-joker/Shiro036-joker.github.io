@@ -13,18 +13,20 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://shiro036-joker.github.io/categories/"/>
+    <link rel="canonical" href="https://shiro036-joker.github.io/build/windows安装redis.html"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="https://shiro036-joker.github.io/categories/index.html">
+        <meta name="description" content="Windows安装Redis及可视化界面RESP一、Redis是什么数据库？Remote Dictionary Server(Redis) 是一个开源的使用 ANSI C 语言编写、遵守 BSD 协议、支持网络、可基于内存、分布式、可选持久性的键值对(Key-Value)存储数据库，并提供多种语言的 API，是跨平台的非关系型数据库。Redis 通常被称为数据结构服务器，因为值（value）可以是">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://shiro036-joker.github.io/build/Windows%E5%AE%89%E8%A3%85Redis.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Windows安装Redis及可视化界面RESP一、Redis是什么数据库？Remote Dictionary Server(Redis) 是一个开源的使用 ANSI C 语言编写、遵守 BSD 协议、支持网络、可基于内存、分布式、可选持久性的键值对(Key-Value)存储数据库，并提供多种语言的 API，是跨平台的非关系型数据库。Redis 通常被称为数据结构服务器，因为值（value）可以是">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-07-06T07:31:45.000Z">
-<meta property="article:modified_time" content="2024-07-06T07:31:45.851Z">
+<meta property="article:published_time" content="2024-07-05T03:55:39.758Z">
+<meta property="article:modified_time" content="2024-07-05T03:55:39.758Z">
 <meta property="article:author" content="Shirolin">
 <meta name="twitter:card" content="summary">
     
@@ -37,8 +39,6 @@
     <!--- Page Info-->
     
     <title>
-        
-            分类 -
         
         Shiro Scale
     </title>
@@ -581,18 +581,102 @@
             <div class="main-content">
 
                 
-                    <div class="category-list-container">
-	<div >
-		<h1 class="category-header">
-			分类
-		</h1>
-	</div>
-	<div class="category-list-content">
-		
-	</div>
-	<div class="category-comments">
-		
-	</div>
+                    <div class="page-template-container">
+    
+    
+    
+    <div class="page-template-content markdown-body">
+        
+            <h1 id="Windows安装Redis及可视化界面RESP"><a href="#Windows安装Redis及可视化界面RESP" class="headerlink" title="Windows安装Redis及可视化界面RESP"></a>Windows安装Redis及可视化界面RESP</h1><h2 id="一、Redis是什么数据库？"><a href="#一、Redis是什么数据库？" class="headerlink" title="一、Redis是什么数据库？"></a>一、Redis是什么数据库？</h2><p>Remote Dictionary Server(Redis) 是一个开源的使用 ANSI C 语言编写、遵守 BSD 协议、支持网络、可基于内存、分布式、可选持久性的键值对(Key-Value)存储数据库，并提供多种语言的 API，是跨平台的非关系型数据库。<br>Redis 通常被称为数据结构服务器，因为值（value）可以是字符串(String)、哈希(Hash)、列表(list)、集合(sets)和有序集合(sorted sets)等类型。</p>
+<h2 id="二、安装Redis"><a href="#二、安装Redis" class="headerlink" title="二、安装Redis"></a>二、安装Redis</h2><p>1、下载地址<br>Github下载地址：<a class="link" target="_blank" rel="noopener" href="https://github.com/MicrosoftArchive/redis/releases">https://github.com/MicrosoftArchive/redis/releases <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>网盘下载：</p>
+<p>windows服务链接：</p>
+<p>链接：<a class="link" target="_blank" rel="noopener" href="https://pan.baidu.com/s/1oLneZAF3xbG0IIAhl2PCFQ?pwd=fxud">https://pan.baidu.com/s/1oLneZAF3xbG0IIAhl2PCFQ?pwd=fxud <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>提取码：fxud</p>
+<p>redis客户端工具链接：</p>
+<p>链接：<a class="link" target="_blank" rel="noopener" href="https://pan.baidu.com/s/1dCnUS2SdfNSeml-sy6-wJA?pwd=gu44">https://pan.baidu.com/s/1dCnUS2SdfNSeml-sy6-wJA?pwd=gu44 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>提取码：gu44</p>
+<h4 id="2、安装过程"><a href="#2、安装过程" class="headerlink" title="2、安装过程"></a>2、安装过程</h4><h5 id="2-1-将下载的压缩包解压到一个文件夹中："><a href="#2-1-将下载的压缩包解压到一个文件夹中：" class="headerlink" title="2.1 将下载的压缩包解压到一个文件夹中："></a>2.1 将下载的压缩包解压到一个文件夹中：</h5>
+
+
+
+
+
+<p>2.3 启动Redis临时服务</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-server.exe redis.windows.conf</span><br></pre></td></tr></table></figure></div>
+
+<p>(备注：通过这个命令，会创建Redis临时服务，不会在window Service列表出现Redis服务名称和状态，此窗口关闭，服务会自动关闭。)</p>
+
+
+<p>2.4 打开另一个cmd窗口，客户端调用：redis-cli.exe -h 127.0.0.1 -p 6379</p>
+
+
+<p>三、Redis自定义windows服务安装</p>
+<p>3.1.进入Redis安装包目录，安装服务</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-server --service-install redis.windows.conf</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p> 3.2 win+r -&gt; services.msc可以看到服务安装成功</p>
+
+
+<p>不指定服务名称：则为默认的Resis</p>
+<p>Redis使用：</p>
+<p>安装服务（redis-install.bat）：redis-server –service-install redis.windows.conf</p>
+<p>开启服务（start-redis.bat）：redis-server –service-start </p>
+<p>停止服务（stop-redis.bat）：redis-server –service-stop</p>
+<p>卸载服务（redis-uninstall.bat）：redis-server –service-uninstall</p>
+<p>指定服务名称：redisserver1</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">安装服务：redis-server.exe --service-install redis.windows.conf --service-name redisserver1 --loglevel verbose``</span><br><span class="line">启动服务：redis-server.exe --service-start --service-name redisserver1``</span><br><span class="line">停止服务：redis-server.exe --service-stop --service-name redisserver1``</span><br><span class="line">卸载服务：redis-server.exe --service-uninstall–service-name redisserver1</span><br></pre></td></tr></table></figure></div>
+
+<p>卸载服务失败，可以用管理员命令执行一下命令</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc delete redisserver1</span><br></pre></td></tr></table></figure></div>
+
+<p> 四、Redis开启远程访问</p>
+<p>1、由于Redis默认只允许本地访问，要使Redis可以远程访问，需修改redis对应的配置文件；<br>我使用的Redis版本为：redis 3.0 ，默认使用的是redis.windows.conf</p>
+<p>注：Redis查看版本信息方法：<br>　　使用redis-server.exe 命令启动Redis服务端之后，再使用redis-cli.exe启动客户端，然后在客户端中输入 info 命令即可查看。</p>
+
+
+<p>确认redis服务运行的配置文件，查找redis服务：</p>
+
+
+<p>由于redis运行的配置文件是 redis.windows.conf，所以需要修改对应的配置文件。<br>修改两个地方即可：</p>
+
+
+<p> 2）redis密码的配置：</p>
+<p>打开 requirepass 的注释，在其后面配置密码，如下所示：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">requirepass password</span><br></pre></td></tr></table></figure></div>
+
+<p> 3）客户端连接redis</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli -h localhost -p 6379 -a 123456</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>4）将redis默认的守护关闭，修改protected-mode yes 为 protected-mode no：注意：3.2版本才有该配置</p>
+
+
+<p> 2、修改完以后，保存文件，重启redis服务。</p>
+<h2 id="三、安装RESP-Redis可视化工具"><a href="#三、安装RESP-Redis可视化工具" class="headerlink" title="三、安装RESP(Redis可视化工具)"></a>三、安装RESP(Redis可视化工具)</h2><p>GitHub下载软件<br><a class="link" target="_blank" rel="noopener" href="https://github.com/lework/RedisDesktopManager-Windows/releases">https://github.com/lework/RedisDesktopManager-Windows/releases <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+
+
+<p>点击第二个下在压缩包，也是点点点，下一步就ok（没下载第一个 感兴趣的可以试试）由于redis默认使用的ip是测试ip（127.0.0.1:6379）如果需要设置外网地址 必须改配置文件，我这里是win11系统。这两个文件都要改</p>
+
+
+
+
+
+
+<p>之后点击桌面刚才新建的RESP.app快捷键方式</p>
+
+
+
+
+<p>点击测试连接，如图提示就ok了</p>
+
+
+        
+    </div>
+    <div class="page-template-comments">
+        
+    </div>
 </div>
 
 
