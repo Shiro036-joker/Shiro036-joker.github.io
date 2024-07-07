@@ -661,9 +661,9 @@
 <p>  <em><strong>Scrapy</strong></em>是一个适用爬取网站数据、提取结构性数据的应用程序框架可以解决传统网络爬虫在大型网站上提取信息效率不高的问题。以某图书网站为案例，通过深入分析了该网站的页面结构，编写了高效的爬虫文件源码，用于提取目标网站的关键信息，包括图书名称、价格、定价、作者和销量排名等。研究结果表明，通过对主流网站的信息提取实验，在实际应用中展示了该方法取得了良好的效果，可以成功提出需要的信息，并根据提取出的图书价格和销量排名信息可以分析出价格与销量之间的关系，实现了对大型网站的信息提取任务。研究为爬虫技术在数据采集和分析领域的应用提供了有力的支持，为信息爬取与处理提供了新的解决方案。</p>
 <h5 id="引-言："><a href="#引-言：" class="headerlink" title="引  言："></a>引  言：</h5><p>   <em><strong>Scrapy</strong></em>框架作为高度可定制的Web抓取框架，能够采集、处理和分析Web上的数据信息。针对传统网络爬虫在大型网站上信息提取效率不高的问题，本研究采用了Scrapy框架作为Python网络爬虫的核心工具。以某图书网站为例，本研究深入分析了该网站的页面结构，并编写了高效的爬虫文件源码，用于提取目标网站的关键信息，包括图书名称、价格、定价、作者和销量排名等。研究的创新性表现在引入Scrapy框架作为Python网络爬虫的核心工具，从而提高了数据采集、处理和分析的效率和灵活性，共同推动了网络爬虫技术在数据采集和分析领域的发展，为更高效和可靠的信息提供了新的解决方案。</p>
 <h2 id="网络爬虫基本理论"><a href="#网络爬虫基本理论" class="headerlink" title="网络爬虫基本理论"></a>网络爬虫基本理论</h2><p>  网络爬虫，也被称为网络爬取器、网络机器人或网络蜘蛛，是一种自动化程序或脚本，用于自动地浏览互联网上的网页并从中收集信息。网络爬虫的主要目的是收集互联网上的数据，这些数据可以用于各种用途，包括搜索引擎索引、数据挖掘、信息检索、价格比较、网站更新监测等。常用的Python网络爬虫库及其功能如下所示。</p>
-<style>.jcgkhtvjhofp{zoom:50%;}</style><img lazyload src="/images/loading.svg" data-src="/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/DNZS202407014_23400.jpg" class="jcgkhtvjhofp" alt="DNZS202407014_23400">
+<style>.ttphegfuvynq{zoom:50%;}</style><img lazyload src="/images/loading.svg" data-src="/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/DNZS202407014_23400.jpg" class="ttphegfuvynq" alt="DNZS202407014_23400">
 
-<style>.hmffseolawbz{zoom:50%;}</style><img lazyload src="/images/loading.svg" data-src="/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/DNZS202407014_23500.jpg" class="hmffseolawbz" alt="DNZS202407014_23500">
+<style>.uppvcmjoeuyv{zoom:50%;}</style><img lazyload src="/images/loading.svg" data-src="/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/DNZS202407014_23500.jpg" class="uppvcmjoeuyv" alt="DNZS202407014_23500">
 
 <h2 id="scrapy爬虫架构"><a href="#scrapy爬虫架构" class="headerlink" title="scrapy爬虫架构"></a>scrapy爬虫架构</h2><ul>
 <li>***Scrapy Engine(引擎)***：负责Spider、ItemPipeline、Downloader、Scheduler中间的通讯，信号、数据传递等。</li>
@@ -674,10 +674,10 @@
 <li><em><strong>Downloader Middlewares（下载中间件）</strong></em>：一个可以自定义扩展下载功能的组件。</li>
 <li><em><strong>Spider Middlewares（Spider中间件）</strong></em>：一个可以自定扩展和操作引擎和Spider中间通信的功能组件。</li>
 </ul>
-<style>.wvgcolsmntmg{zoom:50%;}</style><img lazyload src="/images/loading.svg" data-src="/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/QQ20240704-205144.png" class="wvgcolsmntmg" alt="QQ20240704-205144">
+<style>.dhnpyxfphrnn{zoom:50%;}</style><img lazyload src="/images/loading.svg" data-src="/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/QQ20240704-205144.png" class="dhnpyxfphrnn" alt="QQ20240704-205144">
 
 <h4 id="Xpath查询语言"><a href="#Xpath查询语言" class="headerlink" title="Xpath查询语言"></a>Xpath查询语言</h4><p>  可扩展标记语言路径语言(XML Path Language,XPath)是一种用于在XML文档中定位和提取数据的查询语言。XPath的主要原理是根据路径表达式在XML文档的节点树中进行导航和筛选，以便精确定位所需的节点。它是XML文档处理的重要工具，用于XML数据的查询、转换和提取，常用于Web爬虫、XML文档处理、XPath查询引擎等各种应用领域[<a class="link" href="javascript:void(0);">15 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>]。XPath路径表达式如表所示。</p>
-<style>.saxndlkfjesc{zoom:50%;}</style><img lazyload src="/images/loading.svg" data-src="/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/DNZS202407014_24500.jpg" class="saxndlkfjesc" alt="DNZS202407014_24500">
+<style>.fjqvqzjepkix{zoom:50%;}</style><img lazyload src="/images/loading.svg" data-src="/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/DNZS202407014_24500.jpg" class="fjqvqzjepkix" alt="DNZS202407014_24500">
 
 <h2 id="scrapy项目的结构"><a href="#scrapy项目的结构" class="headerlink" title="scrapy项目的结构"></a>scrapy项目的结构</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">项目名字</span><br><span class="line">    项目的名字</span><br><span class="line">        spiders文件夹（存储的是爬虫文件）</span><br><span class="line">            init</span><br><span class="line">            自定义的爬虫文件        核心功能文件</span><br><span class="line">        init</span><br><span class="line">        items           定义数据结构的地方 爬虫的数据都包含哪些</span><br><span class="line">        middleware      中间件 代理</span><br><span class="line">        pipelines       管道  用来处理下载的数据</span><br><span class="line">        settings        配置文件 robots协议 ua定义等</span><br></pre></td></tr></table></figure></div>
 
@@ -700,7 +700,7 @@
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">py -m scrapy crawl douban</span><br></pre></td></tr></table></figure></div>
 
 <p>最后结果</p>
-<style>.yxdlskcwqgdm{zoom:50%;}</style><img lazyload src="/images/loading.svg" data-src="/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/QQ20240704-210411.png" class="yxdlskcwqgdm" alt="QQ20240704-210411">
+<style>.ehkrdgfreutn{zoom:50%;}</style><img lazyload src="/images/loading.svg" data-src="/2024/07/04/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%E5%92%8C%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/QQ20240704-210411.png" class="ehkrdgfreutn" alt="QQ20240704-210411">
 
         </div>
 
