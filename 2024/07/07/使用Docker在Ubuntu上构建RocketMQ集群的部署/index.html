@@ -26,7 +26,7 @@
 <meta property="og:description" content="使用Docker在Ubuntu上构建RocketMQ集群的部署论文摘要  RocketMQ是一个分布式消息和流数据平台，以其高可靠性、可扩展性和实时消息传递能力而闻名。本文详细介绍了如何通过Docker在Ubuntu操作系统上部署RocketMQ集群，包括名称服务器（Name Server）、消息代理（Broker）以及管理工具的配置和启动过程。 引言随着互联网应用的增加，消息队列系统在解耦和异步">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-07-07T13:51:08.619Z">
-<meta property="article:modified_time" content="2024-07-07T13:53:44.122Z">
+<meta property="article:modified_time" content="2024-07-08T07:05:59.608Z">
 <meta property="article:author" content="Shirolin">
 <meta name="twitter:card" content="summary">
     
@@ -613,8 +613,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-07-07 21:53:44</span>
-            <span class="mobile">2024-07-07 21:53:44</span>
+            <span class="desktop">2024-07-08 15:05:59</span>
+            <span class="mobile">2024-07-08 15:05:59</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -666,7 +666,7 @@
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /itcast/rmq/rmqbroker/conf/</span><br><span class="line">touch /itcast/rmq/rmqbroker/conf/broker.conf</span><br></pre></td></tr></table></figure></div>
 
 <p>编辑 <code>broker.conf</code> 文件并添加以下内容：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brokerIP1=192.168.88.131</span><br><span class="line">namesrvAddr=192.168.88.131:9876</span><br><span class="line">brokerName=boker-tanhua</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brokerIP1=192.168.xxx.xx</span><br><span class="line">namesrvAddr=192.168.xxx.xx:9876</span><br><span class="line">brokerName=boker-tanhua</span><br></pre></td></tr></table></figure></div>
 
 <h5 id="3-创建消息代理容器"><a href="#3-创建消息代理容器" class="headerlink" title="3. 创建消息代理容器"></a>3. 创建消息代理容器</h5><p>使用以下命令创建消息代理容器 <code>rmqbroker</code>：</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker create -p 10911:10911 -p 10909:10909 --name rmqbroker \</span><br><span class="line">-e &quot;JAVA_OPTS=-Duser.home=/opt&quot; \</span><br><span class="line">-e &quot;JAVA_OPT_EXT=-server -Xms128m -Xmx128m -Xmn128m&quot; \</span><br><span class="line">-v /itcast/rmq/rmqbroker/conf/broker.conf:/etc/rocketmq/broker.conf \</span><br><span class="line">-v rmqbroker-logs:/opt/logs \</span><br><span class="line">-v rmqbroker-store:/opt/store \</span><br><span class="line">foxiswho/rocketmq:broker-4.3.2</span><br></pre></td></tr></table></figure></div>
@@ -675,7 +675,7 @@
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker start rmqserver rmqbroker</span><br></pre></td></tr></table></figure></div>
 
 <h5 id="5-部署RocketMQ控制台"><a href="#5-部署RocketMQ控制台" class="headerlink" title="5. 部署RocketMQ控制台"></a>5. 部署RocketMQ控制台</h5><p>部署RocketMQ控制台用于集群的管理和监控：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run -e &quot;JAVA_OPTS=-Drocketmq.namesrv.addr=192.168.88.131:9876 -Dcom.rocketmq.sendMessageWithVIPChannel=false&quot; \</span><br><span class="line">-p 8082:8080 -t styletang/rocketmq-console-ng:1.0.0</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run -e &quot;JAVA_OPTS=-Drocketmq.namesrv.addr=192.168.xxx.xx:9876 -Dcom.rocketmq.sendMessageWithVIPChannel=false&quot; \</span><br><span class="line">-p 8082:8080 -t styletang/rocketmq-console-ng:1.0.0</span><br></pre></td></tr></table></figure></div>
 
 <h4 id="集群管理和操作"><a href="#集群管理和操作" class="headerlink" title="集群管理和操作"></a>集群管理和操作</h4><ul>
 <li><p><strong>访问RocketMQ控制台</strong>: 在浏览器中打开 <code>http://localhost:8082</code>，使用默认登录凭证（<code>admin</code>&#x2F;<code>admin</code>）登录控制台进行管理操作。</p>
@@ -704,7 +704,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-07-07 21:53:44
+                    :</strong> 2024-07-08 15:05:59
             </li>
         
         <li>
