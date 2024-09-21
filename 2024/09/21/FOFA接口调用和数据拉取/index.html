@@ -13,22 +13,25 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://shiro036-joker.github.io/2024/07/02/短信验证码安全/"/>
+    <link rel="canonical" href="https://shiro036-joker.github.io/2024/09/21/fofa接口调用和数据拉取/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="短信验证码安全一、短信验证码的作用  讲到短信验证码需要先提密码，作为保护安全技术手段典型代表如果密码泄露用户安全防御的最后底线就没有秘密可言，短信验证码兴起对用户密码找回，网购银行交易是一种安全性很高的身份识别方式。短信验证码主要还是用于验证用户身份，常用在注册、登录、找回密码、修改用户信息、支付以及其他与用户身份相关的流程中。 二、短信验证码存在的安全问题1、手机木马：  主要集中在 Andr">
+        <meta name="description" content="接口调用和数据拉取（FOFA）大数据量获取方案Search After接口如果需要实时获取大量数据并接入程序，可以使用Search After接口。对于同一搜索语句的大规模数据提取，可以使用连续翻页接口。该接口支持持续获取所有数据，并具备失败重试功能，不用担心数据错位。 与基础接口的区别在于，它不使用page进行翻页，而是通过nextid来实现翻页。每次响应结果中都会返回此值，如果未回传nexti">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://shiro036-joker.github.io/2024/07/02/%E7%9F%AD%E4%BF%A1%E9%AA%8C%E8%AF%81%E7%A0%81%E5%AE%89%E5%85%A8/index.html">
+<meta property="og:url" content="https://shiro036-joker.github.io/2024/09/21/FOFA%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8%E5%92%8C%E6%95%B0%E6%8D%AE%E6%8B%89%E5%8F%96/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="短信验证码安全一、短信验证码的作用  讲到短信验证码需要先提密码，作为保护安全技术手段典型代表如果密码泄露用户安全防御的最后底线就没有秘密可言，短信验证码兴起对用户密码找回，网购银行交易是一种安全性很高的身份识别方式。短信验证码主要还是用于验证用户身份，常用在注册、登录、找回密码、修改用户信息、支付以及其他与用户身份相关的流程中。 二、短信验证码存在的安全问题1、手机木马：  主要集中在 Andr">
+<meta property="og:description" content="接口调用和数据拉取（FOFA）大数据量获取方案Search After接口如果需要实时获取大量数据并接入程序，可以使用Search After接口。对于同一搜索语句的大规模数据提取，可以使用连续翻页接口。该接口支持持续获取所有数据，并具备失败重试功能，不用担心数据错位。 与基础接口的区别在于，它不使用page进行翻页，而是通过nextid来实现翻页。每次响应结果中都会返回此值，如果未回传nexti">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-07-02T13:25:11.211Z">
-<meta property="article:modified_time" content="2024-07-02T13:43:46.302Z">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/09/21/FOFA%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8%E5%92%8C%E6%95%B0%E6%8D%AE%E6%8B%89%E5%8F%96/a1fd4cb4c5d9e22e.gif">
+<meta property="og:image" content="https://shiro036-joker.github.io/2024/09/21/FOFA%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8%E5%92%8C%E6%95%B0%E6%8D%AE%E6%8B%89%E5%8F%96/search_next1.png">
+<meta property="article:published_time" content="2024-09-21T13:14:49.291Z">
+<meta property="article:modified_time" content="2024-09-21T13:55:04.672Z">
 <meta property="article:author" content="Shirolin">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://shiro036-joker.github.io/2024/09/21/FOFA%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8%E5%92%8C%E6%95%B0%E6%8D%AE%E6%8B%89%E5%8F%96/a1fd4cb4c5d9e22e.gif">
     
     
     <!--- Icon Part-->
@@ -459,15 +462,15 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2024-07-02 21:25:11</span>
-        <span class="mobile">2024-07-02 21:25:11</span>
+        <span class="desktop">2024-09-21 21:14:49</span>
+        <span class="mobile">2024-09-21 21:14:49</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-07-02 21:43:46</span>
-            <span class="mobile">2024-07-02 21:43:46</span>
+            <span class="desktop">2024-09-21 21:55:04</span>
+            <span class="mobile">2024-09-21 21:55:04</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -478,7 +481,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>958 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>950 字</span>
         </span>
     
     
@@ -502,18 +505,31 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="短信验证码安全"><a href="#短信验证码安全" class="headerlink" title="短信验证码安全"></a>短信验证码安全</h1><h2 id="一、短信验证码的作用"><a href="#一、短信验证码的作用" class="headerlink" title="一、短信验证码的作用"></a>一、短信验证码的作用</h2><p>  讲到短信验证码需要先提密码，作为保护安全技术手段典型代表如果密码泄露用户安全防御的最后底线就没有秘密可言，短信验证码兴起对用户密码找回，网购银行交易是一种安全性很高的身份识别方式。短信验证码主要还是用于验证用户身份，常用在注册、登录、找回密码、修改用户信息、支付以及其他与用户身份相关的流程中。</p>
-<h2 id="二、短信验证码存在的安全问题"><a href="#二、短信验证码存在的安全问题" class="headerlink" title="二、短信验证码存在的安全问题"></a>二、短信验证码存在的安全问题</h2><h3 id="1、手机木马："><a href="#1、手机木马：" class="headerlink" title="1、手机木马："></a>1、手机木马：</h3><p>  主要集中在 Android手机利用钓鱼或漏洞方式手机被下载安装APK木马从而控制手机获取短信验证码，安装手机木马查杀软件不要浏览安装不明APK 安装包；</p>
-<h3 id="2、蜂窝网络GSM-嗅探："><a href="#2、蜂窝网络GSM-嗅探：" class="headerlink" title="2、蜂窝网络GSM 嗅探："></a>2、蜂窝网络GSM 嗅探：</h3><p>伪基站和 GSM 嗅探，目前5G的普及问题，当然攻击者也可以有办法屏蔽或干扰5G信号，这时候手机就会自动转为2G，这样会导致GSM短信依旧能被监听到；</p>
-<h3 id="3、云同步软件及验证码服务商："><a href="#3、云同步软件及验证码服务商：" class="headerlink" title="3、云同步软件及验证码服务商："></a>3、云同步软件及验证码服务商：</h3><p>手机自带云同步功能。例如黑客使用社工库泄漏密码登陆云同步平台，通过这个方式可以获取短信验证码，其次验证码云服务商平台漏洞，导致被黑客入侵短信验证可以被截取。</p>
-<h3 id="4、短信验证码的泄漏："><a href="#4、短信验证码的泄漏：" class="headerlink" title="4、短信验证码的泄漏："></a>4、短信验证码的泄漏：</h3><p>一般web应用中存在的短信验证码泄漏基本上是直接返回出来，例如url，body，http头都可能存在，我常用的检测方式是bp抓包后，输入手机收到的验证码，看看返回数据中是否存在，还有可能是云端的泄漏，如短信提供商、管理邮箱、管理接口等。泄漏的方式有多种：直接明文、md5。原因多种：debug的问题、短信验证码验证的逻辑问题（前端验证）。建议：回显中删除即可。这是应用的处理方式，对于云端的泄漏，基本上是由于云端管理帐号的问题了。</p>
-<h3 id="5、短信验证码功能在设计："><a href="#5、短信验证码功能在设计：" class="headerlink" title="5、短信验证码功能在设计："></a>5、短信验证码功能在设计：</h3><p>短信验证码功能在设计上存在缺陷的话也会产生很多安全问题：如短信风暴、验证逻辑绕过、短信验证码泄露、验证码暴力破解等。</p>
-<h3 id="6、常见的验证逻辑绕过："><a href="#6、常见的验证逻辑绕过：" class="headerlink" title="6、常见的验证逻辑绕过："></a>6、常见的验证逻辑绕过：</h3><p>验证逻辑没有通用的绕过，取决于后端服务的验证逻辑，常见的逻辑是：前端验证、不验证、固定短信验证码、只验证短信验证码有效而不验证与用户身份是否匹配。</p>
-<h2 id="三、如何防范短信验证码带来的安全隐患"><a href="#三、如何防范短信验证码带来的安全隐患" class="headerlink" title="三、如何防范短信验证码带来的安全隐患"></a>三、如何防范短信验证码带来的安全隐患</h2><p>主要在于两个方面：验证码的健壮性、后端的验证逻辑。</p>
-<p>健壮性：长度、随机性</p>
-<p>验证逻辑：有效验证次数、验证频率、二次验证。</p>
-<p>验证逻辑这块，还是要根据不同的业务场景，梳理业务流程，然后再对各种类型的问题加以防范。验证逻辑各种奇葩的情况都有，自己用的时候，不要太奇葩就行。上线前还要做好逻辑漏洞这一方面的安全测试。</p>
-<h2 id="四、针对短信的应用接口被恶意调用，比较好的防御办法"><a href="#四、针对短信的应用接口被恶意调用，比较好的防御办法" class="headerlink" title="四、针对短信的应用接口被恶意调用，比较好的防御办法"></a>四、针对短信的应用接口被恶意调用，比较好的防御办法</h2><p>发短信时加上图片验证码，1分钟才允许发一次，1分钟以内短信验证码有效，超时失效。还有就是有二次验证还是能起很大作用。用户体验也不会很差，例如现在比较流行的滑动验证。</p>
+            <h1 id="接口调用和数据拉取（FOFA）"><a href="#接口调用和数据拉取（FOFA）" class="headerlink" title="接口调用和数据拉取（FOFA）"></a>接口调用和数据拉取（FOFA）</h1><h2 id="大数据量获取方案"><a href="#大数据量获取方案" class="headerlink" title="大数据量获取方案"></a>大数据量获取方案</h2><h3 id="Search-After接口"><a href="#Search-After接口" class="headerlink" title="Search After接口"></a>Search After接口</h3><p>如果需要实时获取大量数据并接入程序，可以使用Search After接口。对于同一搜索语句的大规模数据提取，可以使用连续翻页接口。该接口支持持续获取所有数据，并具备失败重试功能，不用担心数据错位。</p>
+<p>与基础接口的区别在于，它不使用page进行翻页，而是通过nextid来实现翻页。每次响应结果中都会返回此值，如果未回传nextid，系统将默认返回第一页的数据。</p>
+<p>官方API文档地址：<a class="link" target="_blank" rel="noopener" href="https://fofa.info/api">FOFA API Document <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>专用接口➡️连续翻页接口</p>
+<p>以curl返回为例：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X GET &quot;https://fofa.info/api/v1/search/next?qba se64=dGl0bGU9IueZvuW6piI%3D&amp;size=10&amp;email=your-email&amp;key=your-key&amp;next=id&quot;</span><br></pre></td></tr></table></figure></div>
+
+<p>也可以通过命令行进行执行Python的SDK库</p>
+<img lazyload src="/images/loading.svg" data-src="/2024/09/21/FOFA%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8%E5%92%8C%E6%95%B0%E6%8D%AE%E6%8B%89%E5%8F%96/a1fd4cb4c5d9e22e.gif" class>
+
+<hr>
+<p>该SDK不仅支持大数据量导出任务一次性下发，同样也支持实时动态资产调取，比普通的接口更加的稳定。</p>
+<p>我们可以在<a class="link" target="_blank" rel="noopener" href="https://pypi.org/project/FOFA-py/">Python的SDK库地址 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 或通过<a class="link" target="_blank" rel="noopener" href="https://github.com/fofapro/fofa-py">官方的github地址 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>进行更新使用。</p>
+<h3 id="页面下载"><a href="#页面下载" class="headerlink" title="页面下载"></a>页面下载</h3><p>对于没有实时要求，需要大数据量一次性获取的用户来说，页面下载是最稳定的一种方式。满足最高单次1000万数据量的下载，一键直接下载获取大数据。1000万条数据时间大约需要1小时40分钟，以压缩包的形式获取。他相对而言时间比较久，但更为稳定。</p>
+<img lazyload src="/images/loading.svg" data-src="/2024/09/21/FOFA%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8%E5%92%8C%E6%95%B0%E6%8D%AE%E6%8B%89%E5%8F%96/search_next1.png" class>
+
+<p>注：当导出的字段包含banner&#x2F;header&#x2F;cert&#x2F;body&#x2F;structinfo&#x2F;icon这种大字段的时候，最多支持单次10万条数据下载。</p>
+<p>第一个一次性获取大量数据使用页面下载很好理解，点击下载然后等待获取即可。我们只需要解决下载包压缩的问题。</p>
+<p>第二个满足接入程序的大数据量批量获取；坦白说这是一个很占用资源的方式，我们也可以进行限制即可，不用费时费力去做，但是用户至上一直是我们的目标。通过市场的调研和行业的最佳实践，我们最终选择了Search After方案。</p>
+<p>Elasticsearch共推荐了两种解决方案：Scroll和Search After方案。</p>
+<blockquote>
+<p>根据他的官方描述：结果的分页可以通过使用from和size参数来实现，但当达到深层分页时，成本变得难以承受。index.max_result_window默认为10,000，它其实是一种保护机制，搜索请求需要堆内存和与from+size成比例的时间。Scroll API被推荐用于高校的深层滚动，但滚动上下文的开销很大，不推荐其用于实时用户请求。Search After参数通过提供一个活动游标来解决这个问题，其方式是使用上一页的结果来辅助获取下一页的结果。Search After并不是一个可以自由跳转到随机页面的解决方案，而是可以同时滚动多个查询的方式。</p>
+</blockquote>
+<p>通过行业的调研和官方的解决方案，我们进行了分析及实验尝试，其中Scroll需要对上下文进行维护，scroll_id过期后无法继续进行翻页，且可能会因为网络不稳定等其他因素导致id失效，无法继续获取，导致导出程序中断。</p>
+<p>Search After适用于需要分页检索数据，且实时性要求较高的场景，不需要额外对上下文进行维护，所以根据痛点的问题，我们最终选取Search After这种解决方案。</p>
 
         </div>
 
@@ -524,15 +540,15 @@
         <li><strong>标题:</strong> </li>
         <li><strong>作者:</strong> Shirolin</li>
         <li><strong>创建于
-                :</strong> 2024-07-02 21:25:11</li>
+                :</strong> 2024-09-21 21:14:49</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-07-02 21:43:46
+                    :</strong> 2024-09-21 21:55:04
             </li>
         
         <li>
-            <strong>链接:</strong> https://redefine.ohevan.com/2024/07/02/短信验证码安全/
+            <strong>链接:</strong> https://redefine.ohevan.com/2024/09/21/FOFA接口调用和数据拉取/
         </li>
         <li>
             <strong>
@@ -557,26 +573,11 @@
         
             <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
                 
-                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-                        <a class="prev"
-                        rel="prev"
-                        href="/2024/07/02/SSL%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%8F%8A%E6%BC%8F%E6%B4%9E/"
-                        >
-                            <span class="left arrow-icon flex justify-center items-center">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item"></span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/2024/06/28/%E7%BD%91%E7%BB%9C%E9%9D%B6%E5%9C%BA/"
+                        href="/2024/09/13/Hashcat%E5%88%9D%E6%AD%A5%E5%BA%94%E7%94%A8/"
                         >
                             <span class="title flex justify-center items-center">
                                 <span class="post-nav-title-item"></span>
@@ -644,7 +645,7 @@
     <div class="post-toc">
         <div class="toc-title">目录</div>
         <div class="page-title"></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9F%AD%E4%BF%A1%E9%AA%8C%E8%AF%81%E7%A0%81%E5%AE%89%E5%85%A8"><span class="nav-text">短信验证码安全</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E7%9F%AD%E4%BF%A1%E9%AA%8C%E8%AF%81%E7%A0%81%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-text">一、短信验证码的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%9F%AD%E4%BF%A1%E9%AA%8C%E8%AF%81%E7%A0%81%E5%AD%98%E5%9C%A8%E7%9A%84%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98"><span class="nav-text">二、短信验证码存在的安全问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E6%89%8B%E6%9C%BA%E6%9C%A8%E9%A9%AC%EF%BC%9A"><span class="nav-text">1、手机木马：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E8%9C%82%E7%AA%9D%E7%BD%91%E7%BB%9CGSM-%E5%97%85%E6%8E%A2%EF%BC%9A"><span class="nav-text">2、蜂窝网络GSM 嗅探：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E4%BA%91%E5%90%8C%E6%AD%A5%E8%BD%AF%E4%BB%B6%E5%8F%8A%E9%AA%8C%E8%AF%81%E7%A0%81%E6%9C%8D%E5%8A%A1%E5%95%86%EF%BC%9A"><span class="nav-text">3、云同步软件及验证码服务商：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E7%9F%AD%E4%BF%A1%E9%AA%8C%E8%AF%81%E7%A0%81%E7%9A%84%E6%B3%84%E6%BC%8F%EF%BC%9A"><span class="nav-text">4、短信验证码的泄漏：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81%E7%9F%AD%E4%BF%A1%E9%AA%8C%E8%AF%81%E7%A0%81%E5%8A%9F%E8%83%BD%E5%9C%A8%E8%AE%BE%E8%AE%A1%EF%BC%9A"><span class="nav-text">5、短信验证码功能在设计：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6%E3%80%81%E5%B8%B8%E8%A7%81%E7%9A%84%E9%AA%8C%E8%AF%81%E9%80%BB%E8%BE%91%E7%BB%95%E8%BF%87%EF%BC%9A"><span class="nav-text">6、常见的验证逻辑绕过：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%A6%82%E4%BD%95%E9%98%B2%E8%8C%83%E7%9F%AD%E4%BF%A1%E9%AA%8C%E8%AF%81%E7%A0%81%E5%B8%A6%E6%9D%A5%E7%9A%84%E5%AE%89%E5%85%A8%E9%9A%90%E6%82%A3"><span class="nav-text">三、如何防范短信验证码带来的安全隐患</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E9%92%88%E5%AF%B9%E7%9F%AD%E4%BF%A1%E7%9A%84%E5%BA%94%E7%94%A8%E6%8E%A5%E5%8F%A3%E8%A2%AB%E6%81%B6%E6%84%8F%E8%B0%83%E7%94%A8%EF%BC%8C%E6%AF%94%E8%BE%83%E5%A5%BD%E7%9A%84%E9%98%B2%E5%BE%A1%E5%8A%9E%E6%B3%95"><span class="nav-text">四、针对短信的应用接口被恶意调用，比较好的防御办法</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8%E5%92%8C%E6%95%B0%E6%8D%AE%E6%8B%89%E5%8F%96%EF%BC%88FOFA%EF%BC%89"><span class="nav-text">接口调用和数据拉取（FOFA）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A7%E6%95%B0%E6%8D%AE%E9%87%8F%E8%8E%B7%E5%8F%96%E6%96%B9%E6%A1%88"><span class="nav-text">大数据量获取方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Search-After%E6%8E%A5%E5%8F%A3"><span class="nav-text">Search After接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2%E4%B8%8B%E8%BD%BD"><span class="nav-text">页面下载</span></a></li></ol></li></ol></li></ol>
 
     </div>
 </div>
